@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <!-- PWA Meta Tags -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Agenzie Lavoro">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#6366f1">
+  
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='180' height='180' rx='40'/%3E%3Ctext x='90' y='110' font-family='system-ui' font-size='80' font-weight='bold' fill='white' text-anchor='middle'%3E💼%3C/text%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='75' font-size='80'%3E💼%3C/text%3E%3C/svg%3E">
+  
+  <!-- Splash Screens -->
+  <link rel="apple-touch-startup-image" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 750 1334'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='750' height='1334'/%3E%3Ctext x='375' y='667' font-family='system-ui' font-size='100' font-weight='bold' fill='white' text-anchor='middle'%3E💼 Agenzie%3C/text%3E%3C/svg%3E">
+  
+  <title>Agenzie Lavoro Veneto</title>
+  <link rel="manifest" href="#" id="manifest-placeholder">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    
+    * { 
+      font-family: 'Inter', sans-serif; 
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+      overscroll-behavior: none;
+      touch-action: pan-y;
+    }
+    
+    .hidden { display: none; }
+    
+    /* Install Banner */
+    .install-banner {
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .install-banner.show {
+      transform: translateY(0);
+    }
+    
+    /* Scrollbar nascosta */
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* Animazioni */
+    .card-appear {
+      animation: cardAppear 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    
+    @keyframes cardAppear {
+      from { opacity: 0; transform: translateY(20px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    .shimmer {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
+    
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+    
+    .bottom-sheet {
+      transform: translateY(100%);
+      transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+    }
+    
+    .bottom-sheet.active {
+      transform: translateY(0);
+    }
+    
+    .chip-active {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+    }
+    
+    .safe-area-top { padding-top: max(env(safe-area-inset-top), 12px); }
+    .safe-area-bottom { padding-bottom: max(env(safe-area-inset-bottom), 12px); }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    
+    .skeleton { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    
+    /* Update badge */
+    .update-badge {
+      animation: bounce 1s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Install Banner iOS -->
+  <div id="installBanner" class="install-banner fixed bottom-0 left-0 right-0 bg-white border-t shadow-2xl z-50 safe-area-bottom hidden">
+    <div class="p-4">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-3xl flex-shrink-0">
+          💼
+        </div>
+        <div class="flex-1">
+          <h3 class="font-bold text-gray-900">Installa l'App</h3>
+          <p class="text-xs text-gray-600">Tocca <svg class="inline w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"/></svg> poi "Aggiungi a Home"</p>
+        </div>
+        <button onclick="closeInstallBanner()" class="text-gray-400 hover:text-gray-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Update Available Banner -->
+  <div id="updateBanner" class="hidden fixed top-0 left-0 right-0 bg-gradient-to-r from-green-500 to-emerald-600 text-white z-50 safe-area-top">
+    <div class="px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="update-badge">🎉</span>
+        <span class="text-sm font-semibold">Aggiornamento disponibile!</span>
+      </div>
+      <button onclick="updateApp()" class="bg-white text-green-600 px-4 py-1.5 rounded-full text-sm font-semibold">
+        Aggiorna
+      </button>
+    </div>
+  </div>
+  
+  <!-- Top Bar Fixed -->
+  <div class="fixed top-0 left-0 right-0 bg-white shadow-sm z-40 safe-area-top">
+    <div class="px-4 py-3">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-xl">
+            💼
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold text-gray-900">Agenzie</h1>
+            <p class="text-xs text-gray-500">Trova lavoro in Veneto</p>
+          </div>
+        </div>
+        <button id="filterBtn" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+          <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="relative">
+        <input 
+          type="text" 
+          id="searchInput"
+          placeholder="🔍 Cerca agenzia..."
+          class="w-full px-4 py-3 bg-gray-100 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+      </div>
+    </div>
+    
+    <div class="px-4 pb-3">
+      <div id="sectorsChips" class="flex gap-2 overflow-x-auto hide-scrollbar smooth-scroll"></div>
+    </div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="pt-44 pb-20 px-4">
+    <div class="grid grid-cols-3 gap-3 mb-6" id="statsCards"></div>
+    <div id="agenciesGrid" class="space-y-4"></div>
+    
+    <div id="loadingSkeleton" class="hidden space-y-4">
+      <div class="bg-white rounded-3xl p-4 shimmer h-64"></div>
+    </div>
+    
+    <div id="emptyState" class="hidden text-center py-16">
+      <div class="text-6xl mb-4">😔</div>
+      <h3 class="text-xl font-bold text-gray-700 mb-2">Nessuna agenzia</h3>
+      <p class="text-gray-500 text-sm">Prova a modificare i filtri</p>
+    </div>
+  </div>
+  
+  <!-- Bottom Sheet - Sedi -->
+  <div id="sediSheet" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="absolute inset-0" onclick="closeSedi()"></div>
+    <div class="bottom-sheet absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[85vh] overflow-hidden safe-area-bottom">
+      <div class="sticky top-0 bg-white border-b px-6 py-4 z-10">
+        <div class="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-3"></div>
+        <div class="flex items-center justify-between">
+          <h3 class="text-xl font-bold" id="sediAgencyName"></h3>
+          <button onclick="closeSedi()" class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <p class="text-sm text-gray-500 mt-1" id="sediCount"></p>
+      </div>
+      <div id="sediContent" class="overflow-y-auto p-6 pb-8" style="max-height: calc(85vh - 100px);"></div>
+    </div>
+  </div>
+  
+  <!-- Bottom Sheet - Filtri -->
+  <div id="filterSheet" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+    <div class="absolute inset-0" onclick="closeFilters()"></div>
+    <div class="bottom-sheet absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[70vh] overflow-hidden safe-area-bottom">
+      <div class="sticky top-0 bg-white border-b px-6 py-4">
+        <div class="w-12 h-1 bg-gray-300 rounded-full mx-auto mb-3"></div>
+        <h3 class="text-xl font-bold">Filtri</h3>
+      </div>
+      <div class="overflow-y-auto p-6 pb-8" style="max-height: calc(70vh - 80px);">
+        <div class="mb-6">
+          <h4 class="font-semibold mb-3">Settori</h4>
+          <div id="filterSectors" class="flex flex-wrap gap-2"></div>
+        </div>
+        <button onclick="clearFilters()" class="w-full py-4 bg-gray-100 text-gray-700 rounded-2xl font-semibold">
+          Cancella filtri
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+const APP_VERSION = '1.0.0';
+const agencies=
+[
+  {
+    "id": 1,
+    "nome": "MANPOWER",
+    "sito": "https://www.manpower.it/",
+    "descrizione": "Leader globale nella gestione delle risorse umane.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/cZMQA1Krk5mSEbSLXzDg.png",
+    "formIscrizione": "https://www.manpower.it/it/registrati",
+    "settori": [
+      "Produzione",
+      "Tecnica",
+      "Logistica"
+    ],
+    "sedi": [
+      {
+        "citta": "Belluno",
+        "indirizzo": "V.le Giuseppe Fantuzzi, 7, 32100 Belluno BL",
+        "telefono": "0437943753",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/8wSc89syRJCdpUv8A"
+      },
+      {
+        "citta": "Sedico",
+        "indirizzo": "Zona Industriale Gresal, 5L, 32036 Sedico BL",
+        "telefono": "3406047967",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/KW2rWNgmmZQrdube6"
+      },
+      {
+        "citta": "Camposampiero",
+        "indirizzo": "Via Andrea Palladio, 18, 35012 Camposampiero PD",
+        "telefono": "0499302809",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/3DiFESa9KMLHyNDj7"
+      },
+      {
+        "citta": "Cittadella",
+        "indirizzo": "Via Borgo Padova, 33, 35013 Cittadella PD",
+        "telefono": "",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/aK4xhmKEm967RF5H6"
+      },
+      {
+        "citta": "Mestrino",
+        "indirizzo": "Piazza del Mercato, 21, 35035 Mestrino PD",
+        "telefono": "0499004654",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/gstKqNeQbVfvtL8W8"
+      },
+      {
+        "citta": "Monselice",
+        "indirizzo": "Via Squero, 10/C, 35043 Monselice PD",
+        "telefono": "0429783099",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/k1k8i8BGsb1qddPZ6"
+      },
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Trieste, 47, 35121 Padova PD",
+        "telefono": "049845661",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/k2eQdf46qXbBQzUL6"
+      },
+      {
+        "citta": "Piove di Sacco",
+        "indirizzo": "Presso Crazy Lab, Via F. Petrarca, 37, 35028 Piove di Sacco PD",
+        "telefono": "049845661",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/RStBVUY9rnLbek2n9"
+      },
+      {
+        "citta": "Rovigo",
+        "indirizzo": "Corso del Popolo, 337, 45100 Rovigo RO",
+        "telefono": "0425422985",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/TW7BhLtMVrTGyqbz6"
+      },
+      {
+        "citta": "Castelfranco Veneto",
+        "indirizzo": "Via Ugo Morello, 14, 31033 Castelfranco Veneto TV",
+        "telefono": "0423724028",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/W7EK7aXciMis89sf6"
+      },
+      {
+        "citta": "Conegliano",
+        "indirizzo": "Via Giuseppe Garibaldi, 8, 31015 Conegliano TV",
+        "telefono": "0438412989",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ggdsCRa7994cAxrS6"
+      },
+      {
+        "citta": "Montebelluna",
+        "indirizzo": "Via Luigi Pastro, 4, 31044 Montebelluna TV",
+        "telefono": "0423614069",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/rpEbK6UigYzr6Zyb8"
+      },
+      {
+        "citta": "Oderzo",
+        "indirizzo": "Via Gabriele D'Annunzio, 8, 31046 Oderzo TV",
+        "telefono": "0422816024",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/zwjtaLJasUqTrVET6"
+      },
+      {
+        "citta": "Treviso",
+        "indirizzo": "Viale Nino Bixio, 37, 31100 Treviso TV",
+        "telefono": "0422419672",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/YdfF8VDd5KRdZ2M1A"
+      },
+      {
+        "citta": "Mirano",
+        "indirizzo": "Via A. Gramsci, 36/B, 30035 Mirano VE",
+        "telefono": "0415728860",
+        "email": "",
+        "googleMaps": "0415728860"
+      },
+      {
+        "citta": "San Donà di Piave",
+        "indirizzo": "Via Jesolo, 23, 30027 San Donà di Piave VE",
+        "telefono": "0421331759",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/LgzTfhYkA7RdBfDd8"
+      },
+      {
+        "citta": "Venezia",
+        "indirizzo": "Corso del Popolo, 12, 30172 Venezia VE",
+        "telefono": "0415055752",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/11H6cYfGmYjd4KQ79"
+      },
+      {
+        "citta": "Arzignano",
+        "indirizzo": "Via IV Martiri, 41, 36071 Arzignano VI",
+        "telefono": "0444670829",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/vc2otre8X5VNQeWp6"
+      },
+      {
+        "citta": "Bassano Del Grappa",
+        "indirizzo": "Via Mure del Bastion, 24, 36061 Bassano del Grappa VI",
+        "telefono": "0424526176",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/phY2KwtWBKbRjEPy6"
+      },
+      {
+        "citta": "Montecchio Maggiore",
+        "indirizzo": "Viale Stazione, Via T. Edison, 33, 36075 Montecchio Maggiore VI",
+        "telefono": "0444694507",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/AjGJSwGfNi7EBFHc8"
+      },
+      {
+        "citta": "Noventa Vicentina",
+        "indirizzo": "Via Corte Ferrighi, 2, 36025 Noventa Vicentina VI",
+        "telefono": "0444760017",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/B5tiYJKAPKrqFY28A"
+      },
+      {
+        "citta": "Schio",
+        "indirizzo": "Via Venezia, 140, 36015 Schio VI",
+        "telefono": "0445532435",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/9DxstLcQCzTktyhU7"
+      },
+      {
+        "citta": "Thiene",
+        "indirizzo": "Via Vittorio Veneto, 24, 36016 Thiene VI",
+        "telefono": "0445361280",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/SEVwDazp65ziC5YD7"
+      },
+      {
+        "citta": "Vicenza",
+        "indirizzo": "Viale dell'Industria, 67, 36100 Vicenza VI",
+        "telefono": "0444588201",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/zYXbTzyoVz8GSFNTA"
+      },
+      {
+        "citta": "Bussolengo",
+        "indirizzo": "Via Verona, 39/B, 37012 Bussolengo VR",
+        "telefono": "0456703603",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ftSUsMkR8XF9B98n6"
+      },
+      {
+        "citta": "Legnago",
+        "indirizzo": "Viale Don Minzoni, 5, 37045 Legnago VR",
+        "telefono": "0442600290",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/edaWJX6bXG1XffFH7"
+      },
+      {
+        "citta": "Nogara",
+        "indirizzo": "Via Greppa, 5, 37054 Nogara VR",
+        "telefono": "0442510658",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/pnoUc6xrEnsTfnxz7"
+      },
+      {
+        "citta": "Nogara",
+        "indirizzo": "Via Greppa, 5, 37054 Nogara VR",
+        "telefono": "0442510658",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/FurA2fDrG2YsHQqKA"
+      },
+      {
+        "citta": "San Bonifacio",
+        "indirizzo": "Via Roma, 78, 37047 San Bonifacio VR",
+        "telefono": "0456104543",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ENDwaoxusnZbGFKL8"
+      },
+      {
+        "citta": "Verona",
+        "indirizzo": "Via Locatelli, 10/12, 37100 Verona VR",
+        "telefono": "0458060008",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/n4xrHr6DAckJ6ZVg9"
+      },
+      {
+        "citta": "Villafranca di Verona",
+        "indirizzo": "Via Quadrato, 84, 37069 Villafranca di Verona VR",
+        "telefono": "0456304678",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/QiK458wsyoizQxUD7"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "GIGROUP",
+    "sito": "https://www.gigroup.it/",
+    "descrizione": "Primo gruppo italiano nel settore HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/DOcrcDCpeTjoFrGUSdXH.png",
+    "formIscrizione": "https://it.mygigroup.com/registration",
+    "settori": [
+      "Produzione",
+      "Tecnica"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 10",
+        "telefono": "0498750146"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "RANDSTAD",
+    "sito": "https://www.randstad.it/",
+    "descrizione": "Leader mondiale nei servizi HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/9Rwzy8AORagGPCjxqzGn.png",
+    "formIscrizione": "https://extranet.randstad.it/Candidato/Registrazione/Comincia-da-qui",
+    "settori": [
+      "Manifatturiero",
+      "Tecnico"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Piazza Aldo Moro, 10",
+        "telefono": "049 098 8240"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "ADECCO",
+    "sito": "https://www.adecco.it/",
+    "descrizione": "Il più grande gruppo al mondo nella gestione HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/qnGmMPaEg79XEPDTks5p.png",
+    "formIscrizione": "https://candidate.adecco.it/candidate/register.asp",
+    "settori": [
+      "Operativo",
+      "Retail"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Prima Strada, 35",
+        "telefono": "0492128920"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "UMANA",
+    "sito": "https://www.umana.it/",
+    "descrizione": "Agenzia italiana specializzata in somministrazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/u6aSOHJGnmtPczHEs98g.png",
+    "formIscrizione": "https://areacandidato.umana.it/area-candidato/iscrizione",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 86",
+        "telefono": "049 780 8321"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "ORIENTA",
+    "sito": "https://www.orienta.net/it/",
+    "descrizione": "Servizi di somministrazione e ricerca personale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/IYRakxn3G6H0OlnR6SCb.png",
+    "formIscrizione": "https://www.orienta.net/it/orienta-job/registrati-per-inviare-la-tua-candidatura.html",
+    "settori": [
+      "HR",
+      "Selezione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Teofilo Folengo, 13",
+        "telefono": "0492127608"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "LAVORINT",
+    "sito": "https://www.lavorint.it/",
+    "descrizione": "Focus su somministrazione e ricerca personale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/I8BDoKKXMC53r8fkwF9s.jpeg",
+    "formIscrizione": "https://careers.lavorint.it/job-seekers.php",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Carlo Rezzonico, 45",
+        "telefono": "0498765716"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "ADHR GROUP",
+    "sito": "https://www.adhr.it/",
+    "descrizione": "Specializzati in servizi HR e somministrazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/TSMdx2ra1ZPbLY8AFN8z.png",
+    "formIscrizione": "https://www.adhr.it/registrati/",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Venezia, 9",
+        "telefono": "0498074893"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "MAW",
+    "sito": "https://www.maw.it/",
+    "descrizione": "Somministrazione, ricerca e selezione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/jgWJx0lAXQ9R3w0EW08B.png",
+    "formIscrizione": "https://www.maw.it/registrati",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Giovanni Savelli, 104",
+        "telefono": "0498364738"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "ALI SPA",
+    "sito": "https://alilavoro.it/",
+    "descrizione": "Specializzata in somministrazione lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/CUG7PmRxeqj2JFmGl98M.png",
+    "formIscrizione": "https://careers.alilavoro.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 104",
+        "telefono": "049773563"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nome": "AL CENTRO",
+    "sito": "https://www.alcentrolavoro.it/",
+    "descrizione": "Servizi per il lavoro e formazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/gHUZzN8jwS5Wva7zSBda.png",
+    "formIscrizione": "https://carriere.alcentrolavoro.it/job-seekers.php",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Sottopassaggio Mario Saggin, 2",
+        "telefono": "0497332880"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "HUMAN GEST",
+    "sito": "https://humangest.it/",
+    "descrizione": "Servizi HR completi.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/pAYqdksnMFL4l8jvYb9e.png",
+    "formIscrizione": "https://lavoro.humangest.it/job-seekers.php",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 48",
+        "telefono": "0498074261"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nome": "SYNERGIE",
+    "sito": "https://www.synergie-italia.it/",
+    "descrizione": "Somministrazione lavoro e ricerca.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/aKncMsDVxwWK0eN9pQGB.jpeg",
+    "formIscrizione": "https://www.synergie-italia.it/candidato/accesso-area-candidati",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 40",
+        "telefono": "0498071406"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nome": "OPEN JOB METIS",
+    "sito": "https://www.openjobmetis.it/it",
+    "descrizione": "Leader in Italia per servizi HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/zFzqCDgBX4QFpyehslXn.png",
+    "formIscrizione": "https://www.openjobmetis.it/it/registrazione",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 76",
+        "telefono": "0498075778"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "nome": "ETJCA",
+    "sito": "https://www.etjca.it/",
+    "descrizione": "Focus su somministrazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/PiZmhtXy0QnGr3V6Fujr.png",
+    "formIscrizione": "https://career.etjca.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Uruguay, 79-81-83",
+        "telefono": "0498711922"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "nome": "QUOJOBIS",
+    "sito": "https://www.quojobis.it/",
+    "descrizione": "Servizi per il lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/CZcITMoszyJ98yconZki.png",
+    "formIscrizione": "https://careers.quojobis.it/job-seekers.php",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Verona",
+        "indirizzo": "Via Roveggia 90",
+        "telefono": "045 4931370"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nome": "GENERAZIONE VINCENTE",
+    "sito": "https://www.generazionevincente.it/",
+    "descrizione": "Servizi HR innovativi.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/xdK6CSgXu38Y5oBCKRgw.png",
+    "formIscrizione": "https://www.generazionevincente.it/register/",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 36",
+        "telefono": "0498945178"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "nome": "RELIZONT",
+    "sito": "https://relizont.it/",
+    "descrizione": "Somministrazione e ricerca.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/izee2cyzy23zAzvGlVVo.jpeg",
+    "formIscrizione": "https://job.relizont.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Ugo Bassi, 5",
+        "telefono": "0490990084"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "nome": "DURING",
+    "sito": "https://www.during.it/",
+    "descrizione": "Specializzata in HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/wbR7PEGe6JAlSYazpJAY.png",
+    "formIscrizione": "https://portale.during.it/candidatura-spontanea",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Niccolò Tommaseo, 72",
+        "telefono": "0497625319"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "nome": "PAGE PERSONNEL",
+    "sito": "https://www.pagepersonnel.it/",
+    "descrizione": "Ricerca e selezione specializzata.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/Qyj8Ul7CO6EMNCMfJhgb.png",
+    "formIscrizione": "https://www.pagepersonnel.it/user/register",
+    "settori": [
+      "Ricerca"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Cesare Battisti, 3",
+        "telefono": "0236260606"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "nome": "IG SAMSIC HR",
+    "sito": "https://samsic-hr.it/",
+    "descrizione": "Servizi HR integrati.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/IT0exJ5scFZsxxBDPmmp.png",
+    "formIscrizione": "https://samsic-hr.it/candidati/",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Astichello, 16",
+        "telefono": "049 986 3515"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "nome": "ARCHIMEDE SPA",
+    "sito": "https://archimedespa.it/",
+    "descrizione": "Servizi completi per il lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/fcoSoH95mTgXhmDZ2tgf.jpeg",
+    "formIscrizione": "https://portale.archimedespa.it/candidatura-spontanea",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Piovese, 106",
+        "telefono": "049 802 5561"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "nome": "OASI LAVORO",
+    "sito": "https://www.oasilavoro.it/",
+    "descrizione": "Lavoro e formazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/tj9kIcJYZf61PgLGgVrV.png",
+    "formIscrizione": "https://www.oasilavoro.it/lavoratori",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Viale dell'Industria, 23",
+        "telefono": "049 807 5523"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "nome": "TEMPORARY SPA",
+    "sito": "https://www.temporary.it/",
+    "descrizione": "Esperienza trentennale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/SBWy90s4LyxSRESqUBdc.jpeg",
+    "formIscrizione": "https://careers.temporary.it/job-seekers.php",
+    "settori": [
+      "Temporaneo"
+    ],
+    "sedi": [
+      {
+        "citta": "Venezia",
+        "indirizzo": "Via Daniele Manin, 38/a",
+        "telefono": "041 894 6902"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "nome": "EUROINTERIM",
+    "sito": "https://www.eurointerim.it/",
+    "descrizione": "Somministrazione e ricerca.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/AVbdDgyoaLE0GiOJkwav.png",
+    "formIscrizione": "https://portale.eurointerim.it/entrance/register.aspx",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Rubano",
+        "indirizzo": "Via Rossi, 1",
+        "telefono": "049 631519"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "nome": "CAREER ITALIA",
+    "sito": "https://www.careeritalia.it/",
+    "descrizione": "Ricerca e selezione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/u8SRqH0hK9jKoP2iN4K2.png",
+    "formIscrizione": "https://www.careeritalia.it/candidati/registrazione",
+    "settori": [
+      "Ricerca"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Belzoni, 9",
+        "telefono": "049 875 2211"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "nome": "KELLY SERVICES",
+    "sito": "https://www.kellyservices.it/",
+    "descrizione": "Leader globale in HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/nEjSazTACoutHrdHNaMH.jpeg",
+    "formIscrizione": "https://www.kellyservices.it/candidati/",
+    "settori": [
+      "Staffing"
+    ],
+    "sedi": [
+      {
+        "citta": "Cittadella",
+        "indirizzo": "Via Borgo Treviso, 106",
+        "telefono": "049 940 4276"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "nome": "OBIETTIVO LAVORO",
+    "sito": "https://obiettivolavoro.it/",
+    "descrizione": "Formazione e placement.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/4QOO83Bj2bhPtaiGT9zo.png",
+    "formIscrizione": "https://obiettivolavoro.it/signin-signup/",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Giovanni Savelli, 26",
+        "telefono": "049 780 8599"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "nome": "NHRG",
+    "sito": "https://www.nhrg.it/",
+    "descrizione": "Nuova generazione HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/rIp56iTVYUnDcoI4KTSQ.png",
+    "formIscrizione": "https://www.nhrg.it/candidati",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Niccolò Tommaseo, 98/A",
+        "telefono": "049 099 0215"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "nome": "TEMPJOB",
+    "sito": "https://www.tempjob.it/",
+    "descrizione": "Lavoro temporaneo.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/I90yLNyMp27APceUJAEU.png",
+    "formIscrizione": "https://tempjob.intiway.it/TempJob/view.candidato.registrazione.do",
+    "settori": [
+      "Temporaneo"
+    ],
+    "sedi": [
+      {
+        "citta": "Limena",
+        "indirizzo": "Via del Santo, 12",
+        "telefono": "049 520 7832"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "nome": "CENTRO STUDI",
+    "sito": "https://www.centrostudisrl.com/",
+    "descrizione": "Formazione professionale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/Bz2MdgqQ24PcYCJgSYHd.png",
+    "formIscrizione": "https://www.centrostudisrl.com/contatti",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Campodarsego",
+        "indirizzo": "Via G.Verdi, 117",
+        "telefono": "049 922 1210"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "nome": "LAVORO PIU'",
+    "sito": "https://www.lavoropiu.it/",
+    "descrizione": "Somministrazione nazionale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/jyvR1XKky4krnXlEO3J7.png",
+    "formIscrizione": "https://oliverweb.lavoropiu.it/Consenso",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Monselice",
+        "indirizzo": "Piazza Ossicella, 25",
+        "telefono": "0429 781061"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "nome": "METIORPLAN",
+    "sito": "https://www.metiorplan.it/",
+    "descrizione": "Consulenza HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/2G3L5cdqyqgZCYPsSRXs.png",
+    "formIscrizione": "https://www.metiorplan.it/contatti",
+    "settori": [
+      "Consulenza"
+    ],
+    "sedi": [
+      {
+        "citta": "Albignasego",
+        "indirizzo": "Via Galileo Galilei 93/A",
+        "telefono": "0493005204"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "nome": "AREAJOB",
+    "sito": "https://areajob.it/",
+    "descrizione": "Agenzia territoriale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/r60QaBdlCsDDPOlhnDWN.png",
+    "formIscrizione": "https://areajob.it/iscriviti/",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Conselve",
+        "indirizzo": "Via Vittorio Emanuele II, 101/B",
+        "telefono": "049 535 2234"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "nome": "STAFF SPA",
+    "sito": "https://www.staff.it/",
+    "descrizione": "Somministrazione lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/TGCCQ9ycuedjwoOkimXE.png",
+    "formIscrizione": "https://careers.staff.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Monselice",
+        "indirizzo": "Via Guglielmo Marconi, 1/A",
+        "telefono": "0429 166 6001"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "nome": "QJOB",
+    "sito": "https://www.qjob.it/",
+    "descrizione": "Agenzia locale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/nFcId29ZrxVHE4wi9qqn.png",
+    "formIscrizione": "https://www.qjob.it/candidate/subscribe/",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Elisa Benato, 3",
+        "telefono": "049 744 1600"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "nome": "ONLY JOB",
+    "sito": "https://onlyjob.it/",
+    "descrizione": "Servizi per il lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/Te2JhlyG5RqM3JEv8RZs.png",
+    "formIscrizione": "https://careers.onlyjob.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Monselice",
+        "indirizzo": "Via Luigi Cadorna, 15",
+        "telefono": "0429 653397"
+      }
+    ]
+  }
+];
+
+// Service Worker & PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    // Crea manifest dinamico
+    const manifestJson = {
+      name: "Agenzie Lavoro Veneto",
+      short_name: "Agenzie",
+      description: "Trova lavoro con le migliori agenzie del Veneto",
+      start_url: "./",
+      display: "standalone",
+      background_color: "#6366f1",
+      theme_color: "#6366f1",
+      orientation: "portrait",
+      icons: [
+        {
+          src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='192' height='192' rx='42'/%3E%3Ctext x='96' y='130' font-family='system-ui' font-size='100' font-weight='bold' fill='white' text-anchor='middle'%3E💼%3C/text%3E%3C/svg%3E",
+          sizes: "192x192",
+          type: "image/svg+xml",
+          purpose: "any maskable"
+        },
+        {
+          src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%236366f1'/%3E%3Cstop offset='100%25' style='stop-color:%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23g)' width='512' height='512' rx='112'/%3E%3Ctext x='256' y='350' font-family='system-ui' font-size='280' font-weight='bold' fill='white' text-anchor='middle'%3E💼%3C/text%3E%3C/svg%3E",
+          sizes: "512x512",
+          type: "image/svg+xml"
+        }
+      ]
+    };
+    
+    const manifestBlob = new Blob([JSON.stringify(manifestJson)], { type: 'application/json' });
+    const manifestURL = URL.createObjectURL(manifestBlob);
+    document.getElementById('manifest-placeholder').setAttribute('href', manifestURL);
+  });
+}
+
+// Mostra banner install su iOS
+function checkInstallPrompt() {
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  const isInStandaloneMode = ('standalone' in window.navigator) && (window.navigator.standalone);
+  
+  if (isIOS && !isInStandaloneMode) {
+    const banner = document.getElementById('installBanner');
+    const dismissed = localStorage.getItem('installBannerDismissed');
+    
+    if (!dismissed) {
+      banner.classList.remove('hidden');
+      setTimeout(() => banner.classList.add('show'), 500);
+    }
+  }
+}
+
+function closeInstallBanner() {
+  const banner = document.getElementById('installBanner');
+  banner.classList.remove('show');
+  setTimeout(() => banner.classList.add('hidden'), 300);
+  localStorage.setItem('installBannerDismissed', 'true');
+}
+
+function updateApp() {
+  location.reload(true);
+}
+
+// Resto del codice dell'app
+let searchTerm = '';
+let selectedSector = '';
+let currentAgency = null;
+
+function getProvincia(sede) {
+  const indirizzo = sede.indirizzo || '';
+  const match = indirizzo.match(/\b(PD|VE|VR|VI|TV|RO|BL)\b/);
+  if (match) return match[1];
+  
+  const cittaUpper = (sede.citta || '').toUpperCase();
+  const province = {
+    'BL': ['BELLUNO', 'FELTRE', 'SEDICO'],
+    'PD': ['PADOVA', 'MONSELICE', 'CITTADELLA', 'CAMPOSAMPIERO', 'MESTRINO'],
+    'RO': ['ROVIGO'],
+    'TV': ['TREVISO', 'CASTELFRANCO', 'CONEGLIANO', 'MONTEBELLUNA'],
+    'VE': ['VENEZIA', 'MESTRE', 'MIRANO', 'SAN DONA'],
+    'VI': ['VICENZA', 'BASSANO', 'SCHIO', 'ARZIGNANO', 'THIENE'],
+    'VR': ['VERONA', 'LEGNAGO', 'SAN BONIFACIO', 'VILLAFRANCA']
+  };
+  
+  for (const [prov, cities] of Object.entries(province)) {
+    for (const city of cities) {
+      if (cittaUpper.includes(city)) return prov;
+    }
+  }
+  return 'ZZ';
+}
+
+function getProvinciaName(code) {
+  const names = { 'PD': 'Padova', 'VE': 'Venezia', 'VR': 'Verona', 'VI': 'Vicenza', 'TV': 'Treviso', 'RO': 'Rovigo', 'BL': 'Belluno' };
+  return names[code] || code;
+}
+
+function init() {
+  renderStats();
+  renderSectorChips();
+  renderAgencies();
+  setupListeners();
+  checkInstallPrompt();
+  
+  // Controlla versione
+  const savedVersion = localStorage.getItem('appVersion');
+  if (savedVersion && savedVersion !== APP_VERSION) {
+    document.getElementById('updateBanner').classList.remove('hidden');
+  }
+  localStorage.setItem('appVersion', APP_VERSION);
+}
+
+function renderStats() {
+  const totalSedi = agencies.reduce((s, a) => s + (a.sedi?.length || 0), 0);
+  const sectors = [...new Set(agencies.flatMap(a => a.settori))];
+  
+  document.getElementById('statsCards').innerHTML = `
+    <div class="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-4 text-white">
+      <div class="text-3xl font-bold">${agencies.length}</div>
+      <div class="text-xs opacity-90">Agenzie</div>
+    </div>
+    <div class="bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl p-4 text-white">
+      <div class="text-3xl font-bold">${totalSedi}</div>
+      <div class="text-xs opacity-90">Sedi</div>
+    </div>
+    <div class="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl p-4 text-white">
+      <div class="text-3xl font-bold">${sectors.length}</div>
+      <div class="text-xs opacity-90">Settori</div>
+    </div>
+  `;
+}
+
+function renderSectorChips() {
+  const sectors = [...new Set(agencies.flatMap(a => a.settori))];
+  const container = document.getElementById('sectorsChips');
+  
+  container.innerHTML = `
+    <button onclick="selectSector('')" class="${!selectedSector ? 'chip-active' : 'bg-gray-100 text-gray-700'} px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
+      Tutti
+    </button>
+    ${sectors.map(s => `
+      <button onclick="selectSector('${s}')" class="${selectedSector === s ? 'chip-active' : 'bg-gray-100 text-gray-700'} px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
+        ${s}
+      </button>
+    `).join('')}
+  `;
+}
+
+function selectSector(sector) {
+  selectedSector = sector;
+  renderSectorChips();
+  renderAgencies();
+}
+
+function renderAgencies() {
+  const filtered = agencies.filter(a => {
+    const matchSearch = a.nome.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                       a.descrizione.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchSector = !selectedSector || a.settori.includes(selectedSector);
+    return matchSearch && matchSector;
+  });
+  
+  const grid = document.getElementById('agenciesGrid');
+  const empty = document.getElementById('emptyState');
+  
+  if (filtered.length === 0) {
+    grid.classList.add('hidden');
+    empty.classList.remove('hidden');
+    return;
+  }
+  
+  empty.classList.add('hidden');
+  grid.classList.remove('hidden');
+  
+  grid.innerHTML = filtered.map((a, i) => `
+    <div class="card-appear bg-white rounded-3xl overflow-hidden shadow-sm" style="animation-delay: ${i * 0.05}s">
+      ${a.logo ? `
+        <div class="h-36 bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-6">
+          <img src="${a.logo}" alt="${a.nome}" class="max-h-28 max-w-full object-contain" onerror="this.parentElement.innerHTML='<div class=&quot;w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl flex items-center justify-center text-white text-2xl font-bold&quot;>${a.nome.substring(0, 2)}</div>'"/>
+        </div>
+      ` : ''}
+      
+      <div class="p-5">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">${a.nome}</h3>
+        
+        ${a.settori.length > 0 ? `
+          <div class="flex flex-wrap gap-2 mb-3">
+            ${a.settori.slice(0, 2).map(s => `
+              <span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">
+                ${s}
+              </span>
+            `).join('')}
+            ${a.settori.length > 2 ? `<span class="text-xs text-gray-500 self-center">+${a.settori.length - 2}</span>` : ''}
+          </div>
+        ` : ''}
+        
+        <p class="text-sm text-gray-600 mb-4 line-clamp-2">${a.descrizione}</p>
+        
+        <div class="flex gap-2">
+          ${a.sedi && a.sedi.length > 0 ? `
+            <button onclick="openSedi(${a.id})" class="flex-1 py-3 bg-indigo-600 text-white rounded-2xl font-semibold text-sm flex items-center justify-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              </svg>
+              ${a.sedi.length} ${a.sedi.length === 1 ? 'Sede' : 'Sedi'}
+            </button>
+          ` : ''}
+          ${a.sito ? `
+            <a href="${a.sito}" target="_blank" class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center">
+              <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          ` : ''}
+        </div>
+        
+        ${a.formIscrizione ? `
+          <a href="${a.formIscrizione}" target="_blank" class="mt-3 block w-full py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-2xl font-semibold text-sm text-center">
+            ✉️ Candidati Ora
+          </a>
+        ` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function openSedi(id) {
+  currentAgency = agencies.find(a => a.id === id);
+  if (!currentAgency) return;
+  
+  document.getElementById('sediAgencyName').textContent = currentAgency.nome;
+  document.getElementById('sediCount').textContent = `${currentAgency.sedi.length} ${currentAgency.sedi.length === 1 ? 'sede' : 'sedi'} in Veneto`;
+  
+  let currentProv = '';
+  const sediHtml = currentAgency.sedi.map(s => {
+    const prov = getProvincia(s);
+    let html = '';
+    
+    if (prov !== currentProv && prov !== 'ZZ') {
+      if (currentProv !== '') html += '<div class="h-px bg-gray-200 my-4"></div>';
+      html += `<div class="text-xs font-bold text-indigo-600 uppercase tracking-wide mb-3">Provincia di ${getProvinciaName(prov)}</div>`;
+      currentProv = prov;
+    }
+    
+    html += `
+      <div class="bg-gray-50 rounded-2xl p-4 mb-3">
+        <div class="font-bold text-gray-900 mb-2">${s.citta}</div>
+        <div class="space-y-2 text-sm text-gray-600">
+          <div class="flex items-start gap-2">
+            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            </svg>
+            <span>${s.indirizzo}</span>
+          </div>
+          ${s.telefono ? `
+            <a href="tel:${s.telefono}" class="flex items-center gap-2 text-indigo-600">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              ${s.telefono}
+            </a>
+          ` : ''}
+          ${s.email ? `
+            <a href="mailto:${s.email}" class="flex items-center gap-2 text-indigo-600 break-all">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              ${s.email}
+            </a>
+          ` : ''}
+          ${s.googleMaps ? `
+            <a href="${s.googleMaps}" target="_blank" class="flex items-center gap-2 text-indigo-600 font-medium">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              Vedi su Maps
+            </a>
+          ` : ''}
+        </div>
+      </div>
+    `;
+    
+    return html;
+  }).join('');
+  
+  document.getElementById('sediContent').innerHTML = sediHtml;
+  
+  const sheet = document.getElementById('sediSheet');
+  const bottomSheet = sheet.querySelector('.bottom-sheet');
+  sheet.classList.remove('hidden');
+  setTimeout(() => bottomSheet.classList.add('active'), 10);
+}
+
+function closeSedi() {
+  const sheet = document.getElementById('sediSheet');
+  const bottomSheet = sheet.querySelector('.bottom-sheet');
+  bottomSheet.classList.remove('active');
+  setTimeout(() => sheet.classList.add('hidden'), 300);
+}
+
+function setupListeners() {
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    searchTerm = e.target.value;
+    renderAgencies();
+  });
+  
+  document.getElementById('filterBtn').addEventListener('click', () => {
+    const sheet = document.getElementById('filterSheet');
+    const bottomSheet = sheet.querySelector('.bottom-sheet');
+    sheet.classList.remove('hidden');
+    setTimeout(() => bottomSheet.classList.add('active'), 10);
+    
+    const sectors = [...new Set(agencies.flatMap(a => a.settori))];
+    document.getElementById('filterSectors').innerHTML = sectors.map(s => `
+      <button onclick="selectSector('${s}'); closeFilters();" class="${selectedSector === s ? 'chip-active' : 'bg-gray-100 text-gray-700'} px-4 py-2 rounded-full text-sm font-medium">
+        ${s}
+      </button>
+    `).join('');
+  });
+}
+
+function closeFilters() {
+  const sheet = document.getElementById('filterSheet');
+  const bottomSheet = sheet.querySelector('.bottom-sheet');
+  bottomSheet.classList.remove('active');
+  setTimeout(() => sheet.classList.add('hidden'), 300);
+}
+
+function clearFilters() {
+  selectedSector = '';
+  renderSectorChips();
+  renderAgencies();
+  closeFilters();
+}
+
+window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
