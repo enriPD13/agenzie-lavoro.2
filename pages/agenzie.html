@@ -1,0 +1,80 @@
+<!-- Top Bar -->
+<div class="fixed top-0 left-0 right-0 bg-white shadow-sm z-40 safe-area-top">
+  <div class="px-4 py-3">
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl">💼</div>
+        <div>
+          <h1 class="text-2xl font-bold text-gray-900">Agenzie per il Lavoro</h1>
+          <p class="text-xs text-gray-500">Regione Veneto</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="relative">
+      <input 
+        type="text" 
+        id="searchInput"
+        placeholder="🔍 Cerca città (es. Padova, Venezia...)"
+        class="w-full px-4 py-3 bg-gray-100 rounded-2xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="pt-36 pb-24 px-4" style="min-height: 100vh; background: #f9fafb;">
+  
+  <!-- Stats -->
+  <div class="grid grid-cols-3 gap-3 mb-6" id="statsCards"></div>
+  
+  <!-- Grid -->
+  <div id="agenciesGrid" class="space-y-4"></div>
+  
+  <!-- Loading -->
+  <div id="loadingAgenzie" class="text-center py-12">
+    <div class="inline-block w-12 h-12 border-4 border-indigo-200 border-t-indigo-600 rounded-full animate-spin mb-4"></div>
+    <p class="text-gray-600">Caricamento...</p>
+  </div>
+  
+</div>
+
+<!-- Bottom Sheet -->
+<div id="sediSheet" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" onclick="if(event.target === this) closeSedi()">
+  <div class="bottom-sheet absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[85vh] transition-transform duration-300 transform translate-y-full">
+    <div class="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mt-3 mb-4"></div>
+    <div class="px-6 pb-4 border-b">
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold" id="sediAgencyName"></h3>
+          <p class="text-sm text-gray-500" id="sediCount"></p>
+        </div>
+        <button onclick="closeSedi()" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="overflow-y-auto p-6" style="max-height: calc(85vh - 100px);" id="sediContent"></div>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white border-t z-40 safe-area-bottom">
+  <div class="flex justify-around py-2">
+    <button onclick="navigateToHome()" class="flex flex-col items-center py-2 px-4 text-indigo-600">
+      <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+      </svg>
+      <span class="text-xs font-semibold">Home</span>
+    </button>
+  </div>
+</nav>
+
+<style>
+.bottom-sheet.active { transform: translateY(0) !important; }
+@keyframes cardAppear { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.card-appear { animation: cardAppear 0.4s ease-out forwards; opacity: 0; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+</style>
