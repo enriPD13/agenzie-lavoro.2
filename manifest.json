@@ -1,0 +1,61 @@
+{
+  "name": "JobApp - Trova Lavoro in Veneto",
+  "short_name": "JobApp",
+  "description": "App per la ricerca di lavoro in Veneto. Agenzie per il lavoro e Centri Per l'Impiego.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#6366f1",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "it-IT",
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "Agenzie per il Lavoro",
+      "short_name": "Agenzie",
+      "description": "Cerca agenzie per il lavoro",
+      "url": "/?page=agenzie",
+      "icons": [
+        {
+          "src": "images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Centri Per l'Impiego",
+      "short_name": "CPI",
+      "description": "Trova il CPI più vicino",
+      "url": "/?page=cpi",
+      "icons": [
+        {
+          "src": "images/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

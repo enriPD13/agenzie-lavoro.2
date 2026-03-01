@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="JobApp - Trova lavoro in Veneto. Agenzie per il lavoro e Centri Per l'Impiego in tutte le province venete.">
+  <meta name="keywords" content="lavoro veneto, agenzie lavoro, centri impiego, job, occupazione, padova, venezia, verona, vicenza, treviso, rovigo, belluno">
+  <meta name="author" content="Enrico">
+  
+  <!-- PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="JobApp">
+  <meta name="theme-color" content="#6366f1">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JobApp - Trova Lavoro in Veneto">
+  <meta property="og:description" content="App per la ricerca di lavoro in Veneto. Agenzie per il lavoro e Centri Per l'Impiego.">
+  <meta property="og:url" content="https://tuodominio.github.io/jobapp">
+  
+  <title>JobApp - Trova Lavoro in Veneto</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="images/icon-192.png">
+  <link rel="icon" type="image/png" href="images/icon-192.png">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 overflow-hidden">
+  
+  <!-- Container principale -->
+  <div id="app-container"></div>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/agenzie.js"></script>
+  <script src="js/cpi.js"></script>
+  <script src="js/auth.js"></script>
+  
+  <!-- Init -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      AppMain.init();
+    });
+  </script>
+  
+</body>
+</html>

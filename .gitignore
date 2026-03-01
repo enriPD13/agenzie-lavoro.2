@@ -1,0 +1,59 @@
+# JobApp - Git Ignore
+
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+*-backup.*
+
+# Node modules (se usiamo npm in futuro)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output (se aggiungiamo build process)
+dist/
+build/
+*.zip
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Test coverage
+coverage/
+
+# File temporanei sviluppo
+test.html
+demo.html
+scratch/
+temp/
