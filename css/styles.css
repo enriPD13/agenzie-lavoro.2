@@ -1,0 +1,124 @@
+/* ============================================
+   JobApp - Styles
+   Tutti gli stili personalizzati dell'app
+   ============================================ */
+
+/* ----- Base Styles ----- */
+* {
+  font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+body {
+  background: transparent;
+  min-height: -webkit-fill-available;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- Safe Area iOS/Android ----- */
+.safe-area-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ----- Logo JobApp ----- */
+.jobapp-title {
+  color: white;
+  text-shadow: 
+    3px 3px 0 #6366f1, -3px 3px 0 #6366f1,
+    3px -3px 0 #6366f1, -3px -3px 0 #6366f1,
+    4px 4px 0 #8b5cf6, -4px 4px 0 #8b5cf6,
+    4px -4px 0 #8b5cf6, -4px -4px 0 #8b5cf6,
+    0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* ----- Category Buttons ----- */
+.category-button {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  cursor: pointer;
+}
+
+.category-button::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b, #ec4899, #8b5cf6);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.category-button:hover::before {
+  inset: -4px;
+  padding: 4px;
+}
+
+.category-button:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.category-button:active {
+  transform: scale(1.05) translateY(-2px);
+}
+
+.category-icon {
+  display: inline-block;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+
+.category-button:hover .category-icon {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
+}
+
+.category-button-main::before {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899, #f59e0b) !important;
+}
+
+/* ----- Utility ----- */
+.hidden {
+  display: none !important;
+}
+
+.fade-out {
+  animation: fadeOut 0.6s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* ----- Scrollbar ----- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 4px;
+}
+
+/* ----- Accessibility ----- */
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
