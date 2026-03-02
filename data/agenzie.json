@@ -1,0 +1,1140 @@
+[
+  {
+    "id": 1,
+    "nome": "MANPOWER",
+    "sito": "https://www.manpower.it/",
+    "descrizione": "Leader globale nella gestione delle risorse umane.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/cZMQA1Krk5mSEbSLXzDg.png",
+    "formIscrizione": "https://www.manpower.it/it/registrati",
+    "settori": [
+      "Produzione",
+      "Tecnica",
+      "Logistica"
+    ],
+    "sedi": [
+      {
+        "citta": "Belluno",
+        "indirizzo": "V.le Giuseppe Fantuzzi, 7, 32100 Belluno BL",
+        "telefono": "0437943753",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/8wSc89syRJCdpUv8A"
+      },
+      {
+        "citta": "Sedico",
+        "indirizzo": "Zona Industriale Gresal, 5L, 32036 Sedico BL",
+        "telefono": "3406047967",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/KW2rWNgmmZQrdube6"
+      },
+      {
+        "citta": "Camposampiero",
+        "indirizzo": "Via Andrea Palladio, 18, 35012 Camposampiero PD",
+        "telefono": "0499302809",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/3DiFESa9KMLHyNDj7"
+      },
+      {
+        "citta": "Cittadella",
+        "indirizzo": "Via Borgo Padova, 33, 35013 Cittadella PD",
+        "telefono": "",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/aK4xhmKEm967RF5H6"
+      },
+      {
+        "citta": "Mestrino",
+        "indirizzo": "Piazza del Mercato, 21, 35035 Mestrino PD",
+        "telefono": "0499004654",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/gstKqNeQbVfvtL8W8"
+      },
+      {
+        "citta": "Monselice",
+        "indirizzo": "Via Squero, 10/C, 35043 Monselice PD",
+        "telefono": "0429783099",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/k1k8i8BGsb1qddPZ6"
+      },
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Trieste, 47, 35121 Padova PD",
+        "telefono": "049845661",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/k2eQdf46qXbBQzUL6"
+      },
+      {
+        "citta": "Piove di Sacco",
+        "indirizzo": "Presso Crazy Lab, Via F. Petrarca, 37, 35028 Piove di Sacco PD",
+        "telefono": "049845661",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/RStBVUY9rnLbek2n9"
+      },
+      {
+        "citta": "Rovigo",
+        "indirizzo": "Corso del Popolo, 337, 45100 Rovigo RO",
+        "telefono": "0425422985",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/TW7BhLtMVrTGyqbz6"
+      },
+      {
+        "citta": "Castelfranco Veneto",
+        "indirizzo": "Via Ugo Morello, 14, 31033 Castelfranco Veneto TV",
+        "telefono": "0423724028",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/W7EK7aXciMis89sf6"
+      },
+      {
+        "citta": "Conegliano",
+        "indirizzo": "Via Giuseppe Garibaldi, 8, 31015 Conegliano TV",
+        "telefono": "0438412989",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ggdsCRa7994cAxrS6"
+      },
+      {
+        "citta": "Montebelluna",
+        "indirizzo": "Via Luigi Pastro, 4, 31044 Montebelluna TV",
+        "telefono": "0423614069",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/rpEbK6UigYzr6Zyb8"
+      },
+      {
+        "citta": "Oderzo",
+        "indirizzo": "Via Gabriele D'Annunzio, 8, 31046 Oderzo TV",
+        "telefono": "0422816024",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/zwjtaLJasUqTrVET6"
+      },
+      {
+        "citta": "Treviso",
+        "indirizzo": "Viale Nino Bixio, 37, 31100 Treviso TV",
+        "telefono": "0422419672",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/YdfF8VDd5KRdZ2M1A"
+      },
+      {
+        "citta": "Mirano",
+        "indirizzo": "Via A. Gramsci, 36/B, 30035 Mirano VE",
+        "telefono": "0415728860",
+        "email": "",
+        "googleMaps": "0415728860"
+      },
+      {
+        "citta": "San Donà di Piave",
+        "indirizzo": "Via Jesolo, 23, 30027 San Donà di Piave VE",
+        "telefono": "0421331759",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/LgzTfhYkA7RdBfDd8"
+      },
+      {
+        "citta": "Venezia",
+        "indirizzo": "Corso del Popolo, 12, 30172 Venezia VE",
+        "telefono": "0415055752",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/11H6cYfGmYjd4KQ79"
+      },
+      {
+        "citta": "Arzignano",
+        "indirizzo": "Via IV Martiri, 41, 36071 Arzignano VI",
+        "telefono": "0444670829",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/vc2otre8X5VNQeWp6"
+      },
+      {
+        "citta": "Bassano Del Grappa",
+        "indirizzo": "Via Mure del Bastion, 24, 36061 Bassano del Grappa VI",
+        "telefono": "0424526176",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/phY2KwtWBKbRjEPy6"
+      },
+      {
+        "citta": "Montecchio Maggiore",
+        "indirizzo": "Viale Stazione, Via T. Edison, 33, 36075 Montecchio Maggiore VI",
+        "telefono": "0444694507",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/AjGJSwGfNi7EBFHc8"
+      },
+      {
+        "citta": "Noventa Vicentina",
+        "indirizzo": "Via Corte Ferrighi, 2, 36025 Noventa Vicentina VI",
+        "telefono": "0444760017",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/B5tiYJKAPKrqFY28A"
+      },
+      {
+        "citta": "Schio",
+        "indirizzo": "Via Venezia, 140, 36015 Schio VI",
+        "telefono": "0445532435",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/9DxstLcQCzTktyhU7"
+      },
+      {
+        "citta": "Thiene",
+        "indirizzo": "Via Vittorio Veneto, 24, 36016 Thiene VI",
+        "telefono": "0445361280",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/SEVwDazp65ziC5YD7"
+      },
+      {
+        "citta": "Vicenza",
+        "indirizzo": "Viale dell'Industria, 67, 36100 Vicenza VI",
+        "telefono": "0444588201",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/zYXbTzyoVz8GSFNTA"
+      },
+      {
+        "citta": "Bussolengo",
+        "indirizzo": "Via Verona, 39/B, 37012 Bussolengo VR",
+        "telefono": "0456703603",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ftSUsMkR8XF9B98n6"
+      },
+      {
+        "citta": "Legnago",
+        "indirizzo": "Viale Don Minzoni, 5, 37045 Legnago VR",
+        "telefono": "0442600290",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/edaWJX6bXG1XffFH7"
+      },
+      {
+        "citta": "Nogara",
+        "indirizzo": "Via Greppa, 5, 37054 Nogara VR",
+        "telefono": "0442510658",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/pnoUc6xrEnsTfnxz7"
+      },
+      {
+        "citta": "Nogara",
+        "indirizzo": "Via Greppa, 5, 37054 Nogara VR",
+        "telefono": "0442510658",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/FurA2fDrG2YsHQqKA"
+      },
+      {
+        "citta": "San Bonifacio",
+        "indirizzo": "Via Roma, 78, 37047 San Bonifacio VR",
+        "telefono": "0456104543",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ENDwaoxusnZbGFKL8"
+      },
+      {
+        "citta": "Verona",
+        "indirizzo": "Via Locatelli, 10/12, 37100 Verona VR",
+        "telefono": "0458060008",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/n4xrHr6DAckJ6ZVg9"
+      },
+      {
+        "citta": "Villafranca di Verona",
+        "indirizzo": "Via Quadrato, 84, 37069 Villafranca di Verona VR",
+        "telefono": "0456304678",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/QiK458wsyoizQxUD7"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "GIGROUP",
+    "sito": "https://www.gigroup.it/",
+    "descrizione": "Primo gruppo italiano nel settore HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/DOcrcDCpeTjoFrGUSdXH.png",
+    "formIscrizione": "https://it.mygigroup.com/registration",
+    "settori": [
+      "Produzione",
+      "Tecnica"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 10",
+        "telefono": "0498750146"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "RANDSTAD",
+    "sito": "https://www.randstad.it/",
+    "descrizione": "Leader mondiale nei servizi HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/9Rwzy8AORagGPCjxqzGn.png",
+    "formIscrizione": "https://extranet.randstad.it/Candidato/Registrazione/Comincia-da-qui",
+    "settori": [
+      "Manifatturiero",
+      "Tecnico"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Piazza Aldo Moro, 10",
+        "telefono": "049 098 8240"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "ADECCO",
+    "sito": "https://www.adecco.it/",
+    "descrizione": "Il più grande gruppo al mondo nella gestione HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/qnGmMPaEg79XEPDTks5p.png",
+    "formIscrizione": "https://candidate.adecco.it/candidate/register.asp",
+    "settori": [
+      "Operativo",
+      "Retail"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Prima Strada, 35, 35129 Padova PD",
+        "telefono": "0492128920",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/JYZjT49WAJ7DfEgY8"
+      },
+      {
+        "citta": "Rubano",
+        "indirizzo": "Via Paolo da Sarmeola, 2, 35030 Rubano PD",
+        "telefono": "0498976650",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/fSDKLzoet2xJXzqA9"
+      },
+      {
+        "citta": "Monselice",
+        "indirizzo": "Via G. Garibaldi, 26, 35043 Monselice PD",
+        "telefono": "0429784306",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/jjggt9ws8mZagRAg6"
+      },
+      {
+        "citta": "Piove di Sacco",
+        "indirizzo": "Via Cavour, 11, 35028 Piove di Sacco PD",
+        "telefono": "0499701491",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/PoazfAFyQ2BP6AgAA"
+      },
+      {
+        "citta": "Mirano",
+        "indirizzo": "Via A. Gramsci, 62, 30035 Mirano VE",
+        "telefono": "0415702829",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/6oVd3xBBgGxyJ67D7"
+      },
+      {
+        "citta": "Castelfranco Veneto",
+        "indirizzo": "Via S. Pio X, 64, 31033 Castelfranco Veneto TV",
+        "telefono": "0423723707",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/Hn2623Up8bXvfTA97"
+      },
+      {
+        "citta": "Vicenza",
+        "indirizzo": "Viale Sant' Agostino, 95, 36100 Vicenza VI",
+        "telefono": "0444305385",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/WBuoM7j56CNQeQ5c6"
+      },
+      {
+        "citta": "Venezia",
+        "indirizzo": "Piazzale Generale Enrico Cialdini, 3, 30174 Venezia VE",
+        "telefono": "0415055833",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/srVi7q5qNBS8JfDw8"
+      },
+      {
+        "citta": "Camposampiero",
+        "indirizzo": "Contrà Rialto, 2, 35012 Camposampiero PD",
+        "telefono": "0499301459",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/g4uYfmFRyP5mLKmh8"
+      },
+      {
+        "citta": "Cittadella",
+        "indirizzo": "Via L. Zurlo, 17, 35013 Cittadella PD",
+        "telefono": "0495970788",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/EUw1QA6wg2ckx8Ze9"
+      },
+      {
+        "citta": "Treviso",
+        "indirizzo": "Viale Brigata Marche, 41, 31100 Treviso TV",
+        "telefono": "0422541021",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/CcLCSpUnihTeux6J8"
+      },
+      {
+        "citta": "Arzignano",
+        "indirizzo": "Via Sega, 9, 36071 Arzignano VI",
+        "telefono": "0444451962",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/77GTp3tJUZ8BRSQ1A"
+      },
+      {
+        "citta": "Montecchio Maggiore",
+        "indirizzo": "Viale Trieste, 46, 36075 Montecchio Maggiore VI",
+        "telefono": "0444492929",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/f154xmyJAstQwVnr7"
+      },
+      {
+        "citta": "Thiene",
+        "indirizzo": "Via Montello, 18, 36016 Thiene VI",
+        "telefono": "0445362266",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/rR2MU9CjDMTr2bPZA"
+      },
+      {
+        "citta": "Bassano Del Grappa",
+        "indirizzo": "Via IV Armata, 50, 36061 Bassano del Grappa VI",
+        "telefono": "0424514662",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/BXpitD8kLGrkPHb79"
+      },
+      {
+        "citta": "San Donà di Piave",
+        "indirizzo": "Via Carlo Vizzotto, 4, 30027 San Donà di Piave VE",
+        "telefono": "042140001",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ubb2uAyJrq22kpp1A"
+      },
+      {
+        "citta": "San Bellino",
+        "indirizzo": "Via Roma, 182, 45020 San Bellino RO",
+        "telefono": "",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/qUwoSeECMwriuZbT7"
+      },
+      {
+        "citta": "Rovigo",
+        "indirizzo": "Via Giovanni Pascoli, 1, 45100 Rovigo RO",
+        "telefono": "042533762",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/3RJCcENy3ff2izHG6"
+      },
+      {
+        "citta": "Conegliano",
+        "indirizzo": "Via Cadore, 15, 31015 Conegliano TV",
+        "telefono": "043831720",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/ATTpdGNMLcSyNLfp6"
+      },
+      {
+        "citta": "San Bonifacio",
+        "indirizzo": "Via Camporosolo, 70, 37047 San Bonifacio VR",
+        "telefono": "0456106205",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/tzX78PKNFY4D5Cw47"
+      },
+      {
+        "citta": "San Martino Buon Albergo",
+        "indirizzo": "Via Nazionale, 21, 37036 San Martino Buon Albergo VR",
+        "telefono": "045991464",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/pVrWQpWn7awLytcm8"
+      },
+      {
+        "citta": "Belluno",
+        "indirizzo": "Via Vittorio Veneto, 65, 32100 Belluno BL",
+        "telefono": "0437950544",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/oA8zURMqHVNVeM849"
+      },
+      {
+        "citta": "Legnago",
+        "indirizzo": "Viale dei Caduti, 73, 37045 Legnago VR",
+        "telefono": "0442602000",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/EMUGiu7Y8vooX8M27"
+      },
+      {
+        "citta": "Schio",
+        "indirizzo": "Via Lago Trasimeno, 42, 36015 Schio VI",
+        "telefono": "0445531937",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/t2ZGJAnGeMrQv61t5"
+      },
+      {
+        "citta": "Verona",
+        "indirizzo": "Corso Porta Nuova, 72, 37122 Verona VR",
+        "telefono": "0458005462",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/bGobv3PUarim9mpn8"
+      },
+      {
+        "citta": "Montebelluna",
+        "indirizzo": "Via Risorgimento, 4, 31044 Montebelluna TV",
+        "telefono": "0423600225",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/LS35d6yjjkmaRvSA8"
+      },
+      {
+        "citta": "Villafranca di Verona",
+        "indirizzo": "Via Quadrato, 74-74/A, 37069 Villafranca di Verona VR",
+        "telefono": "0456305401",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/15o1RCLMuBHKqahW7"
+      },
+      {
+        "citta": "Nogara",
+        "indirizzo": "Via C.A. Dalla Chiesa, 10, 37054 Nogara VR",
+        "telefono": "0442511092",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/Xb5Qx3G7LSbz8pgE8"
+      },
+      {
+        "citta": "Valdagno",
+        "indirizzo": "Corso Italia, 38, 36078 Valdagno VI",
+        "telefono": "0445401893",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/zG4BeHAqvxN7ob7A6"
+      },
+      {
+        "citta": "Vittorio Veneto",
+        "indirizzo": "Via Pastore Giulio, 8, 31029 Vittorio Veneto TV",
+        "telefono": "0438550015",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/gqyn2SqnHaVc6srZA"
+      },
+      {
+        "citta": "Oderzo",
+        "indirizzo": "Via Artico Monsignore Paride, 18, 31046 Oderzo TV",
+        "telefono": "0422718211",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/WKoZ3Y8BEBmyQCgd9"
+      },
+      {
+        "citta": "Affi",
+        "indirizzo": "Via Danzia, 3/F, 37010 Affi VR",
+        "telefono": "0456261412",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/RFLARUYCyLnKKEr56"
+      },
+      {
+        "citta": "Altavilla Vicentina",
+        "indirizzo": "36077 Altavilla Vicentina VI",
+        "telefono": "",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/3S6HLeMGE4DzxCFk6"
+      },
+      {
+        "citta": "Feltre",
+        "indirizzo": "Piazzale della Lana, 16, 32032 Feltre BL",
+        "telefono": "043980018",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/NdJ7d18cCfzVybqN6"
+      },
+      {
+        "citta": "Portogruaro",
+        "indirizzo": "Borgo Sant'Agnese, 57, 30026 Portogruaro VE",
+        "telefono": "0421275030",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/j2UGQDkDYYVSL5vk6"
+      },
+      {
+        "citta": "Marostica",
+        "indirizzo": "Via 4 Novembre, 39a, 36063 Marostica VI",
+        "telefono": "0424471899",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/B6qGwPZnBZETe4Yg6"
+      },
+      {
+        "citta": "Lonigo",
+        "indirizzo": "Piazza San Marco, 8, 36045 Lonigo VI",
+        "telefono": "0444436408",
+        "email": "",
+        "googleMaps": "https://maps.app.goo.gl/5AqAWKuGLg4NMQoB6"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "UMANA",
+    "sito": "https://www.umana.it/",
+    "descrizione": "Agenzia italiana specializzata in somministrazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/u6aSOHJGnmtPczHEs98g.png",
+    "formIscrizione": "https://areacandidato.umana.it/area-candidato/iscrizione",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 86",
+        "telefono": "049 780 8321"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "ORIENTA",
+    "sito": "https://www.orienta.net/it/",
+    "descrizione": "Servizi di somministrazione e ricerca personale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/IYRakxn3G6H0OlnR6SCb.png",
+    "formIscrizione": "https://www.orienta.net/it/orienta-job/registrati-per-inviare-la-tua-candidatura.html",
+    "settori": [
+      "HR",
+      "Selezione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Teofilo Folengo, 13",
+        "telefono": "0492127608"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "LAVORINT",
+    "sito": "https://www.lavorint.it/",
+    "descrizione": "Focus su somministrazione e ricerca personale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/I8BDoKKXMC53r8fkwF9s.jpeg",
+    "formIscrizione": "https://careers.lavorint.it/job-seekers.php",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Carlo Rezzonico, 45",
+        "telefono": "0498765716"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "ADHR GROUP",
+    "sito": "https://www.adhr.it/",
+    "descrizione": "Specializzati in servizi HR e somministrazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/TSMdx2ra1ZPbLY8AFN8z.png",
+    "formIscrizione": "https://www.adhr.it/registrati/",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Venezia, 9",
+        "telefono": "0498074893"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "MAW",
+    "sito": "https://www.maw.it/",
+    "descrizione": "Somministrazione, ricerca e selezione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/jgWJx0lAXQ9R3w0EW08B.png",
+    "formIscrizione": "https://www.maw.it/registrati",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Giovanni Savelli, 104",
+        "telefono": "0498364738"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "ALI SPA",
+    "sito": "https://alilavoro.it/",
+    "descrizione": "Specializzata in somministrazione lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/CUG7PmRxeqj2JFmGl98M.png",
+    "formIscrizione": "https://careers.alilavoro.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 104",
+        "telefono": "049773563"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nome": "AL CENTRO",
+    "sito": "https://www.alcentrolavoro.it/",
+    "descrizione": "Servizi per il lavoro e formazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/gHUZzN8jwS5Wva7zSBda.png",
+    "formIscrizione": "https://carriere.alcentrolavoro.it/job-seekers.php",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Sottopassaggio Mario Saggin, 2",
+        "telefono": "0497332880"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "HUMAN GEST",
+    "sito": "https://humangest.it/",
+    "descrizione": "Servizi HR completi.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/pAYqdksnMFL4l8jvYb9e.png",
+    "formIscrizione": "https://lavoro.humangest.it/job-seekers.php",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 48",
+        "telefono": "0498074261"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nome": "SYNERGIE",
+    "sito": "https://www.synergie-italia.it/",
+    "descrizione": "Somministrazione lavoro e ricerca.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/aKncMsDVxwWK0eN9pQGB.jpeg",
+    "formIscrizione": "https://www.synergie-italia.it/candidato/accesso-area-candidati",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 40",
+        "telefono": "0498071406"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nome": "OPEN JOB METIS",
+    "sito": "https://www.openjobmetis.it/it",
+    "descrizione": "Leader in Italia per servizi HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/zFzqCDgBX4QFpyehslXn.png",
+    "formIscrizione": "https://www.openjobmetis.it/it/registrazione",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 76",
+        "telefono": "0498075778"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "nome": "ETJCA",
+    "sito": "https://www.etjca.it/",
+    "descrizione": "Focus su somministrazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/PiZmhtXy0QnGr3V6Fujr.png",
+    "formIscrizione": "https://career.etjca.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Uruguay, 79-81-83",
+        "telefono": "0498711922"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "nome": "QUOJOBIS",
+    "sito": "https://www.quojobis.it/",
+    "descrizione": "Servizi per il lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/CZcITMoszyJ98yconZki.png",
+    "formIscrizione": "https://careers.quojobis.it/job-seekers.php",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Verona",
+        "indirizzo": "Via Roveggia 90",
+        "telefono": "045 4931370"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nome": "GENERAZIONE VINCENTE",
+    "sito": "https://www.generazionevincente.it/",
+    "descrizione": "Servizi HR innovativi.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/xdK6CSgXu38Y5oBCKRgw.png",
+    "formIscrizione": "https://www.generazionevincente.it/register/",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via S. Crispino, 36",
+        "telefono": "0498945178"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "nome": "RELIZONT",
+    "sito": "https://relizont.it/",
+    "descrizione": "Somministrazione e ricerca.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/izee2cyzy23zAzvGlVVo.jpeg",
+    "formIscrizione": "https://job.relizont.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Ugo Bassi, 5",
+        "telefono": "0490990084"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "nome": "DURING",
+    "sito": "https://www.during.it/",
+    "descrizione": "Specializzata in HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/wbR7PEGe6JAlSYazpJAY.png",
+    "formIscrizione": "https://portale.during.it/candidatura-spontanea",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Niccolò Tommaseo, 72",
+        "telefono": "0497625319"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "nome": "PAGE PERSONNEL",
+    "sito": "https://www.pagepersonnel.it/",
+    "descrizione": "Ricerca e selezione specializzata.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/Qyj8Ul7CO6EMNCMfJhgb.png",
+    "formIscrizione": "https://www.pagepersonnel.it/user/register",
+    "settori": [
+      "Ricerca"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Cesare Battisti, 3",
+        "telefono": "0236260606"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "nome": "IG SAMSIC HR",
+    "sito": "https://samsic-hr.it/",
+    "descrizione": "Servizi HR integrati.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/IT0exJ5scFZsxxBDPmmp.png",
+    "formIscrizione": "https://samsic-hr.it/candidati/",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Astichello, 16",
+        "telefono": "049 986 3515"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "nome": "ARCHIMEDE SPA",
+    "sito": "https://archimedespa.it/",
+    "descrizione": "Servizi completi per il lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/fcoSoH95mTgXhmDZ2tgf.jpeg",
+    "formIscrizione": "https://portale.archimedespa.it/candidatura-spontanea",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Piovese, 106",
+        "telefono": "049 802 5561"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "nome": "OASI LAVORO",
+    "sito": "https://www.oasilavoro.it/",
+    "descrizione": "Lavoro e formazione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/tj9kIcJYZf61PgLGgVrV.png",
+    "formIscrizione": "https://www.oasilavoro.it/lavoratori",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Viale dell'Industria, 23",
+        "telefono": "049 807 5523"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "nome": "TEMPORARY SPA",
+    "sito": "https://www.temporary.it/",
+    "descrizione": "Esperienza trentennale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/SBWy90s4LyxSRESqUBdc.jpeg",
+    "formIscrizione": "https://careers.temporary.it/job-seekers.php",
+    "settori": [
+      "Temporaneo"
+    ],
+    "sedi": [
+      {
+        "citta": "Venezia",
+        "indirizzo": "Via Daniele Manin, 38/a",
+        "telefono": "041 894 6902"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "nome": "EUROINTERIM",
+    "sito": "https://www.eurointerim.it/",
+    "descrizione": "Somministrazione e ricerca.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/AVbdDgyoaLE0GiOJkwav.png",
+    "formIscrizione": "https://portale.eurointerim.it/entrance/register.aspx",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Rubano",
+        "indirizzo": "Via Rossi, 1",
+        "telefono": "049 631519"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "nome": "CAREER ITALIA",
+    "sito": "https://www.careeritalia.it/",
+    "descrizione": "Ricerca e selezione.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/u8SRqH0hK9jKoP2iN4K2.png",
+    "formIscrizione": "https://www.careeritalia.it/candidati/registrazione",
+    "settori": [
+      "Ricerca"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Belzoni, 9",
+        "telefono": "049 875 2211"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "nome": "KELLY SERVICES",
+    "sito": "https://www.kellyservices.it/",
+    "descrizione": "Leader globale in HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/nEjSazTACoutHrdHNaMH.jpeg",
+    "formIscrizione": "https://www.kellyservices.it/candidati/",
+    "settori": [
+      "Staffing"
+    ],
+    "sedi": [
+      {
+        "citta": "Cittadella",
+        "indirizzo": "Via Borgo Treviso, 106",
+        "telefono": "049 940 4276"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "nome": "OBIETTIVO LAVORO",
+    "sito": "https://obiettivolavoro.it/",
+    "descrizione": "Formazione e placement.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/4QOO83Bj2bhPtaiGT9zo.png",
+    "formIscrizione": "https://obiettivolavoro.it/signin-signup/",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Giovanni Savelli, 26",
+        "telefono": "049 780 8599"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "nome": "NHRG",
+    "sito": "https://www.nhrg.it/",
+    "descrizione": "Nuova generazione HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/rIp56iTVYUnDcoI4KTSQ.png",
+    "formIscrizione": "https://www.nhrg.it/candidati",
+    "settori": [
+      "HR"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Niccolò Tommaseo, 98/A",
+        "telefono": "049 099 0215"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "nome": "TEMPJOB",
+    "sito": "https://www.tempjob.it/",
+    "descrizione": "Lavoro temporaneo.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/I90yLNyMp27APceUJAEU.png",
+    "formIscrizione": "https://tempjob.intiway.it/TempJob/view.candidato.registrazione.do",
+    "settori": [
+      "Temporaneo"
+    ],
+    "sedi": [
+      {
+        "citta": "Limena",
+        "indirizzo": "Via del Santo, 12",
+        "telefono": "049 520 7832"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "nome": "CENTRO STUDI",
+    "sito": "https://www.centrostudisrl.com/",
+    "descrizione": "Formazione professionale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/Bz2MdgqQ24PcYCJgSYHd.png",
+    "formIscrizione": "https://www.centrostudisrl.com/contatti",
+    "settori": [
+      "Formazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Campodarsego",
+        "indirizzo": "Via G.Verdi, 117",
+        "telefono": "049 922 1210"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "nome": "LAVORO PIU'",
+    "sito": "https://www.lavoropiu.it/",
+    "descrizione": "Somministrazione nazionale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/jyvR1XKky4krnXlEO3J7.png",
+    "formIscrizione": "https://oliverweb.lavoropiu.it/Consenso",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Monselice",
+        "indirizzo": "Piazza Ossicella, 25",
+        "telefono": "0429 781061"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "nome": "METIORPLAN",
+    "sito": "https://www.metiorplan.it/",
+    "descrizione": "Consulenza HR.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/2G3L5cdqyqgZCYPsSRXs.png",
+    "formIscrizione": "https://www.metiorplan.it/contatti",
+    "settori": [
+      "Consulenza"
+    ],
+    "sedi": [
+      {
+        "citta": "Albignasego",
+        "indirizzo": "Via Galileo Galilei 93/A",
+        "telefono": "0493005204"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "nome": "AREAJOB",
+    "sito": "https://areajob.it/",
+    "descrizione": "Agenzia territoriale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/r60QaBdlCsDDPOlhnDWN.png",
+    "formIscrizione": "https://areajob.it/iscriviti/",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Conselve",
+        "indirizzo": "Via Vittorio Emanuele II, 101/B",
+        "telefono": "049 535 2234"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "nome": "STAFF SPA",
+    "sito": "https://www.staff.it/",
+    "descrizione": "Somministrazione lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/TGCCQ9ycuedjwoOkimXE.png",
+    "formIscrizione": "https://careers.staff.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Monselice",
+        "indirizzo": "Via Guglielmo Marconi, 1/A",
+        "telefono": "0429 166 6001"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "nome": "QJOB",
+    "sito": "https://www.qjob.it/",
+    "descrizione": "Agenzia locale.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/nFcId29ZrxVHE4wi9qqn.png",
+    "formIscrizione": "https://www.qjob.it/candidate/subscribe/",
+    "settori": [
+      "Vari settori"
+    ],
+    "sedi": [
+      {
+        "citta": "Padova",
+        "indirizzo": "Via Elisa Benato, 3",
+        "telefono": "049 744 1600"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "nome": "ONLY JOB",
+    "sito": "https://onlyjob.it/",
+    "descrizione": "Servizi per il lavoro.",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/Te2JhlyG5RqM3JEv8RZs.png",
+    "formIscrizione": "https://careers.onlyjob.it/job-seekers.php",
+    "settori": [
+      "Somministrazione"
+    ],
+    "sedi": [
+      {
+        "citta": "Monselice",
+        "indirizzo": "Via Luigi Cadorna, 15",
+        "telefono": "0429 653397"
+      }
+    ]
+  }
+]
