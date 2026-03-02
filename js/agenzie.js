@@ -1,4 +1,4 @@
-// JobApp - Agenzie Module (con province)
+// JobApp - Agenzie Module (CORRETTO)
 const Agenzie = {
   agencies: [],
   favorites: [],
@@ -37,16 +37,24 @@ const Agenzie = {
         this.filteredAgencies = this.agencies;
       } else {
         this.filteredAgencies = this.agencies.filter(a => {
-          if (a.nome.toLowerCase().includes(q)) return true;
+          // ✅ RICERCA NOME: Solo se inizia con la query
+          if (a.nome.toLowerCase().startsWith(q)) return true;
+          
+          // Ricerca nelle sedi (città e provincia)
           if (a.sedi) {
             return a.sedi.some(s => {
               const citta = s.citta?.toLowerCase() || '';
               const addr = s.indirizzo?.toLowerCase() || '';
+              
+              // Estrae provincia dalla sigla
               const provMatch = addr.match(/\b(BL|PD|RO|TV|VE|VR|VI)\b/i);
               const prov = provMatch ? provMatch[0].toLowerCase() : '';
-              return citta.includes(q) || prov.includes(q);
+              
+              // Cerca città o provincia esatta
+              return citta.includes(q) || prov === q;
             });
           }
+          
           return false;
         });
       }
@@ -79,9 +87,34 @@ const Agenzie = {
         ${a.logo ? `<div class="h-36 bg-gray-50 flex items-center justify-center p-6"><img src="${a.logo}" alt="${a.nome}" class="max-h-28 object-contain"/></div>` : ''}
         <div class="p-5">
           <h3 class="text-xl font-bold mb-2">${a.nome}</h3>
+          ${a.settori?.length > 0 ? `
+            <div class="flex flex-wrap gap-2 mb-3">
+              ${a.settori.slice(0, 2).map(s => `<span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">${s}</span>`).join('')}
+              ${a.settori.length > 2 ? `<span class="text-xs text-gray-500">+${a.settori.length - 2}</span>` : ''}
+            </div>
+          ` : ''}
           <p class="text-sm text-gray-600 mb-4 line-clamp-2">${a.descrizione}</p>
-          ${a.sedi?.length ? `<button onclick="Agenzie.openSedi(${a.id})" class="w-full py-3 bg-indigo-600 text-white rounded-2xl font-semibold">📍 Vedi ${a.sedi.length} Sedi</button>` : ''}
-          ${a.sito ? `<a href="${a.sito}" target="_blank" class="block mt-2 w-full py-3 bg-blue-500 text-white rounded-2xl font-semibold text-center">🌐 Sito</a>` : ''}
+          
+          <!-- ✅ PULSANTI SEDI + ISCRIVITI AFFIANCATI -->
+          <div class="grid grid-cols-2 gap-2">
+            ${a.sedi?.length ? `
+              <button onclick="Agenzie.openSedi(${a.id})" class="py-3 bg-indigo-600 text-white rounded-2xl font-semibold text-sm">
+                📍 Sedi (${a.sedi.length})
+              </button>
+            ` : '<div></div>'}
+            
+            ${a.formIscrizione ? `
+              <a href="${a.formIscrizione}" target="_blank" class="py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center">
+                ✉️ Iscriviti
+              </a>
+            ` : '<div></div>'}
+          </div>
+          
+          ${a.sito ? `
+            <a href="${a.sito}" target="_blank" class="block mt-2 w-full py-3 bg-blue-500 text-white rounded-2xl font-semibold text-sm text-center">
+              🌐 Sito Web
+            </a>
+          ` : ''}
         </div>
       </div>
     `).join('');
@@ -121,11 +154,11 @@ const Agenzie = {
     let html = '';
     provOrdinate.forEach(prov => {
       const sedi = perProv[prov];
-      html += `<div class="text-sm font-bold text-indigo-600 uppercase tracking-wide mb-3 mt-4 first:mt-0">📍 Provincia di ${this.getProvinciaName(prov)} (${sedi.length})</div>`;
+      html += `<div class="text-sm font-bold text-indigo-600 uppercase tracking-wide mb-4 mt-6 first:mt-0">📍 Provincia di ${this.getProvinciaName(prov)} (${sedi.length})</div>`;
       
       sedi.forEach(s => {
         html += `
-          <div class="bg-gray-50 rounded-2xl p-4 mb-3">
+          <div class="bg-gray-50 rounded-2xl p-4 mb-4">
             <div class="font-bold mb-2">${s.citta}</div>
             <div class="text-sm text-gray-600 space-y-2">
               <div>📍 ${s.indirizzo}</div>
