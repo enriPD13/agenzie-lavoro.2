@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nome": "Fòrema Srl",
+    "descrizione": "Centro di formazione professionale",
+    "indirizzo": "Via Edoardo Plinio Masini, 2/Piano 4",
+    "cap": "35131",
+    "citta": "Padova",
+    "provincia": "Padova",
+    "provincia_sigla": "PD",
+    "telefono": "049 822 7500",
+    "email": "info@forema.it",
+    "sito": "https://www.forema.it/it/",
+    "googleMaps": "https://maps.app.goo.gl/mERhPnhnX6Aqcpuu5",
+    "sede_principale": "Centro Direzionale La Cittadella",
+    "tipo": "ente_formazione"
+  }
+]
