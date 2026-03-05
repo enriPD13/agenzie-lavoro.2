@@ -1,10 +1,9 @@
 {
   "name": "JobApp - Trova Lavoro in Veneto",
   "short_name": "JobApp",
-  "version": "1.0.1",
   "description": "App per la ricerca di lavoro in Veneto. Agenzie per il lavoro e Centri Per l'Impiego.",
-  "start_url": "/agenzie-lavoro-2/index.html",
-  "scope": "/agenzie-lavoro-2/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#6366f1",
@@ -29,12 +28,12 @@
   "shortcuts": [
     {
       "name": "Agenzie per il Lavoro",
-      "url": "/agenzie-lavoro-2/#agenzie",
+      "url": "./#agenzie",
       "description": "Visualizza le agenzie per il lavoro"
     },
     {
       "name": "Centri Per l'Impiego",
-      "url": "/agenzie-lavoro-2/#cpi",
+      "url": "./#cpi",
       "description": "Visualizza i Centri Per l'Impiego"
     }
   ]
