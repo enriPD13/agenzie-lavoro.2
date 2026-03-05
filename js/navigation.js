@@ -79,6 +79,14 @@ const Navigation = {
     this.loadPage('piattaforme');
   },
   
+  openClicLavoro() {
+    this.loadPage('cliclavoro');
+  },
+  
+  openPoliticheAttive() {
+    this.loadPage('politiche-attive');
+  },
+  
   openComingSoon() {
     alert('Coming Soon! 🚀');
   }
@@ -112,6 +120,14 @@ function openEntiApp() {
 
 function openPiattaformeApp() {
   Navigation.openPiattaforme();
+}
+
+function openClicLavoroApp() {
+  Navigation.openClicLavoro();
+}
+
+function openPoliticheAttiveApp() {
+  Navigation.openPoliticheAttive();
 }
 
 function openProfilePage() {
