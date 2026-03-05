@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "nome": "Indeed",
+    "descrizione": "Indeed è il principale motore di ricerca di lavoro a livello mondiale, attivo in oltre 60 paesi, che aggrega milioni di annunci da siti web, bacheche e aziende. Permette ai candidati di cercare, filtrare e candidarsi, e alle aziende di pubblicare offerte e gestire selezioni, offrendo strumenti basati sull'intelligenza artificiale per il matching.",
+    "sito": "https://it.indeed.com/",
+    "logo": "images/piattaforme/indeed.png",
+    "categoria": "generalista",
+    "tipo": "piattaforma"
+  }
+]
