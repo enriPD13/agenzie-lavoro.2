@@ -220,12 +220,19 @@ const Agenzie = {
       this.favoriteSedi.splice(index, 1);
     } else {
       this.favoriteSedi.push(fav);
+      
+      // Auto-aggiungi agenzia ai preferiti se non c'è già
+      const agencyId = sedeId.split('-').slice(0, 2).join('-');
+      if (!this.favorites.includes(agencyId)) {
+        this.favorites.push(agencyId);
+        this.saveFavorites();
+      }
     }
     
     this.saveFavoriteSedi();
-    // Estrae l'ID agenzia dal sedeId (es: "ag-1-0" → "ag-1")
+    // Estrae l'ID agenzia dal sedeId
     const agencyId = sedeId.split('-').slice(0, 2).join('-');
-    this.openSedi(agencyId); // Ricarica il bottom sheet
+    this.openSedi(agencyId);
   },
   
   isSedeInFavorites(sedeId) {
