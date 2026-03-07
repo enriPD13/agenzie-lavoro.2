@@ -15,7 +15,7 @@ const Preferiti = {
   
   favoriteEnti: [],
   favoriteEntiIds: [],
-  favoriteSediEnti: [], // Supporto future sedi enti
+  favoriteSediEnti: [],
   
   favoritePiattaforme: [],
   favoritePiattaformeIds: [],
@@ -196,8 +196,7 @@ const Preferiti = {
         html += '</div>';
       }
       
-        </div>
-      `;
+      html += '</div>';
     });
     
     agenzieOrfane.forEach(agencyId => {
@@ -226,10 +225,7 @@ const Preferiti = {
         }
       });
       
-      html += `
-          </div>
-        </div>
-      `;
+      html += '</div></div>';
     });
     
     html += '</div></div>';
@@ -329,9 +325,7 @@ const Preferiti = {
         html += '</div>';
       }
       
-      html += `
-        </div>
-      `;
+      html += '</div>';
     });
     
     provinceOrfane.forEach(provinciaId => {
@@ -360,10 +354,7 @@ const Preferiti = {
         }
       });
       
-      html += `
-          </div>
-        </div>
-      `;
+      html += '</div></div>';
     });
     
     html += '</div></div>';
@@ -411,7 +402,6 @@ const Preferiti = {
   renderCategoriaEnti() {
     const totale = this.favoriteEnti.length + this.favoriteSediEnti.length;
     
-    // Raggruppa sedi per ente (per il futuro)
     const sediPerEnte = {};
     this.favoriteSediEnti.forEach(sede => {
       const enteId = sede.id.split('-').slice(0, 2).join('-');
@@ -419,7 +409,6 @@ const Preferiti = {
       sediPerEnte[enteId].push(sede);
     });
     
-    // Enti orfani (solo sedi salvate)
     const entiOrfani = new Set();
     Object.keys(sediPerEnte).forEach(enteId => {
       if (!this.favoriteEntiIds.includes(enteId)) {
@@ -459,7 +448,6 @@ const Preferiti = {
           <p class="text-sm text-gray-600 mb-3">${e.descrizione}</p>
       `;
       
-      // Sedi di questo ente (se presenti)
       if (sediDiQuestoEnte.length > 0) {
         html += `
           <div class="mt-3 pl-3 border-l-2 border-purple-200 space-y-2">
@@ -476,12 +464,9 @@ const Preferiti = {
         html += '</div>';
       }
       
-      html += `
-        </div>
-      `;
+      html += '</div>';
     });
     
-    // Enti orfani (solo sedi salvate, senza ente)
     entiOrfani.forEach(enteId => {
       const ente = this.enti.find(e => e.id === enteId);
       if (!ente) return;
@@ -508,10 +493,7 @@ const Preferiti = {
         }
       });
       
-      html += `
-          </div>
-        </div>
-      `;
+      html += '</div></div>';
     });
     
     html += '</div></div>';
@@ -519,7 +501,6 @@ const Preferiti = {
   },
 
   trovaSedeEnte(ente, sedeId) {
-    // Quando gli enti avranno array sedi[] come le agenzie
     if (!ente.sedi || !Array.isArray(ente.sedi)) return null;
     const idx = parseInt(sedeId.split('-')[2]);
     return ente.sedi[idx];
@@ -574,7 +555,7 @@ const Preferiti = {
               </svg>
             </button>
           </div>
-          <p class="text-sm text-gray-600 mb-3">${p.descrizione}</p>
+          <p class="text-sm text-gray-600">${p.descrizione}</p>
         </div>
       `;
     });
@@ -583,14 +564,12 @@ const Preferiti = {
     return html;
   },
 
-  // Funzioni rimozione con cascata
   rimuoviAgenzia(id) {
     const index = this.favoriteAgenzieIds.indexOf(id);
     if (index > -1) {
       this.favoriteAgenzieIds.splice(index, 1);
       localStorage.setItem('agenzie_favorites', JSON.stringify(this.favoriteAgenzieIds));
       
-      // CASCATA: Rimuovi anche tutte le sedi di questa agenzia
       this.favoriteSediAgenzie = this.favoriteSediAgenzie.filter(sede => {
         const sedeAgencyId = sede.id.split('-').slice(0, 2).join('-');
         return sedeAgencyId !== id;
@@ -616,7 +595,6 @@ const Preferiti = {
       this.favoriteCPIIds.splice(index, 1);
       localStorage.setItem('cpi_favorites', JSON.stringify(this.favoriteCPIIds));
       
-      // CASCATA: Rimuovi anche tutte le sedi di questa provincia
       this.favoriteSediCPI = this.favoriteSediCPI.filter(sede => {
         const sedeProvinciaId = sede.id.split('-')[0];
         return sedeProvinciaId !== sigla;
@@ -642,7 +620,6 @@ const Preferiti = {
       this.favoriteEntiIds.splice(index, 1);
       localStorage.setItem('enti_favorites', JSON.stringify(this.favoriteEntiIds));
       
-      // CASCATA: Rimuovi anche tutte le sedi di questo ente
       this.favoriteSediEnti = this.favoriteSediEnti.filter(sede => {
         const sedeEnteId = sede.id.split('-').slice(0, 2).join('-');
         return sedeEnteId !== id;
