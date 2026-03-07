@@ -224,6 +224,13 @@ const CPI = {
       this.favoriteSedi.splice(index, 1);
     } else {
       this.favoriteSedi.push(fav);
+      
+      // Auto-aggiungi provincia ai preferiti se non c'è già
+      const provinciaSigla = sedeId.split('-')[0]; // "PD-0" -> "PD"
+      if (!this.favorites.includes(provinciaSigla)) {
+        this.favorites.push(provinciaSigla);
+        this.saveFavorites();
+      }
     }
     
     this.saveFavoriteSedi();
