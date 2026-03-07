@@ -21,10 +21,25 @@ const Preferiti = {
   favoritePiattaformeIds: [],
 
   async init() {
-    console.log('Preferiti init');
+    console.log('Preferiti init START');
     await this.loadData();
+    console.log('Dati caricati:', {
+      agenzie: this.agenzie.length,
+      cpi: this.cpi.length,
+      enti: this.enti.length,
+      piattaforme: this.piattaforme.length
+    });
     this.loadFavorites();
+    console.log('Preferiti caricati:', {
+      agenzie: this.favoriteAgenzieIds,
+      sediAgenzie: this.favoriteSediAgenzie,
+      cpi: this.favoriteCPIIds,
+      sediCPI: this.favoriteSediCPI,
+      enti: this.favoriteEntiIds,
+      piattaforme: this.favoritePiattaformeIds
+    });
     this.render();
+    console.log('Preferiti render COMPLETE');
   },
 
   async loadData() {
