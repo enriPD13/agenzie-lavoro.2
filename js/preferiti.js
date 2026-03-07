@@ -21,14 +21,8 @@ const Preferiti = {
 
   async init() {
     console.log('Preferiti init');
-    
-    // Carica dati JSON
     await this.loadData();
-    
-    // Carica preferiti da localStorage
     this.loadFavorites();
-    
-    // Renderizza
     this.render();
   },
 
@@ -59,19 +53,19 @@ const Preferiti = {
     const sediAgenzie = localStorage.getItem('agenzie_sedi_favorites');
     this.favoriteSediAgenzie = sediAgenzie ? JSON.parse(sediAgenzie) : [];
     
-    // CPI
+    // CPI - Usa provincia_sigla
     const cpiIds = localStorage.getItem('cpi_favorites');
     this.favoriteCPIIds = cpiIds ? JSON.parse(cpiIds) : [];
     
-    // Trova le province complete dai dati
-    const provinceUniche = [...new Set(this.cpi.map(c => c.provincia))];
+    // Raggruppa CPI per provincia_sigla
+    const provinceUniche = [...new Set(this.cpi.map(c => c.provincia_sigla))];
     this.favoriteCPI = provinceUniche
       .filter(sigla => this.favoriteCPIIds.includes(sigla))
       .map(sigla => {
-        const primo = this.cpi.find(c => c.provincia === sigla);
+        const primo = this.cpi.find(c => c.provincia_sigla === sigla);
         return {
           sigla: sigla,
-          nome: primo.provincia_nome
+          nome: primo.provincia
         };
       });
     
@@ -92,7 +86,6 @@ const Preferiti = {
   render() {
     const container = document.getElementById('preferiti-container');
     
-    // Conta totale preferiti
     const totale = this.favoriteAgenzie.length + this.favoriteSediAgenzie.length +
                    this.favoriteCPI.length + this.favoriteSediCPI.length +
                    this.favoriteEnti.length + this.favoritePiattaforme.length;
@@ -104,22 +97,18 @@ const Preferiti = {
     
     let html = '<div class="space-y-6">';
     
-    // Agenzie
     if (this.favoriteAgenzie.length > 0 || this.favoriteSediAgenzie.length > 0) {
       html += this.renderCategoriaAgenzie();
     }
     
-    // CPI
     if (this.favoriteCPI.length > 0 || this.favoriteSediCPI.length > 0) {
       html += this.renderCategoriaCPI();
     }
     
-    // Enti
     if (this.favoriteEnti.length > 0) {
       html += this.renderCategoriaEnti();
     }
     
-    // Piattaforme
     if (this.favoritePiattaforme.length > 0) {
       html += this.renderCategoriaPiattaforme();
     }
@@ -144,6 +133,23 @@ const Preferiti = {
 
   renderCategoriaAgenzie() {
     const totale = this.favoriteAgenzie.length + this.favoriteSediAgenzie.length;
+    
+    // Raggruppa sedi per agenzia
+    const sediPerAgenzia = {};
+    this.favoriteSediAgenzie.forEach(sede => {
+      const agencyId = sede.id.split('-').slice(0, 2).join('-'); // "ag-1-0" -> "ag-1"
+      if (!sediPerAgenzia[agencyId]) sediPerAgenzia[agencyId] = [];
+      sediPerAgenzia[agencyId].push(sede);
+    });
+    
+    // Trova agenzie "orfane" (sedi salvate ma agenzia non nei preferiti)
+    const agenzieOrfane = new Set();
+    Object.keys(sediPerAgenzia).forEach(agencyId => {
+      if (!this.favoriteAgenzieIds.includes(agencyId)) {
+        agenzieOrfane.add(agencyId);
+      }
+    });
+    
     let html = `
       <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
         <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-4">
@@ -160,8 +166,10 @@ const Preferiti = {
         <div class="p-4 space-y-3">
     `;
     
-    // Agenzie principali
+    // Agenzie principali (con le loro sedi)
     this.favoriteAgenzie.forEach(a => {
+      const sediDiQuestaAgenzia = sediPerAgenzia[a.id] || [];
+      
       html += `
         <div class="bg-gray-50 rounded-2xl p-4">
           <div class="flex items-start justify-between mb-2">
@@ -173,7 +181,31 @@ const Preferiti = {
             </button>
           </div>
           <p class="text-sm text-gray-600 mb-3">${a.descrizione}</p>
-          <div class="flex gap-2">
+      `;
+      
+      // Sedi di questa agenzia
+      if (sediDiQuestaAgenzia.length > 0) {
+        html += `
+          <div class="mt-3 pl-3 border-l-2 border-indigo-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600">📍 Sedi (${sediDiQuestaAgenzia.length})</p>
+        `;
+        sediDiQuestaAgenzia.forEach(sede => {
+          html += `
+            <div class="bg-white rounded-lg p-2 flex items-center justify-between text-sm">
+              <span class="text-gray-700">${sede.city}</span>
+              <button onclick="Preferiti.rimuoviSedeAgenzia('${sede.id}')" class="w-7 h-7 flex items-center justify-center">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                </svg>
+              </button>
+            </div>
+          `;
+        });
+        html += '</div>';
+      }
+      
+      html += `
+          <div class="flex gap-2 mt-3">
             <button onclick="Navigation.loadPage('agenzie')" class="flex-1 py-2 bg-indigo-600 text-white rounded-xl text-sm font-semibold">
               Vedi Dettagli
             </button>
@@ -182,33 +214,44 @@ const Preferiti = {
       `;
     });
     
-    // Sedi agenzie
-    if (this.favoriteSediAgenzie.length > 0) {
+    // Agenzie orfane (solo sedi salvate, senza agenzia)
+    agenzieOrfane.forEach(agencyId => {
+      const agenzia = this.agenzie.find(a => a.id === agencyId);
+      if (!agenzia) return;
+      
+      const sediDiQuestaAgenzia = sediPerAgenzia[agencyId];
+      
       html += `
-        <div class="pl-4 border-l-2 border-indigo-200">
-          <p class="text-sm font-semibold text-gray-600 mb-2">📍 Sedi (${this.favoriteSediAgenzie.length})</p>
+        <div class="bg-gray-50 rounded-2xl p-4 border-2 border-dashed border-indigo-300">
+          <div class="flex items-start justify-between mb-2">
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-gray-700">${agenzia.nome}</h3>
+              <p class="text-xs text-gray-500">Solo sedi salvate</p>
+            </div>
+          </div>
+          
+          <div class="mt-3 pl-3 border-l-2 border-indigo-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600">📍 Sedi (${sediDiQuestaAgenzia.length})</p>
       `;
       
-      this.favoriteSediAgenzie.forEach(sede => {
+      sediDiQuestaAgenzia.forEach(sede => {
         html += `
-          <div class="bg-white rounded-xl p-3 mb-2 border border-gray-200">
-            <div class="flex items-start justify-between">
-              <div class="flex-1">
-                <p class="font-semibold text-sm">${sede.agency}</p>
-                <p class="text-xs text-gray-600">${sede.city}</p>
-              </div>
-              <button onclick="Preferiti.rimuoviSedeAgenzia('${sede.id}')" class="w-8 h-8 flex items-center justify-center">
-                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                </svg>
-              </button>
-            </div>
+          <div class="bg-white rounded-lg p-2 flex items-center justify-between text-sm">
+            <span class="text-gray-700">${sede.city}</span>
+            <button onclick="Preferiti.rimuoviSedeAgenzia('${sede.id}')" class="w-7 h-7 flex items-center justify-center">
+              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
           </div>
         `;
       });
       
-      html += '</div>';
-    }
+      html += `
+          </div>
+        </div>
+      `;
+    });
     
     html += '</div></div>';
     return html;
@@ -216,6 +259,23 @@ const Preferiti = {
 
   renderCategoriaCPI() {
     const totale = this.favoriteCPI.length + this.favoriteSediCPI.length;
+    
+    // Raggruppa sedi per provincia
+    const sediPerProvincia = {};
+    this.favoriteSediCPI.forEach(sede => {
+      const provinciaId = sede.id.split('-')[0]; // "PD-0" -> "PD"
+      if (!sediPerProvincia[provinciaId]) sediPerProvincia[provinciaId] = [];
+      sediPerProvincia[provinciaId].push(sede);
+    });
+    
+    // Trova province "orfane"
+    const provinceOrfane = new Set();
+    Object.keys(sediPerProvincia).forEach(provinciaId => {
+      if (!this.favoriteCPIIds.includes(provinciaId)) {
+        provinceOrfane.add(provinciaId);
+      }
+    });
+    
     let html = `
       <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
         <div class="bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-4">
@@ -232,8 +292,10 @@ const Preferiti = {
         <div class="p-4 space-y-3">
     `;
     
-    // Province CPI
+    // Province CPI (con le loro sedi)
     this.favoriteCPI.forEach(prov => {
+      const sediDiQuestaProvincia = sediPerProvincia[prov.sigla] || [];
+      
       html += `
         <div class="bg-gray-50 rounded-2xl p-4">
           <div class="flex items-start justify-between mb-2">
@@ -244,7 +306,31 @@ const Preferiti = {
               </svg>
             </button>
           </div>
-          <div class="flex gap-2">
+      `;
+      
+      // Sedi di questa provincia
+      if (sediDiQuestaProvincia.length > 0) {
+        html += `
+          <div class="mt-3 pl-3 border-l-2 border-blue-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600">📍 Sedi (${sediDiQuestaProvincia.length})</p>
+        `;
+        sediDiQuestaProvincia.forEach(sede => {
+          html += `
+            <div class="bg-white rounded-lg p-2 flex items-center justify-between text-sm">
+              <span class="text-gray-700">${sede.city}</span>
+              <button onclick="Preferiti.rimuoviSedeCPI('${sede.id}')" class="w-7 h-7 flex items-center justify-center">
+                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                </svg>
+              </button>
+            </div>
+          `;
+        });
+        html += '</div>';
+      }
+      
+      html += `
+          <div class="flex gap-2 mt-3">
             <button onclick="Navigation.loadPage('cpi')" class="flex-1 py-2 bg-blue-600 text-white rounded-xl text-sm font-semibold">
               Vedi Dettagli
             </button>
@@ -253,33 +339,44 @@ const Preferiti = {
       `;
     });
     
-    // Sedi CPI
-    if (this.favoriteSediCPI.length > 0) {
+    // Province orfane
+    provinceOrfane.forEach(provinciaId => {
+      const primo = this.cpi.find(c => c.provincia_sigla === provinciaId);
+      if (!primo) return;
+      
+      const sediDiQuestaProvincia = sediPerProvincia[provinciaId];
+      
       html += `
-        <div class="pl-4 border-l-2 border-blue-200">
-          <p class="text-sm font-semibold text-gray-600 mb-2">📍 Sedi (${this.favoriteSediCPI.length})</p>
+        <div class="bg-gray-50 rounded-2xl p-4 border-2 border-dashed border-blue-300">
+          <div class="flex items-start justify-between mb-2">
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-gray-700">Provincia di ${primo.provincia}</h3>
+              <p class="text-xs text-gray-500">Solo sedi salvate</p>
+            </div>
+          </div>
+          
+          <div class="mt-3 pl-3 border-l-2 border-blue-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600">📍 Sedi (${sediDiQuestaProvincia.length})</p>
       `;
       
-      this.favoriteSediCPI.forEach(sede => {
+      sediDiQuestaProvincia.forEach(sede => {
         html += `
-          <div class="bg-white rounded-xl p-3 mb-2 border border-gray-200">
-            <div class="flex items-start justify-between">
-              <div class="flex-1">
-                <p class="font-semibold text-sm">${sede.provincia}</p>
-                <p class="text-xs text-gray-600">${sede.city}</p>
-              </div>
-              <button onclick="Preferiti.rimuoviSedeCPI('${sede.id}')" class="w-8 h-8 flex items-center justify-center">
-                <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
-                </svg>
-              </button>
-            </div>
+          <div class="bg-white rounded-lg p-2 flex items-center justify-between text-sm">
+            <span class="text-gray-700">${sede.city}</span>
+            <button onclick="Preferiti.rimuoviSedeCPI('${sede.id}')" class="w-7 h-7 flex items-center justify-center">
+              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
           </div>
         `;
       });
       
-      html += '</div>';
-    }
+      html += `
+          </div>
+        </div>
+      `;
+    });
     
     html += '</div></div>';
     return html;
@@ -375,7 +472,7 @@ const Preferiti = {
     if (index > -1) {
       this.favoriteAgenzieIds.splice(index, 1);
       localStorage.setItem('agenzie_favorites', JSON.stringify(this.favoriteAgenzieIds));
-      this.init(); // Ricarica
+      this.init();
     }
   },
 
