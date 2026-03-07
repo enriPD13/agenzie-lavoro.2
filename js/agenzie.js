@@ -147,10 +147,10 @@ const Agenzie = {
     document.getElementById('sediCount').textContent = `${agency.sedi.length} sed${agency.sedi.length === 1 ? 'e' : 'i'} in Veneto`;
     
     const perProv = {};
-    agency.sedi.forEach(s => {
+    agency.sedi.forEach((s, globalIdx) => {
       const prov = this.getProvincia(s);
       if (!perProv[prov]) perProv[prov] = [];
-      perProv[prov].push(s);
+      perProv[prov].push({ ...s, globalIdx }); // Aggiungi index globale
     });
     
     const provOrdinate = Object.keys(perProv).sort();
@@ -161,8 +161,8 @@ const Agenzie = {
       // ✅ SENZA ICONA PIN accanto al nome provincia
       html += `<div class="text-sm font-bold text-indigo-600 uppercase tracking-wide mb-4 mt-6 first:mt-0">Provincia di ${this.getProvinciaName(prov)} (${sedi.length})</div>`;
       
-      sedi.forEach((s, idx) => {
-        const sedeId = `${id}-${idx}`;
+      sedi.forEach(s => {
+        const sedeId = `${id}-${s.globalIdx}`; // Usa index globale
         const isFav = this.isSedeInFavorites(sedeId);
         
         html += `
