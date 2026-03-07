@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "ag-1",
     "nome": "MANPOWER",
     "sito": "https://www.manpower.it/",
     "descrizione": "Leader globale nella gestione delle risorse umane.",
@@ -232,7 +232,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": "ag-2",
     "nome": "GIGROUP",
     "sito": "https://www.gigroup.it/",
     "descrizione": "Primo gruppo italiano nel settore HR.",
@@ -251,7 +251,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": "ag-3",
     "nome": "RANDSTAD",
     "sito": "https://www.randstad.it/",
     "descrizione": "Leader mondiale nei servizi HR.",
@@ -270,7 +270,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": "ag-4",
     "nome": "ADECCO",
     "sito": "https://www.adecco.it/",
     "descrizione": "Il più grande gruppo al mondo nella gestione HR.",
@@ -543,7 +543,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": "ag-5",
     "nome": "UMANA",
     "sito": "https://www.umana.it/",
     "descrizione": "Agenzia italiana specializzata in somministrazione.",
@@ -561,7 +561,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": "ag-6",
     "nome": "ORIENTA",
     "sito": "https://www.orienta.net/it/",
     "descrizione": "Servizi di somministrazione e ricerca personale.",
@@ -580,7 +580,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": "ag-7",
     "nome": "LAVORINT",
     "sito": "https://www.lavorint.it/",
     "descrizione": "Focus su somministrazione e ricerca personale.",
@@ -598,7 +598,7 @@
     ]
   },
   {
-    "id": 8,
+    "id": "ag-8",
     "nome": "ADHR GROUP",
     "sito": "https://www.adhr.it/",
     "descrizione": "Specializzati in servizi HR e somministrazione.",
@@ -616,7 +616,7 @@
     ]
   },
   {
-    "id": 9,
+    "id": "ag-9",
     "nome": "MAW",
     "sito": "https://www.maw.it/",
     "descrizione": "Somministrazione, ricerca e selezione.",
@@ -634,7 +634,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": "ag-10",
     "nome": "ALI SPA",
     "sito": "https://alilavoro.it/",
     "descrizione": "Specializzata in somministrazione lavoro.",
@@ -652,7 +652,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": "ag-11",
     "nome": "AL CENTRO",
     "sito": "https://www.alcentrolavoro.it/",
     "descrizione": "Servizi per il lavoro e formazione.",
@@ -670,7 +670,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": "ag-12",
     "nome": "HUMAN GEST",
     "sito": "https://humangest.it/",
     "descrizione": "Servizi HR completi.",
@@ -688,7 +688,7 @@
     ]
   },
   {
-    "id": 13,
+    "id": "ag-13",
     "nome": "SYNERGIE",
     "sito": "https://www.synergie-italia.it/",
     "descrizione": "Somministrazione lavoro e ricerca.",
@@ -706,7 +706,7 @@
     ]
   },
   {
-    "id": 14,
+    "id": "ag-14",
     "nome": "OPEN JOB METIS",
     "sito": "https://www.openjobmetis.it/it",
     "descrizione": "Leader in Italia per servizi HR.",
@@ -724,7 +724,7 @@
     ]
   },
   {
-    "id": 15,
+    "id": "ag-15",
     "nome": "ETJCA",
     "sito": "https://www.etjca.it/",
     "descrizione": "Focus su somministrazione.",
@@ -742,7 +742,7 @@
     ]
   },
   {
-    "id": 16,
+    "id": "ag-16",
     "nome": "QUOJOBIS",
     "sito": "https://www.quojobis.it/",
     "descrizione": "Servizi per il lavoro.",
@@ -760,7 +760,7 @@
     ]
   },
   {
-    "id": 17,
+    "id": "ag-17",
     "nome": "GENERAZIONE VINCENTE",
     "sito": "https://www.generazionevincente.it/",
     "descrizione": "Servizi HR innovativi.",
@@ -778,7 +778,7 @@
     ]
   },
   {
-    "id": 18,
+    "id": "ag-18",
     "nome": "RELIZONT",
     "sito": "https://relizont.it/",
     "descrizione": "Somministrazione e ricerca.",
@@ -796,7 +796,7 @@
     ]
   },
   {
-    "id": 19,
+    "id": "ag-19",
     "nome": "DURING",
     "sito": "https://www.during.it/",
     "descrizione": "Specializzata in HR.",
@@ -814,7 +814,7 @@
     ]
   },
   {
-    "id": 20,
+    "id": "ag-20",
     "nome": "PAGE PERSONNEL",
     "sito": "https://www.pagepersonnel.it/",
     "descrizione": "Ricerca e selezione specializzata.",
@@ -832,7 +832,7 @@
     ]
   },
   {
-    "id": 21,
+    "id": "ag-21",
     "nome": "IG SAMSIC HR",
     "sito": "https://samsic-hr.it/",
     "descrizione": "Servizi HR integrati.",
@@ -850,7 +850,7 @@
     ]
   },
   {
-    "id": 22,
+    "id": "ag-22",
     "nome": "ARCHIMEDE SPA",
     "sito": "https://archimedespa.it/",
     "descrizione": "Servizi completi per il lavoro.",
@@ -868,7 +868,7 @@
     ]
   },
   {
-    "id": 23,
+    "id": "ag-23",
     "nome": "OASI LAVORO",
     "sito": "https://www.oasilavoro.it/",
     "descrizione": "Lavoro e formazione.",
@@ -886,7 +886,7 @@
     ]
   },
   {
-    "id": 24,
+    "id": "ag-24",
     "nome": "TEMPORARY SPA",
     "sito": "https://www.temporary.it/",
     "descrizione": "Esperienza trentennale.",
@@ -904,7 +904,7 @@
     ]
   },
   {
-    "id": 25,
+    "id": "ag-25",
     "nome": "EUROINTERIM",
     "sito": "https://www.eurointerim.it/",
     "descrizione": "Somministrazione e ricerca.",
@@ -922,7 +922,7 @@
     ]
   },
   {
-    "id": 26,
+    "id": "ag-26",
     "nome": "CAREER ITALIA",
     "sito": "https://www.careeritalia.it/",
     "descrizione": "Ricerca e selezione.",
@@ -940,7 +940,7 @@
     ]
   },
   {
-    "id": 27,
+    "id": "ag-27",
     "nome": "KELLY SERVICES",
     "sito": "https://www.kellyservices.it/",
     "descrizione": "Leader globale in HR.",
@@ -958,7 +958,7 @@
     ]
   },
   {
-    "id": 28,
+    "id": "ag-28",
     "nome": "OBIETTIVO LAVORO",
     "sito": "https://obiettivolavoro.it/",
     "descrizione": "Formazione e placement.",
@@ -976,7 +976,7 @@
     ]
   },
   {
-    "id": 29,
+    "id": "ag-29",
     "nome": "NHRG",
     "sito": "https://www.nhrg.it/",
     "descrizione": "Nuova generazione HR.",
@@ -994,7 +994,7 @@
     ]
   },
   {
-    "id": 30,
+    "id": "ag-30",
     "nome": "TEMPJOB",
     "sito": "https://www.tempjob.it/",
     "descrizione": "Lavoro temporaneo.",
@@ -1012,7 +1012,7 @@
     ]
   },
   {
-    "id": 31,
+    "id": "ag-31",
     "nome": "CENTRO STUDI",
     "sito": "https://www.centrostudisrl.com/",
     "descrizione": "Formazione professionale.",
@@ -1030,7 +1030,7 @@
     ]
   },
   {
-    "id": 32,
+    "id": "ag-32",
     "nome": "LAVORO PIU'",
     "sito": "https://www.lavoropiu.it/",
     "descrizione": "Somministrazione nazionale.",
@@ -1048,7 +1048,7 @@
     ]
   },
   {
-    "id": 33,
+    "id": "ag-33",
     "nome": "METIORPLAN",
     "sito": "https://www.metiorplan.it/",
     "descrizione": "Consulenza HR.",
@@ -1066,7 +1066,7 @@
     ]
   },
   {
-    "id": 34,
+    "id": "ag-34",
     "nome": "AREAJOB",
     "sito": "https://areajob.it/",
     "descrizione": "Agenzia territoriale.",
@@ -1084,7 +1084,7 @@
     ]
   },
   {
-    "id": 35,
+    "id": "ag-35",
     "nome": "STAFF SPA",
     "sito": "https://www.staff.it/",
     "descrizione": "Somministrazione lavoro.",
@@ -1102,7 +1102,7 @@
     ]
   },
   {
-    "id": 36,
+    "id": "ag-36",
     "nome": "QJOB",
     "sito": "https://www.qjob.it/",
     "descrizione": "Agenzia locale.",
@@ -1120,7 +1120,7 @@
     ]
   },
   {
-    "id": 37,
+    "id": "ag-37",
     "nome": "ONLY JOB",
     "sito": "https://onlyjob.it/",
     "descrizione": "Servizi per il lavoro.",
