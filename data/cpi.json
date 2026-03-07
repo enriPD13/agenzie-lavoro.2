@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "cpi-1",
     "nome": "CPI di Agordo",
     "provincia": "Belluno",
     "indirizzo": "Viale Sommariva, 10",
@@ -13,7 +13,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 2,
+    "id": "cpi-2",
     "nome": "CPI di Belluno",
     "provincia": "Belluno",
     "indirizzo": "Via Feltre, 109",
@@ -25,7 +25,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 3,
+    "id": "cpi-3",
     "nome": "CPI di Feltre",
     "provincia": "Belluno",
     "indirizzo": "Viale Piave, 14/a",
@@ -37,7 +37,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 4,
+    "id": "cpi-4",
     "nome": "CPI di Pieve di Cadore",
     "provincia": "Belluno",
     "indirizzo": "Via degli Alpini, 39 Tai di Cadore",
@@ -49,7 +49,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 5,
+    "id": "cpi-5",
     "nome": "Coordinamento d'Ambito Belluno",
     "provincia": "Belluno",
     "indirizzo": "Via Feltre, 109",
@@ -62,7 +62,7 @@
     "tipo": "coordinamento"
   },
   {
-    "id": 6,
+    "id": "cpi-6",
     "nome": "Ufficio Collocamento Mirato Belluno",
     "provincia": "Belluno",
     "indirizzo": "Via Feltre, 109",
@@ -74,7 +74,7 @@
     "tipo": "collocamento_mirato"
   },
   {
-    "id": 7,
+    "id": "cpi-7",
     "nome": "CPI di Camposampiero",
     "provincia": "Padova",
     "indirizzo": "Piazza Castello, 35",
@@ -86,7 +86,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 8,
+    "id": "cpi-8",
     "nome": "CPI di Cittadella",
     "provincia": "Padova",
     "indirizzo": "Vicolo del Folo, 2 - Quartiere Borgo Bassano",
@@ -98,7 +98,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 9,
+    "id": "cpi-9",
     "nome": "CPI di Conselve",
     "provincia": "Padova",
     "indirizzo": "Via Traverso, 2",
@@ -110,7 +110,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 10,
+    "id": "cpi-10",
     "nome": "CPI di Este",
     "provincia": "Padova",
     "indirizzo": "Via Francesconi, 2 presso Chiostro delle Consolazioni",
@@ -122,7 +122,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 11,
+    "id": "cpi-11",
     "nome": "CPI di Monselice",
     "provincia": "Padova",
     "indirizzo": "Via Squero, 6/A",
@@ -134,7 +134,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 12,
+    "id": "cpi-12",
     "nome": "CPI di Padova",
     "provincia": "Padova",
     "indirizzo": "Sottopassaggio Saggin, 5",
@@ -146,7 +146,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 13,
+    "id": "cpi-13",
     "nome": "CPI di Piove di Sacco",
     "provincia": "Padova",
     "indirizzo": "Vicolo E. Ferrari, 1",
@@ -158,7 +158,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 14,
+    "id": "cpi-14",
     "nome": "Coordinamento d'Ambito Padova",
     "provincia": "Padova",
     "indirizzo": "Piazza Bardella, 12",
@@ -171,7 +171,7 @@
     "tipo": "coordinamento"
   },
   {
-    "id": 15,
+    "id": "cpi-15",
     "nome": "Ufficio Collocamento Mirato Padova",
     "provincia": "Padova",
     "indirizzo": "P.zza Bardella, 12 (terzo piano)",
@@ -183,7 +183,7 @@
     "tipo": "collocamento_mirato"
   },
   {
-    "id": 16,
+    "id": "cpi-16",
     "nome": "CPI di Adria",
     "provincia": "Rovigo",
     "indirizzo": "P.le Rovigno, 6",
@@ -195,7 +195,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 17,
+    "id": "cpi-17",
     "nome": "CPI di Badia Polesine",
     "provincia": "Rovigo",
     "indirizzo": "Via Don Minzoni, 66",
@@ -207,7 +207,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 18,
+    "id": "cpi-18",
     "nome": "CPI di Rovigo",
     "provincia": "Rovigo",
     "indirizzo": "Viale della Pace, 5",
@@ -219,7 +219,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 19,
+    "id": "cpi-19",
     "nome": "Coordinamento d'Ambito Rovigo",
     "provincia": "Rovigo",
     "indirizzo": "Viale della Pace, 5",
@@ -232,7 +232,7 @@
     "tipo": "coordinamento"
   },
   {
-    "id": 20,
+    "id": "cpi-20",
     "nome": "Ufficio Collocamento Mirato Rovigo",
     "provincia": "Rovigo",
     "indirizzo": "Viale della Pace, 5",
@@ -244,7 +244,7 @@
     "tipo": "collocamento_mirato"
   },
   {
-    "id": 21,
+    "id": "cpi-21",
     "nome": "CPI di Castelfranco Veneto",
     "provincia": "Treviso",
     "indirizzo": "Via degli Ulivi, 1/A",
@@ -256,7 +256,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 22,
+    "id": "cpi-22",
     "nome": "CPI di Conegliano",
     "provincia": "Treviso",
     "indirizzo": "Via Maggiore Piovesana, 13",
@@ -268,7 +268,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 23,
+    "id": "cpi-23",
     "nome": "CPI di Montebelluna",
     "provincia": "Treviso",
     "indirizzo": "Via Vivaldi, 16/F",
@@ -280,7 +280,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 24,
+    "id": "cpi-24",
     "nome": "CPI di Oderzo",
     "provincia": "Treviso",
     "indirizzo": "Via Murialdo, 5",
@@ -292,7 +292,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 25,
+    "id": "cpi-25",
     "nome": "CPI di Treviso",
     "provincia": "Treviso",
     "indirizzo": "Via Cal di Breda, 116",
@@ -304,7 +304,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 26,
+    "id": "cpi-26",
     "nome": "CPI di Vittorio Veneto",
     "provincia": "Treviso",
     "indirizzo": "Piazza del Popolo, 16",
@@ -316,7 +316,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 27,
+    "id": "cpi-27",
     "nome": "Coordinamento d'Ambito Treviso",
     "provincia": "Treviso",
     "indirizzo": "Via Cal di Breda, 116",
@@ -329,7 +329,7 @@
     "tipo": "coordinamento"
   },
   {
-    "id": 28,
+    "id": "cpi-28",
     "nome": "Ufficio Collocamento Mirato Treviso",
     "provincia": "Treviso",
     "indirizzo": "Via Cal di Breda, 116",
@@ -341,7 +341,7 @@
     "tipo": "collocamento_mirato"
   },
   {
-    "id": 29,
+    "id": "cpi-29",
     "nome": "CPI di Chioggia",
     "provincia": "Venezia",
     "indirizzo": "Riviera Caboto, 5",
@@ -353,7 +353,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 30,
+    "id": "cpi-30",
     "nome": "CPI di Dolo",
     "provincia": "Venezia",
     "indirizzo": "Via Foscarina, 12",
@@ -365,7 +365,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 31,
+    "id": "cpi-31",
     "nome": "CPI di Jesolo",
     "provincia": "Venezia",
     "indirizzo": "Via Sant'Antonio II° vicolo, 10 B",
@@ -377,7 +377,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 32,
+    "id": "cpi-32",
     "nome": "CPI di Venezia-Mestre",
     "provincia": "Venezia",
     "indirizzo": "Viale Sansovino, 3",
@@ -389,7 +389,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 33,
+    "id": "cpi-33",
     "nome": "CPI di Mirano",
     "provincia": "Venezia",
     "indirizzo": "Via Verdi, 48",
@@ -401,7 +401,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 34,
+    "id": "cpi-34",
     "nome": "CPI di Portogruaro",
     "provincia": "Venezia",
     "indirizzo": "Borgo Sant'Agnese 87-A interno 1",
@@ -413,7 +413,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 35,
+    "id": "cpi-35",
     "nome": "CPI di San Donà di Piave",
     "provincia": "Venezia",
     "indirizzo": "Via N. Sauro, 21",
@@ -425,7 +425,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 36,
+    "id": "cpi-36",
     "nome": "Coordinamento d'Ambito Venezia",
     "provincia": "Venezia",
     "indirizzo": "Viale Sansovino, 3/5",
@@ -438,7 +438,7 @@
     "tipo": "coordinamento"
   },
   {
-    "id": 37,
+    "id": "cpi-37",
     "nome": "Ufficio Collocamento Mirato Venezia",
     "provincia": "Venezia",
     "indirizzo": "Viale Sansovino, 3/5",
@@ -450,7 +450,7 @@
     "tipo": "collocamento_mirato"
   },
   {
-    "id": 38,
+    "id": "cpi-38",
     "nome": "CPI di Affi",
     "provincia": "Verona",
     "indirizzo": "c/o Grand'Affi Shopping Center - Località Canove",
@@ -462,7 +462,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 39,
+    "id": "cpi-39",
     "nome": "CPI di Bovolone",
     "provincia": "Verona",
     "indirizzo": "Via IV Novembre, 1",
@@ -474,7 +474,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 40,
+    "id": "cpi-40",
     "nome": "CPI di Legnago",
     "provincia": "Verona",
     "indirizzo": "presso Edificio 13 Via Vicentini",
@@ -486,7 +486,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 41,
+    "id": "cpi-41",
     "nome": "CPI di San Bonifacio",
     "provincia": "Verona",
     "indirizzo": "Via Cesare Battisti, 5",
@@ -498,7 +498,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 42,
+    "id": "cpi-42",
     "nome": "CPI di Verona",
     "provincia": "Verona",
     "indirizzo": "Via delle Franceschine, 10",
@@ -510,7 +510,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 43,
+    "id": "cpi-43",
     "nome": "CPI di Villafranca di Verona",
     "provincia": "Verona",
     "indirizzo": "Viale Postumia, 58/C",
@@ -522,7 +522,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 44,
+    "id": "cpi-44",
     "nome": "Coordinamento d'Ambito Verona",
     "provincia": "Verona",
     "indirizzo": "Via Franceschine, 10",
@@ -535,7 +535,7 @@
     "tipo": "coordinamento"
   },
   {
-    "id": 45,
+    "id": "cpi-45",
     "nome": "Ufficio Collocamento Mirato Verona",
     "provincia": "Verona",
     "indirizzo": "Via Franceschine, 10",
@@ -547,7 +547,7 @@
     "tipo": "collocamento_mirato"
   },
   {
-    "id": 46,
+    "id": "cpi-46",
     "nome": "CPI di Arzignano",
     "provincia": "Vicenza",
     "indirizzo": "Via A. Diaz, 7",
@@ -559,7 +559,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 47,
+    "id": "cpi-47",
     "nome": "CPI di Bassano del Grappa",
     "provincia": "Vicenza",
     "indirizzo": "Largo Parolini, 82",
@@ -571,7 +571,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 48,
+    "id": "cpi-48",
     "nome": "CPI di Lonigo",
     "provincia": "Vicenza",
     "indirizzo": "Viale della Vittoria 17 - 1° piano (sede ex Pretura)",
@@ -583,7 +583,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 49,
+    "id": "cpi-49",
     "nome": "CPI di Schio-Thiene",
     "provincia": "Vicenza",
     "indirizzo": "Via Righi",
@@ -595,7 +595,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 50,
+    "id": "cpi-50",
     "nome": "CPI di Valdagno",
     "provincia": "Vicenza",
     "indirizzo": "Via Enrico Fermi, 11/C",
@@ -607,7 +607,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 51,
+    "id": "cpi-51",
     "nome": "CPI di Vicenza",
     "provincia": "Vicenza",
     "indirizzo": "Via Legione Gallieno, 31",
@@ -619,7 +619,7 @@
     "tipo": "cpi"
   },
   {
-    "id": 52,
+    "id": "cpi-52",
     "nome": "Coordinamento d'Ambito Vicenza",
     "provincia": "Vicenza",
     "indirizzo": "Via Legione Gallieno, 31",
@@ -632,7 +632,7 @@
     "tipo": "coordinamento"
   },
   {
-    "id": 53,
+    "id": "cpi-53",
     "nome": "Ufficio Collocamento Mirato Vicenza",
     "provincia": "Vicenza",
     "indirizzo": "Via Legione Gallieno, 31",
