@@ -1,14 +1,13 @@
-// JobApp - CPI Module
-const CPI = {
-  allCPI: [],
+// JobApp - Agenzie Module (MODIFICATO)
+const Agenzie = {
+  agencies: [],
   favorites: [],
-  favoriteSedi: [],
-  filteredProvinces: [],
-  provinceData: {},
+  favoriteSedi: [], // ✅ NUOVO: Preferiti per sedi
+  filteredAgencies: [],
   
   init() {
     setTimeout(() => {
-      const loading = document.getElementById('loadingCPI');
+      const loading = document.getElementById('loadingAgenzie');
       if (loading) loading.classList.add('hidden');
     }, 500);
     this.loadData();
@@ -17,23 +16,10 @@ const CPI = {
   
   async loadData() {
     try {
-      const response = await fetch('data/cpi.json');
-      this.allCPI = await response.json();
-      
-      this.provinceData = {};
-      this.allCPI.forEach(cpi => {
-        const prov = cpi.provincia;
-        if (!this.provinceData[prov]) {
-          this.provinceData[prov] = {
-            nome: prov,
-            sigla: cpi.provincia_sigla,
-            sedi: []
-          };
-        }
-        this.provinceData[prov].sedi.push(cpi);
-      });
-      
-      this.filteredProvinces = Object.values(this.provinceData).sort((a, b) => a.nome.localeCompare(b.nome));
+      const response = await fetch('data/agenzie.json');
+      this.agencies = await response.json();
+      this.agencies.sort((a, b) => a.nome.localeCompare(b.nome));
+      this.filteredAgencies = this.agencies;
       this.loadFavorites();
       this.loadFavoriteSedi();
       this.render();
@@ -43,19 +29,27 @@ const CPI = {
   },
   
   setupSearch() {
-    const input = document.getElementById('searchInputCPI');
+    const input = document.getElementById('searchInput');
     if (!input) return;
     
     input.addEventListener('input', (e) => {
       const q = e.target.value.toLowerCase().trim();
       
       if (q === '') {
-        this.filteredProvinces = Object.values(this.provinceData).sort((a, b) => a.nome.localeCompare(b.nome));
+        this.filteredAgencies = this.agencies;
       } else {
-        this.filteredProvinces = Object.values(this.provinceData).filter(p => {
-          if (p.nome.toLowerCase().includes(q)) return true;
-          if (p.sigla.toLowerCase() === q) return true;
-          return p.sedi.some(s => s.citta.toLowerCase().includes(q));
+        this.filteredAgencies = this.agencies.filter(a => {
+          if (a.nome.toLowerCase().startsWith(q)) return true;
+          if (a.sedi) {
+            return a.sedi.some(s => {
+              const citta = s.citta?.toLowerCase() || '';
+              const addr = s.indirizzo?.toLowerCase() || '';
+              const provMatch = addr.match(/\b(BL|PD|RO|TV|VE|VR|VI)\b/i);
+              const prov = provMatch ? provMatch[0].toLowerCase() : '';
+              return citta.includes(q) || prov === q;
+            });
+          }
+          return false;
         });
       }
       this.render();
@@ -63,170 +57,163 @@ const CPI = {
   },
   
   render() {
-    const grid = document.getElementById('cpiGrid');
+    const grid = document.getElementById('agenciesGrid');
     if (!grid) return;
     
-    const stats = document.getElementById('statsCPI');
+    // ✅ STATS: Solo 2 card (rimosso Veneto)
+    const stats = document.getElementById('statsCards');
     if (stats) {
-      const totalProv = this.filteredProvinces.length;
-      const totalSedi = this.filteredProvinces.reduce((s, p) => s + p.sedi.length, 0);
+      const total = this.filteredAgencies.length;
+      const sedi = this.filteredAgencies.reduce((s, a) => s + (a.sedi?.length || 0), 0);
       stats.innerHTML = `
-        <div class="bg-blue-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${totalProv}</div><div class="text-xs">Province</div></div>
-        <div class="bg-cyan-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${totalSedi}</div><div class="text-xs">Sedi CPI</div></div>
+        <div class="bg-indigo-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${total}</div><div class="text-xs">Agenzie</div></div>
+        <div class="bg-pink-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${sedi}</div><div class="text-xs">Sedi</div></div>
       `;
     }
     
-    if (this.filteredProvinces.length === 0) {
+    if (this.filteredAgencies.length === 0) {
       grid.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">🔍</div><h3 class="text-xl font-bold">Nessun Risultato</h3></div>';
       return;
     }
     
-    grid.innerHTML = this.filteredProvinces.map(p => this.renderProvinciaCard(p)).join('');
-  },
-  
-  renderProvinciaCard(p) {
-    const isFav = this.isFavorite(p.sigla);
-    const favClass = isFav ? 'bg-yellow-100' : 'bg-gray-100';
-    const starColor = isFav ? 'text-yellow-500' : 'text-gray-400';
-    const starFill = isFav ? 'currentColor' : 'none';
-    
-    const provinciaLower = p.nome.toLowerCase();
-    const flagPath = `images/province/${provinciaLower}.png`;
-    
-    return `
+    grid.innerHTML = this.filteredAgencies.map(a => `
       <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-        <div class="h-36 bg-gradient-to-br from-blue-50 to-cyan-50 flex items-center justify-center p-6">
-          <img src="${flagPath}" alt="Provincia di ${p.nome}" class="max-h-28 max-w-full object-contain" style="filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));" />
-        </div>
-        
+        ${a.logo ? `<div class="h-36 bg-gray-50 flex items-center justify-center p-6"><img src="${a.logo}" alt="${a.nome}" class="max-h-28 object-contain"/></div>` : ''}
         <div class="p-5">
           <div class="flex items-start justify-between mb-2">
-            <h3 class="text-xl font-bold flex-1">Provincia di ${p.nome}</h3>
-            <button onclick="CPI.toggleFavorite(&quot;${p.sigla}&quot;)" class="ml-2 w-10 h-10 flex items-center justify-center -mr-2">
-              <svg class="w-5 h-5 ${isFav ? 'text-blue-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <h3 class="text-xl font-bold flex-1">${a.nome}</h3>
+            <button onclick="Agenzie.toggleFavorite('${a.id}')" class="ml-2 w-10 h-10 flex items-center justify-center -mr-2">
+              <svg class="w-5 h-5 ${this.isFavorite(a.id) ? 'text-indigo-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
               </svg>
             </button>
           </div>
           
-          <div class="flex gap-2 mb-3">
-            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">${p.sigla}</span>
-            <span class="text-xs text-gray-500">${p.sedi.length} sedi</span>
-          </div>
+          ${a.settori?.length > 0 ? `
+            <div class="flex flex-wrap gap-2 mb-3">
+              ${a.settori.slice(0, 2).map(s => `<span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">${s}</span>`).join('')}
+              ${a.settori.length > 2 ? `<span class="text-xs text-gray-500">+${a.settori.length - 2}</span>` : ''}
+            </div>
+          ` : ''}
           
-          <p class="text-sm text-gray-600 mb-4">Centri Per Impiego della provincia di ${p.nome}</p>
+          <p class="text-sm text-gray-600 mb-4 line-clamp-2">${a.descrizione}</p>
           
           <div class="grid grid-cols-2 gap-2">
-            <button onclick="CPI.openSedi(&quot;${p.sigla}&quot;)" class="py-3 bg-blue-600 text-white rounded-2xl font-semibold text-sm flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              Sedi (${p.sedi.length})
-            </button>
+            ${a.sedi?.length ? `
+              <button onclick="Agenzie.openSedi('${a.id}')" class="py-3 bg-indigo-600 text-white rounded-2xl font-semibold text-sm flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                Sedi (${a.sedi.length})
+              </button>
+            ` : '<div></div>'}
             
-            <a href="https://www.venetolavoro.it/cpi" target="_blank" class="py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-              Servizi
-            </a>
+            ${a.formIscrizione ? `
+              <a href="${a.formIscrizione}" target="_blank" class="py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Iscriviti
+              </a>
+            ` : '<div></div>'}
           </div>
           
-          <a href="https://www.venetolavoro.it/" target="_blank" class="block mt-2 w-full py-3 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-            Veneto Lavoro
-          </a>
+          ${a.sito ? `
+            <a href="${a.sito}" target="_blank" class="block mt-2 w-full py-3 bg-gradient-to-br from-blue-500 to-cyan-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Candidati
+            </a>
+          ` : ''}
         </div>
       </div>
-    `;
+    `).join('');
   },
   
-  openSedi(provinciaSigla) {
-    const provincia = this.provinceData[Object.keys(this.provinceData).find(k => 
-      this.provinceData[k].sigla === provinciaSigla
-    )];
+  getProvincia(sede) {
+    const addr = sede.indirizzo || '';
+    const match = addr.match(/\b(BL|PD|RO|TV|VE|VR|VI)\b/i);
+    return match ? match[0].toUpperCase() : 'ALTRE';
+  },
+  
+  getProvinciaName(sigla) {
+    const nomi = {
+      'BL': 'Belluno', 'PD': 'Padova', 'RO': 'Rovigo', 'TV': 'Treviso',
+      'VE': 'Venezia', 'VR': 'Verona', 'VI': 'Vicenza'
+    };
+    return nomi[sigla] || 'Altre Province';
+  },
+  
+  openSedi(id) {
+    const agency = this.agencies.find(a => a.id === id);
+    if (!agency) return;
     
-    if (!provincia) return;
+    document.getElementById('sediAgencyName').textContent = agency.nome;
+    document.getElementById('sediCount').textContent = `${agency.sedi.length} sed${agency.sedi.length === 1 ? 'e' : 'i'} in Veneto`;
     
-    document.getElementById('cpiProvinciaName').textContent = 'Provincia di ' + provincia.nome;
-    document.getElementById('cpiSediCount').textContent = provincia.sedi.length + ' sedi CPI';
-    
-    const htmlParts = [];
-    provincia.sedi.forEach((s, idx) => {
-      const sedeId = provinciaSigla + '-' + idx;
-      const isFav = this.isSedeInFavorites(sedeId);
-      htmlParts.push(this.renderSedeCard(s, sedeId, isFav, provincia.nome));
+    const perProv = {};
+    agency.sedi.forEach((s, globalIdx) => {
+      const prov = this.getProvincia(s);
+      if (!perProv[prov]) perProv[prov] = [];
+      perProv[prov].push({ ...s, globalIdx }); // Aggiungi index globale
     });
     
-    document.getElementById('cpiSediContent').innerHTML = htmlParts.join('');
+    const provOrdinate = Object.keys(perProv).sort();
     
-    const sheet = document.getElementById('cpiSediSheet');
+    let html = '';
+    provOrdinate.forEach(prov => {
+      const sedi = perProv[prov];
+      // ✅ SENZA ICONA PIN accanto al nome provincia
+      html += `<div class="text-sm font-bold text-indigo-600 uppercase tracking-wide mb-4 mt-6 first:mt-0">Provincia di ${this.getProvinciaName(prov)} (${sedi.length})</div>`;
+      
+      sedi.forEach(s => {
+        const sedeId = `${id}-${s.globalIdx}`; // Usa index globale
+        const isFav = this.isSedeInFavorites(sedeId);
+        
+        html += `
+          <div class="bg-gray-50 rounded-2xl p-4 mb-4">
+            <div class="flex items-start justify-between mb-2">
+              <div class="font-bold">${s.citta}</div>
+              <button onclick="Agenzie.toggleSedeFavorite('${sedeId}', '${agency.nome}', '${s.citta}')" class="w-10 h-10 flex items-center justify-center -mr-2">
+                <svg class="w-5 h-5 ${isFav ? 'text-indigo-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="text-sm text-gray-600 space-y-2">
+              <div class="flex items-start gap-2">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                <span>${s.indirizzo}</span>
+              </div>
+              ${s.telefono ? `<a href="tel:${s.telefono}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>${s.telefono}</a>` : ''}
+              ${s.email ? `<a href="mailto:${s.email}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline break-all"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>${s.email}</a>` : ''}
+              ${s.googleMaps ? `<a href="${s.googleMaps}" target="_blank" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold underline"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>Apri in Google Maps</a>` : ''}
+            </div>
+          </div>
+        `;
+      });
+    });
+    
+    document.getElementById('sediContent').innerHTML = html;
+    
+    const sheet = document.getElementById('sediSheet');
     sheet.classList.remove('hidden');
     setTimeout(() => sheet.querySelector('.bottom-sheet').classList.add('active'), 10);
   },
   
-  renderSedeCard(s, sedeId, isFav, provinciaNome) {
-    
-    const telefono = s.telefono ? `<a href="tel:${s.telefono}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>${s.telefono}</a>` : '';
-    
-    const email = s.email ? `<a href="mailto:${s.email}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline break-all"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>${s.email}</a>` : '';
-    
-    const orari = s.orari ? `<div class="flex items-center gap-2 text-gray-600"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>${s.orari}</div>` : '';
-    
-    const mapsQuery = encodeURIComponent(s.indirizzo + ', ' + s.citta);
-    
-    return `
-      <div class="bg-gray-50 rounded-2xl p-4 mb-4">
-        <div class="flex items-start justify-between mb-2">
-          <div class="font-bold">${s.nome}</div>
-          <button onclick="CPI.toggleSedeFavorite(&quot;${sedeId}&quot;, &quot;${provinciaNome}&quot;, &quot;${s.citta}&quot;)" class="w-10 h-10 flex items-center justify-center -mr-2">
-            <svg class="w-5 h-5 ${isFav ? 'text-blue-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-            </svg>
-          </button>
-        </div>
-        <div class="text-sm text-gray-600 space-y-2">
-          <div class="flex items-start gap-2">
-            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
-            <span>${s.indirizzo}, ${s.cap} ${s.citta} (${s.provincia_sigla})</span>
-          </div>
-          ${telefono}
-          ${email}
-          ${orari}
-          <a href="https://www.google.com/maps/search/?api=1&query=${mapsQuery}" target="_blank" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold underline"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>Apri in Google Maps</a>
-        </div>
-      </div>
-    `;
-  },
-  
-  closeSedi() {
-    const sheet = document.getElementById('cpiSediSheet');
-    sheet.querySelector('.bottom-sheet').classList.remove('active');
-    setTimeout(() => sheet.classList.add('hidden'), 300);
-  },
-  
-  toggleFavorite(provinciaSigla) {
-    const index = this.favorites.indexOf(provinciaSigla);
+  toggleFavorite(agencyId) {
+    const index = this.favorites.indexOf(agencyId);
     if (index > -1) {
-      // RIMOZIONE: elimina anche tutte le sedi di questa provincia
       this.favorites.splice(index, 1);
-      
-      // Rimuovi tutte le sedi che appartengono a questa provincia
-      this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeProvinciaId = sede.id.split('-')[0];
-        return sedeProvinciaId !== provinciaSigla;
-      });
-      this.saveFavoriteSedi();
     } else {
-      // AGGIUNTA: aggiungi solo la provincia
-      this.favorites.push(provinciaSigla);
+      this.favorites.push(agencyId);
     }
     this.saveFavorites();
     this.render();
   },
   
-  isFavorite(provinciaSigla) {
-    return this.favorites.includes(provinciaSigla);
+  isFavorite(agencyId) {
+    return this.favorites.includes(agencyId);
   },
   
-  toggleSedeFavorite(sedeId, provincia, city) {
-    const fav = { id: sedeId, provincia: provincia, city: city };
+  // ✅ NUOVE FUNZIONI PER PREFERITI SEDI
+  toggleSedeFavorite(sedeId, agencyName, city) {
+    const fav = { id: sedeId, agency: agencyName, city: city };
     const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
     
     if (index > -1) {
@@ -234,16 +221,18 @@ const CPI = {
     } else {
       this.favoriteSedi.push(fav);
       
-      // Auto-aggiungi provincia ai preferiti se non c'è già
-      const provinciaSigla = sedeId.split('-')[0]; // "PD-0" -> "PD"
-      if (!this.favorites.includes(provinciaSigla)) {
-        this.favorites.push(provinciaSigla);
+      // Auto-aggiungi agenzia ai preferiti se non c'è già
+      const agencyId = sedeId.split('-').slice(0, 2).join('-');
+      if (!this.favorites.includes(agencyId)) {
+        this.favorites.push(agencyId);
         this.saveFavorites();
       }
     }
     
     this.saveFavoriteSedi();
-    this.openSedi(sedeId.split('-')[0]);
+    // Estrae l'ID agenzia dal sedeId
+    const agencyId = sedeId.split('-').slice(0, 2).join('-');
+    this.openSedi(agencyId);
   },
   
   isSedeInFavorites(sedeId) {
@@ -251,25 +240,31 @@ const CPI = {
   },
   
   loadFavorites() {
-    const s = localStorage.getItem('cpi_favorites');
+    const s = localStorage.getItem('agenzie_favorites');
     this.favorites = s ? JSON.parse(s) : [];
   },
   
   saveFavorites() {
-    localStorage.setItem('cpi_favorites', JSON.stringify(this.favorites));
+    localStorage.setItem('agenzie_favorites', JSON.stringify(this.favorites));
   },
   
   loadFavoriteSedi() {
-    const s = localStorage.getItem('cpi_sedi_favorites');
+    const s = localStorage.getItem('agenzie_sedi_favorites');
     this.favoriteSedi = s ? JSON.parse(s) : [];
   },
   
   saveFavoriteSedi() {
-    localStorage.setItem('cpi_sedi_favorites', JSON.stringify(this.favoriteSedi));
+    localStorage.setItem('agenzie_sedi_favorites', JSON.stringify(this.favoriteSedi));
   },
   
   showError(msg) {
-    const grid = document.getElementById('cpiGrid');
-    if (grid) grid.innerHTML = '<div class="text-center py-12"><p class="text-red-600">' + msg + '</p></div>';
+    const grid = document.getElementById('agenciesGrid');
+    if (grid) grid.innerHTML = `<div class="text-center py-12"><p class="text-red-600">${msg}</p></div>`;
   }
 };
+
+function closeSedi() {
+  const sheet = document.getElementById('sediSheet');
+  sheet.querySelector('.bottom-sheet').classList.remove('active');
+  setTimeout(() => sheet.classList.add('hidden'), 300);
+}
