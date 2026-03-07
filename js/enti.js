@@ -2,6 +2,7 @@
 const Enti = {
   allEnti: [],
   favorites: [],
+  favoriteSedi: [], // Supporto future sedi multiple
   filteredEnti: [],
   
   init() {
@@ -141,10 +142,43 @@ const Enti = {
   loadFavorites() {
     const s = localStorage.getItem('enti_favorites');
     this.favorites = s ? JSON.parse(s) : [];
+    
+    const sedi = localStorage.getItem('enti_sedi_favorites');
+    this.favoriteSedi = sedi ? JSON.parse(sedi) : [];
   },
   
   saveFavorites() {
     localStorage.setItem('enti_favorites', JSON.stringify(this.favorites));
+  },
+  
+  saveFavoriteSedi() {
+    localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSedi));
+  },
+  
+  // Funzioni per future sedi multiple
+  toggleSedeFavorite(sedeId, enteNome, city) {
+    const fav = { id: sedeId, ente: enteNome, city: city };
+    const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
+    
+    if (index > -1) {
+      this.favoriteSedi.splice(index, 1);
+    } else {
+      this.favoriteSedi.push(fav);
+      
+      // Auto-aggiungi ente ai preferiti se non c'è già
+      const enteId = sedeId.split('-').slice(0, 2).join('-');
+      if (!this.favorites.includes(enteId)) {
+        this.favorites.push(enteId);
+        this.saveFavorites();
+      }
+    }
+    
+    this.saveFavoriteSedi();
+    // Riapri sheet sedi se implementato
+  },
+  
+  isSedeInFavorites(sedeId) {
+    return this.favoriteSedi.some(f => f.id === sedeId);
   },
   
   showError(msg) {
