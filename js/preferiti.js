@@ -196,12 +196,6 @@ const Preferiti = {
         html += '</div>';
       }
       
-      html += `
-          <div class="flex gap-2 mt-3">
-            <button onclick="Navigation.loadPage('agenzie')" class="flex-1 py-2 bg-indigo-600 text-white rounded-xl text-sm font-semibold">
-              Vedi Dettagli
-            </button>
-          </div>
         </div>
       `;
     });
@@ -336,11 +330,6 @@ const Preferiti = {
       }
       
       html += `
-          <div class="flex gap-2 mt-3">
-            <button onclick="Navigation.loadPage('cpi')" class="flex-1 py-2 bg-blue-600 text-white rounded-xl text-sm font-semibold">
-              Vedi Dettagli
-            </button>
-          </div>
         </div>
       `;
     });
@@ -488,11 +477,6 @@ const Preferiti = {
       }
       
       html += `
-          <div class="flex gap-2 mt-3">
-            <button onclick="Navigation.loadPage('enti')" class="flex-1 py-2 bg-purple-600 text-white rounded-xl text-sm font-semibold">
-              Vedi Dettagli
-            </button>
-          </div>
         </div>
       `;
     });
@@ -591,11 +575,6 @@ const Preferiti = {
             </button>
           </div>
           <p class="text-sm text-gray-600 mb-3">${p.descrizione}</p>
-          <div class="flex gap-2">
-            <button onclick="Navigation.loadPage('piattaforme')" class="flex-1 py-2 bg-orange-600 text-white rounded-xl text-sm font-semibold">
-              Vedi Dettagli
-            </button>
-          </div>
         </div>
       `;
     });
