@@ -1,270 +1,665 @@
-// JobApp - Agenzie Module (MODIFICATO)
-const Agenzie = {
-  agencies: [],
-  favorites: [],
-  favoriteSedi: [], // ✅ NUOVO: Preferiti per sedi
-  filteredAgencies: [],
+// JobApp - Preferiti Module
+const Preferiti = {
+  agenzie: [],
+  cpi: [],
+  enti: [],
+  piattaforme: [],
   
-  init() {
-    setTimeout(() => {
-      const loading = document.getElementById('loadingAgenzie');
-      if (loading) loading.classList.add('hidden');
-    }, 500);
-    this.loadData();
-    this.setupSearch();
+  favoriteAgenzie: [],
+  favoriteAgenzieIds: [],
+  favoriteSediAgenzie: [],
+  
+  favoriteCPI: [],
+  favoriteCPIIds: [],
+  favoriteSediCPI: [],
+  
+  favoriteEnti: [],
+  favoriteEntiIds: [],
+  favoriteSediEnti: [],
+  
+  favoritePiattaforme: [],
+  favoritePiattaformeIds: [],
+
+  async init() {
+    console.log('Preferiti init START');
+    await this.loadData();
+    console.log('Dati caricati:', {
+      agenzie: this.agenzie.length,
+      cpi: this.cpi.length,
+      enti: this.enti.length,
+      piattaforme: this.piattaforme.length
+    });
+    this.loadFavorites();
+    console.log('Preferiti caricati:', {
+      agenzie: this.favoriteAgenzieIds,
+      sediAgenzie: this.favoriteSediAgenzie,
+      cpi: this.favoriteCPIIds,
+      sediCPI: this.favoriteSediCPI,
+      enti: this.favoriteEntiIds,
+      piattaforme: this.favoritePiattaformeIds
+    });
+    this.render();
+    console.log('Preferiti render COMPLETE');
   },
-  
+
   async loadData() {
     try {
-      const response = await fetch('data/agenzie.json');
-      this.agencies = await response.json();
-      this.agencies.sort((a, b) => a.nome.localeCompare(b.nome));
-      this.filteredAgencies = this.agencies;
-      this.loadFavorites();
-      this.loadFavoriteSedi();
-      this.render();
-    } catch (error) {
-      this.showError(error.message);
-    }
-  },
-  
-  setupSearch() {
-    const input = document.getElementById('searchInput');
-    if (!input) return;
-    
-    input.addEventListener('input', (e) => {
-      const q = e.target.value.toLowerCase().trim();
+      const [agenzieRes, cpiRes, entiRes, piattaformeRes] = await Promise.all([
+        fetch('data/agenzie.json'),
+        fetch('data/cpi.json'),
+        fetch('data/enti.json'),
+        fetch('data/piattaforme.json')
+      ]);
       
-      if (q === '') {
-        this.filteredAgencies = this.agencies;
-      } else {
-        this.filteredAgencies = this.agencies.filter(a => {
-          if (a.nome.toLowerCase().startsWith(q)) return true;
-          if (a.sedi) {
-            return a.sedi.some(s => {
-              const citta = s.citta?.toLowerCase() || '';
-              const addr = s.indirizzo?.toLowerCase() || '';
-              const provMatch = addr.match(/\b(BL|PD|RO|TV|VE|VR|VI)\b/i);
-              const prov = provMatch ? provMatch[0].toLowerCase() : '';
-              return citta.includes(q) || prov === q;
-            });
-          }
-          return false;
-        });
-      }
-      this.render();
-    });
-  },
-  
-  render() {
-    const grid = document.getElementById('agenciesGrid');
-    if (!grid) return;
-    
-    // ✅ STATS: Solo 2 card (rimosso Veneto)
-    const stats = document.getElementById('statsCards');
-    if (stats) {
-      const total = this.filteredAgencies.length;
-      const sedi = this.filteredAgencies.reduce((s, a) => s + (a.sedi?.length || 0), 0);
-      stats.innerHTML = `
-        <div class="bg-indigo-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${total}</div><div class="text-xs">Agenzie</div></div>
-        <div class="bg-pink-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${sedi}</div><div class="text-xs">Sedi</div></div>
-      `;
+      this.agenzie = await agenzieRes.json();
+      this.cpi = await cpiRes.json();
+      this.enti = await entiRes.json();
+      this.piattaforme = await piattaformeRes.json();
+    } catch (error) {
+      console.error('Errore caricamento dati:', error);
     }
+  },
+
+  loadFavorites() {
+    const agenzieIds = localStorage.getItem('agenzie_favorites');
+    this.favoriteAgenzieIds = agenzieIds ? JSON.parse(agenzieIds) : [];
+    this.favoriteAgenzie = this.agenzie.filter(a => this.favoriteAgenzieIds.includes(a.id));
     
-    if (this.filteredAgencies.length === 0) {
-      grid.innerHTML = '<div class="text-center py-12"><div class="text-6xl mb-4">🔍</div><h3 class="text-xl font-bold">Nessun Risultato</h3></div>';
+    const sediAgenzie = localStorage.getItem('agenzie_sedi_favorites');
+    this.favoriteSediAgenzie = sediAgenzie ? JSON.parse(sediAgenzie) : [];
+    
+    const cpiIds = localStorage.getItem('cpi_favorites');
+    this.favoriteCPIIds = cpiIds ? JSON.parse(cpiIds) : [];
+    
+    const provinceUniche = [...new Set(this.cpi.map(c => c.provincia_sigla))];
+    this.favoriteCPI = provinceUniche
+      .filter(sigla => this.favoriteCPIIds.includes(sigla))
+      .map(sigla => {
+        const primo = this.cpi.find(c => c.provincia_sigla === sigla);
+        return {
+          sigla: sigla,
+          nome: primo.provincia
+        };
+      });
+    
+    const sediCPI = localStorage.getItem('cpi_sedi_favorites');
+    this.favoriteSediCPI = sediCPI ? JSON.parse(sediCPI) : [];
+    
+    const entiIds = localStorage.getItem('enti_favorites');
+    this.favoriteEntiIds = entiIds ? JSON.parse(entiIds) : [];
+    this.favoriteEnti = this.enti.filter(e => this.favoriteEntiIds.includes(e.id));
+    
+    const sediEnti = localStorage.getItem('enti_sedi_favorites');
+    this.favoriteSediEnti = sediEnti ? JSON.parse(sediEnti) : [];
+    
+    const piattIds = localStorage.getItem('piattaforme_favorites');
+    this.favoritePiattaformeIds = piattIds ? JSON.parse(piattIds) : [];
+    this.favoritePiattaforme = this.piattaforme.filter(p => this.favoritePiattaformeIds.includes(p.id));
+  },
+
+  render() {
+    const container = document.getElementById('preferiti-container');
+    
+    const totale = this.favoriteAgenzie.length + this.favoriteSediAgenzie.length +
+                   this.favoriteCPI.length + this.favoriteSediCPI.length +
+                   this.favoriteEnti.length + this.favoriteSediEnti.length +
+                   this.favoritePiattaforme.length;
+    
+    if (totale === 0) {
+      container.innerHTML = this.renderEmpty();
       return;
     }
     
-    grid.innerHTML = this.filteredAgencies.map(a => `
-      <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-        ${a.logo ? `<div class="h-36 bg-gray-50 flex items-center justify-center p-6"><img src="${a.logo}" alt="${a.nome}" class="max-h-28 object-contain"/></div>` : ''}
-        <div class="p-5">
+    let html = '<div class="space-y-6">';
+    
+    if (this.favoriteAgenzie.length > 0 || this.favoriteSediAgenzie.length > 0) {
+      html += this.renderCategoriaAgenzie();
+    }
+    
+    if (this.favoriteCPI.length > 0 || this.favoriteSediCPI.length > 0) {
+      html += this.renderCategoriaCPI();
+    }
+    
+    if (this.favoriteEnti.length > 0 || this.favoriteSediEnti.length > 0) {
+      html += this.renderCategoriaEnti();
+    }
+    
+    if (this.favoritePiattaforme.length > 0) {
+      html += this.renderCategoriaPiattaforme();
+    }
+    
+    html += '</div>';
+    container.innerHTML = html;
+  },
+
+  renderEmpty() {
+    return `
+      <div class="flex flex-col items-center justify-center py-20 px-6 text-center">
+        <svg class="w-24 h-24 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+        </svg>
+        <h3 class="text-xl font-bold text-gray-700 mb-2">Nessun Preferito</h3>
+        <p class="text-gray-500 max-w-sm">
+          Aggiungi i tuoi preferiti toccando la stella sulle schede di agenzie, CPI, enti e piattaforme
+        </p>
+      </div>
+    `;
+  },
+
+  renderCategoriaAgenzie() {
+    const totale = this.favoriteAgenzie.length + this.favoriteSediAgenzie.length;
+    
+    const sediPerAgenzia = {};
+    this.favoriteSediAgenzie.forEach(sede => {
+      const agencyId = sede.id.split('-').slice(0, 2).join('-');
+      if (!sediPerAgenzia[agencyId]) sediPerAgenzia[agencyId] = [];
+      sediPerAgenzia[agencyId].push(sede);
+    });
+    
+    const agenzieOrfane = new Set();
+    Object.keys(sediPerAgenzia).forEach(agencyId => {
+      if (!this.favoriteAgenzieIds.includes(agencyId)) {
+        agenzieOrfane.add(agencyId);
+      }
+    });
+    
+    let html = `
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="text-3xl">💼</div>
+              <div>
+                <h2 class="text-xl font-bold text-white">Agenzie per il Lavoro</h2>
+                <p class="text-indigo-100 text-sm">${totale} preferit${totale === 1 ? 'o' : 'i'}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 space-y-3">
+    `;
+    
+    this.favoriteAgenzie.forEach(a => {
+      const sediDiQuestaAgenzia = sediPerAgenzia[a.id] || [];
+      
+      html += `
+        <div class="bg-gray-50 rounded-2xl p-4">
           <div class="flex items-start justify-between mb-2">
-            <h3 class="text-xl font-bold flex-1">${a.nome}</h3>
-            <button onclick="Agenzie.toggleFavorite('${a.id}')" class="ml-2 w-10 h-10 flex items-center justify-center -mr-2">
-              <svg class="w-5 h-5 ${this.isFavorite(a.id) ? 'text-indigo-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            <h3 class="text-lg font-bold flex-1">${a.nome}</h3>
+            <button onclick="Preferiti.rimuoviAgenzia('${a.id}')" class="w-10 h-10 flex items-center justify-center -mr-2">
+              <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
               </svg>
             </button>
           </div>
-          
-          ${a.settori?.length > 0 ? `
-            <div class="flex flex-wrap gap-2 mb-3">
-              ${a.settori.slice(0, 2).map(s => `<span class="bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full text-xs font-semibold">${s}</span>`).join('')}
-              ${a.settori.length > 2 ? `<span class="text-xs text-gray-500">+${a.settori.length - 2}</span>` : ''}
+          <p class="text-sm text-gray-600 mb-3">${a.descrizione}</p>
+      `;
+      
+      if (sediDiQuestaAgenzia.length > 0) {
+        html += `
+          <div class="mt-3 pl-3 border-l-2 border-indigo-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600 mb-3">📍 Sedi Preferite (${sediDiQuestaAgenzia.length})</p>
+        `;
+        
+        sediDiQuestaAgenzia.forEach(sede => {
+          const sedeCompleta = this.trovaSedeAgenzia(a, sede.id);
+          if (sedeCompleta) {
+            html += this.renderSedeAgenziaCard(sedeCompleta, sede.id, a.nome);
+          }
+        });
+        
+        html += '</div>';
+      }
+      
+      html += '</div>';
+    });
+    
+    agenzieOrfane.forEach(agencyId => {
+      const agenzia = this.agenzie.find(a => a.id === agencyId);
+      if (!agenzia) return;
+      
+      const sediDiQuestaAgenzia = sediPerAgenzia[agencyId];
+      
+      html += `
+        <div class="bg-gray-50 rounded-2xl p-4 border-2 border-dashed border-indigo-300">
+          <div class="flex items-start justify-between mb-2">
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-gray-700">${agenzia.nome}</h3>
+              <p class="text-xs text-gray-500">Solo sedi salvate</p>
             </div>
-          ` : ''}
-          
-          <p class="text-sm text-gray-600 mb-4 line-clamp-2">${a.descrizione}</p>
-          
-          <div class="grid grid-cols-2 gap-2">
-            ${a.sedi?.length ? `
-              <button onclick="Agenzie.openSedi('${a.id}')" class="py-3 bg-indigo-600 text-white rounded-2xl font-semibold text-sm flex items-center justify-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                Sedi (${a.sedi.length})
-              </button>
-            ` : '<div></div>'}
-            
-            ${a.formIscrizione ? `
-              <a href="${a.formIscrizione}" target="_blank" class="py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                Iscriviti
-              </a>
-            ` : '<div></div>'}
           </div>
           
-          ${a.sito ? `
-            <a href="${a.sito}" target="_blank" class="block mt-2 w-full py-3 bg-gradient-to-br from-blue-500 to-cyan-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              Candidati
-            </a>
-          ` : ''}
+          <div class="mt-3 pl-3 border-l-2 border-indigo-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600 mb-3">📍 Sedi (${sediDiQuestaAgenzia.length})</p>
+      `;
+      
+      sediDiQuestaAgenzia.forEach(sede => {
+        const sedeCompleta = this.trovaSedeAgenzia(agenzia, sede.id);
+        if (sedeCompleta) {
+          html += this.renderSedeAgenziaCard(sedeCompleta, sede.id, agenzia.nome);
+        }
+      });
+      
+      html += '</div></div>';
+    });
+    
+    html += '</div></div>';
+    return html;
+  },
+
+  trovaSedeAgenzia(agenzia, sedeId) {
+    const idx = parseInt(sedeId.split('-')[2]);
+    return agenzia.sedi[idx];
+  },
+
+  renderSedeAgenziaCard(s, sedeId, agencyName) {
+    return `
+      <div class="bg-white rounded-xl p-3 mb-2 border border-gray-200">
+        <div class="flex items-start justify-between mb-2">
+          <div class="font-bold text-sm">${s.citta}</div>
+          <button onclick="Preferiti.rimuoviSedeAgenzia('${sedeId}')" class="w-8 h-8 flex items-center justify-center">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </button>
+        </div>
+        <div class="text-xs text-gray-600 space-y-1">
+          <div class="flex items-start gap-2">
+            <svg class="w-3 h-3 mt-0.5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            <span>${s.indirizzo}</span>
+          </div>
+          ${s.telefono ? `<div class="flex items-center gap-2"><svg class="w-3 h-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:${s.telefono}" class="text-indigo-600">${s.telefono}</a></div>` : ''}
+          ${s.email ? `<div class="flex items-center gap-2"><svg class="w-3 h-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:${s.email}" class="text-indigo-600 break-all">${s.email}</a></div>` : ''}
+          ${s.googleMaps ? `<div class="mt-2"><a href="${s.googleMaps}" target="_blank" class="inline-flex items-center gap-1 text-indigo-600 font-semibold text-xs"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>Mappa</a></div>` : ''}
         </div>
       </div>
-    `).join('');
+    `;
   },
-  
-  getProvincia(sede) {
-    const addr = sede.indirizzo || '';
-    const match = addr.match(/\b(BL|PD|RO|TV|VE|VR|VI)\b/i);
-    return match ? match[0].toUpperCase() : 'ALTRE';
-  },
-  
-  getProvinciaName(sigla) {
-    const nomi = {
-      'BL': 'Belluno', 'PD': 'Padova', 'RO': 'Rovigo', 'TV': 'Treviso',
-      'VE': 'Venezia', 'VR': 'Verona', 'VI': 'Vicenza'
-    };
-    return nomi[sigla] || 'Altre Province';
-  },
-  
-  openSedi(id) {
-    const agency = this.agencies.find(a => a.id === id);
-    if (!agency) return;
+
+  renderCategoriaCPI() {
+    const totale = this.favoriteCPI.length + this.favoriteSediCPI.length;
     
-    document.getElementById('sediAgencyName').textContent = agency.nome;
-    document.getElementById('sediCount').textContent = `${agency.sedi.length} sed${agency.sedi.length === 1 ? 'e' : 'i'} in Veneto`;
-    
-    const perProv = {};
-    agency.sedi.forEach((s, globalIdx) => {
-      const prov = this.getProvincia(s);
-      if (!perProv[prov]) perProv[prov] = [];
-      perProv[prov].push({ ...s, globalIdx }); // Aggiungi index globale
+    const sediPerProvincia = {};
+    this.favoriteSediCPI.forEach(sede => {
+      const provinciaId = sede.id.split('-')[0];
+      if (!sediPerProvincia[provinciaId]) sediPerProvincia[provinciaId] = [];
+      sediPerProvincia[provinciaId].push(sede);
     });
     
-    const provOrdinate = Object.keys(perProv).sort();
+    const provinceOrfane = new Set();
+    Object.keys(sediPerProvincia).forEach(provinciaId => {
+      if (!this.favoriteCPIIds.includes(provinciaId)) {
+        provinceOrfane.add(provinciaId);
+      }
+    });
     
-    let html = '';
-    provOrdinate.forEach(prov => {
-      const sedi = perProv[prov];
-      // ✅ SENZA ICONA PIN accanto al nome provincia
-      html += `<div class="text-sm font-bold text-indigo-600 uppercase tracking-wide mb-4 mt-6 first:mt-0">Provincia di ${this.getProvinciaName(prov)} (${sedi.length})</div>`;
-      
-      sedi.forEach(s => {
-        const sedeId = `${id}-${s.globalIdx}`; // Usa index globale
-        const isFav = this.isSedeInFavorites(sedeId);
-        
-        html += `
-          <div class="bg-gray-50 rounded-2xl p-4 mb-4">
-            <div class="flex items-start justify-between mb-2">
-              <div class="font-bold">${s.citta}</div>
-              <button onclick="Agenzie.toggleSedeFavorite('${sedeId}', '${agency.nome}', '${s.citta}')" class="w-10 h-10 flex items-center justify-center -mr-2">
-                <svg class="w-5 h-5 ${isFav ? 'text-indigo-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-                </svg>
-              </button>
-            </div>
-            <div class="text-sm text-gray-600 space-y-2">
-              <div class="flex items-start gap-2">
-                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
-                <span>${s.indirizzo}</span>
+    let html = `
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-600 to-cyan-600 px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="text-3xl">🏢</div>
+              <div>
+                <h2 class="text-xl font-bold text-white">Centri Per l'Impiego</h2>
+                <p class="text-blue-100 text-sm">${totale} preferit${totale === 1 ? 'o' : 'i'}</p>
               </div>
-              ${s.telefono ? `<a href="tel:${s.telefono}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>${s.telefono}</a>` : ''}
-              ${s.email ? `<a href="mailto:${s.email}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline break-all"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>${s.email}</a>` : ''}
-              ${s.googleMaps ? `<a href="${s.googleMaps}" target="_blank" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold underline"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>Apri in Google Maps</a>` : ''}
             </div>
           </div>
+        </div>
+        <div class="p-4 space-y-3">
+    `;
+    
+    this.favoriteCPI.forEach(prov => {
+      const sediDiQuestaProvincia = sediPerProvincia[prov.sigla] || [];
+      
+      html += `
+        <div class="bg-gray-50 rounded-2xl p-4">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="text-lg font-bold flex-1">Provincia di ${prov.nome}</h3>
+            <button onclick="Preferiti.rimuoviCPI('${prov.sigla}')" class="w-10 h-10 flex items-center justify-center -mr-2">
+              <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+      `;
+      
+      if (sediDiQuestaProvincia.length > 0) {
+        html += `
+          <div class="mt-3 pl-3 border-l-2 border-blue-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600 mb-3">📍 Sedi Preferite (${sediDiQuestaProvincia.length})</p>
         `;
-      });
+        
+        sediDiQuestaProvincia.forEach(sede => {
+          const sedeCompleta = this.trovaSedeCPI(prov.sigla, sede.id);
+          if (sedeCompleta) {
+            html += this.renderSedeCPICard(sedeCompleta, sede.id);
+          }
+        });
+        
+        html += '</div>';
+      }
+      
+      html += '</div>';
     });
     
-    document.getElementById('sediContent').innerHTML = html;
-    
-    const sheet = document.getElementById('sediSheet');
-    sheet.classList.remove('hidden');
-    setTimeout(() => sheet.querySelector('.bottom-sheet').classList.add('active'), 10);
-  },
-  
-  toggleFavorite(agencyId) {
-    const index = this.favorites.indexOf(agencyId);
-    if (index > -1) {
-      this.favorites.splice(index, 1);
-    } else {
-      this.favorites.push(agencyId);
-    }
-    this.saveFavorites();
-    this.render();
-  },
-  
-  isFavorite(agencyId) {
-    return this.favorites.includes(agencyId);
-  },
-  
-  // ✅ NUOVE FUNZIONI PER PREFERITI SEDI
-  toggleSedeFavorite(sedeId, agencyName, city) {
-    const fav = { id: sedeId, agency: agencyName, city: city };
-    const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
-    
-    if (index > -1) {
-      this.favoriteSedi.splice(index, 1);
-    } else {
-      this.favoriteSedi.push(fav);
+    provinceOrfane.forEach(provinciaId => {
+      const primo = this.cpi.find(c => c.provincia_sigla === provinciaId);
+      if (!primo) return;
       
-      // Auto-aggiungi agenzia ai preferiti se non c'è già
-      const agencyId = sedeId.split('-').slice(0, 2).join('-');
-      if (!this.favorites.includes(agencyId)) {
-        this.favorites.push(agencyId);
-        this.saveFavorites();
-      }
-    }
+      const sediDiQuestaProvincia = sediPerProvincia[provinciaId];
+      
+      html += `
+        <div class="bg-gray-50 rounded-2xl p-4 border-2 border-dashed border-blue-300">
+          <div class="flex items-start justify-between mb-2">
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-gray-700">Provincia di ${primo.provincia}</h3>
+              <p class="text-xs text-gray-500">Solo sedi salvate</p>
+            </div>
+          </div>
+          
+          <div class="mt-3 pl-3 border-l-2 border-blue-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600 mb-3">📍 Sedi (${sediDiQuestaProvincia.length})</p>
+      `;
+      
+      sediDiQuestaProvincia.forEach(sede => {
+        const sedeCompleta = this.trovaSedeCPI(provinciaId, sede.id);
+        if (sedeCompleta) {
+          html += this.renderSedeCPICard(sedeCompleta, sede.id);
+        }
+      });
+      
+      html += '</div></div>';
+    });
     
-    this.saveFavoriteSedi();
-    // Estrae l'ID agenzia dal sedeId
-    const agencyId = sedeId.split('-').slice(0, 2).join('-');
-    this.openSedi(agencyId);
+    html += '</div></div>';
+    return html;
+  },
+
+  trovaSedeCPI(provinciaSigla, sedeId) {
+    const idx = parseInt(sedeId.split('-')[1]);
+    const sediProvincia = this.cpi.filter(c => c.provincia_sigla === provinciaSigla);
+    return sediProvincia[idx];
+  },
+
+  renderSedeCPICard(s, sedeId) {
+    const mapsQuery = encodeURIComponent(`${s.indirizzo}, ${s.cap} ${s.citta}`);
+    
+    return `
+      <div class="bg-white rounded-xl p-3 mb-2 border border-gray-200">
+        <div class="flex items-start justify-between mb-2">
+          <div class="font-bold text-sm">${s.nome}</div>
+          <button onclick="Preferiti.rimuoviSedeCPI('${sedeId}')" class="w-8 h-8 flex items-center justify-center">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </button>
+        </div>
+        <div class="text-xs text-gray-600 space-y-1">
+          <div class="flex items-start gap-2">
+            <svg class="w-3 h-3 mt-0.5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+            <span>${s.indirizzo}, ${s.cap} ${s.citta}</span>
+          </div>
+          ${s.telefono ? `<div class="flex items-center gap-2"><svg class="w-3 h-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:${s.telefono}" class="text-blue-600">${s.telefono}</a></div>` : ''}
+          ${s.email ? `<div class="flex items-center gap-2"><svg class="w-3 h-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:${s.email}" class="text-blue-600 break-all">${s.email}</a></div>` : ''}
+          ${s.orari ? `<div class="flex items-center gap-2 text-gray-600"><svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>${s.orari}</div>` : ''}
+          <div class="mt-2">
+            <a href="https://www.google.com/maps/search/?api=1&query=${mapsQuery}" target="_blank" class="inline-flex items-center gap-1 text-blue-600 font-semibold text-xs">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              Mappa
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  renderCategoriaEnti() {
+    const totale = this.favoriteEnti.length + this.favoriteSediEnti.length;
+    
+    const sediPerEnte = {};
+    this.favoriteSediEnti.forEach(sede => {
+      const enteId = sede.id.split('-').slice(0, 2).join('-');
+      if (!sediPerEnte[enteId]) sediPerEnte[enteId] = [];
+      sediPerEnte[enteId].push(sede);
+    });
+    
+    const entiOrfani = new Set();
+    Object.keys(sediPerEnte).forEach(enteId => {
+      if (!this.favoriteEntiIds.includes(enteId)) {
+        entiOrfani.add(enteId);
+      }
+    });
+    
+    let html = `
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="text-3xl">🎓</div>
+              <div>
+                <h2 class="text-xl font-bold text-white">Enti di Formazione</h2>
+                <p class="text-purple-100 text-sm">${totale} preferit${totale === 1 ? 'o' : 'i'}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 space-y-3">
+    `;
+    
+    this.favoriteEnti.forEach(e => {
+      const sediDiQuestoEnte = sediPerEnte[e.id] || [];
+      
+      html += `
+        <div class="bg-gray-50 rounded-2xl p-4">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="text-lg font-bold flex-1">${e.nome}</h3>
+            <button onclick="Preferiti.rimuoviEnte('${e.id}')" class="w-10 h-10 flex items-center justify-center -mr-2">
+              <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+          <p class="text-sm text-gray-600 mb-3">${e.descrizione}</p>
+      `;
+      
+      if (sediDiQuestoEnte.length > 0) {
+        html += `
+          <div class="mt-3 pl-3 border-l-2 border-purple-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600 mb-3">📍 Sedi Preferite (${sediDiQuestoEnte.length})</p>
+        `;
+        
+        sediDiQuestoEnte.forEach(sede => {
+          const sedeCompleta = this.trovaSedeEnte(e, sede.id);
+          if (sedeCompleta) {
+            html += this.renderSedeEnteCard(sedeCompleta, sede.id, e.nome);
+          }
+        });
+        
+        html += '</div>';
+      }
+      
+      html += '</div>';
+    });
+    
+    entiOrfani.forEach(enteId => {
+      const ente = this.enti.find(e => e.id === enteId);
+      if (!ente) return;
+      
+      const sediDiQuestoEnte = sediPerEnte[enteId];
+      
+      html += `
+        <div class="bg-gray-50 rounded-2xl p-4 border-2 border-dashed border-purple-300">
+          <div class="flex items-start justify-between mb-2">
+            <div class="flex-1">
+              <h3 class="text-lg font-bold text-gray-700">${ente.nome}</h3>
+              <p class="text-xs text-gray-500">Solo sedi salvate</p>
+            </div>
+          </div>
+          
+          <div class="mt-3 pl-3 border-l-2 border-purple-200 space-y-2">
+            <p class="text-xs font-semibold text-gray-600 mb-3">📍 Sedi (${sediDiQuestoEnte.length})</p>
+      `;
+      
+      sediDiQuestoEnte.forEach(sede => {
+        const sedeCompleta = this.trovaSedeEnte(ente, sede.id);
+        if (sedeCompleta) {
+          html += this.renderSedeEnteCard(sedeCompleta, sede.id, ente.nome);
+        }
+      });
+      
+      html += '</div></div>';
+    });
+    
+    html += '</div></div>';
+    return html;
+  },
+
+  trovaSedeEnte(ente, sedeId) {
+    if (!ente.sedi || !Array.isArray(ente.sedi)) return null;
+    const idx = parseInt(sedeId.split('-')[2]);
+    return ente.sedi[idx];
+  },
+
+  renderSedeEnteCard(s, sedeId, enteNome) {
+    return `
+      <div class="bg-white rounded-xl p-3 mb-2 border border-gray-200">
+        <div class="flex items-start justify-between mb-2">
+          <div class="font-bold text-sm">${s.citta || s.nome}</div>
+          <button onclick="Preferiti.rimuoviSedeEnte('${sedeId}')" class="w-8 h-8 flex items-center justify-center">
+            <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </button>
+        </div>
+        <div class="text-xs text-gray-600 space-y-1">
+          ${s.indirizzo ? `<div class="flex items-start gap-2"><svg class="w-3 h-3 mt-0.5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg><span>${s.indirizzo}</span></div>` : ''}
+          ${s.telefono ? `<div class="flex items-center gap-2"><svg class="w-3 h-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><a href="tel:${s.telefono}" class="text-purple-600">${s.telefono}</a></div>` : ''}
+          ${s.email ? `<div class="flex items-center gap-2"><svg class="w-3 h-3 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><a href="mailto:${s.email}" class="text-purple-600 break-all">${s.email}</a></div>` : ''}
+          ${s.googleMaps ? `<div class="mt-2"><a href="${s.googleMaps}" target="_blank" class="inline-flex items-center gap-1 text-purple-600 font-semibold text-xs"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>Mappa</a></div>` : ''}
+        </div>
+      </div>
+    `;
+  },
+
+  renderCategoriaPiattaforme() {
+    let html = `
+      <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+        <div class="bg-gradient-to-r from-orange-600 to-red-600 px-6 py-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <div class="text-3xl">📢</div>
+              <div>
+                <h2 class="text-xl font-bold text-white">Piattaforme Annunci</h2>
+                <p class="text-orange-100 text-sm">${this.favoritePiattaforme.length} preferit${this.favoritePiattaforme.length === 1 ? 'a' : 'e'}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 space-y-3">
+    `;
+    
+    this.favoritePiattaforme.forEach(p => {
+      html += `
+        <div class="bg-gray-50 rounded-2xl p-4">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="text-lg font-bold flex-1">${p.nome}</h3>
+            <button onclick="Preferiti.rimuoviPiattaforma('${p.id}')" class="w-10 h-10 flex items-center justify-center -mr-2">
+              <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+              </svg>
+            </button>
+          </div>
+          <p class="text-sm text-gray-600">${p.descrizione}</p>
+        </div>
+      `;
+    });
+    
+    html += '</div></div>';
+    return html;
+  },
+
+  rimuoviAgenzia(id) {
+    const index = this.favoriteAgenzieIds.indexOf(id);
+    if (index > -1) {
+      this.favoriteAgenzieIds.splice(index, 1);
+      localStorage.setItem('agenzie_favorites', JSON.stringify(this.favoriteAgenzieIds));
+      
+      this.favoriteSediAgenzie = this.favoriteSediAgenzie.filter(sede => {
+        const sedeAgencyId = sede.id.split('-').slice(0, 2).join('-');
+        return sedeAgencyId !== id;
+      });
+      localStorage.setItem('agenzie_sedi_favorites', JSON.stringify(this.favoriteSediAgenzie));
+      
+      this.init();
+    }
+  },
+
+  rimuoviSedeAgenzia(sedeId) {
+    const index = this.favoriteSediAgenzie.findIndex(s => s.id === sedeId);
+    if (index > -1) {
+      this.favoriteSediAgenzie.splice(index, 1);
+      localStorage.setItem('agenzie_sedi_favorites', JSON.stringify(this.favoriteSediAgenzie));
+      this.init();
+    }
+  },
+
+  rimuoviCPI(sigla) {
+    const index = this.favoriteCPIIds.indexOf(sigla);
+    if (index > -1) {
+      this.favoriteCPIIds.splice(index, 1);
+      localStorage.setItem('cpi_favorites', JSON.stringify(this.favoriteCPIIds));
+      
+      this.favoriteSediCPI = this.favoriteSediCPI.filter(sede => {
+        const sedeProvinciaId = sede.id.split('-')[0];
+        return sedeProvinciaId !== sigla;
+      });
+      localStorage.setItem('cpi_sedi_favorites', JSON.stringify(this.favoriteSediCPI));
+      
+      this.init();
+    }
+  },
+
+  rimuoviSedeCPI(sedeId) {
+    const index = this.favoriteSediCPI.findIndex(s => s.id === sedeId);
+    if (index > -1) {
+      this.favoriteSediCPI.splice(index, 1);
+      localStorage.setItem('cpi_sedi_favorites', JSON.stringify(this.favoriteSediCPI));
+      this.init();
+    }
+  },
+
+  rimuoviEnte(id) {
+    const index = this.favoriteEntiIds.indexOf(id);
+    if (index > -1) {
+      this.favoriteEntiIds.splice(index, 1);
+      localStorage.setItem('enti_favorites', JSON.stringify(this.favoriteEntiIds));
+      
+      this.favoriteSediEnti = this.favoriteSediEnti.filter(sede => {
+        const sedeEnteId = sede.id.split('-').slice(0, 2).join('-');
+        return sedeEnteId !== id;
+      });
+      localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSediEnti));
+      
+      this.init();
+    }
   },
   
-  isSedeInFavorites(sedeId) {
-    return this.favoriteSedi.some(f => f.id === sedeId);
+  rimuoviSedeEnte(sedeId) {
+    const index = this.favoriteSediEnti.findIndex(s => s.id === sedeId);
+    if (index > -1) {
+      this.favoriteSediEnti.splice(index, 1);
+      localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSediEnti));
+      this.init();
+    }
   },
-  
-  loadFavorites() {
-    const s = localStorage.getItem('agenzie_favorites');
-    this.favorites = s ? JSON.parse(s) : [];
-  },
-  
-  saveFavorites() {
-    localStorage.setItem('agenzie_favorites', JSON.stringify(this.favorites));
-  },
-  
-  loadFavoriteSedi() {
-    const s = localStorage.getItem('agenzie_sedi_favorites');
-    this.favoriteSedi = s ? JSON.parse(s) : [];
-  },
-  
-  saveFavoriteSedi() {
-    localStorage.setItem('agenzie_sedi_favorites', JSON.stringify(this.favoriteSedi));
-  },
-  
-  showError(msg) {
-    const grid = document.getElementById('agenciesGrid');
-    if (grid) grid.innerHTML = `<div class="text-center py-12"><p class="text-red-600">${msg}</p></div>`;
+
+  rimuoviPiattaforma(id) {
+    const index = this.favoritePiattaformeIds.indexOf(id);
+    if (index > -1) {
+      this.favoritePiattaformeIds.splice(index, 1);
+      localStorage.setItem('piattaforme_favorites', JSON.stringify(this.favoritePiattaformeIds));
+      this.init();
+    }
   }
 };
-
-function closeSedi() {
-  const sheet = document.getElementById('sediSheet');
-  sheet.querySelector('.bottom-sheet').classList.remove('active');
-  setTimeout(() => sheet.classList.add('hidden'), 300);
-}
