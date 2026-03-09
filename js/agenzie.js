@@ -199,8 +199,17 @@ const Agenzie = {
   toggleFavorite(agencyId) {
     const index = this.favorites.indexOf(agencyId);
     if (index > -1) {
+      // RIMOZIONE: elimina anche tutte le sedi
       this.favorites.splice(index, 1);
+      
+      // Rimuovi tutte le sedi che appartengono a questa agenzia
+      this.favoriteSedi = this.favoriteSedi.filter(sede => {
+        const sedeAgencyId = sede.id.split('-').slice(0, 2).join('-');
+        return sedeAgencyId !== agencyId;
+      });
+      this.saveFavoriteSedi();
     } else {
+      // AGGIUNTA: aggiungi solo l'agenzia
       this.favorites.push(agencyId);
     }
     this.saveFavorites();
