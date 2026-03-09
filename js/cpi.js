@@ -204,8 +204,17 @@ const CPI = {
   toggleFavorite(provinciaSigla) {
     const index = this.favorites.indexOf(provinciaSigla);
     if (index > -1) {
+      // RIMOZIONE: elimina anche tutte le sedi
       this.favorites.splice(index, 1);
+      
+      // Rimuovi tutte le sedi che appartengono a questa provincia
+      this.favoriteSedi = this.favoriteSedi.filter(sede => {
+        const sedeProvinciaId = sede.id.split('-')[0];
+        return sedeProvinciaId !== provinciaSigla;
+      });
+      this.saveFavoriteSedi();
     } else {
+      // AGGIUNTA: aggiungi solo la provincia
       this.favorites.push(provinciaSigla);
     }
     this.saveFavorites();
