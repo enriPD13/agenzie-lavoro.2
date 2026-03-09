@@ -25,6 +25,16 @@
 
 </div>
 
+<!-- Script di inizializzazione -->
+<script>
+  // Inizializza la pagina Preferiti
+  if (typeof Preferiti !== 'undefined') {
+    Preferiti.init();
+  } else {
+    console.error('Preferiti module not loaded!');
+  }
+</script>
+
 <!-- Bottom Nav -->
 <nav class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 safe-area-bottom">
   <div class="flex justify-around py-2">
