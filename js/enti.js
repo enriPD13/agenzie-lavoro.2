@@ -127,8 +127,17 @@ const Enti = {
   toggleFavorite(enteId) {
     const index = this.favorites.indexOf(enteId);
     if (index > -1) {
+      // RIMOZIONE: elimina anche tutte le sedi
       this.favorites.splice(index, 1);
+      
+      // Rimuovi tutte le sedi che appartengono a questo ente
+      this.favoriteSedi = this.favoriteSedi.filter(sede => {
+        const sedeEnteId = sede.id.split('-').slice(0, 2).join('-');
+        return sedeEnteId !== enteId;
+      });
+      this.saveFavoriteSedi();
     } else {
+      // AGGIUNTA: aggiungi solo l'ente
       this.favorites.push(enteId);
     }
     this.saveFavorites();
