@@ -1,11 +1,11 @@
-// JobApp - Enti di Formazione Module
+// JobApp - Enti di Formazione Module con Firebase
 const Enti = {
   allEnti: [],
   favorites: [],
-  favoriteSedi: [], // Supporto future sedi multiple
+  favoriteSedi: [],
   filteredEnti: [],
   
-  init() {
+  async init() {
     setTimeout(() => {
       const loading = document.getElementById('loadingEnti');
       if (loading) loading.classList.add('hidden');
@@ -20,7 +20,7 @@ const Enti = {
       this.allEnti = await response.json();
       this.allEnti.sort((a, b) => a.nome.localeCompare(b.nome));
       this.filteredEnti = this.allEnti;
-      this.loadFavorites();
+      await this.loadFavorites();
       this.render();
     } catch (error) {
       this.showError(error.message);
@@ -69,9 +69,6 @@ const Enti = {
   
   renderEnteCard(e) {
     const isFav = this.isFavorite(e.id);
-    const favClass = isFav ? 'bg-yellow-100' : 'bg-gray-100';
-    const starColor = isFav ? 'text-yellow-500' : 'text-gray-400';
-    const starFill = isFav ? 'currentColor' : 'none';
     
     return `
       <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
@@ -124,23 +121,16 @@ const Enti = {
     `;
   },
   
-  toggleFavorite(enteId) {
+  async toggleFavorite(enteId) {
+    if (!window.FirebaseFavorites) return;
+    
     const index = this.favorites.indexOf(enteId);
     if (index > -1) {
-      // RIMOZIONE: elimina anche tutte le sedi
-      this.favorites.splice(index, 1);
-      
-      // Rimuovi tutte le sedi che appartengono a questo ente
-      this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeEnteId = sede.id.split('-').slice(0, 2).join('-');
-        return sedeEnteId !== enteId;
-      });
-      this.saveFavoriteSedi();
+      await FirebaseFavorites.removeEnte(enteId);
     } else {
-      // AGGIUNTA: aggiungi solo l'ente
-      this.favorites.push(enteId);
+      await FirebaseFavorites.addEnte(enteId);
     }
-    this.saveFavorites();
+    await this.loadFavorites();
     this.render();
   },
   
@@ -148,42 +138,43 @@ const Enti = {
     return this.favorites.includes(enteId);
   },
   
-  loadFavorites() {
-    const s = localStorage.getItem('enti_favorites');
-    this.favorites = s ? JSON.parse(s) : [];
+  async loadFavorites() {
+    if (!window.FirebaseFavorites || !FirebaseFavorites.isReady) {
+      if (window.FirebaseFavorites) await FirebaseFavorites.init();
+    }
+    if (window.FirebaseFavorites && FirebaseFavorites.isLoggedIn()) {
+      const favs = await FirebaseFavorites.getFavorites();
+      if (favs) {
+        this.favorites = favs.enti || [];
+        this.favoriteSedi = favs.enti_sedi || [];
+      }
+    } else {
+      this.favorites = [];
+      this.favoriteSedi = [];
+    }
+  },
+  
+  async saveFavorites() {
+    // Non serve più - usa FirebaseFavorites
+  },
+  
+  async saveFavoriteSedi() {
+    // Non serve più - usa FirebaseFavorites
+  },
+  
+  async toggleSedeFavorite(sedeId, enteNome, city) {
+    if (!window.FirebaseFavorites) return;
     
-    const sedi = localStorage.getItem('enti_sedi_favorites');
-    this.favoriteSedi = sedi ? JSON.parse(sedi) : [];
-  },
-  
-  saveFavorites() {
-    localStorage.setItem('enti_favorites', JSON.stringify(this.favorites));
-  },
-  
-  saveFavoriteSedi() {
-    localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSedi));
-  },
-  
-  // Funzioni per future sedi multiple
-  toggleSedeFavorite(sedeId, enteNome, city) {
     const fav = { id: sedeId, ente: enteNome, city: city };
     const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
     
     if (index > -1) {
-      this.favoriteSedi.splice(index, 1);
+      await FirebaseFavorites.removeEnteSede(sedeId);
     } else {
-      this.favoriteSedi.push(fav);
-      
-      // Auto-aggiungi ente ai preferiti se non c'è già
-      const enteId = sedeId.split('-').slice(0, 2).join('-');
-      if (!this.favorites.includes(enteId)) {
-        this.favorites.push(enteId);
-        this.saveFavorites();
-      }
+      await FirebaseFavorites.addEnteSede(fav);
     }
     
-    this.saveFavoriteSedi();
-    // Riapri sheet sedi se implementato
+    await this.loadFavorites();
   },
   
   isSedeInFavorites(sedeId) {
