@@ -1,10 +1,10 @@
-// JobApp - Piattaforme Annunci Module
+// JobApp - Piattaforme Annunci Module con Firebase
 const Piattaforme = {
   allPiattaforme: [],
   favorites: [],
   filteredPiattaforme: [],
   
-  init() {
+  async init() {
     setTimeout(() => {
       const loading = document.getElementById('loadingPiattaforme');
       if (loading) loading.classList.add('hidden');
@@ -19,7 +19,7 @@ const Piattaforme = {
       this.allPiattaforme = await response.json();
       this.allPiattaforme.sort((a, b) => a.nome.localeCompare(b.nome));
       this.filteredPiattaforme = this.allPiattaforme;
-      this.loadFavorites();
+      await this.loadFavorites();
       this.render();
     } catch (error) {
       this.showError(error.message);
@@ -68,9 +68,6 @@ const Piattaforme = {
   
   renderPiattaformaCard(p) {
     const isFav = this.isFavorite(p.id);
-    const favClass = isFav ? 'bg-yellow-100' : 'bg-gray-100';
-    const starColor = isFav ? 'text-yellow-500' : 'text-gray-400';
-    const starFill = isFav ? 'currentColor' : 'none';
     
     return `
       <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
@@ -103,14 +100,16 @@ const Piattaforme = {
     `;
   },
   
-  toggleFavorite(piattaformaId) {
+  async toggleFavorite(piattaformaId) {
+    if (!window.FirebaseFavorites) return;
+    
     const index = this.favorites.indexOf(piattaformaId);
     if (index > -1) {
-      this.favorites.splice(index, 1);
+      await FirebaseFavorites.removePiattaforma(piattaformaId);
     } else {
-      this.favorites.push(piattaformaId);
+      await FirebaseFavorites.addPiattaforma(piattaformaId);
     }
-    this.saveFavorites();
+    await this.loadFavorites();
     this.render();
   },
   
@@ -118,13 +117,22 @@ const Piattaforme = {
     return this.favorites.includes(piattaformaId);
   },
   
-  loadFavorites() {
-    const s = localStorage.getItem('piattaforme_favorites');
-    this.favorites = s ? JSON.parse(s) : [];
+  async loadFavorites() {
+    if (!window.FirebaseFavorites || !FirebaseFavorites.isReady) {
+      if (window.FirebaseFavorites) await FirebaseFavorites.init();
+    }
+    if (window.FirebaseFavorites && FirebaseFavorites.isLoggedIn()) {
+      const favs = await FirebaseFavorites.getFavorites();
+      if (favs) {
+        this.favorites = favs.piattaforme || [];
+      }
+    } else {
+      this.favorites = [];
+    }
   },
   
-  saveFavorites() {
-    localStorage.setItem('piattaforme_favorites', JSON.stringify(this.favorites));
+  async saveFavorites() {
+    // Non serve più - usa FirebaseFavorites
   },
   
   showError(msg) {
