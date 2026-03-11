@@ -1,11 +1,11 @@
-// JobApp - Agenzie Module (MODIFICATO)
+// JobApp - Agenzie Module con Firebase
 const Agenzie = {
   agencies: [],
   favorites: [],
-  favoriteSedi: [], // ✅ NUOVO: Preferiti per sedi
+  favoriteSedi: [],
   filteredAgencies: [],
   
-async init() {
+  async init() {
     setTimeout(() => {
       const loading = document.getElementById('loadingAgenzie');
       if (loading) loading.classList.add('hidden');
@@ -20,8 +20,7 @@ async init() {
       this.agencies = await response.json();
       this.agencies.sort((a, b) => a.nome.localeCompare(b.nome));
       this.filteredAgencies = this.agencies;
-      this.loadFavorites();
-      this.loadFavoriteSedi();
+      await this.loadFavorites();
       this.render();
     } catch (error) {
       this.showError(error.message);
@@ -60,7 +59,6 @@ async init() {
     const grid = document.getElementById('agenciesGrid');
     if (!grid) return;
     
-    // ✅ STATS: Solo 2 card (rimosso Veneto)
     const stats = document.getElementById('statsCards');
     if (stats) {
       const total = this.filteredAgencies.length;
@@ -150,7 +148,7 @@ async init() {
     agency.sedi.forEach((s, globalIdx) => {
       const prov = this.getProvincia(s);
       if (!perProv[prov]) perProv[prov] = [];
-      perProv[prov].push({ ...s, globalIdx }); // Aggiungi index globale
+      perProv[prov].push({ ...s, globalIdx });
     });
     
     const provOrdinate = Object.keys(perProv).sort();
@@ -158,11 +156,10 @@ async init() {
     let html = '';
     provOrdinate.forEach(prov => {
       const sedi = perProv[prov];
-      // ✅ SENZA ICONA PIN accanto al nome provincia
       html += `<div class="text-sm font-bold text-indigo-600 uppercase tracking-wide mb-4 mt-6 first:mt-0">Provincia di ${this.getProvinciaName(prov)} (${sedi.length})</div>`;
       
       sedi.forEach(s => {
-        const sedeId = `${id}-${s.globalIdx}`; // Usa index globale
+        const sedeId = `${id}-${s.globalIdx}`;
         const isFav = this.isSedeInFavorites(sedeId);
         
         html += `
@@ -196,23 +193,16 @@ async init() {
     setTimeout(() => sheet.querySelector('.bottom-sheet').classList.add('active'), 10);
   },
   
-  toggleFavorite(agencyId) {
+  async toggleFavorite(agencyId) {
+    if (!window.FirebaseFavorites) return;
+    
     const index = this.favorites.indexOf(agencyId);
     if (index > -1) {
-      // RIMOZIONE: elimina anche tutte le sedi
-      this.favorites.splice(index, 1);
-      
-      // Rimuovi tutte le sedi che appartengono a questa agenzia
-      this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeAgencyId = sede.id.split('-').slice(0, 2).join('-');
-        return sedeAgencyId !== agencyId;
-      });
-      this.saveFavoriteSedi();
+      await FirebaseFavorites.removeAgency(agencyId);
     } else {
-      // AGGIUNTA: aggiungi solo l'agenzia
-      this.favorites.push(agencyId);
+      await FirebaseFavorites.addAgency(agencyId);
     }
-    this.saveFavorites();
+    await this.loadFavorites();
     this.render();
   },
   
@@ -220,26 +210,19 @@ async init() {
     return this.favorites.includes(agencyId);
   },
   
-  // ✅ NUOVE FUNZIONI PER PREFERITI SEDI
-  toggleSedeFavorite(sedeId, agencyName, city) {
+  async toggleSedeFavorite(sedeId, agencyName, city) {
+    if (!window.FirebaseFavorites) return;
+    
     const fav = { id: sedeId, agency: agencyName, city: city };
     const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
     
     if (index > -1) {
-      this.favoriteSedi.splice(index, 1);
+      await FirebaseFavorites.removeAgencySede(sedeId);
     } else {
-      this.favoriteSedi.push(fav);
-      
-      // Auto-aggiungi agenzia ai preferiti se non c'è già
-      const agencyId = sedeId.split('-').slice(0, 2).join('-');
-      if (!this.favorites.includes(agencyId)) {
-        this.favorites.push(agencyId);
-        this.saveFavorites();
-      }
+      await FirebaseFavorites.addAgencySede(fav);
     }
     
-    this.saveFavoriteSedi();
-    // Estrae l'ID agenzia dal sedeId
+    await this.loadFavorites();
     const agencyId = sedeId.split('-').slice(0, 2).join('-');
     this.openSedi(agencyId);
   },
@@ -248,22 +231,32 @@ async init() {
     return this.favoriteSedi.some(f => f.id === sedeId);
   },
   
-  loadFavorites() {
-    const s = localStorage.getItem('agenzie_favorites');
-    this.favorites = s ? JSON.parse(s) : [];
+  async loadFavorites() {
+    if (!window.FirebaseFavorites || !FirebaseFavorites.isReady) {
+      if (window.FirebaseFavorites) await FirebaseFavorites.init();
+    }
+    if (window.FirebaseFavorites && FirebaseFavorites.isLoggedIn()) {
+      const favs = await FirebaseFavorites.getFavorites();
+      if (favs) {
+        this.favorites = favs.agenzie || [];
+        this.favoriteSedi = favs.agenzie_sedi || [];
+      }
+    } else {
+      this.favorites = [];
+      this.favoriteSedi = [];
+    }
   },
   
-  saveFavorites() {
-    localStorage.setItem('agenzie_favorites', JSON.stringify(this.favorites));
+  async saveFavorites() {
+    // Non serve più - usa FirebaseFavorites
   },
   
-  loadFavoriteSedi() {
-    const s = localStorage.getItem('agenzie_sedi_favorites');
-    this.favoriteSedi = s ? JSON.parse(s) : [];
+  async loadFavoriteSedi() {
+    // Già caricato in loadFavorites()
   },
   
-  saveFavoriteSedi() {
-    localStorage.setItem('agenzie_sedi_favorites', JSON.stringify(this.favoriteSedi));
+  async saveFavoriteSedi() {
+    // Non serve più - usa FirebaseFavorites
   },
   
   showError(msg) {
