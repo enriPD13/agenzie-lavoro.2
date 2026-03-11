@@ -52,6 +52,11 @@ const Navigation = {
           Piattaforme.init();
         }
         break;
+      case 'profilo':
+        if (typeof Profilo !== 'undefined') {
+          Profilo.init();
+        }
+        break;
     }
   },
   
@@ -77,6 +82,10 @@ const Navigation = {
   
   openPiattaforme() {
     this.loadPage('piattaforme');
+  },
+  
+  openProfilo() {
+    this.loadPage('profilo');
   },
   
   openClicLavoro() {
@@ -131,7 +140,7 @@ function openPoliticheAttiveApp() {
 }
 
 function openProfilePage() {
-  alert('Profilo - Coming Soon! 👤');
+  Navigation.openProfilo();
 }
 
 function openComingSoon() {
