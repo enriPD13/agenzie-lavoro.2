@@ -1,4 +1,4 @@
-// JobApp - CPI Module
+// JobApp - CPI Module con Firebase
 const CPI = {
   allCPI: [],
   favorites: [],
@@ -6,7 +6,7 @@ const CPI = {
   filteredProvinces: [],
   provinceData: {},
   
-  init() {
+  async init() {
     setTimeout(() => {
       const loading = document.getElementById('loadingCPI');
       if (loading) loading.classList.add('hidden');
@@ -34,8 +34,7 @@ const CPI = {
       });
       
       this.filteredProvinces = Object.values(this.provinceData).sort((a, b) => a.nome.localeCompare(b.nome));
-      this.loadFavorites();
-      this.loadFavoriteSedi();
+      await this.loadFavorites();
       this.render();
     } catch (error) {
       this.showError(error.message);
@@ -86,10 +85,6 @@ const CPI = {
   
   renderProvinciaCard(p) {
     const isFav = this.isFavorite(p.sigla);
-    const favClass = isFav ? 'bg-yellow-100' : 'bg-gray-100';
-    const starColor = isFav ? 'text-yellow-500' : 'text-gray-400';
-    const starFill = isFav ? 'currentColor' : 'none';
-    
     const provinciaLower = p.nome.toLowerCase();
     const flagPath = `images/province/${provinciaLower}.png`;
     
@@ -162,7 +157,6 @@ const CPI = {
   },
   
   renderSedeCard(s, sedeId, isFav, provinciaNome) {
-    
     const telefono = s.telefono ? `<a href="tel:${s.telefono}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>${s.telefono}</a>` : '';
     
     const email = s.email ? `<a href="mailto:${s.email}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 underline break-all"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>${s.email}</a>` : '';
@@ -201,23 +195,16 @@ const CPI = {
     setTimeout(() => sheet.classList.add('hidden'), 300);
   },
   
-  toggleFavorite(provinciaSigla) {
+  async toggleFavorite(provinciaSigla) {
+    if (!window.FirebaseFavorites) return;
+    
     const index = this.favorites.indexOf(provinciaSigla);
     if (index > -1) {
-      // RIMOZIONE: elimina anche tutte le sedi
-      this.favorites.splice(index, 1);
-      
-      // Rimuovi tutte le sedi che appartengono a questa provincia
-      this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeProvinciaId = sede.id.split('-')[0];
-        return sedeProvinciaId !== provinciaSigla;
-      });
-      this.saveFavoriteSedi();
+      await FirebaseFavorites.removeCPI(provinciaSigla);
     } else {
-      // AGGIUNTA: aggiungi solo la provincia
-      this.favorites.push(provinciaSigla);
+      await FirebaseFavorites.addCPI(provinciaSigla);
     }
-    this.saveFavorites();
+    await this.loadFavorites();
     this.render();
   },
   
@@ -225,24 +212,19 @@ const CPI = {
     return this.favorites.includes(provinciaSigla);
   },
   
-  toggleSedeFavorite(sedeId, provincia, city) {
+  async toggleSedeFavorite(sedeId, provincia, city) {
+    if (!window.FirebaseFavorites) return;
+    
     const fav = { id: sedeId, provincia: provincia, city: city };
     const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
     
     if (index > -1) {
-      this.favoriteSedi.splice(index, 1);
+      await FirebaseFavorites.removeCPISede(sedeId);
     } else {
-      this.favoriteSedi.push(fav);
-      
-      // Auto-aggiungi provincia ai preferiti se non c'è già
-      const provinciaSigla = sedeId.split('-')[0]; // "PD-0" -> "PD"
-      if (!this.favorites.includes(provinciaSigla)) {
-        this.favorites.push(provinciaSigla);
-        this.saveFavorites();
-      }
+      await FirebaseFavorites.addCPISede(fav);
     }
     
-    this.saveFavoriteSedi();
+    await this.loadFavorites();
     this.openSedi(sedeId.split('-')[0]);
   },
   
@@ -250,22 +232,32 @@ const CPI = {
     return this.favoriteSedi.some(f => f.id === sedeId);
   },
   
-  loadFavorites() {
-    const s = localStorage.getItem('cpi_favorites');
-    this.favorites = s ? JSON.parse(s) : [];
+  async loadFavorites() {
+    if (!window.FirebaseFavorites || !FirebaseFavorites.isReady) {
+      if (window.FirebaseFavorites) await FirebaseFavorites.init();
+    }
+    if (window.FirebaseFavorites && FirebaseFavorites.isLoggedIn()) {
+      const favs = await FirebaseFavorites.getFavorites();
+      if (favs) {
+        this.favorites = favs.cpi || [];
+        this.favoriteSedi = favs.cpi_sedi || [];
+      }
+    } else {
+      this.favorites = [];
+      this.favoriteSedi = [];
+    }
   },
   
-  saveFavorites() {
-    localStorage.setItem('cpi_favorites', JSON.stringify(this.favorites));
+  async saveFavorites() {
+    // Non serve più - usa FirebaseFavorites
   },
   
-  loadFavoriteSedi() {
-    const s = localStorage.getItem('cpi_sedi_favorites');
-    this.favoriteSedi = s ? JSON.parse(s) : [];
+  async loadFavoriteSedi() {
+    // Già caricato in loadFavorites()
   },
   
-  saveFavoriteSedi() {
-    localStorage.setItem('cpi_sedi_favorites', JSON.stringify(this.favoriteSedi));
+  async saveFavoriteSedi() {
+    // Non serve più - usa FirebaseFavorites
   },
   
   showError(msg) {
