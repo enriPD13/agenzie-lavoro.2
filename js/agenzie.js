@@ -5,7 +5,7 @@ const Agenzie = {
   favoriteSedi: [], // ✅ NUOVO: Preferiti per sedi
   filteredAgencies: [],
   
-  init() {
+async init() {
     setTimeout(() => {
       const loading = document.getElementById('loadingAgenzie');
       if (loading) loading.classList.add('hidden');
