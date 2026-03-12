@@ -63,7 +63,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      background: linear-gradient(to bottom right, rgb(99 102 241), rgb(168 85 247), rgb(236 72 153));
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -78,18 +78,18 @@
     }
 
     .splash-logo {
-      width: 120px;
-      height: 120px;
-      background: white;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 48px;
+      font-family: 'Inter', sans-serif;
+      font-size: 72px;
       font-weight: 900;
-      color: #667eea;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      color: white;
+      text-shadow: 
+        3px 3px 0 #6366f1, -3px 3px 0 #6366f1,
+        3px -3px 0 #6366f1, -3px -3px 0 #6366f1,
+        4px 4px 0 #8b5cf6, -4px 4px 0 #8b5cf6,
+        4px -4px 0 #8b5cf6, -4px -4px 0 #8b5cf6,
+        0 6px 20px rgba(0,0,0,0.4);
       margin-bottom: 40px;
+      letter-spacing: -2px;
       animation: pulse 2s ease-in-out infinite;
     }
 
@@ -136,7 +136,7 @@
   
   <!-- Schermata di caricamento -->
   <div id="splash-screen">
-    <div class="splash-logo">💼</div>
+    <div class="splash-logo">JobApp</div>
     <div class="loader-dots">
       <span></span>
       <span></span>
