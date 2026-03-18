@@ -140,8 +140,9 @@ const Enti = {
       this.favorites.splice(index, 1);
       
       // Rimuovi tutte le sedi che appartengono a questo ente
+      // Le sedi hanno id tipo "123-0" dove 123 è l'enteId
       this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeEnteId = sede.id.split('-').slice(0, 2).join('-');
+        const sedeEnteId = parseInt(sede.id.split('-')[0]);
         return sedeEnteId !== enteId;
       });
       this.saveFavoriteSedi();
