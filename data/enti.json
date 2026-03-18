@@ -1,20 +1,5006 @@
 [
   {
-    "id": "ent-1",
-    "nome": "Fòrema Srl",
-    "descrizione": "Centro di formazione professionale",
-    "indirizzo": "Via Edoardo Plinio Masini, 2/Piano 4",
-    "cap": "35131",
-    "citta": "Padova",
-    "provincia": "Padova",
-    "provincia_sigla": "PD",
-    "telefono": "049 822 7500",
-    "email": "info@forema.it",
-    "sito": "https://www.forema.it/it/",
-    "googleMaps": "https://maps.app.goo.gl/mERhPnhnX6Aqcpuu5",
-    "logo": "images/enti/forema.png",
-    "sede_principale": "Centro Direzionale La Cittadella",
-    "sedi": 1,
-    "tipo": "ente_formazione"
+    "id": 1,
+    "nome": "ISTITUTO VENETO PER IL LAVORO",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA TORINO, 101 - MESTRE",
+        "cap": "30172",
+        "citta": "Venezia",
+        "telefono": "041-932241",
+        "email": "sede@ivl.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nome": "E.F.A. - ENTE FORMAZIONE ARTIGIANA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "CORSO STATI UNITI, 18/B",
+        "cap": "35127",
+        "citta": "Padova",
+        "telefono": "049-8705583",
+        "email": "efa@federclaai.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nome": "SISTHEMA FORMAZIONE SCARL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Castelfranco Veneto",
+        "indirizzo": "VIA DEGLI OLIVI, 1",
+        "cap": "31033",
+        "citta": "Castelfranco Veneto",
+        "telefono": "0423451019",
+        "email": "info@sisthemaformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nome": "CENTRO DI ISTRUZIONE PROFESSIONALE E ASSISTENZA TECNICA DELLA REGIONE VENETO - C.I.P.A.T.",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA LEONE GRAZIANI, 2 - MARGHERA",
+        "cap": "30175",
+        "citta": "Venezia",
+        "telefono": "041-929167",
+        "email": "info@cipatveneto.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nome": "INSIEME SI PUO' SOCIETA' COOPERATIVA SOCIALE",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Conegliano",
+        "indirizzo": "VIA PITTONI, 17",
+        "cap": "31015",
+        "citta": "Conegliano",
+        "telefono": "0438-410321",
+        "email": "formazione@insiemesipuo.eu",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Treviso",
+        "indirizzo": "VIA MARCHESAN, 4/D",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-325711",
+        "email": "formazione@insiemesipuo.eu",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nome": "CESCOT VENETO",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA SAVELLI, 8",
+        "cap": "35129",
+        "citta": "Padova",
+        "telefono": "049-8174601",
+        "email": "info@cescotveneto.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nome": "FORCOOP C.O.R.A. VENEZIA SC",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Donà di Piave",
+        "indirizzo": "GALLERIA VIDUSSI, 9",
+        "cap": "30027",
+        "citta": "San Donà di Piave",
+        "telefono": "0421-307741",
+        "email": "forcoop@progettagroup.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nome": "SCUOLA CENTRALE FORMAZIONE - ETS",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "CORSO DEL POPOLO, 146/C - MESTRE",
+        "cap": "30172",
+        "citta": "Venezia",
+        "telefono": "041-5382142",
+        "email": "amministrazione@scformazione.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nome": "ASCOM SERVIZI PADOVA SPA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "PIAZZA V. BARDELLA, 3",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "049-8209711",
+        "email": "info@ascompd.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nome": "ENTE DI FORMAZIONE IRIGEM - SOCIETA' COOPERATIVA IMPRESA SOCIALE",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Rosà",
+        "indirizzo": "VIA SCHALLSTADT, 55",
+        "cap": "36027",
+        "citta": "Rosà",
+        "telefono": "0424-85573",
+        "email": "irigem@irigem.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nome": "UNIONSERVICES SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA SOMMACAMPAGNA, 63/H",
+        "cap": "37137",
+        "citta": "Verona",
+        "telefono": "045-8060811",
+        "email": "formazione@confcommercioverona.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nome": "ENAIP VENETO IMPRESA SOCIALE",
+    "provincia": "Multi",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Longarone",
+        "indirizzo": "VIA MARCONI, 17",
+        "cap": "32013",
+        "citta": "Longarone",
+        "telefono": "0437-770318",
+        "email": "longarone@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Noale",
+        "indirizzo": "VIA DE POL, 6",
+        "cap": "30033",
+        "citta": "Noale",
+        "telefono": "041-440160",
+        "email": "noale@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_3",
+        "nome": "Sede di Cittadella",
+        "indirizzo": "VIA ANGELO GABRIELLI, 28",
+        "cap": "35013",
+        "citta": "Cittadella",
+        "telefono": "049-9402400",
+        "email": "cittadella@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_4",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA A. DA FORLI', 64/A",
+        "cap": "35134",
+        "citta": "Padova",
+        "telefono": "049-8658911",
+        "email": "padova@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_5",
+        "nome": "Sede di Piove di Sacco",
+        "indirizzo": "VIA A. GRANDI, 10",
+        "cap": "35028",
+        "citta": "Piove di Sacco",
+        "telefono": "049-9702355",
+        "email": "piovedisacco@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_6",
+        "nome": "Sede di Conselve",
+        "indirizzo": "VIA MARTIRI DELLA LIBERTA', 17",
+        "cap": "35026",
+        "citta": "Conselve",
+        "telefono": "049-5384325",
+        "email": "conselve@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_7",
+        "nome": "Sede di Dolo",
+        "indirizzo": "VIA BRENTA BASSA, 39",
+        "cap": "30031",
+        "citta": "Dolo",
+        "telefono": "041-413056",
+        "email": "dolo@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_8",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA NAPOLI, 11",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-326685",
+        "email": "vicenza@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_9",
+        "nome": "Sede di Isola della Scala",
+        "indirizzo": "VIA PRATO FIERA, 1",
+        "cap": "37063",
+        "citta": "Isola della Scala",
+        "telefono": "045-7300289",
+        "email": "isoladellascala@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_10",
+        "nome": "Sede di Porto Viro",
+        "indirizzo": "VIA MAZZINI, 169 LOC. DONADA",
+        "cap": "45014",
+        "citta": "Porto Viro",
+        "telefono": "0426-634069",
+        "email": "portoviro@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_11",
+        "nome": "Sede di Piazzola sul Brenta",
+        "indirizzo": "VIA VITTORIO EMANUELE II, 1",
+        "cap": "35016",
+        "citta": "Piazzola sul Brenta",
+        "telefono": "049-5590046",
+        "email": "piazzolasulbrenta@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_12",
+        "nome": "Sede di Rovigo",
+        "indirizzo": "Viale Porta Adige 45",
+        "cap": "45100",
+        "citta": "Rovigo",
+        "telefono": "0425-33671",
+        "email": "rovigo@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_13",
+        "nome": "Sede di Feltre",
+        "indirizzo": "VIA BORGO RUGA, 40",
+        "cap": "32032",
+        "citta": "Feltre",
+        "telefono": "0439-300237",
+        "email": "feltre@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_14",
+        "nome": "Sede di Legnago",
+        "indirizzo": "VIA PRINCIPE UMBERTO, 60",
+        "cap": "37045",
+        "citta": "Legnago",
+        "telefono": "0442-21299",
+        "email": "legnago@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_15",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA BENCIVENGA BIONDANI (EX LUNGADIGE GALTAROSSA), 1",
+        "cap": "37133",
+        "citta": "Verona",
+        "telefono": "045-8015053",
+        "email": "verona@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_16",
+        "nome": "Sede di Conegliano",
+        "indirizzo": "Viale Venezia 12",
+        "cap": "31015",
+        "citta": "Conegliano",
+        "telefono": "0438427182",
+        "email": "conegliano@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_17",
+        "nome": "Sede di Bassano del Grappa",
+        "indirizzo": "Via Cristoforo Colombo 94",
+        "cap": "36061",
+        "citta": "Bassano del Grappa",
+        "telefono": "0424227030",
+        "email": "bassano@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_18",
+        "nome": "Sede di Chioggia",
+        "indirizzo": "Isola dell'Unione 1",
+        "cap": "30015",
+        "citta": "Chioggia",
+        "telefono": "0412501082",
+        "email": "chioggia@enaip.veneto.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nome": "IRECOOP VENETO SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA G. SAVELLI, 128",
+        "cap": "35129",
+        "citta": "Padova",
+        "telefono": "049-8076143",
+        "email": "segreteria@irecoop.veneto.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "nome": "ECIPA SOCIETA' CONSORTILE A RL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA DELLA PILA, 3/B INT. 1 - MARGHERA",
+        "cap": "30175",
+        "citta": "Venezia",
+        "telefono": "041-928638",
+        "email": "info@ecipa.eu",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "nome": "CIOFS-FP VENETO ETS",
+    "provincia": "Multi",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA ORSINI, 15",
+        "cap": "35139",
+        "citta": "Padova",
+        "telefono": "049-8732611",
+        "email": "info@ciofsdb.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Conegliano",
+        "indirizzo": "VIA CADORE, 1",
+        "cap": "31015",
+        "citta": "Conegliano",
+        "telefono": "0438-21436",
+        "email": "info@ciofsfpconegliano.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "nome": "FONDAZIONE CENTRO PRODUTTIVITA' VENETO",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "Via Rossini, 60",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444960500",
+        "email": "info@cpv.org",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Chiampo",
+        "indirizzo": "Piazza Giovanni Fontana, 1",
+        "cap": "36072",
+        "citta": "Chiampo",
+        "telefono": "00444623101",
+        "email": "cfpchiampo@cpv.org",
+        "accreditamenti": {
+          "OF": true,
+          "FS": false,
+          "FC": false,
+          "OR": false
+        }
+      },
+      {
+        "id": "sede_3",
+        "nome": "Sede di Zevio",
+        "indirizzo": "Via Aldo Moro, 40",
+        "cap": "37059",
+        "citta": "Zevio",
+        "telefono": "0457850286",
+        "email": "info@cpv.org",
+        "accreditamenti": {
+          "OF": true,
+          "FS": false,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nome": "FONDAZIONE CUOA - CENTRO UNIVERSITARIO DI ORGANIZZAZIONE AZIENDALE",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Altavilla Vicentina",
+        "indirizzo": "VIA MARCONI, 103",
+        "cap": "36077",
+        "citta": "Altavilla Vicentina",
+        "telefono": "0444-333711",
+        "email": "direzione@cuoa.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "nome": "AGORA' ASSOCIAZIONE PER LO SVILUPPO DELLA FORMAZIONE",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA SOMMACAMPAGNA, 63/H",
+        "cap": "37137",
+        "citta": "Verona",
+        "telefono": "045-8647236",
+        "email": "info@agoraformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "nome": "I.N.I.A.P.A. VENETO S. CONSORTILE A RL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA DELLE INDUSTRIE, 19/C/11 - MARGHERA",
+        "cap": "30175",
+        "citta": "Venezia",
+        "telefono": "041-5317402",
+        "email": "info@iniapa.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "nome": "TER-SERVIZI CONFCOMMERCIO VENEZIA SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIALE ANCONA, 9 - MESTRE",
+        "cap": "30172",
+        "citta": "Venezia",
+        "telefono": "041-5318501",
+        "email": "terservizi@confcom.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "nome": "SCUOLA SUPERIORE DI SALDATURA E CONTROLLO SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Caldogno",
+        "indirizzo": "VIA DIVIGLIO, 235",
+        "cap": "36030",
+        "citta": "Caldogno",
+        "telefono": "0444-986901",
+        "email": "info@saldaturacontrollo.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "nome": "ENAC ENTE NAZIONALE CANOSSIANO ETS",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA SAN GIUSEPPE, 15",
+        "cap": "37123",
+        "citta": "Verona",
+        "telefono": "045-8006518",
+        "email": "enac@enac.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "nome": "CENTRO CONSORZI",
+    "provincia": "BL",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Sedico",
+        "indirizzo": "VIA GRESAL, 5/E",
+        "cap": "32036",
+        "citta": "Sedico",
+        "telefono": "0437-851311",
+        "email": "info@centroconsorzi.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "nome": "JOB & SCHOOL FORMAZIONE E PROFESSIONE - SOCIETA' COOPERATIVA",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Gruaro",
+        "indirizzo": "VIA DELL'ARTIGIANATO, 1",
+        "cap": "33020",
+        "citta": "Gruaro",
+        "telefono": "0421-280436",
+        "email": "job-school@job-school.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "nome": "SCUOLA EDILE CPT - CENTRO PER LA FORMAZIONE E LA SICUREZZA EDILE DI PADOVA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA BASILICATA, 10",
+        "cap": "35127",
+        "citta": "Padova",
+        "telefono": "049-761168",
+        "email": "info@scuolaedilepadova.net",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Stanghella",
+        "indirizzo": "Via Concetto Marchesi, 30",
+        "cap": "35048",
+        "citta": "Stanghella",
+        "telefono": "0425456016",
+        "email": "tutorstanghella@scuolaedilepadova.net",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "nome": "FICIAP VENETO SRL IMPRESA SOCIALE",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA MONTE SABOTINO, 1/A - MESTRE",
+        "cap": "30171",
+        "citta": "Venezia",
+        "telefono": "041-935400",
+        "email": "ficiap@ficiap.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "nome": "PROVINCIA ITALIANA SACRO CUORE",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA CAVALCASELLE, 20",
+        "cap": "37124",
+        "citta": "Verona",
+        "telefono": "045-8349777",
+        "email": "csfstimmatini@stimmatini.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "nome": "COOP SERVICES SOCIETA' COOPERATIVA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Este",
+        "indirizzo": "VIA PRINCIPE AMEDEO, 49/A INT. 2",
+        "cap": "35042",
+        "citta": "Este",
+        "telefono": "0429-603233",
+        "email": "info@coopservices.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "nome": "ISTITUTO DI PROGRAMMAZIONE E ORGANIZZAZIONE DELLO SVILUPPO TERRITORIALE - P.O.S.TER.",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIALE FRANCESCO CRISPI, 142",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-1870835",
+        "email": "segreteria@istitutoposter.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "nome": "FIAVET VENETO SERVIZI SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "PIAZZA MARCO SAGGIN, 2",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "049-8722387",
+        "email": "info@fiavetvenetoservizi.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "nome": "I.R.P.E.A. - ISTITUTI RIUNITI PADOVANI DI EDUCAZIONE E ASSISTENZA - ETS",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA BEATO PELLEGRINO, 155",
+        "cap": "35137",
+        "citta": "Padova",
+        "telefono": "049-8727300",
+        "email": "cfpcamerinirossi@irpea.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "nome": "AG-FORM SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA PESCHIERA, 5 - MESTRE",
+        "cap": "30174",
+        "citta": "Venezia",
+        "telefono": "041-5040523",
+        "email": "info@ag-form.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "nome": "ERAPRA DEL VENETO",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA MONTEVERDI, 15 - MESTRE",
+        "cap": "30174",
+        "citta": "Venezia",
+        "telefono": "041-5040460",
+        "email": "erapra@confagricolturaveneto.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "nome": "ENGIM VENETO ETS",
+    "provincia": "Multi",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Mirano",
+        "indirizzo": "VIA MURIALDO, 1",
+        "cap": "30035",
+        "citta": "Mirano",
+        "telefono": "041-430800",
+        "email": "amministrazione@engimve.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Treviso",
+        "indirizzo": "VIA FRANCESCO DA MILANO, 7",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-412267",
+        "email": "segreteria@engim.tv.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_3",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "CONTRA' VITTORIO VENETO, 1",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-322903",
+        "email": "segret@engimvi.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_4",
+        "nome": "Sede di Thiene",
+        "indirizzo": "VIA SANTA MARIA MADDALENA, 90",
+        "cap": "36016",
+        "citta": "Thiene",
+        "telefono": "0445-361141",
+        "email": "segreteria@engimthiene.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_5",
+        "nome": "Sede di Tonezza del Cimone",
+        "indirizzo": "VIA DEGLI ALPINI, 26",
+        "cap": "36040",
+        "citta": "Tonezza del Cimone",
+        "telefono": "0445-749266",
+        "email": "segreteria@engimtonezza.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      },
+      {
+        "id": "sede_6",
+        "nome": "Sede di Oderzo",
+        "indirizzo": "Via Brandolini, 6",
+        "cap": "31046",
+        "citta": "Oderzo",
+        "telefono": "0422718430",
+        "email": "segreteria@oderzo.engim.tv.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_7",
+        "nome": "Sede di Venezia",
+        "indirizzo": "DORSODURO, 18/M",
+        "cap": "30123",
+        "citta": "Venezia",
+        "telefono": "0415241849",
+        "email": "segreteriacif@engimve.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_8",
+        "nome": "Sede di Monticello Conte Otto",
+        "indirizzo": "Via Treviso, 29",
+        "cap": "36010",
+        "citta": "Monticello Conte Otto",
+        "telefono": "0444946846",
+        "email": "restauro@engimvi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      },
+      {
+        "id": "sede_9",
+        "nome": "Sede di Verona - Chievo",
+        "indirizzo": "Via Aeroporto Angelo Berardi, 9",
+        "cap": "37139",
+        "citta": "Verona",
+        "telefono": "0458167229",
+        "email": "chievo@engimvr.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_10",
+        "nome": "Sede di Verona - San Michele",
+        "indirizzo": "Via Belluzzo, 2",
+        "cap": "37132",
+        "citta": "Verona",
+        "telefono": "0458952039",
+        "email": "sanmichele@engimvr.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_11",
+        "nome": "Sede di Villafranca di Verona",
+        "indirizzo": "Via Novara, 3",
+        "cap": "37069",
+        "citta": "Villafranca di Verona",
+        "telefono": "0457900644",
+        "email": "villafranca@engimvr.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "nome": "FONDAZIONE CAVANIS",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Chioggia",
+        "indirizzo": "VIA CAMPO MARCONI, 112",
+        "cap": "30015",
+        "citta": "Chioggia",
+        "telefono": "041-400922",
+        "email": "fondazione.cavanis@libero.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "nome": "UNINDUSTRIA SERVIZI & FORMAZIONE TREVISO PORDENONE SCARL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Treviso",
+        "indirizzo": "PIAZZA DELLE ISTITUZIONI, 12",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-916400",
+        "email": "unisef@unisef.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "nome": "ENDO-FAP MESTRE ISTITUTO BERNA",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA BISSUOLA, 93 - MESTRE",
+        "cap": "30173",
+        "citta": "Venezia",
+        "telefono": "0412697711",
+        "email": "info@istitutoberna.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "nome": "ASSOCIAZIONE LA NOSTRA FAMIGLIA",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Conegliano",
+        "indirizzo": "VIA COSTA ALTA, 37",
+        "cap": "31015",
+        "citta": "Conegliano",
+        "telefono": "0438-414290",
+        "email": "cfp.conegliano@lanostrafamiglia.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": false,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "nome": "FORMEDIL VENEZIA",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "BANCHINA DELL'AZOTO, 15 - MARGHERA",
+        "cap": "30175",
+        "citta": "Venezia",
+        "telefono": "041-3694701",
+        "email": "formazione@centroedilivenezia.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "nome": "ISTITUTO VENETO PER I BENI CULTURALI",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "SAN MARCO, 2940",
+        "cap": "30124",
+        "citta": "Venezia",
+        "telefono": "041-8941521",
+        "email": "info@ivbc.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "nome": "FONDAZIONE IREA MORINI PEDRINA PELA' TONO",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Este",
+        "indirizzo": "VIALE FIUME, 51/53",
+        "cap": "35042",
+        "citta": "Este",
+        "telefono": "0429-602674",
+        "email": "irea@morinipedrina.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "nome": "RICONVERSIDER SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA DELLA MECCANICA, 1/R",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-960240",
+        "email": "info.vicenza@riconversider.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "nome": "ISTITUTO SERBLIN PER L'INFANZIA, L'ADOLESCENZA, L'ETA' MATURA E LA TERZA ETA' - A.P.S.",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIALE DELLA PACE, 176/178",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-301660",
+        "email": "istitutoserblin@villaggioglobale.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "nome": "MAG MUTUA PER L'AUTOGESTIONE COOPERATIVA SOCIALE",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA CRISTOFOLI, 31/A",
+        "cap": "37138",
+        "citta": "Verona",
+        "telefono": "045-8100279",
+        "email": "info@magverona.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "nome": "CONFCOMMERCIO IMPRESE PER L'ITALIA - MANDAMENTO DI BASSANO DEL GRAPPA",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Bassano del Grappa",
+        "indirizzo": "LARGO PAROLINI, 48",
+        "cap": "36061",
+        "citta": "Bassano del Grappa",
+        "telefono": "0424-523108",
+        "email": "ufficioformazione@ascom.bassano.vi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "nome": "CONSORZIO PROVINCIALE: INTESA - CCA SOCIETA' COOPERATIVA SOCIALE CONSORTILE",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Treviso",
+        "indirizzo": "VIALE DELLA REPUBBLICA 253",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-918824",
+        "email": "amministrazione@intesacca.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "nome": "COSP VERONA ETS - COMITATO PROVINCIALE PER L'ORIENTAMENTO SCOLASTICO E PROFESSIONALE",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Corso Porta Nuova 96",
+        "cap": "37122",
+        "citta": "Verona",
+        "telefono": "045597108",
+        "email": "cosp@cosp.verona.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "nome": "FONDAZIONE OPERA MONTE GRAPPA",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Fonte",
+        "indirizzo": "PIAZZA S. PIETRO, 9",
+        "cap": "31010",
+        "citta": "Fonte",
+        "telefono": "0423-949072",
+        "email": "info@cfpfonte.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "nome": "ASCOM FORMAZIONE E SERVIZI S.R.L.",
+    "provincia": "BL",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Belluno",
+        "indirizzo": "PIAZZA DEI MARTIRI, 16",
+        "cap": "32100",
+        "citta": "Belluno",
+        "telefono": "0437-215260",
+        "email": "formazione@ascombelluno.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "nome": "CONFARTIGIANATO MARCA TREVIGIANA FORMAZIONE SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Treviso",
+        "indirizzo": "PIAZZA DELLE ISTITUZIONI, 34",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-433250",
+        "email": "info@confartigianatoformazione.tv",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "nome": "UPA SERVIZI SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA SELENIA, 16",
+        "cap": "37135",
+        "citta": "Verona",
+        "telefono": "045-9211555",
+        "email": "formazione2@artigianiupa.vr.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "nome": "FONDAZIONE ANNA ROSSI SAUGO - ETS",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Thiene",
+        "indirizzo": "VIA DEI QUARTIERI, 2/4",
+        "cap": "36016",
+        "citta": "Thiene",
+        "telefono": "0445-362159",
+        "email": "cfp@saugo.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "nome": "TEATRO STABILE DEL VENETO - CARLO GOLDONI",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA DEI LIVELLO, 32",
+        "cap": "35139",
+        "citta": "Padova",
+        "telefono": "049-8777011",
+        "email": "info@teatrostabileveneto.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "nome": "CIM & FORM S.R.L.",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA CASERMA OSPITAL VECCHIO, 4C",
+        "cap": "37122",
+        "citta": "Verona",
+        "telefono": "045-8099446",
+        "email": "cimform@confindustria.vr.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "nome": "FOREMA SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA E.P. MASINI, 2",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "049-8227500",
+        "email": "progettazione@forema.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "nome": "PUNTO CONFINDUSTRIA SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA DELLE INDUSTRIE, 19",
+        "cap": "30175",
+        "citta": "Venezia",
+        "telefono": "041-5382052",
+        "email": "b.discardi@puntoconfindustria.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "nome": "FORMEDIL VERONA - SCUOLA EDILE",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA G. V. ZEVIANI, 8",
+        "cap": "37131",
+        "citta": "Verona",
+        "telefono": "045-523366",
+        "email": "esev@esev.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "nome": "ISFID PRISMA SOCIETA' COOPERATIVA",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA G. ULLOA, 5 - MARGHERA I Piano Scala A",
+        "cap": "30175",
+        "citta": "Venezia",
+        "telefono": "041-5490258",
+        "email": "formazione@isfidprisma.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "nome": "CFLI - CENTRO DI FORMAZIONE LOGISTICA INTERMODALE SOCIETÀ CONSORTILE A RESPONSABILITÀ LIMITATA",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "FABBRICATO 16 ZONA PORTUALE DI S. MARTA",
+        "cap": "30123",
+        "citta": "Venezia",
+        "telefono": "041-5334155",
+        "email": "venezia@cfli.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "nome": "MASTER SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA DON LUIGI PERON, 1/A - MESTRE",
+        "cap": "30174",
+        "citta": "Venezia",
+        "telefono": "041-5347646",
+        "email": "info@masterfor.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "nome": "CONFINDUSTRIA VENETO SIAV SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA TORINO, 151/C - MESTRE",
+        "cap": "30172",
+        "citta": "Venezia",
+        "telefono": "041-2517511",
+        "email": "area.progetti@siav.net",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "nome": "CONFARTIGIANATO IMPRESE PADOVA FORMAZIONE SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "PIAZZA A. DE GASPERI 22",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "0498206414",
+        "email": "formazione@confartigianatopadova.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "nome": "CESAR SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA E. FERMI, 201",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-960100",
+        "email": "cesar@confartigianatovicenza.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "nome": "ASCOM SERVIZI SPA",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Treviso",
+        "indirizzo": "VIA VENIER, 55",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-570781",
+        "email": "a.menuzzo@ascom.tv.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "nome": "ESAC SPA",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Creazzo",
+        "indirizzo": "VIA PIAZZON. 40",
+        "cap": "36051",
+        "citta": "Creazzo",
+        "telefono": "0444-964300",
+        "email": "esac@ascom.vi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "nome": "THE LONDON SCHOOL SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Schio",
+        "indirizzo": "VIA LAGO DI GARDA, 16",
+        "cap": "36015",
+        "citta": "Schio",
+        "telefono": "0445-386226",
+        "email": "info@thelondonschool.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "nome": "VOLONTA' DI SAPERE SOCIETA' COOPERATIVA SOCIALE",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Albignasego",
+        "indirizzo": "VIA ROMA, 15",
+        "cap": "35020",
+        "citta": "Albignasego",
+        "telefono": "049-710977",
+        "email": "info@volsap.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "nome": "ECOSTUDIO AMBIENTE SRL",
+    "provincia": "BL",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Seren del Grappa",
+        "indirizzo": "VIA INDUSTRIE, 14 Loc. Rasai",
+        "cap": "32030",
+        "citta": "Seren del Grappa",
+        "telefono": "0439448441",
+        "email": "info@ecostudio.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "nome": "FONDAZIONE SAN GAETANO CENTRO SERVIZI FORMATIVI ETS",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Bonifacio",
+        "indirizzo": "VIA ZAMPIERI, 9",
+        "cap": "37047",
+        "citta": "San Bonifacio",
+        "telefono": "045-7610198",
+        "email": "info@fondazionesangaetano.org",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "nome": "UMANA FORMA SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA PORTENARI, 9/11 - MARGHERA",
+        "cap": "30175",
+        "citta": "Venezia",
+        "telefono": "041-5385630",
+        "email": "infove@umanaforma.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "nome": "SYNTHESIS SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Noventa Padovana",
+        "indirizzo": "VIA PANA', 56/A",
+        "cap": "35027",
+        "citta": "Noventa Padovana",
+        "telefono": "049-8078751",
+        "email": "info@synthesis-srl.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "nome": "AIV FORMAZIONE SOCIETA' COOPERATIVA",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Villafranca di Verona",
+        "indirizzo": "VIALE POSTUMIA, 37",
+        "cap": "37069",
+        "citta": "Villafranca di Verona",
+        "telefono": "045-6304651",
+        "email": "info@aivformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "nome": "FORMEDIL VICENZA - SCUOLA COSTRUZIONI ANDREA PALLADIO",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIALE CRICOLI, 57",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-544395",
+        "email": "info@scuolacostruzionivicenza.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "nome": "C.C.S. - CONSORZIO COOPERATIVE SOCIALI",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Selvazzano Dentro",
+        "indirizzo": "VIA EUGANEA, 27",
+        "cap": "35030",
+        "citta": "Selvazzano Dentro",
+        "telefono": "049-8059886",
+        "email": "mail@reteccs.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "nome": "KAIROSFORMA SRL - IMPRESA SOCIALE",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA MAMELI, 12",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "041-5100598",
+        "email": "formazione@kairos-consulting.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "nome": "CERTOTTICA S.C.R.L.",
+    "provincia": "BL",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Longarone",
+        "indirizzo": "VIA Z.I. VILLANOVA 7/A",
+        "cap": "32013",
+        "citta": "Longarone",
+        "telefono": "0437-573157",
+        "email": "formazione@certottica.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "nome": "A & A CONSULENZA SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Villorba",
+        "indirizzo": "VIALE DELLA REPUBBLICA, 19/B",
+        "cap": "31020",
+        "citta": "Villorba",
+        "telefono": "0422-421742",
+        "email": "info@aeaconsulenza.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "nome": "E-CONS SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Boara Pisani",
+        "indirizzo": "VIA DEL LAVORO, 4",
+        "cap": "35040",
+        "citta": "Boara Pisani",
+        "telefono": "0425-485621",
+        "email": "info@e-cons.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "nome": "NIUKO - INNOVATION & KNOWLEDGE S.R.L.",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "PIAZZA PONTELANDOLFO, 27",
+        "cap": "36077",
+        "citta": "Vicenza",
+        "telefono": "0444-333710",
+        "email": "info@risorseincrescita.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "nome": "COOPERATIVA FORMAT - FORMAZIONE TECNICA SOC. COOP.",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA DANIELE MANIN, 49/F",
+        "cap": "30174",
+        "citta": "Venezia",
+        "telefono": "041-5350276",
+        "email": "info@formazionetecnica.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "nome": "CON-SER SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Marcon",
+        "indirizzo": "VIA R. LOMBARDI, 19",
+        "cap": "30020",
+        "citta": "Marcon",
+        "telefono": "041-5952952",
+        "email": "segreteria@con-ser.ve.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "nome": "LA ESSE SOCIETA' COOPERATIVA SOCIALE",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Treviso",
+        "indirizzo": "VIALE FRANCIA, 2",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-260188",
+        "email": "info@laesse.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "nome": "CODESS SOCIALE SOCIETA' COOPERATIVA SOCIALE",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA BISSAGOLA, 25",
+        "cap": "30174",
+        "citta": "Venezia",
+        "telefono": "041-616120",
+        "email": "formazione@codess.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "nome": "IMPRESA VERDE VENEZIA SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA TORINO, 180/A - MESTRE",
+        "cap": "30172",
+        "citta": "Venezia",
+        "telefono": "041-5455210",
+        "email": "venezia@coldiretti.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "nome": "IMPRESA VERDE TREVISO-BELLUNO SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Paese",
+        "indirizzo": "VIALE SANTE BIASUZZI, 20",
+        "cap": "31038",
+        "citta": "Paese",
+        "telefono": "0422-954111",
+        "email": "treviso@coldiretti.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "nome": "AGENFOR VENETO",
+    "provincia": "RO",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Rovigo",
+        "indirizzo": "VIALE DELLA COOPERAZIONE, 6",
+        "cap": "45100",
+        "citta": "Rovigo",
+        "telefono": "0425-474643",
+        "email": "agenforveneto@agenfor.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "nome": "FONDAZIONE PIA OPERA CICCARELLI ONLUS",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Giovanni Lupatoto",
+        "indirizzo": "VICOLO OSPEDALE, 1",
+        "cap": "37057",
+        "citta": "San Giovanni Lupatoto",
+        "telefono": "045-8296111",
+        "email": "info@piaoperaciccarelli.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "nome": "FONDAZIONE GIUSEPPE TONIOLO",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA SEMINARIO, 8",
+        "cap": "37129",
+        "citta": "Verona",
+        "telefono": "045-9276221",
+        "email": "info@fondazionetoniolo.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "nome": "UNIVERSITA' DEGLI STUDI DI VERONA",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 2",
+        "cap": "37129",
+        "citta": "Verona",
+        "telefono": "045-8028523",
+        "email": "ufficio.ricerca@ateneo.univr.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "nome": "FORM&R SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Martino di Lupari",
+        "indirizzo": "VIA GARIBALDI, 38",
+        "cap": "35018",
+        "citta": "San Martino di Lupari",
+        "telefono": "049-9470847",
+        "email": "info@former-division.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "nome": "ISTITUTO ZOOPROFILATTICO SPERIMENTALE DELLE VENEZIE",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Legnaro",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 10",
+        "cap": "35020",
+        "citta": "Legnaro",
+        "telefono": "049-8084341",
+        "email": "formazione@izsvenezie.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "nome": "GIUSEPPE OLIVOTTI SOCIETA' COOPERATIVA SOCIALE",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Mira",
+        "indirizzo": "VIA NAZIONALE, 57",
+        "cap": "30034",
+        "citta": "Mira",
+        "telefono": "041-420349",
+        "email": "orientamento@olivotti.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Asolo",
+        "indirizzo": "VIA CARREGGIATE, 30",
+        "cap": "31011",
+        "citta": "Asolo",
+        "telefono": "0423-529186",
+        "email": "orientamento@olivotti.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "nome": "CENTRO ITALIANO DI SOLIDARIETA' DI BELLUNO - ONLUS",
+    "provincia": "BL",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Belluno",
+        "indirizzo": "VIA RUGO, 21",
+        "cap": "32100",
+        "citta": "Belluno",
+        "telefono": "0437-950909",
+        "email": "info@ceisbelluno.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "nome": "NECSI SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Romano d'Ezzelino",
+        "indirizzo": "VIA TENENTE E. VELO, 28",
+        "cap": "36060",
+        "citta": "Romano d'Ezzelino",
+        "telefono": "0424-382638",
+        "email": "info@necsi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "nome": "EQUASOFT SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA DIVISIONE FOLGORE, 7/D",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-929136",
+        "email": "equasoft@equasoft.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "nome": "STUDIO EIDOS SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Thiene",
+        "indirizzo": "VIA MARCO CORNER, 19",
+        "cap": "36016",
+        "citta": "Thiene",
+        "telefono": "0445-382277",
+        "email": "info@studioeidosformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "nome": "APRI FORMAZIONE SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA ZAMENHOF, 100",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-914236",
+        "email": "info@apriformazione.eu",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "nome": "STUDIO ESSEPI SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Sona",
+        "indirizzo": "VIA DELL'INDUSTRIA, 1/3",
+        "cap": "37060",
+        "citta": "Sona",
+        "telefono": "045-8621499",
+        "email": "info@studioessepi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "nome": "IMPRESA VERDE VERONA SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIALE DEL LAVORO, 52",
+        "cap": "37135",
+        "citta": "Verona",
+        "telefono": "045-8678210",
+        "email": "impresaverde.vr@coldiretti.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "nome": "IMPRESA VERDE VICENZA SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA ZAMENHOF, 697",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-189600",
+        "email": "vicenza@coldiretti.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "nome": "IMPRESA VERDE PADOVA SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA CROCE ROSSA, 32",
+        "cap": "35129",
+        "citta": "Padova",
+        "telefono": "049-8997311",
+        "email": "padova@coldiretti.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "nome": "IMPRESA VERDE ROVIGO SRL",
+    "provincia": "RO",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Rovigo",
+        "indirizzo": "VIA A. MARIO, 19",
+        "cap": "45100",
+        "citta": "Rovigo",
+        "telefono": "0425-2018",
+        "email": "impresaverde.ro@coldiretti.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "nome": "SUORE DELLA COMPAGNIA DI MARIA",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA A. PROVOLO, 18",
+        "cap": "37123",
+        "citta": "Verona",
+        "telefono": "045-8000015",
+        "email": "istituto@gresner.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": false,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "nome": "C.F.S. - CENTRO PER LA FORMAZIONE E LA SICUREZZA DI BELLUNO",
+    "provincia": "BL",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Sedico",
+        "indirizzo": "STADIO,11/A",
+        "cap": "32036",
+        "citta": "Sedico",
+        "telefono": "0437-753330",
+        "email": "segreteria@cfsbelluno.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "nome": "ASSOCIAZIONE PAVONIANA LA FAMIGLIA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Montagnana",
+        "indirizzo": "VIA LUPPIA ALBERI, 3",
+        "cap": "35044",
+        "citta": "Montagnana",
+        "telefono": "0429-81658",
+        "email": "direzione.cfp@pavoniani.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "nome": "UNIVERSITA' INTERNAZIONALE DELL'ARTE - U.I.A.",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "CALLE MICHELANGELO 54/P - VILLA HERIOTT - GIUDECCA",
+        "cap": "30133",
+        "citta": "Venezia",
+        "telefono": "0412411974",
+        "email": "amministrazioneuia@gmail.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "nome": "VICTORY SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIALE SAN LAZZARO, 10",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-570098",
+        "email": "info@victoryweb.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "nome": "UNIVERSITA' DEGLI STUDI DI PADOVA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA VIII FEBBRAIO, 2",
+        "cap": "35122",
+        "citta": "Padova",
+        "telefono": "049-8273055",
+        "email": "rettore@unipd.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "nome": "CECAT - CENTRO PER L'EDUCAZIONE, LA COOPERAZIONE E L'ASSISTENZA TECNICA",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Castelfranco Veneto",
+        "indirizzo": "VIA DELLA BORSA, 1/A INT. 2",
+        "cap": "31033",
+        "citta": "Castelfranco Veneto",
+        "telefono": "0423-493442",
+        "email": "info@cecat.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "nome": "AD CONSULTING SRL",
+    "provincia": "RO",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Rovigo",
+        "indirizzo": "CORSO DEL POPOLO, 70",
+        "cap": "45100",
+        "citta": "Rovigo",
+        "telefono": "0425-412470",
+        "email": "info@adconsulting.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "nome": "UNIVERSITA' CA' FOSCARI",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "DORSODURO, 3246",
+        "cap": "30123",
+        "citta": "Venezia",
+        "telefono": "041-2348083",
+        "email": "ricerca.nazionale@unive.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "nome": "POLITECNICO CALZATURIERO SCPA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vigonza",
+        "indirizzo": "VIA VENEZIA, 62",
+        "cap": "35010",
+        "citta": "Vigonza",
+        "telefono": "049-9801111",
+        "email": "info@politecnicocalzaturiero.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "nome": "UNIVERSITA' IUAV DI VENEZIA",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "SANTA CROCE, 191 TOLENTINI",
+        "cap": "30135",
+        "citta": "Venezia",
+        "telefono": "041-2571880",
+        "email": "fse@iuav.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "nome": "FORMEDIL TREVISO",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Treviso",
+        "indirizzo": "VIA SAN PELAJO, 35",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422-301141",
+        "email": "info@centroediliziatreviso.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "nome": "ISTITUTO E SCUOLA DI ESTETICA PRIMIA SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "PIAZZALE STAZIONE, 8",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "049-662020",
+        "email": "info@scuolaprimia.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "nome": "SEGRA - SCUOLA PROFESSIONALE DI ESTETICA",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Castelfranco Veneto",
+        "indirizzo": "VIA DELLE QUERCE, 11",
+        "cap": "31033",
+        "citta": "Castelfranco Veneto",
+        "telefono": "0423-720653",
+        "email": "info@scuolasegra.com",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "nome": "LUNIKLEF",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "LUNGADIGE CAPULETI, 11",
+        "cap": "37122",
+        "citta": "Verona",
+        "telefono": "045-8010803",
+        "email": "direzione@luniklef.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "nome": "CLEF SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "LUNGADIGE CAPULETI, 11",
+        "cap": "37122",
+        "citta": "Verona",
+        "telefono": "045-597080",
+        "email": "direzione@clef.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "nome": "DIMENSIONE IMPRESA SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Thiene",
+        "indirizzo": "PIAZZA ROSSI, 20",
+        "cap": "36016",
+        "citta": "Thiene",
+        "telefono": "0445-367131",
+        "email": "info@dimensioneimpresa.vi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "nome": "CONSORZIO GAMMA SERVIZI",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Viale della Repubblica 53",
+        "cap": "37126",
+        "citta": "Verona",
+        "telefono": "0454752080",
+        "email": "veneto@gammaservizi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "nome": "ASCOM SERVIZI VITTORIO VENETO SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vittorio Veneto",
+        "indirizzo": "GALLERIA NAZIONI UNITE, 6 INT. 12",
+        "cap": "31029",
+        "citta": "Vittorio Veneto",
+        "telefono": "0438-555146",
+        "email": "formazione@ascomvittoriov.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "nome": "COOPERATIVA SOCIALE DI SOLIDARIETA' PROMOZIONE LAVORO",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Altavilla Vicentina",
+        "indirizzo": "VIA VICENZA, 15",
+        "cap": "36077",
+        "citta": "Altavilla Vicentina",
+        "telefono": "0442480686",
+        "email": "formazione@promo-lavoro.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "nome": "GIF - GRUPPO INSEGNANTI FORMATORI SCARL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Oderzo",
+        "indirizzo": "VIA DEGLI ALPINI, 28/5",
+        "cap": "31046",
+        "citta": "Oderzo",
+        "telefono": "0422-717488",
+        "email": "info@gifonline.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "nome": "EUROCONSULTING SPA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "PIAZZA MODIN, 12",
+        "cap": "35129",
+        "citta": "Padova",
+        "telefono": "049-8935156",
+        "email": "padova@ecgroup.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "nome": "CENTRO API SERVIZI SRL - SOCIETA' BENEFIT",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "GALLERIA CRISPI, 45",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444-232210",
+        "email": "m.maltauro@apindustria.vi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "nome": "FORMIAMO IMPRESA SOCIALE SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Rubano",
+        "indirizzo": "VIA DELLA PROVVIDENZA, 68-SARMEOLA",
+        "cap": "35030",
+        "citta": "Rubano",
+        "telefono": "049633942",
+        "email": "info@e-formiamo.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "nome": "STUDIO CENTRO PERSONALE E TRADUZIONI SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA FRANCESCO CRISPI, 142",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444512733",
+        "email": "personale@studiocentro.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "nome": "BKR IN.FORM.AZIONE SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Donà di Piave",
+        "indirizzo": "VIA GIORGIO LA PIRA, 19",
+        "cap": "30027",
+        "citta": "San Donà di Piave",
+        "telefono": "04211846058",
+        "email": "info@bkrinformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "nome": "OBIETTIVO SICUREZZA SRL",
+    "provincia": "RO",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Adria",
+        "indirizzo": "VIA CARDUCCI, 41/5",
+        "cap": "45011",
+        "citta": "Adria",
+        "telefono": "0426908316",
+        "email": "obiettivosicurezza81e@gmail.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "nome": "FORMLAB SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Michele al Tagliamento",
+        "indirizzo": "Via Canal 3",
+        "cap": "30028",
+        "citta": "San Michele al Tagliamento",
+        "telefono": "0421709123",
+        "email": "formazione@formlab.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "nome": "ENFORMA S.R.L. (ENTE FORMAZIONE MANTOVANO) IMPRESA SOCIALE",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA LAMARMORA, 12/2",
+        "cap": "30173",
+        "citta": "Venezia",
+        "telefono": "041610918",
+        "email": "veneto@enforma.biz",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "nome": "E-WORK SPA",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Viale delle Nazioni 2",
+        "cap": "37135",
+        "citta": "Verona",
+        "telefono": "0458531916",
+        "email": "welcome.verona@e-workspa.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "nome": "CONFORM - CONSULENZA FORMAZIONE E MANAGEMENT SCARL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA TOMMASEO 74/B",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "049625261",
+        "email": "monitoraggio@conform.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "nome": "AZIENDA SERVIZI FORMAZIONE EUROPEA S.R.L.",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Via Giuseppe Belluzzo, 2",
+        "cap": "37132",
+        "citta": "Verona",
+        "telefono": "0452056100",
+        "email": "info@asfe-vr.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "nome": "FONDAZIONE TEATRO LA FENICE DI VENEZIA",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "Campo San Fantin 1965",
+        "cap": "30124",
+        "citta": "Venezia",
+        "telefono": "041786511",
+        "email": "alessandro.fantini@teatrolafenice.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "nome": "SVILUPPO FORMAZIONE S.R.L.",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIALE SANT'AGOSTINO, 153",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "04441832190",
+        "email": "formazione.vi@sviluppoformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "nome": "ALPE ADRIA IMPRESE SERVIZI AMMINISTRATIVI E COMMERCIALI SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Oderzo",
+        "indirizzo": "VIA DEGLI ALPINI, 15",
+        "cap": "31046",
+        "citta": "Oderzo",
+        "telefono": "0422815544",
+        "email": "info@alpeadriaimprese.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "nome": "SYNERGIE ACADEMY S.R.L.",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA GIOVANNI SAVELLI, 24",
+        "cap": "35129",
+        "citta": "Padova",
+        "telefono": "049775065",
+        "email": "risorse.padova@risorseitaliasrl.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "nome": "ISTITUTO NAZIONALE DI FISICA NUCLEARE (INFN)",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Legnaro",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 2",
+        "cap": "35020",
+        "citta": "Legnaro",
+        "telefono": "0498068311",
+        "email": "prot@lnl.infn.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "nome": "PROTECNO FORMAZIONE SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Donà di Piave",
+        "indirizzo": "VIA GARDA, 11/2",
+        "cap": "30027",
+        "citta": "San Donà di Piave",
+        "telefono": "04211880445",
+        "email": "info@protecnoformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "nome": "VENETICA SOCIETA' COOPERATIVA SOCIALE",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Rubano",
+        "indirizzo": "Via Pitagora 11/A",
+        "cap": "35030",
+        "citta": "Rubano",
+        "telefono": "0499406541",
+        "email": "info@venetica.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "nome": "ROYAL CAMBRIDGE BUSINESS SCHOOL SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Mogliano Veneto",
+        "indirizzo": "VIA MARCONI, 15/5",
+        "cap": "31021",
+        "citta": "Mogliano Veneto",
+        "telefono": "0415906139",
+        "email": "info@rcbs.org.uk",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "nome": "OFFICINE MENTALI SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Portogruaro",
+        "indirizzo": "Viale Udine 17",
+        "cap": "30026",
+        "citta": "Portogruaro",
+        "telefono": "0421271166",
+        "email": "formazione@officinementali.eu",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "nome": "FONDAZIONE ITS ACADEMY MECCATRONICO VENETO",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "Via Legione Gallieno 52",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444302980",
+        "email": "info@itsmeccatronico.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "nome": "FONDAZIONE ITS ACADEMY LAST - MOBILITA' SOSTENIBILE E LOGISTICA",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA SOMMACAMPAGNA 61",
+        "cap": "37137",
+        "citta": "Verona",
+        "telefono": "0454950249",
+        "email": "info@itslogistica.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "nome": "FONDAZIONE FENICE ONLUS",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "Lungargine G. Rovetta, 28",
+        "cap": "35127",
+        "citta": "Padova",
+        "telefono": "0498021850",
+        "email": "info@fondazionefenice.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "nome": "TIME TO TIME SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Limena",
+        "indirizzo": "VIA L. Pierobon, 65",
+        "cap": "35010",
+        "citta": "Limena",
+        "telefono": "04291905040",
+        "email": "segreteria@timetotime.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "nome": "EUROISO SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Oderzo",
+        "indirizzo": "Contrada Rossa 2/3",
+        "cap": "31046",
+        "citta": "Oderzo",
+        "telefono": "0422713254",
+        "email": "formazione@euroiso.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "nome": "QUALIFICA GROUP BERIT SRL SOCIETA' BENEFIT",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Godega di Sant'Urbano",
+        "indirizzo": "VIA BOSCO, 36/a",
+        "cap": "31010",
+        "citta": "Godega di Sant'Urbano",
+        "telefono": "043838553",
+        "email": "berit@pec.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "nome": "RANDSTAD HR SOLUTIONS SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "Piazza Virgilio Bardella n.12, complesso \"La Cittadella\"",
+        "cap": "35131",
+        "citta": "Padova",
+        "telefono": "3400646634",
+        "email": "deliveryesf@randstad.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "nome": "AGENZIA VENETA PER L'INNOVAZIONE NEL SETTORE PRIMARIO",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Legnaro",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 14",
+        "cap": "35020",
+        "citta": "Legnaro",
+        "telefono": "0498293711",
+        "email": "divulgazione.formazione@venetoagricoltura.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "nome": "STAFF SPA",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Montecchio Maggiore",
+        "indirizzo": "Via Marconi,1",
+        "cap": "36041",
+        "citta": "Montecchio Maggiore",
+        "telefono": "04441390121",
+        "email": "montecchio@staff.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "nome": "INTERNATIONAL ONLINE UNIVERSITY SOCIETA' A RESPONSABILITA' LIMITATA SEMPLIFICATA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA MONTESI, 9",
+        "cap": "35025",
+        "citta": "Padova",
+        "telefono": "0499101545",
+        "email": "info@internationalonlineuniversity.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "nome": "FONDAZIONE ENAC VENETO C.F.P. CANOSSIANO IMPRESA SOCIALE",
+    "provincia": "Multi",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Via S. Giuseppe, 11",
+        "cap": "37123",
+        "citta": "Verona",
+        "telefono": "0458003043",
+        "email": "info@cfpcanossiano vr.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Treviso",
+        "indirizzo": "Viale Europa, 20",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422432849",
+        "email": "cfp@canossiane-treviso.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_3",
+        "nome": "Sede di Schio",
+        "indirizzo": "Via Fusinato, 51",
+        "cap": "36015",
+        "citta": "Schio",
+        "telefono": "045524212",
+        "email": "schio@enac.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_4",
+        "nome": "Sede di Feltre",
+        "indirizzo": "Viale Monte Grappa, 1",
+        "cap": "32032",
+        "citta": "Feltre",
+        "telefono": "0439840947",
+        "email": "feltre@enac.org",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_5",
+        "nome": "Sede di Treviso 2",
+        "indirizzo": "Via Castellana 86, int. 20",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "0422267445",
+        "email": "treviso@enacveneto.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "nome": "FONDAZIONE INGEGNERI VENEZIANI",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA BRUNO MADERNA, 7 - MESTRE",
+        "cap": "30174",
+        "citta": "Venezia",
+        "telefono": "0417790577",
+        "email": "fondazione@ordineingegneri.ve.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "nome": "TACK & TMI ITALY SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "via San Crispino 8",
+        "cap": "35129",
+        "citta": "Padova",
+        "telefono": "0497450101",
+        "email": "padova@tacktmi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "nome": "FONDAZIONE LEPIDO ROCCO",
+    "provincia": "Multi",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Motta di Livenza",
+        "indirizzo": "Via Lepido Rocco, 6",
+        "cap": "31045",
+        "citta": "Motta di Livenza",
+        "telefono": "0422867511",
+        "email": "lepidorocco@lepidorocco.com",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Caorle",
+        "indirizzo": "Via del Passarin, 15",
+        "cap": "30021",
+        "citta": "Caorle",
+        "telefono": "0421299269",
+        "email": "alberghiero.caorle@lepidorocco.com",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_3",
+        "nome": "Sede di Castelfranco Veneto",
+        "indirizzo": "Via Brenta, 4",
+        "cap": "31033",
+        "citta": "Castelfranco Veneto",
+        "telefono": "0423497950",
+        "email": "segreteria.cfv@lepidorocco.com",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_4",
+        "nome": "Sede di Pramaggiore",
+        "indirizzo": "Via Callalta, 2",
+        "cap": "30020",
+        "citta": "Pramaggiore",
+        "telefono": "0421799258",
+        "email": "alberghiero.pramaggiore@lepidorocco.com",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_5",
+        "nome": "Sede di San Donà di Piave",
+        "indirizzo": "Piazza Duomo o delle Grazie, 12",
+        "cap": "30027",
+        "citta": "San Donà di Piave",
+        "telefono": "042152791",
+        "email": "segreteria@cfpsanluigi.net",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "nome": "FOR ACTION SRLS",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Bassano del Grappa",
+        "indirizzo": "VIA SS. TRINITA' 8",
+        "cap": "36061",
+        "citta": "Bassano del Grappa",
+        "telefono": "04241760945",
+        "email": "info@foraction.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "nome": "TALENT SOLUTIONS SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "Via Trieste 47",
+        "cap": "35121",
+        "citta": "Padova",
+        "telefono": "0498456614",
+        "email": "accreditamentiregionali@manpower.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "nome": "EVOSOLUTION SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA BARANA, 10",
+        "cap": "37100",
+        "citta": "Verona",
+        "telefono": "0458530078",
+        "email": "verona@evosolution.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "nome": "GRUPPOFORMAZIONE SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIALE DEL LAVORO, 37",
+        "cap": "37135",
+        "citta": "Verona",
+        "telefono": "045576600",
+        "email": "info@gruppoformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "nome": "PROEVO",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Noventa Padovana",
+        "indirizzo": "VIALE DELLA NAVIGAZIONE INTERNA 119",
+        "cap": "35027",
+        "citta": "Noventa Padovana",
+        "telefono": "0498074467",
+        "email": "formazione@proevosrl.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "nome": "AINE SERVIZI SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Pianezze",
+        "indirizzo": "VIA S. PIO X, 13",
+        "cap": "36060",
+        "citta": "Pianezze",
+        "telefono": "0424708879",
+        "email": "info@aineservizi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "nome": "ACCADEMIA GROUP SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Gruaro",
+        "indirizzo": "VIA DELL'ARTIGIANATO, 23",
+        "cap": "33020",
+        "citta": "Gruaro",
+        "telefono": "0421761247",
+        "email": "info@accademia-pizzaioli.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "nome": "A-MARKS FACTORY SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Treviso",
+        "indirizzo": "VIA DANIELE MONTERUMICI, 12",
+        "cap": "31100",
+        "citta": "Treviso",
+        "telefono": "04221560424",
+        "email": "contact@a-marksfactory.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "nome": "ECLET FORMAZIONE",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Donà di Piave",
+        "indirizzo": "VIA VANONI, 14",
+        "cap": "30027",
+        "citta": "San Donà di Piave",
+        "telefono": "04211896082",
+        "email": "info@ecletformazione.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "nome": "CENTRO DI FORMAZIONE STS SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA ROMANA APONENSE 116",
+        "cap": "35142",
+        "citta": "Padova",
+        "telefono": "0498809842",
+        "email": "info@centrodiformazionests.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "nome": "SOPHIA SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Castelfranco Veneto",
+        "indirizzo": "PIAZZALE DELLA SERENISSIMA, 60",
+        "cap": "31033",
+        "citta": "Castelfranco Veneto",
+        "telefono": "0423605049",
+        "email": "info@sophiamanagement.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "nome": "CONFARTIGIANATO SERVIZI BELLUNO SRL",
+    "provincia": "BL",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Belluno",
+        "indirizzo": "PIAZZALE RESISTENZA, 8",
+        "cap": "32100",
+        "citta": "Belluno",
+        "telefono": "0437933231",
+        "email": "edebacco@confartigianatobelluno.eu",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "nome": "FONDAZIONE SAN NICOLO'",
+    "provincia": "Multi",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Noventa Padovana",
+        "indirizzo": "VIA RISORGIMENTO, 29",
+        "cap": "35027",
+        "citta": "Noventa Padovana",
+        "telefono": "0499865000",
+        "email": "padova@scuoledieffe.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Lonigo",
+        "indirizzo": "VIA SAN DANIELE, 60",
+        "cap": "36045",
+        "citta": "Lonigo",
+        "telefono": "0444432639",
+        "email": "lonigo@scuoledieffe.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_3",
+        "nome": "Sede di Spinea",
+        "indirizzo": "VIA DELLE INDUSTRIE, 18/A",
+        "cap": "30038",
+        "citta": "Spinea",
+        "telefono": "041936042",
+        "email": "spinea@scuoledieffe.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_4",
+        "nome": "Sede di Valdobbiadene",
+        "indirizzo": "VIA CENTRO LA FILANDA, 18",
+        "cap": "31049",
+        "citta": "Valdobbiadene",
+        "telefono": "0423972443",
+        "email": "valdobbiadene@scuoledieffe.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_5",
+        "nome": "Sede di Verona",
+        "indirizzo": "STRADONE ANTONIO PROVOLO, 24",
+        "cap": "37123",
+        "citta": "Verona",
+        "telefono": "000",
+        "email": "verona@accademia.me",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "nome": "MOODART SRL",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Via Ciro Ferrari, 13",
+        "cap": "37135",
+        "citta": "Verona",
+        "telefono": "0454623588",
+        "email": "info@moodart.com",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "nome": "ISTITUTO FORMAZIONE PANTERE",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "VIA DEGLI ONTANI 83",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444965113",
+        "email": "formazionepantere@libero.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "nome": "CONSORZIO EPIC SCRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Boara Pisani",
+        "indirizzo": "Via del Lavoro n° 4",
+        "cap": "35040",
+        "citta": "Boara Pisani",
+        "telefono": "04251573100",
+        "email": "info@consorzioepic.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "nome": "FONDAZIONE SAN GIOVANNI PAOLO II",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Via Bolzano 1",
+        "cap": "37135",
+        "citta": "Verona",
+        "telefono": "045500398",
+        "email": "cfpsgiuseppe@piccolefigliesg.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": false,
+          "FC": false,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "nome": "ST S.R.L.",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "VIA A. MEUCCI 2",
+        "cap": "37135",
+        "citta": "Verona",
+        "telefono": "0458200181",
+        "email": "in-formazione@studiotosi.ner",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "nome": "ZHERO CONSULTING SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "VIA GIOVANNI FALCONE 4",
+        "cap": "35142",
+        "citta": "Padova",
+        "telefono": "0571548459",
+        "email": "info@zhero.eu",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "nome": "CONSORZIO GAP FORMAZIONE",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Villafranca di Verona",
+        "indirizzo": "VIALE POSTUMIA 37",
+        "cap": "37069",
+        "citta": "Villafranca di Verona",
+        "telefono": "0456336737",
+        "email": "direzione@gapformazione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "nome": "FONDAZIONE SALESIANI PER LA FORMAZIONE PROFESSIONALE ITALIA NORD EST - IMPRESA SOCIALE",
+    "provincia": "Multi",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "Via dei Salesiani, 15",
+        "cap": "30174",
+        "citta": "Venezia",
+        "telefono": "0415498200",
+        "email": "cfpsanmarco@issm.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Este",
+        "indirizzo": "Via Manfredini 12",
+        "cap": "35042",
+        "citta": "Este",
+        "telefono": "0429612101",
+        "email": "info@cfpmanfredini.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_3",
+        "nome": "Sede di Schio",
+        "indirizzo": "Via Marconi 14",
+        "cap": "36015",
+        "citta": "Schio",
+        "telefono": "0445525151",
+        "email": "cnosfap.schio@cnos-fap.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_4",
+        "nome": "Sede di Verona",
+        "indirizzo": "Via Don Minzoni 50",
+        "cap": "37138",
+        "citta": "Verona",
+        "telefono": "0458070111",
+        "email": "a.sorio@sanzeno.org",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_5",
+        "nome": "Sede di Bardolino",
+        "indirizzo": "Via Strada di Sem, 1",
+        "cap": "37011",
+        "citta": "Bardolino",
+        "telefono": "0456211310",
+        "email": "direzione.salesianibardolino@cnosfap.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_6",
+        "nome": "Sede di San Donà di Piave",
+        "indirizzo": "Via XIII Martiri 86",
+        "cap": "30027",
+        "citta": "San Donà di Piave",
+        "telefono": "0421338990",
+        "email": "a.maschio@donboscosandona.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      },
+      {
+        "id": "sede_7",
+        "nome": "Sede di Sant'Ambrogio di Valpolicella",
+        "indirizzo": "Via Marconi 13;",
+        "cap": "37017",
+        "citta": "Sant'Ambrogio di Valpolicella",
+        "telefono": "04508070111",
+        "email": "a.sorio@sanzeno.org",
+        "accreditamenti": {
+          "OF": true,
+          "FS": false,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "nome": "UNISMART FONDAZIONE UNIVERSITA' DEGLI STUDI DI PADOVA",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "via Beldomandi 1",
+        "cap": "35137",
+        "citta": "Padova",
+        "telefono": "0498278670",
+        "email": "info@unismart.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "nome": "NIEDERSTAETTER SPA",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Povegliano",
+        "indirizzo": "VIA DEGLI ALPINI 12",
+        "cap": "31050",
+        "citta": "Povegliano",
+        "telefono": "0471061107",
+        "email": "academy@niederstaetter.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "nome": "STRATEGIE ORGANIZZATIVE SRL",
+    "provincia": "VE",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Venezia",
+        "indirizzo": "VIA TORINO 105/B",
+        "cap": "30172",
+        "citta": "Venezia",
+        "telefono": "0417798736",
+        "email": "info@strategieorganizzative.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "nome": "ISTITUTO SUPERIORE SANSOVINO-OBICI DI ODERZO",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Oderzo - Via Masotti",
+        "indirizzo": "Via Masotti 1",
+        "cap": "31046",
+        "citta": "Oderzo",
+        "telefono": "0422713614",
+        "email": "tvis02800q@istruzione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      },
+      {
+        "id": "sede_2",
+        "nome": "Sede di Oderzo - Via Stadio",
+        "indirizzo": "Via Stadio 2/A",
+        "cap": "31046",
+        "citta": "Oderzo",
+        "telefono": "0422717654",
+        "email": "tvis02800q@istruzione.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "nome": "IIS BARSANTI-GALILEI DI CASTELFRANCO VENETO",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Castelfranco Veneto",
+        "indirizzo": "VIA DEI CARPANI 19/B",
+        "cap": "31033",
+        "citta": "Castelfranco Veneto",
+        "telefono": "0423492847",
+        "email": "TVIS02700X@ISTRUZIONE.IT",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "nome": "ISTITUTO SUPERIORE CIPRIANI-COLOMBO DI ADRIA",
+    "provincia": "RO",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Adria",
+        "indirizzo": "VIA ALDO MORO, 1",
+        "cap": "45011",
+        "citta": "Adria",
+        "telefono": "0426900220",
+        "email": "ROIS01300R@ISTRUZIONE.IT",
+        "accreditamenti": {
+          "OF": false,
+          "FS": true,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "nome": "CENTRO POLIFUNZIONALE DON CALABRIA FONDAZIONE ETS",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Verona",
+        "indirizzo": "Via San Marco 121",
+        "cap": "37138",
+        "citta": "Verona",
+        "telefono": "0458184411",
+        "email": "areaformativa@centrodoncalabria.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": true,
+          "FC": true,
+          "OR": true
+        }
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "nome": "DARWIN SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Padova",
+        "indirizzo": "viale dell'Industria 21",
+        "cap": "35129",
+        "citta": "Padova",
+        "telefono": "00390418520158",
+        "email": "info@darwin.srl",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "nome": "SERENISSIMA SRL",
+    "provincia": "TV",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Silea",
+        "indirizzo": "piazza europa, 4 int 5",
+        "cap": "31057",
+        "citta": "Silea",
+        "telefono": "3282935856",
+        "email": "segreteria@serenissimaservizi.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "nome": "INNOVA FORMAZIONE SRL",
+    "provincia": "PD",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Ponte San Nicolò",
+        "indirizzo": "Viale del Lavoro 44-46",
+        "cap": "35020",
+        "citta": "Ponte San Nicolò",
+        "telefono": "0497851621",
+        "email": "formazione@innovaconsulenze.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "nome": "ETC SOLUZIONI AZIENDALI SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "Via Bassa, 106",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "0444573002",
+        "email": "etc@etcsoluzioniaziendali.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "nome": "SUSTAIN TECH HUB S.P.A. SOCIETA' BENEFIT",
+    "provincia": "RO",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Ceregnano",
+        "indirizzo": "Via Gorizia 1540",
+        "cap": "45010",
+        "citta": "Ceregnano",
+        "telefono": "042547800",
+        "email": "info@sthconsulting.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "nome": "STUDIO CENTRO SICUREZZA AMBIENTE SRL",
+    "provincia": "VI",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di Vicenza",
+        "indirizzo": "via dell'Economia 131",
+        "cap": "36100",
+        "citta": "Vicenza",
+        "telefono": "044961800",
+        "email": "scsa@scsa.it",
+        "accreditamenti": {
+          "OF": false,
+          "FS": false,
+          "FC": true,
+          "OR": false
+        }
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "nome": "FONDAZIONE DI RELIGIONE POVERETTE DELLA CASA DI NAZARETH",
+    "provincia": "VR",
+    "sedi": [
+      {
+        "id": "sede_1",
+        "nome": "Sede di San Pietro in Cariano",
+        "indirizzo": "VIA CLAUDIA AUGUSTA 44",
+        "cap": "37029",
+        "citta": "San Pietro in Cariano",
+        "telefono": "0457725835",
+        "email": "cfpcorrubbio@casanazareth.it",
+        "accreditamenti": {
+          "OF": true,
+          "FS": false,
+          "FC": false,
+          "OR": false
+        }
+      }
+    ]
   }
 ]
