@@ -42,6 +42,25 @@
 
 </div>
 
+<!-- Bottom Sheet Sedi Enti -->
+<div id="sediEnteSheet" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" onclick="if(event.target===this) Enti.closeSediSheet()">
+  <div class="bottom-sheet absolute bottom-0 left-0 right-0 bg-white rounded-t-3xl max-h-[85vh] transition-transform duration-300 transform translate-y-full">
+    <div class="w-12 h-1.5 bg-gray-300 rounded-full mx-auto mt-3 mb-4"></div>
+    <div class="px-6 pb-4 border-b flex items-center justify-between">
+      <div>
+        <h3 class="text-xl font-bold" id="sediEnteName"></h3>
+        <p class="text-sm text-gray-500" id="sediEnteCount"></p>
+      </div>
+      <button onclick="Enti.closeSediSheet()" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="overflow-y-auto p-6" style="max-height:calc(85vh - 100px)" id="sediEnteContent"></div>
+  </div>
+</div>
+
 <!-- Bottom Nav -->
 <nav class="fixed bottom-0 left-0 right-0 bg-white border-t z-50 safe-area-bottom">
   <div class="flex justify-around py-2">
@@ -79,4 +98,9 @@
 
 <style>
 .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* Bottom Sheet Animation */
+.bottom-sheet.active {
+  transform: translateY(0) !important;
+}
 </style>
