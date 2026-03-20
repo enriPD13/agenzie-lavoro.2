@@ -20,7 +20,7 @@ const Enti = {
       this.allEnti = await response.json();
       this.allEnti.sort((a, b) => a.nome.localeCompare(b.nome));
       this.filteredEnti = this.allEnti;
-      this.loadFavorites();
+      await this.loadFavorites(); // Aspetta il caricamento Firebase
       this.render();
     } catch (error) {
       this.showError(error.message);
@@ -133,26 +133,30 @@ const Enti = {
     `;
   },
   
-  toggleFavorite(enteId) {
+  async toggleFavorite(enteId) {
     // Converti sempre in numero per coerenza con il JSON
     enteId = parseInt(enteId);
     
+    // Verifica se l'utente è loggato
+    if (!window.FirebaseFavorites || !window.FirebaseFavorites.isLoggedIn()) {
+      // Mostra popup di login
+      if (window.showLoginPopup) {
+        window.showLoginPopup();
+      }
+      return;
+    }
+    
     const index = this.favorites.indexOf(enteId);
     if (index > -1) {
-      // RIMOZIONE: elimina anche tutte le sedi
+      // RIMOZIONE da Firebase
+      await window.FirebaseFavorites.removeEnte(enteId);
       this.favorites.splice(index, 1);
-      
-      // Rimuovi tutte le sedi che appartengono a questo ente
-      this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeEnteId = parseInt(sede.id.split('-')[0]);
-        return sedeEnteId !== enteId;
-      });
-      this.saveFavoriteSedi();
     } else {
-      // AGGIUNTA: aggiungi solo l'ente
+      // AGGIUNTA a Firebase
+      await window.FirebaseFavorites.addEnte(enteId);
       this.favorites.push(enteId);
     }
-    this.saveFavorites();
+    
     this.render();
   },
   
@@ -160,41 +164,48 @@ const Enti = {
     return this.favorites.includes(enteId);
   },
   
-  loadFavorites() {
-    const s = localStorage.getItem('enti_favorites');
-    this.favorites = s ? JSON.parse(s) : [];
-    
-    const sedi = localStorage.getItem('enti_sedi_favorites');
-    this.favoriteSedi = sedi ? JSON.parse(sedi) : [];
-  },
-  
-  saveFavorites() {
-    localStorage.setItem('enti_favorites', JSON.stringify(this.favorites));
-  },
-  
-  saveFavoriteSedi() {
-    localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSedi));
+  async loadFavorites() {
+    // Carica da Firebase se loggato
+    if (window.FirebaseFavorites && window.FirebaseFavorites.isLoggedIn()) {
+      const favorites = await window.FirebaseFavorites.getFavorites();
+      if (favorites) {
+        this.favorites = favorites.enti || [];
+        this.favoriteSedi = favorites.enti_sedi || [];
+      }
+    } else {
+      this.favorites = [];
+      this.favoriteSedi = [];
+    }
   },
   
   // Funzioni per future sedi multiple
-  toggleSedeFavorite(sedeId, enteNome, city) {
+  async toggleSedeFavorite(sedeId, enteNome, city) {
+    // Verifica se l'utente è loggato
+    if (!window.FirebaseFavorites || !window.FirebaseFavorites.isLoggedIn()) {
+      if (window.showLoginPopup) {
+        window.showLoginPopup();
+      }
+      return;
+    }
+    
     const fav = { id: sedeId, ente: enteNome, city: city };
     const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
     
     if (index > -1) {
+      // RIMOZIONE da Firebase
+      await window.FirebaseFavorites.removeEnteSede(sedeId);
       this.favoriteSedi.splice(index, 1);
     } else {
+      // AGGIUNTA a Firebase
+      await window.FirebaseFavorites.addEnteSede(fav);
       this.favoriteSedi.push(fav);
       
-      // Auto-aggiungi ente ai preferiti se non c'è già
+      // Firebase auto-aggiunge l'ente, sincronizza localmente
       const enteId = parseInt(sedeId.split('-')[0]);
       if (!this.favorites.includes(enteId)) {
         this.favorites.push(enteId);
-        this.saveFavorites();
       }
     }
-    
-    this.saveFavoriteSedi();
     
     // Aggiorna sheet se aperta
     const enteId = parseInt(sedeId.split('-')[0]);
