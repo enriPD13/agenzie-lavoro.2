@@ -29,7 +29,7 @@ const Preferiti = {
       enti: this.enti.length,
       piattaforme: this.piattaforme.length
     });
-    this.loadFavorites();
+    await this.loadFavorites(); // Aspetta Firebase
     console.log('Preferiti caricati:', {
       agenzie: this.favoriteAgenzieIds,
       sediAgenzie: this.favoriteSediAgenzie,
@@ -60,41 +60,53 @@ const Preferiti = {
     }
   },
 
-  loadFavorites() {
-    const agenzieIds = localStorage.getItem('agenzie_favorites');
-    this.favoriteAgenzieIds = agenzieIds ? JSON.parse(agenzieIds) : [];
-    this.favoriteAgenzie = this.agenzie.filter(a => this.favoriteAgenzieIds.includes(a.id));
-    
-    const sediAgenzie = localStorage.getItem('agenzie_sedi_favorites');
-    this.favoriteSediAgenzie = sediAgenzie ? JSON.parse(sediAgenzie) : [];
-    
-    const cpiIds = localStorage.getItem('cpi_favorites');
-    this.favoriteCPIIds = cpiIds ? JSON.parse(cpiIds) : [];
-    
-    const provinceUniche = [...new Set(this.cpi.map(c => c.provincia_sigla))];
-    this.favoriteCPI = provinceUniche
-      .filter(sigla => this.favoriteCPIIds.includes(sigla))
-      .map(sigla => {
-        const primo = this.cpi.find(c => c.provincia_sigla === sigla);
-        return {
-          sigla: sigla,
-          nome: primo.provincia
-        };
-      });
-    
-    const sediCPI = localStorage.getItem('cpi_sedi_favorites');
-    this.favoriteSediCPI = sediCPI ? JSON.parse(sediCPI) : [];
-    
-    const entiIds = localStorage.getItem('enti_favorites');
-    this.favoriteEntiIds = entiIds ? JSON.parse(entiIds) : [];
-    this.favoriteEnti = this.enti.filter(e => this.favoriteEntiIds.includes(e.id));
-    
-    const sediEnti = localStorage.getItem('enti_sedi_favorites');
-    this.favoriteSediEnti = sediEnti ? JSON.parse(sediEnti) : [];
-    
-    const piattIds = localStorage.getItem('piattaforme_favorites');
-    this.favoritePiattaformeIds = piattIds ? JSON.parse(piattIds) : [];
-    this.favoritePiattaforme = this.piattaforme.filter(p => this.favoritePiattaformeIds.includes(p.id));
+  async loadFavorites() {
+    // Carica da Firebase se loggato
+    if (window.FirebaseFavorites && window.FirebaseFavorites.isLoggedIn()) {
+      const favorites = await window.FirebaseFavorites.getFavorites();
+      if (favorites) {
+        // Agenzie
+        this.favoriteAgenzieIds = favorites.agenzie || [];
+        this.favoriteAgenzie = this.agenzie.filter(a => this.favoriteAgenzieIds.includes(a.id));
+        this.favoriteSediAgenzie = favorites.agenzie_sedi || [];
+        
+        // CPI
+        this.favoriteCPIIds = favorites.cpi || [];
+        const provinceUniche = [...new Set(this.cpi.map(c => c.provincia_sigla))];
+        this.favoriteCPI = provinceUniche
+          .filter(sigla => this.favoriteCPIIds.includes(sigla))
+          .map(sigla => {
+            const primo = this.cpi.find(c => c.provincia_sigla === sigla);
+            return {
+              sigla: sigla,
+              nome: primo.provincia
+            };
+          });
+        this.favoriteSediCPI = favorites.cpi_sedi || [];
+        
+        // Enti
+        this.favoriteEntiIds = favorites.enti || [];
+        this.favoriteEnti = this.enti.filter(e => this.favoriteEntiIds.includes(e.id));
+        this.favoriteSediEnti = favorites.enti_sedi || [];
+        
+        // Piattaforme
+        this.favoritePiattaformeIds = favorites.piattaforme || [];
+        this.favoritePiattaforme = this.piattaforme.filter(p => this.favoritePiattaformeIds.includes(p.id));
+      }
+    } else {
+      // Non loggato - array vuoti
+      this.favoriteAgenzieIds = [];
+      this.favoriteAgenzie = [];
+      this.favoriteSediAgenzie = [];
+      this.favoriteCPIIds = [];
+      this.favoriteCPI = [];
+      this.favoriteSediCPI = [];
+      this.favoriteEntiIds = [];
+      this.favoriteEnti = [];
+      this.favoriteSediEnti = [];
+      this.favoritePiattaformeIds = [];
+      this.favoritePiattaforme = [];
+    }
   },
 
   render() {
@@ -629,27 +641,34 @@ const Preferiti = {
     }
   },
 
-  rimuoviEnte(id) {
+  async rimuoviEnte(id) {
+    // Usa Firebase
+    if (window.FirebaseFavorites && window.FirebaseFavorites.isLoggedIn()) {
+      await window.FirebaseFavorites.removeEnte(id);
+    }
+    
+    // Aggiorna stato locale
     const index = this.favoriteEntiIds.indexOf(id);
     if (index > -1) {
       this.favoriteEntiIds.splice(index, 1);
-      localStorage.setItem('enti_favorites', JSON.stringify(this.favoriteEntiIds));
-      
       this.favoriteSediEnti = this.favoriteSediEnti.filter(sede => {
         const sedeEnteId = parseInt(sede.id.split('-')[0]);
         return sedeEnteId !== id;
       });
-      localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSediEnti));
-      
       this.init();
     }
   },
   
-  rimuoviSedeEnte(sedeId) {
+  async rimuoviSedeEnte(sedeId) {
+    // Usa Firebase
+    if (window.FirebaseFavorites && window.FirebaseFavorites.isLoggedIn()) {
+      await window.FirebaseFavorites.removeEnteSede(sedeId);
+    }
+    
+    // Aggiorna stato locale
     const index = this.favoriteSediEnti.findIndex(s => s.id === sedeId);
     if (index > -1) {
       this.favoriteSediEnti.splice(index, 1);
-      localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSediEnti));
       this.init();
     }
   },
