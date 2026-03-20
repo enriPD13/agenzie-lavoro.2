@@ -134,6 +134,9 @@ const Enti = {
   },
   
   toggleFavorite(enteId) {
+    // Converti sempre in numero per coerenza con il JSON
+    enteId = parseInt(enteId);
+    
     const index = this.favorites.indexOf(enteId);
     if (index > -1) {
       // RIMOZIONE: elimina anche tutte le sedi
@@ -141,7 +144,7 @@ const Enti = {
       
       // Rimuovi tutte le sedi che appartengono a questo ente
       this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeEnteId = sede.id.split('-').slice(0, 2).join('-');
+        const sedeEnteId = parseInt(sede.id.split('-')[0]);
         return sedeEnteId !== enteId;
       });
       this.saveFavoriteSedi();
@@ -184,7 +187,7 @@ const Enti = {
       this.favoriteSedi.push(fav);
       
       // Auto-aggiungi ente ai preferiti se non c'è già
-      const enteId = sedeId.split('-')[0];
+      const enteId = parseInt(sedeId.split('-')[0]);
       if (!this.favorites.includes(enteId)) {
         this.favorites.push(enteId);
         this.saveFavorites();
@@ -194,7 +197,7 @@ const Enti = {
     this.saveFavoriteSedi();
     
     // Aggiorna sheet se aperta
-    const enteId = sedeId.split('-')[0];
+    const enteId = parseInt(sedeId.split('-')[0]);
     const sheet = document.getElementById('sediEnteSheet');
     if (sheet && !sheet.classList.contains('hidden')) {
       this.openSedi(enteId);
@@ -227,6 +230,9 @@ const Enti = {
   },
 
   openSedi(id) {
+    // Converti sempre in numero per coerenza
+    id = parseInt(id);
+    
     const ente = this.allEnti.find(e => e.id === id);
     if (!ente || !ente.sedi) return;
     
