@@ -642,6 +642,9 @@ const Preferiti = {
   },
 
   async rimuoviEnte(id) {
+    // Converti in numero
+    id = parseInt(id);
+    
     // Usa Firebase
     if (window.FirebaseFavorites && window.FirebaseFavorites.isLoggedIn()) {
       await window.FirebaseFavorites.removeEnte(id);
