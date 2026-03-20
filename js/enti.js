@@ -20,7 +20,8 @@ const Enti = {
       this.allEnti = await response.json();
       this.allEnti.sort((a, b) => a.nome.localeCompare(b.nome));
       this.filteredEnti = this.allEnti;
-      await this.loadFavorites(); // Aspetta il caricamento Firebase
+      this.loadFavorites();
+      this.loadFavoriteSedi();
       this.render();
     } catch (error) {
       this.showError(error.message);
@@ -133,30 +134,26 @@ const Enti = {
     `;
   },
   
-  async toggleFavorite(enteId) {
+  toggleFavorite(enteId) {
     // Converti sempre in numero per coerenza con il JSON
     enteId = parseInt(enteId);
     
-    // Verifica se l'utente è loggato
-    if (!window.FirebaseFavorites || !window.FirebaseFavorites.isLoggedIn()) {
-      // Mostra popup di login
-      if (window.showLoginPopup) {
-        window.showLoginPopup();
-      }
-      return;
-    }
-    
     const index = this.favorites.indexOf(enteId);
     if (index > -1) {
-      // RIMOZIONE da Firebase
-      await window.FirebaseFavorites.removeEnte(enteId);
+      // RIMOZIONE: elimina anche tutte le sedi
       this.favorites.splice(index, 1);
+      
+      // Rimuovi tutte le sedi che appartengono a questo ente
+      this.favoriteSedi = this.favoriteSedi.filter(sede => {
+        const sedeEnteId = parseInt(sede.id.split('-')[0]);
+        return sedeEnteId !== enteId;
+      });
+      this.saveFavoriteSedi();
     } else {
-      // AGGIUNTA a Firebase
-      await window.FirebaseFavorites.addEnte(enteId);
+      // AGGIUNTA: aggiungi solo l'ente
       this.favorites.push(enteId);
     }
-    
+    this.saveFavorites();
     this.render();
   },
   
@@ -164,55 +161,46 @@ const Enti = {
     return this.favorites.includes(enteId);
   },
   
-  async loadFavorites() {
-    // Carica da Firebase se loggato
-    if (window.FirebaseFavorites && window.FirebaseFavorites.isLoggedIn()) {
-      const favorites = await window.FirebaseFavorites.getFavorites();
-      if (favorites) {
-        this.favorites = favorites.enti || [];
-        this.favoriteSedi = favorites.enti_sedi || [];
-      }
-    } else {
-      this.favorites = [];
-      this.favoriteSedi = [];
-    }
+  loadFavorites() {
+    const s = localStorage.getItem('enti_favorites');
+    this.favorites = s ? JSON.parse(s) : [];
+  },
+  
+  saveFavorites() {
+    localStorage.setItem('enti_favorites', JSON.stringify(this.favorites));
+  },
+  
+  loadFavoriteSedi() {
+    const s = localStorage.getItem('enti_sedi_favorites');
+    this.favoriteSedi = s ? JSON.parse(s) : [];
+  },
+  
+  saveFavoriteSedi() {
+    localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSedi));
   },
   
   // Funzioni per future sedi multiple
-  async toggleSedeFavorite(sedeId, enteNome, city) {
-    // Verifica se l'utente è loggato
-    if (!window.FirebaseFavorites || !window.FirebaseFavorites.isLoggedIn()) {
-      if (window.showLoginPopup) {
-        window.showLoginPopup();
-      }
-      return;
-    }
-    
+  toggleSedeFavorite(sedeId, enteNome, city) {
     const fav = { id: sedeId, ente: enteNome, city: city };
     const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
     
     if (index > -1) {
-      // RIMOZIONE da Firebase
-      await window.FirebaseFavorites.removeEnteSede(sedeId);
       this.favoriteSedi.splice(index, 1);
     } else {
-      // AGGIUNTA a Firebase
-      await window.FirebaseFavorites.addEnteSede(fav);
       this.favoriteSedi.push(fav);
       
-      // Firebase auto-aggiunge l'ente, sincronizza localmente
+      // Auto-aggiungi ente ai preferiti se non c'è già
       const enteId = parseInt(sedeId.split('-')[0]);
       if (!this.favorites.includes(enteId)) {
         this.favorites.push(enteId);
+        this.saveFavorites();
       }
     }
     
+    this.saveFavoriteSedi();
     // Aggiorna sheet se aperta
     const enteId = parseInt(sedeId.split('-')[0]);
-    const sheet = document.getElementById('sediEnteSheet');
-    if (sheet && !sheet.classList.contains('hidden')) {
-      this.openSedi(enteId);
-    }
+    this.openSedi(enteId);
   },
   
   isSedeInFavorites(sedeId) {
