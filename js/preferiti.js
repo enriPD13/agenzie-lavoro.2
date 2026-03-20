@@ -616,9 +616,6 @@ const Preferiti = {
     await FirebaseFavorites.removeCPISede(sedeId);
     await this.init();
   },
-      this.init();
-    }
-  },
 
   async rimuoviEnte(id) {
     if (!window.FirebaseFavorites) return;
