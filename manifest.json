@@ -1,40 +1,62 @@
 {
-  "name": "JobApp - Trova Lavoro in Veneto",
+  "name": "JobApp - Lavoro Veneto",
   "short_name": "JobApp",
-  "description": "App per la ricerca di lavoro in Veneto. Agenzie per il lavoro e Centri Per l'Impiego.",
-  "start_url": "./",
-  "scope": "./",
+  "description": "Trova lavoro in Veneto: agenzie, CPI, enti di formazione e piattaforme di annunci",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#6366f1",
+  "background_color": "#B794F6",
+  "theme_color": "#7C3AED",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "images/icon-192.png",
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "images/icon-512.png",
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["business", "productivity", "utilities"],
-  "lang": "it-IT",
-  "dir": "ltr",
-  "shortcuts": [
-    {
-      "name": "Agenzie per il Lavoro",
-      "url": "./#agenzie",
-      "description": "Visualizza le agenzie per il lavoro"
-    },
-    {
-      "name": "Centri Per l'Impiego",
-      "url": "./#cpi",
-      "description": "Visualizza i Centri Per l'Impiego"
-    }
-  ]
+  "categories": ["business", "productivity"],
+  "lang": "it-IT"
 }
