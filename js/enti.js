@@ -1,11 +1,11 @@
-// JobApp - Enti di Formazione Module
+// JobApp - Enti Module con Firebase
 const Enti = {
   allEnti: [],
   favorites: [],
-  favoriteSedi: [], // Supporto future sedi multiple
+  favoriteSedi: [],
   filteredEnti: [],
   
-  init() {
+  async init() {
     setTimeout(() => {
       const loading = document.getElementById('loadingEnti');
       if (loading) loading.classList.add('hidden');
@@ -20,8 +20,7 @@ const Enti = {
       this.allEnti = await response.json();
       this.allEnti.sort((a, b) => a.nome.localeCompare(b.nome));
       this.filteredEnti = this.allEnti;
-      this.loadFavorites();
-      this.loadFavoriteSedi();
+      await this.loadFavorites();
       this.render();
     } catch (error) {
       this.showError(error.message);
@@ -29,7 +28,7 @@ const Enti = {
   },
   
   setupSearch() {
-    const input = document.getElementById('searchInputEnti');
+    const input = document.getElementById('searchInput');
     if (!input) return;
     
     input.addEventListener('input', (e) => {
@@ -38,19 +37,15 @@ const Enti = {
       if (q === '') {
         this.filteredEnti = this.allEnti;
       } else {
-        this.filteredEnti = this.allEnti.filter(ente => {
-          // Cerca nel nome ente
-          if (ente.nome.toLowerCase().includes(q)) return true;
-          
-          // Cerca nelle sedi
-          if (ente.sedi) {
-            return ente.sedi.some(s => {
+        this.filteredEnti = this.allEnti.filter(e => {
+          if (e.nome.toLowerCase().includes(q)) return true;
+          if (e.provincia && e.provincia.toLowerCase().includes(q)) return true;
+          if (e.sedi) {
+            return e.sedi.some(s => {
               const citta = s.citta?.toLowerCase() || '';
-              const nome = s.nome?.toLowerCase() || '';
-              return citta.includes(q) || nome.includes(q);
+              return citta.includes(q);
             });
           }
-          
           return false;
         });
       }
@@ -62,14 +57,13 @@ const Enti = {
     const grid = document.getElementById('entiGrid');
     if (!grid) return;
     
-    const stats = document.getElementById('statsEnti');
+    const stats = document.getElementById('statsCards');
     if (stats) {
-      const totalEnti = this.filteredEnti.length;
-      const totalSedi = this.filteredEnti.reduce((sum, ente) => sum + (ente.sedi?.length || 0), 0);
-      
+      const total = this.filteredEnti.length;
+      const sedi = this.filteredEnti.reduce((s, e) => s + (e.sedi?.length || 0), 0);
       stats.innerHTML = `
-        <div class="bg-purple-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${totalEnti}</div><div class="text-xs">Enti</div></div>
-        <div class="bg-pink-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${totalSedi}</div><div class="text-xs">Sedi</div></div>
+        <div class="bg-purple-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${total}</div><div class="text-xs">Enti</div></div>
+        <div class="bg-pink-500 rounded-2xl p-4 text-white"><div class="text-3xl font-bold">${sedi}</div><div class="text-xs">Sedi</div></div>
       `;
     }
     
@@ -78,169 +72,69 @@ const Enti = {
       return;
     }
     
-    grid.innerHTML = this.filteredEnti.map(e => this.renderEnteCard(e)).join('');
-  },
-  
-  renderEnteCard(e) {
-    const isFav = this.isFavorite(e.id);
-    // Prende email dalla prima sede se disponibile
-    const primaSedeEmail = e.sedi?.[0]?.email || null;
-    
-    return `
-      <div class="bg-white rounded-3xl overflow-hidden shadow-sm">
-        <div class="h-36 bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center p-6">
-          <div class="text-6xl">🎓</div>
+    grid.innerHTML = this.filteredEnti.map(e => `
+      <div class="bg-white rounded-3xl overflow-hidden shadow-sm p-5">
+        <div class="flex items-start justify-between mb-2">
+          <h3 class="text-xl font-bold flex-1">${e.nome}</h3>
+          <button onclick="Enti.toggleFavorite(${e.id})" class="ml-2 w-10 h-10 flex items-center justify-center -mr-2">
+            <svg class="w-5 h-5 ${this.isFavorite(e.id) ? 'text-purple-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+          </button>
         </div>
         
-        <div class="p-5">
-          <div class="flex items-start justify-between mb-2">
-            <h3 class="text-xl font-bold flex-1">${e.nome}</h3>
-            <button onclick="Enti.toggleFavorite('${e.id}')" class="ml-2 w-10 h-10 flex items-center justify-center -mr-2">
-              <svg class="w-5 h-5 ${this.isFavorite(e.id) ? 'text-purple-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
-              </svg>
-            </button>
-          </div>
-          
-          <div class="text-sm text-gray-600 mb-3">
-            <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-semibold">${e.provincia}</span>
-            ${e.sedi?.length > 1 ? `<span class="ml-2 text-xs">${e.sedi.length} sedi</span>` : ''}
-          </div>
-          
-          <div class="grid grid-cols-2 gap-2">
-            ${e.sedi?.length ? `
-              <button onclick="Enti.openSedi('${e.id}')" class="py-3 bg-purple-600 text-white rounded-2xl font-semibold text-sm flex items-center justify-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                Sedi (${e.sedi.length})
-              </button>
-            ` : '<div></div>'}
-            
-            ${primaSedeEmail ? `
-              <a href="mailto:${primaSedeEmail}" class="py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                Email
-              </a>
-            ` : '<div></div>'}
-          </div>
-          
-          ${e.sito ? `
-            <a href="${e.sito}" target="_blank" class="block mt-2 w-full py-3 bg-gradient-to-br from-blue-500 to-cyan-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
-              Sito Web
-            </a>
-          ` : ''}
+        <div class="text-sm text-gray-600 mb-3">
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-semibold">${e.provincia}</span>
         </div>
+        
+        <div class="grid grid-cols-2 gap-2">
+          ${e.sedi?.length ? `
+            <button onclick="Enti.openSedi(${e.id})" class="py-3 bg-purple-600 text-white rounded-2xl font-semibold text-sm flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Sedi (${e.sedi.length})
+            </button>
+          ` : '<div></div>'}
+          
+          ${e.sedi?.[0]?.email ? `
+            <a href="mailto:${e.sedi[0].email}" class="py-3 bg-gradient-to-r from-pink-500 to-rose-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Email
+            </a>
+          ` : '<div></div>'}
+        </div>
+        
+        ${e.sito ? `
+          <a href="${e.sito}" target="_blank" class="block mt-2 w-full py-3 bg-gradient-to-br from-blue-500 to-cyan-600 text-white rounded-2xl font-semibold text-sm text-center flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Sito Web
+          </a>
+        ` : ''}
       </div>
-    `;
+    `).join('');
   },
   
-  toggleFavorite(enteId) {
-    // Converti sempre in numero per coerenza con il JSON
-    enteId = parseInt(enteId);
-    
-    const index = this.favorites.indexOf(enteId);
-    if (index > -1) {
-      // RIMOZIONE: elimina anche tutte le sedi
-      this.favorites.splice(index, 1);
-      
-      // Rimuovi tutte le sedi che appartengono a questo ente
-      this.favoriteSedi = this.favoriteSedi.filter(sede => {
-        const sedeEnteId = parseInt(sede.id.split('-')[0]);
-        return sedeEnteId !== enteId;
-      });
-      this.saveFavoriteSedi();
-    } else {
-      // AGGIUNTA: aggiungi solo l'ente
-      this.favorites.push(enteId);
-    }
-    this.saveFavorites();
-    this.render();
-  },
-  
-  isFavorite(enteId) {
-    return this.favorites.includes(enteId);
-  },
-  
-  loadFavorites() {
-    const s = localStorage.getItem('enti_favorites');
-    this.favorites = s ? JSON.parse(s) : [];
-  },
-  
-  saveFavorites() {
-    localStorage.setItem('enti_favorites', JSON.stringify(this.favorites));
-  },
-  
-  loadFavoriteSedi() {
-    const s = localStorage.getItem('enti_sedi_favorites');
-    this.favoriteSedi = s ? JSON.parse(s) : [];
-  },
-  
-  saveFavoriteSedi() {
-    localStorage.setItem('enti_sedi_favorites', JSON.stringify(this.favoriteSedi));
-  },
-  
-  // Funzioni per future sedi multiple
-  toggleSedeFavorite(sedeId, enteNome, city) {
-    const fav = { id: sedeId, ente: enteNome, city: city };
-    const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
-    
-    if (index > -1) {
-      this.favoriteSedi.splice(index, 1);
-    } else {
-      this.favoriteSedi.push(fav);
-      
-      // Auto-aggiungi ente ai preferiti se non c'è già
-      const enteId = parseInt(sedeId.split('-')[0]);
-      if (!this.favorites.includes(enteId)) {
-        this.favorites.push(enteId);
-        this.saveFavorites();
-      }
-    }
-    
-    this.saveFavoriteSedi();
-    // Aggiorna sheet se aperta
-    const enteId = parseInt(sedeId.split('-')[0]);
-    this.openSedi(enteId);
-  },
-  
-  isSedeInFavorites(sedeId) {
-    return this.favoriteSedi.some(f => f.id === sedeId);
-  },
-
   getProvincia(sede) {
-    // Prende la provincia dalle informazioni della sede
-    // Assumendo che esista un campo provincia o che sia nella citta/indirizzo
-    if (sede.provincia) return sede.provincia;
-    if (sede.citta) {
-      // Estrae la sigla provincia dall'indirizzo se presente
-      const addr = sede.indirizzo || '';
-      const match = addr.match(/\b(BL|PD|RO|TV|VE|VR|VI)\b/i);
-      return match ? match[0].toUpperCase() : 'ALTRE';
-    }
-    return 'ALTRE';
+    return sede.citta || sede.provincia || '';
   },
-
+  
   getProvinciaName(sigla) {
     const nomi = {
       'BL': 'Belluno', 'PD': 'Padova', 'RO': 'Rovigo', 'TV': 'Treviso',
       'VE': 'Venezia', 'VR': 'Verona', 'VI': 'Vicenza'
     };
-    return nomi[sigla] || 'Altre Province';
+    return nomi[sigla] || sigla;
   },
-
+  
   openSedi(id) {
-    // Converti sempre in numero per coerenza
-    id = parseInt(id);
-    
     const ente = this.allEnti.find(e => e.id === id);
-    if (!ente || !ente.sedi) return;
+    if (!ente) return;
     
     document.getElementById('sediEnteName').textContent = ente.nome;
     document.getElementById('sediEnteCount').textContent = `${ente.sedi.length} sed${ente.sedi.length === 1 ? 'e' : 'i'} in Veneto`;
     
     const perProv = {};
     ente.sedi.forEach((s, globalIdx) => {
-      const prov = this.getProvincia(s);
+      const prov = s.citta || 'ALTRE';
       if (!perProv[prov]) perProv[prov] = [];
       perProv[prov].push({ ...s, globalIdx });
     });
@@ -250,7 +144,7 @@ const Enti = {
     let html = '';
     provOrdinate.forEach(prov => {
       const sedi = perProv[prov];
-      html += `<div class="text-sm font-bold text-purple-600 uppercase tracking-wide mb-4 mt-6 first:mt-0">Provincia di ${this.getProvinciaName(prov)} (${sedi.length})</div>`;
+      html += `<div class="text-sm font-bold text-purple-600 uppercase tracking-wide mb-4 mt-6 first:mt-0">${prov} (${sedi.length})</div>`;
       
       sedi.forEach(s => {
         const sedeId = `${id}-${s.globalIdx}`;
@@ -274,7 +168,7 @@ const Enti = {
           <div class="bg-gray-50 rounded-2xl p-4 mb-4">
             <div class="flex items-start justify-between mb-2">
               <div class="font-bold">${s.nome || s.citta}</div>
-              <button onclick="Enti.toggleSedeFavorite('${sedeId}', '${ente.nome.replace(/'/g, "\\'")}', '${s.citta.replace(/'/g, "\\'")}')" class="w-10 h-10 flex items-center justify-center -mr-2">
+              <button onclick="Enti.toggleSedeFavorite('${sedeId}', '${ente.nome.replace(/'/g, "\\'")}', '${s.citta.replace(/'/g, "\\'")}')\" class="w-10 h-10 flex items-center justify-center -mr-2">
                 <svg class="w-5 h-5 ${isFav ? 'text-purple-600' : 'text-gray-400'}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
                 </svg>
@@ -301,16 +195,81 @@ const Enti = {
     sheet.classList.remove('hidden');
     setTimeout(() => sheet.querySelector('.bottom-sheet').classList.add('active'), 10);
   },
-
+  
   closeSediSheet() {
     const sheet = document.getElementById('sediEnteSheet');
-    const bottomSheet = sheet.querySelector('.bottom-sheet');
-    bottomSheet.classList.remove('active');
+    sheet.querySelector('.bottom-sheet').classList.remove('active');
     setTimeout(() => sheet.classList.add('hidden'), 300);
+  },
+  
+  async toggleFavorite(enteId) {
+    if (!window.FirebaseFavorites) return;
+    
+    const index = this.favorites.indexOf(enteId);
+    if (index > -1) {
+      await FirebaseFavorites.removeEnte(enteId);
+    } else {
+      await FirebaseFavorites.addEnte(enteId);
+    }
+    await this.loadFavorites();
+    this.render();
+  },
+  
+  isFavorite(enteId) {
+    return this.favorites.includes(enteId);
+  },
+  
+  async toggleSedeFavorite(sedeId, enteNome, city) {
+    if (!window.FirebaseFavorites) return;
+    
+    const fav = { id: sedeId, ente: enteNome, city: city };
+    const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
+    
+    if (index > -1) {
+      await FirebaseFavorites.removeEnteSede(sedeId);
+    } else {
+      await FirebaseFavorites.addEnteSede(fav);
+    }
+    
+    await this.loadFavorites();
+    const enteId = parseInt(sedeId.split('-')[0]);
+    this.openSedi(enteId);
+  },
+  
+  isSedeInFavorites(sedeId) {
+    return this.favoriteSedi.some(f => f.id === sedeId);
+  },
+  
+  async loadFavorites() {
+    if (!window.FirebaseFavorites || !FirebaseFavorites.isReady) {
+      if (window.FirebaseFavorites) await FirebaseFavorites.init();
+    }
+    if (window.FirebaseFavorites && FirebaseFavorites.isLoggedIn()) {
+      const favs = await FirebaseFavorites.getFavorites();
+      if (favs) {
+        this.favorites = favs.enti || [];
+        this.favoriteSedi = favs.enti_sedi || [];
+      }
+    } else {
+      this.favorites = [];
+      this.favoriteSedi = [];
+    }
+  },
+  
+  async saveFavorites() {
+    // Non serve più - usa FirebaseFavorites
+  },
+  
+  async loadFavoriteSedi() {
+    // Già caricato in loadFavorites()
+  },
+  
+  async saveFavoriteSedi() {
+    // Non serve più - usa FirebaseFavorites
   },
   
   showError(msg) {
     const grid = document.getElementById('entiGrid');
-    if (grid) grid.innerHTML = '<div class="text-center py-12"><p class="text-red-600">' + msg + '</p></div>';
+    if (grid) grid.innerHTML = `<div class="text-center py-12"><p class="text-red-600">${msg}</p></div>`;
   }
 };
