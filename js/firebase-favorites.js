@@ -207,6 +207,31 @@ const FirebaseFavorites = {
     return await this.saveFavorites(favorites);
   },
   
+  async addEnteSede(sedeData) {
+    if (!this.requireLogin()) return false;
+    
+    const favorites = await this.getFavorites();
+    // Aggiungi sede se non esiste
+    const exists = favorites.enti_sedi.some(s => s.id === sedeData.id);
+    if (!exists) {
+      favorites.enti_sedi.push(sedeData);
+    }
+    // Auto-aggiungi ente se non presente
+    const enteId = parseInt(sedeData.id.split('-')[0]);
+    if (!favorites.enti.includes(enteId)) {
+      favorites.enti.push(enteId);
+    }
+    return await this.saveFavorites(favorites);
+  },
+  
+  async removeEnteSede(sedeId) {
+    if (!this.isLoggedIn()) return false;
+    
+    const favorites = await this.getFavorites();
+    favorites.enti_sedi = favorites.enti_sedi.filter(s => s.id !== sedeId);
+    return await this.saveFavorites(favorites);
+  },
+  
   async addPiattaforma(piattaformaId) {
     if (!this.requireLogin()) return false;
     
