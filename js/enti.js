@@ -28,7 +28,7 @@ const Enti = {
   },
   
   setupSearch() {
-    const input = document.getElementById('searchInput');
+    const input = document.getElementById('searchInputEnti');
     if (!input) return;
     
     input.addEventListener('input', (e) => {
