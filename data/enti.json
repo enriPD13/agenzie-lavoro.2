@@ -168,12 +168,12 @@
     "sedi": [
       {
         "nome": "VENETO ETS",
-        "citta": "",
-        "provincia": "Multi",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "citta": "Mirano",
+        "provincia": "VE",
+        "indirizzo": "VIA MURIALDO, 1, 30035 Mirano VE",
+        "cap": "30035",
+        "telefono": "041-430800",
+        "email": "amministrazione@engimve.it",
         "googleMaps": ""
       },
       {
@@ -418,12 +418,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA LEONE GRAZIANI, 2 - MARGHERA, 30175 Venezia VE",
+        "cap": "30175",
+        "telefono": "041-929167",
+        "email": "info@cipatveneto.it",
         "googleMaps": ""
       }
     ],
@@ -438,12 +438,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Conegliano",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA PITTONI, 17, 31015 Conegliano TV",
+        "cap": "31015",
+        "telefono": "0438-410321",
+        "email": "formazione@insiemesipuo.eu",
         "googleMaps": ""
       }
     ],
@@ -478,12 +478,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Donà di Piave",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "GALLERIA VIDUSSI, 9, 30027 San Donà di Piave VE",
+        "cap": "30027",
+        "telefono": "0421-307741",
+        "email": "forcoop@progettagroup.com",
         "googleMaps": ""
       }
     ],
@@ -498,12 +498,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "CORSO DEL POPOLO, 146/C - MESTRE, 30172 Venezia VE",
+        "cap": "30172",
+        "telefono": "041-5382142",
+        "email": "amministrazione@scformazione.org",
         "googleMaps": ""
       }
     ],
@@ -538,12 +538,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Rosà",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA SCHALLSTADT, 55, 36027 Rosà VI",
+        "cap": "36027",
+        "telefono": "0424-85573",
+        "email": "irigem@irigem.it",
         "googleMaps": ""
       }
     ],
@@ -558,12 +558,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA SOMMACAMPAGNA, 63/H, 37137 Verona VR",
+        "cap": "37137",
+        "telefono": "045-8060811",
+        "email": "formazione@confcommercioverona.it",
         "googleMaps": ""
       }
     ],
@@ -618,12 +618,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
-        "provincia": "Multi",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "citta": "Padova",
+        "provincia": "PD",
+        "indirizzo": "VIA ORSINI, 15, 35139 Padova PD",
+        "cap": "35139",
+        "telefono": "049-8732611",
+        "email": "info@ciofsdb.it",
         "googleMaps": ""
       }
     ],
@@ -638,12 +638,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Rossini, 60, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444 960500",
+        "email": "info@cpv.org",
         "googleMaps": ""
       }
     ],
@@ -678,12 +678,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA SOMMACAMPAGNA, 63/H, 37137 Verona VR",
+        "cap": "37137",
+        "telefono": "045-8647236",
+        "email": "info@agoraformazione.it",
         "googleMaps": ""
       }
     ],
@@ -718,12 +718,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE ANCONA, 9 - MESTRE, 30172 Venezia VE",
+        "cap": "30172",
+        "telefono": "041-5318501",
+        "email": "terservizi@confcom.it",
         "googleMaps": ""
       }
     ],
@@ -762,8 +762,8 @@
         "provincia": "BL",
         "indirizzo": "Z.I. Villanova, Via Malcom 14, 32013 Longarone BL",
         "cap": "32013",
-        "telefono": "",
-        "email": "",
+        "telefono": "0437-851311",
+        "email": "info@centroconsorzi.it",
         "googleMaps": ""
       }
     ],
@@ -798,12 +798,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA MONTE SABOTINO, 1/A - MESTRE, 30171 Venezia VE",
+        "cap": "30171",
+        "telefono": "041-935400",
+        "email": "ficiap@ficiap.it",
         "googleMaps": ""
       }
     ],
@@ -818,12 +818,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA CAVALCASELLE, 20, 37124 Verona VR",
+        "cap": "37124",
+        "telefono": "045-8349777",
+        "email": "csfstimmatini@stimmatini.it",
         "googleMaps": ""
       }
     ],
@@ -838,12 +838,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Este",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA PRINCIPE AMEDEO, 49/A INT. 2, 35042 Este PD",
+        "cap": "35042",
+        "telefono": "0429-603233",
+        "email": "info@coopservices.it",
         "googleMaps": ""
       }
     ],
@@ -858,12 +858,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE FRANCESCO CRISPI, 142, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444-1870835",
+        "email": "segreteria@istitutoposter.it",
         "googleMaps": ""
       }
     ],
@@ -878,12 +878,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "PIAZZA MARCO SAGGIN, 2, 35131 Padova PD",
+        "cap": "35131",
+        "telefono": "049-8722387",
+        "email": "info@fiavetvenetoservizi.com",
         "googleMaps": ""
       }
     ],
@@ -898,12 +898,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA BEATO PELLEGRINO, 155, 35137 Padova PD",
+        "cap": "35137",
+        "telefono": "049-8727300",
+        "email": "cfpcamerinirossi@irpea.it",
         "googleMaps": ""
       }
     ],
@@ -922,8 +922,8 @@
         "provincia": "VE",
         "indirizzo": "Via Peschiera 7, 30174 Venezia Mestre VE",
         "cap": "30174",
-        "telefono": "",
-        "email": "",
+        "telefono": "041-5040523",
+        "email": "info@ag-form.it",
         "googleMaps": ""
       }
     ],
@@ -942,8 +942,8 @@
         "provincia": "VE",
         "indirizzo": "Via Torino 101, 30172 Mestre VE",
         "cap": "30172",
-        "telefono": "",
-        "email": "",
+        "telefono": "041-5040460",
+        "email": "erapra@confagricolturaveneto.it",
         "googleMaps": ""
       }
     ],
@@ -958,12 +958,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Chioggia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA CAMPO MARCONI, 112, 30015 Chioggia VE",
+        "cap": "30015",
+        "telefono": "041-400922",
+        "email": "fondazione.cavanis@libero.it",
         "googleMaps": ""
       }
     ],
@@ -982,7 +982,7 @@
         "provincia": "TV",
         "indirizzo": "Piazza delle Istituzioni 34, 31100 Treviso TV",
         "cap": "",
-        "telefono": "",
+        "telefono": "0422-916400",
         "email": "info@confartigianatoformazione.tv",
         "googleMaps": ""
       }
@@ -998,12 +998,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA BISSUOLA, 93 - MESTRE, 30173 Venezia VE",
+        "cap": "30173",
+        "telefono": "0412697711",
+        "email": "info@istitutoberna.it",
         "googleMaps": ""
       }
     ],
@@ -1018,12 +1018,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Conegliano",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA COSTA ALTA, 37, 31015 Conegliano TV",
+        "cap": "31015",
+        "telefono": "0438-414290",
+        "email": "cfp.conegliano@lanostrafamiglia.it",
         "googleMaps": ""
       }
     ],
@@ -1058,12 +1058,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Este",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE FIUME, 51/53, 35042 Este PD",
+        "cap": "35042",
+        "telefono": "0429-602674",
+        "email": "irea@morinipedrina.it",
         "googleMaps": ""
       }
     ],
@@ -1078,12 +1078,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DELLA MECCANICA, 1/R, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444-960240",
+        "email": "info.vicenza@riconversider.it",
         "googleMaps": ""
       }
     ],
@@ -1098,12 +1098,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELLA PACE, 176/178, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444-301660",
+        "email": "istitutoserblin@villaggioglobale.com",
         "googleMaps": ""
       }
     ],
@@ -1118,12 +1118,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA CRISTOFOLI, 31/A, 37138 Verona VR",
+        "cap": "37138",
+        "telefono": "045-8100279",
+        "email": "info@magverona.it",
         "googleMaps": ""
       }
     ],
@@ -1138,12 +1138,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Bassano del Grappa",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "LARGO PAROLINI, 48, 36061 Bassano del Grappa VI",
+        "cap": "36061",
+        "telefono": "0424-523108",
+        "email": "ufficioformazione@ascom.bassano.vi.it",
         "googleMaps": ""
       }
     ],
@@ -1158,12 +1158,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Treviso",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELLA REPUBBLICA 253, 31100 Treviso TV",
+        "cap": "31100",
+        "telefono": "0422-918824",
+        "email": "amministrazione@intesacca.it",
         "googleMaps": ""
       }
     ],
@@ -1178,12 +1178,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Corso Porta Nuova 96, 37122 Verona VR",
+        "cap": "37122",
+        "telefono": "045597108",
+        "email": "cosp@cosp.verona.it",
         "googleMaps": ""
       }
     ],
@@ -1198,12 +1198,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Fonte",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "PIAZZA S. PIETRO, 9, 31010 Fonte TV",
+        "cap": "31010",
+        "telefono": "0423-949072",
+        "email": "info@cfpfonte.it",
         "googleMaps": ""
       }
     ],
@@ -1218,12 +1218,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Belluno",
         "provincia": "BL",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "PIAZZA DEI MARTIRI, 16, 32100 Belluno BL",
+        "cap": "32100",
+        "telefono": "0437-215260",
+        "email": "formazione@ascombelluno.it",
         "googleMaps": ""
       }
     ],
@@ -1242,8 +1242,8 @@
         "provincia": "VR",
         "indirizzo": "Via Selenia 16, 37135 Verona VR",
         "cap": "37135",
-        "telefono": "",
-        "email": "",
+        "telefono": "045-9211555",
+        "email": "formazione2@artigianiupa.vr.it",
         "googleMaps": ""
       }
     ],
@@ -1258,12 +1258,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Thiene",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DEI QUARTIERI, 2/4, 36016 Thiene VI",
+        "cap": "36016",
+        "telefono": "0445-362159",
+        "email": "cfp@saugo.it",
         "googleMaps": ""
       }
     ],
@@ -1278,12 +1278,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DEI LIVELLO, 32, 35139 Padova PD",
+        "cap": "35139",
+        "telefono": "049-8777011",
+        "email": "info@teatrostabileveneto.it",
         "googleMaps": ""
       }
     ],
@@ -1298,12 +1298,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA CASERMA OSPITAL VECCHIO, 4C, 37122 Verona VR",
+        "cap": "37122",
+        "telefono": "045-8099446",
+        "email": "cimform@confindustria.vr.it",
         "googleMaps": ""
       }
     ],
@@ -1338,12 +1338,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DELLE INDUSTRIE, 19, 30175 Venezia VE",
+        "cap": "30175",
+        "telefono": "041-5382052",
+        "email": "b.discardi@puntoconfindustria.it",
         "googleMaps": ""
       }
     ],
@@ -1358,12 +1358,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA G. ULLOA, 5 - MARGHERA, 30175 Venezia VE",
+        "cap": "30175",
+        "telefono": "041-5490258",
+        "email": "formazione@isfidprisma.it",
         "googleMaps": ""
       }
     ],
@@ -1378,12 +1378,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "FABBRICATO 16 ZONA PORTUALE DI S. MARTA, 30123 Venezia VE",
+        "cap": "30123",
+        "telefono": "041-5334155",
+        "email": "venezia@cfli.it",
         "googleMaps": ""
       }
     ],
@@ -1398,12 +1398,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DON LUIGI PERON, 1/A - MESTRE, 30174 Venezia VE",
+        "cap": "30174",
+        "telefono": "041-5347646",
+        "email": "info@masterfor.it",
         "googleMaps": ""
       }
     ],
@@ -1418,12 +1418,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA TORINO, 151/C - MESTRE, 30172 Venezia VE",
+        "cap": "30172",
+        "telefono": "041-2517511",
+        "email": "area.progetti@siav.net",
         "googleMaps": ""
       }
     ],
@@ -1442,8 +1442,8 @@
         "provincia": "VI",
         "indirizzo": "Via E. Fermi 197, 36100 Vicenza VI",
         "cap": "36100",
-        "telefono": "",
-        "email": "",
+        "telefono": "0444-960100",
+        "email": "cesar@confartigianatovicenza.it",
         "googleMaps": ""
       }
     ],
@@ -1458,12 +1458,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Treviso",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA VENIER, 55, 31100 Treviso TV",
+        "cap": "31100",
+        "telefono": "0422-570781",
+        "email": "a.menuzzo@ascom.tv.it",
         "googleMaps": ""
       }
     ],
@@ -1498,12 +1498,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Schio",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA LAGO DI GARDA, 16, 36015 Schio VI",
+        "cap": "36015",
+        "telefono": "0445-386226",
+        "email": "info@thelondonschool.it",
         "googleMaps": ""
       }
     ],
@@ -1518,12 +1518,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Albignasego",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA ROMA, 15, 35020 Albignasego PD",
+        "cap": "35020",
+        "telefono": "049-710977",
+        "email": "info@volsap.it",
         "googleMaps": ""
       }
     ],
@@ -1538,12 +1538,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Seren del Grappa",
         "provincia": "BL",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA INDUSTRIE, 14 Loc. Rasai, 32030 Seren del Grappa BL",
+        "cap": "32030",
+        "telefono": "0439448441",
+        "email": "info@ecostudio.it",
         "googleMaps": ""
       }
     ],
@@ -1558,12 +1558,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Bonifacio",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA ZAMPIERI, 9, 37047 San Bonifacio VR",
+        "cap": "37047",
+        "telefono": "045-7610198",
+        "email": "info@fondazionesangaetano.org",
         "googleMaps": ""
       }
     ],
@@ -1598,12 +1598,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Villafranca di Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE POSTUMIA, 37, 37069 Villafranca di Verona VR",
+        "cap": "37069",
+        "telefono": "045-6304651",
+        "email": "info@aivformazione.it",
         "googleMaps": ""
       }
     ],
@@ -1618,12 +1618,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Selvazzano Dentro",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA EUGANEA, 27, 35030 Selvazzano Dentro PD",
+        "cap": "35030",
+        "telefono": "049-8059886",
+        "email": "mail@reteccs.org",
         "googleMaps": ""
       }
     ],
@@ -1638,12 +1638,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA MAMELI, 12, 35131 Padova PD",
+        "cap": "35131",
+        "telefono": "041-5100598",
+        "email": "formazione@kairos-consulting.com",
         "googleMaps": ""
       }
     ],
@@ -1678,12 +1678,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Villorba",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELLA REPUBBLICA, 19/B, 31020 Villorba TV",
+        "cap": "31020",
+        "telefono": "0422-421742",
+        "email": "info@aeaconsulenza.it",
         "googleMaps": ""
       }
     ],
@@ -1698,12 +1698,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Boara Pisani",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DEL LAVORO, 4, 35040 Boara Pisani PD",
+        "cap": "35040",
+        "telefono": "0425-485621",
+        "email": "info@e-cons.it",
         "googleMaps": ""
       }
     ],
@@ -1738,12 +1738,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DANIELE MANIN, 49/F, 30174 Venezia VE",
+        "cap": "30174",
+        "telefono": "041-5350276",
+        "email": "info@formazionetecnica.it",
         "googleMaps": ""
       }
     ],
@@ -1762,8 +1762,8 @@
         "provincia": "VE",
         "indirizzo": "Viale R. Lombardi 19, 30020 Marcon VE",
         "cap": "30020",
-        "telefono": "",
-        "email": "",
+        "telefono": "041-5952952",
+        "email": "segreteria@con-ser.ve.it",
         "googleMaps": ""
       }
     ],
@@ -1778,12 +1778,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Treviso",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE FRANCIA, 2, 31100 Treviso TV",
+        "cap": "31100",
+        "telefono": "0422-260188",
+        "email": "info@laesse.org",
         "googleMaps": ""
       }
     ],
@@ -1798,12 +1798,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA BISSAGOLA, 25, 30174 Venezia VE",
+        "cap": "30174",
+        "telefono": "041-616120",
+        "email": "formazione@codess.org",
         "googleMaps": ""
       }
     ],
@@ -1818,12 +1818,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA TORINO, 180/A - MESTRE, 30172 Venezia VE",
+        "cap": "30172",
+        "telefono": "041-5455210",
+        "email": "venezia@coldiretti.it",
         "googleMaps": ""
       }
     ],
@@ -1838,12 +1838,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Paese",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE SANTE BIASUZZI, 20, 31038 Paese TV",
+        "cap": "31038",
+        "telefono": "0422-954111",
+        "email": "treviso@coldiretti.it",
         "googleMaps": ""
       }
     ],
@@ -1858,12 +1858,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Rovigo",
         "provincia": "RO",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELLA COOPERAZIONE, 6, 45100 Rovigo RO",
+        "cap": "45100",
+        "telefono": "0425-474643",
+        "email": "agenforveneto@agenfor.it",
         "googleMaps": ""
       }
     ],
@@ -1878,12 +1878,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Giovanni Lupatoto",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VICOLO OSPEDALE, 1, 37057 San Giovanni Lupatoto VR",
+        "cap": "37057",
+        "telefono": "045-8296111",
+        "email": "info@piaoperaciccarelli.org",
         "googleMaps": ""
       }
     ],
@@ -1898,12 +1898,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA SEMINARIO, 8, 37129 Verona VR",
+        "cap": "37129",
+        "telefono": "045-9276221",
+        "email": "info@fondazionetoniolo.it",
         "googleMaps": ""
       }
     ],
@@ -1918,12 +1918,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 2, 37129 Verona VR",
+        "cap": "37129",
+        "telefono": "0458028523",
+        "email": "ufficio.ricerca@ateneo.univr.it",
         "googleMaps": ""
       }
     ],
@@ -1938,12 +1938,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Martino di Lupari",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA GARIBALDI, 38, 35018 San Martino di Lupari PD",
+        "cap": "35018",
+        "telefono": "049-9470847",
+        "email": "info@former-division.it",
         "googleMaps": ""
       }
     ],
@@ -1958,12 +1958,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Legnaro",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 10, 35020 Legnaro PD",
+        "cap": "35020",
+        "telefono": "049-8084341",
+        "email": "formazione@izsvenezie.it",
         "googleMaps": ""
       }
     ],
@@ -1978,12 +1978,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Mira",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA NAZIONALE, 57, 30034 Mira VE",
+        "cap": "30034",
+        "telefono": "041-420349",
+        "email": "orientamento@olivotti.org",
         "googleMaps": ""
       }
     ],
@@ -1998,12 +1998,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Belluno",
         "provincia": "BL",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA RUGO, 21, 32100 Belluno BL",
+        "cap": "32100",
+        "telefono": "0437-950909",
+        "email": "info@ceisbelluno.org",
         "googleMaps": ""
       }
     ],
@@ -2018,12 +2018,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Romano d'Ezzelino",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA TENENTE E. VELO, 28, 36060 Romano d'Ezzelino VI",
+        "cap": "36060",
+        "telefono": "0424-382638",
+        "email": "info@necsi.it",
         "googleMaps": ""
       }
     ],
@@ -2058,12 +2058,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Thiene",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA MARCO CORNER, 19, 36016 Thiene VI",
+        "cap": "36016",
+        "telefono": "0445-382277",
+        "email": "info@studioeidosformazione.it",
         "googleMaps": ""
       }
     ],
@@ -2078,12 +2078,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA ZAMENHOF, 100, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444-914236",
+        "email": "info@apriformazione.eu",
         "googleMaps": ""
       }
     ],
@@ -2098,12 +2098,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Sona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DELL'INDUSTRIA, 1/3, 37060 Sona VR",
+        "cap": "37060",
+        "telefono": "045-8621499",
+        "email": "info@studioessepi.it",
         "googleMaps": ""
       }
     ],
@@ -2118,12 +2118,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DEL LAVORO, 52, 37135 Verona VR",
+        "cap": "37135",
+        "telefono": "045-8678210",
+        "email": "impresaverde.vr@coldiretti.it",
         "googleMaps": ""
       }
     ],
@@ -2138,12 +2138,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA ZAMENHOF, 697, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444-189600",
+        "email": "vicenza@coldiretti.it",
         "googleMaps": ""
       }
     ],
@@ -2158,12 +2158,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA CROCE ROSSA, 32, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "049-8997311",
+        "email": "padova@coldiretti.it",
         "googleMaps": ""
       }
     ],
@@ -2178,12 +2178,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Rovigo",
         "provincia": "RO",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA A. MARIO, 19, 45100 Rovigo RO",
+        "cap": "45100",
+        "telefono": "0425-2018",
+        "email": "impresaverde.ro@coldiretti.it",
         "googleMaps": ""
       }
     ],
@@ -2198,12 +2198,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA A. PROVOLO, 18, 37123 Verona VR",
+        "cap": "37123",
+        "telefono": "045-8000015",
+        "email": "istituto@gresner.it",
         "googleMaps": ""
       }
     ],
@@ -2218,12 +2218,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Montagnana",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA LUPPIA ALBERI, 3, 35044 Montagnana PD",
+        "cap": "35044",
+        "telefono": "0429-81658",
+        "email": "direzione.cfp@pavoniani.it",
         "googleMaps": ""
       }
     ],
@@ -2238,12 +2238,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "CALLE MICHELANGELO 54/P - VILLA HERIOTT - GIUDECCA, 30133 Venezia VE",
+        "cap": "30133",
+        "telefono": "041-5287090",
+        "email": "amministrazioneuia@gmail.com",
         "googleMaps": ""
       }
     ],
@@ -2258,12 +2258,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE SAN LAZZARO, 10, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444-570098",
+        "email": "info@victoryweb.it",
         "googleMaps": ""
       }
     ],
@@ -2278,12 +2278,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA VIII FEBBRAIO, 2, 35122 Padova PD",
+        "cap": "35122",
+        "telefono": "049-8273055",
+        "email": "rettore@unipd.it",
         "googleMaps": ""
       }
     ],
@@ -2298,12 +2298,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
-        "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "citta": "Sedico",
+        "provincia": "BL",
+        "indirizzo": "STADIO, 11/A, 32036 Sedico BL",
+        "cap": "32036",
+        "telefono": "0437-753330",
+        "email": "segreteria@cfsbelluno.it",
         "googleMaps": ""
       }
     ],
@@ -2318,12 +2318,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Rovigo",
         "provincia": "RO",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "CORSO DEL POPOLO, 70, 45100 Rovigo RO",
+        "cap": "45100",
+        "telefono": "0425-412470",
+        "email": "info@adconsulting.it",
         "googleMaps": ""
       }
     ],
@@ -2338,12 +2338,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "DORSODURO, 3246, 30123 Venezia VE",
+        "cap": "30123",
+        "telefono": "041-2348083",
+        "email": "ricerca.nazionale@unive.it",
         "googleMaps": ""
       }
     ],
@@ -2358,12 +2358,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vigonza",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA VENEZIA, 62, 35010 Vigonza PD",
+        "cap": "35010",
+        "telefono": "049-9801111",
+        "email": "info@politecnicocalzaturiero.it",
         "googleMaps": ""
       }
     ],
@@ -2378,12 +2378,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "SANTA CROCE, 191 TOLENTINI, 30135 Venezia VE",
+        "cap": "30135",
+        "telefono": "041-2571880",
+        "email": "fse@iuav.it",
         "googleMaps": ""
       }
     ],
@@ -2402,8 +2402,8 @@
         "provincia": "PD",
         "indirizzo": "Via Andrea Da Bassano 11, 35134 Padova PD",
         "cap": "35134",
-        "telefono": "",
-        "email": "",
+        "telefono": "049-662020",
+        "email": "info@scuolaprimia.it",
         "googleMaps": ""
       }
     ],
@@ -2422,8 +2422,8 @@
         "provincia": "TV",
         "indirizzo": "Via Cal di Breda 42, 31100 Treviso TV",
         "cap": "31100",
-        "telefono": "",
-        "email": "",
+        "telefono": "0423-720653",
+        "email": "info@scuolasegra.com",
         "googleMaps": ""
       }
     ],
@@ -2438,12 +2438,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "LUNGADIGE CAPULETI, 11, 37122 Verona VR",
+        "cap": "37122",
+        "telefono": "045-8010803",
+        "email": "direzione@luniklef.it",
         "googleMaps": ""
       }
     ],
@@ -2458,12 +2458,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "LUNGADIGE CAPULETI, 11, 37122 Verona VR",
+        "cap": "37122",
+        "telefono": "045-597080",
+        "email": "direzione@clef.it",
         "googleMaps": ""
       }
     ],
@@ -2478,12 +2478,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Thiene",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "PIAZZA ROSSI, 20, 36016 Thiene VI",
+        "cap": "36016",
+        "telefono": "0445-367131",
+        "email": "info@dimensioneimpresa.vi.it",
         "googleMaps": ""
       }
     ],
@@ -2498,12 +2498,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Viale della Repubblica 53, 37126 Verona VR",
+        "cap": "37126",
+        "telefono": "0454752080",
+        "email": "veneto@gammaservizi.it",
         "googleMaps": ""
       }
     ],
@@ -2518,12 +2518,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vittorio Veneto",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "GALLERIA NAZIONI UNITE, 6 INT. 12, 31029 Vittorio Veneto TV",
+        "cap": "31029",
+        "telefono": "0438-555146",
+        "email": "formazione@ascomvittoriov.it",
         "googleMaps": ""
       }
     ],
@@ -2538,12 +2538,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Altavilla Vicentina",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA VICENZA, 15, 36077 Altavilla Vicentina VI",
+        "cap": "36077",
+        "telefono": "0442-480686",
+        "email": "formazione@promo-lavoro.it",
         "googleMaps": ""
       }
     ],
@@ -2578,12 +2578,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "PIAZZA MODIN, 12, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "049-8935156",
+        "email": "padova@ecgroup.it",
         "googleMaps": ""
       }
     ],
@@ -2598,12 +2598,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "GALLERIA CRISPI, 45, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444-232210",
+        "email": "m.maltauro@apindustria.vi.it",
         "googleMaps": ""
       }
     ],
@@ -2618,12 +2618,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Rubano",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DELLA PROVVIDENZA, 68-SARMEOLA, 35030 Rubano PD",
+        "cap": "35030",
+        "telefono": "049633942",
+        "email": "info@e-formiamo.it",
         "googleMaps": ""
       }
     ],
@@ -2638,12 +2638,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA FRANCESCO CRISPI, 142, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444 512733",
+        "email": "personale@studiocentro.com",
         "googleMaps": ""
       }
     ],
@@ -2658,12 +2658,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Donà di Piave",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA GIORGIO LA PIRA, 19, 30027 San Donà di Piave VE",
+        "cap": "30027",
+        "telefono": "04211846058",
+        "email": "info@bkrinformazione.it",
         "googleMaps": ""
       }
     ],
@@ -2678,12 +2678,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Adria",
         "provincia": "RO",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA CARDUCCI, 41/5, 45011 Adria RO",
+        "cap": "45011",
+        "telefono": "0426-908316",
+        "email": "obiettivosicurezza81e@gmail.com",
         "googleMaps": ""
       }
     ],
@@ -2698,12 +2698,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Michele al Tagliamento",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Canal 3, 30028 San Michele al Tagliamento VE",
+        "cap": "30028",
+        "telefono": "0421709123",
+        "email": "formazione@formlab.it",
         "googleMaps": ""
       }
     ],
@@ -2718,12 +2718,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA LAMARMORA, 12/2, 30173 Venezia VE",
+        "cap": "30173",
+        "telefono": "041610918",
+        "email": "veneto@enforma.biz",
         "googleMaps": ""
       }
     ],
@@ -2738,12 +2738,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Viale delle Nazioni 2, 37135 Verona VR",
+        "cap": "37135",
+        "telefono": "0458531916",
+        "email": "welcome.verona@e-workspa.it",
         "googleMaps": ""
       }
     ],
@@ -2758,12 +2758,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA TOMMASEO 74/B, 35131 Padova PD",
+        "cap": "35131",
+        "telefono": "049 625261",
+        "email": "monitoraggio@conform.it",
         "googleMaps": ""
       }
     ],
@@ -2778,12 +2778,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Giuseppe Belluzzo, 2, 37132 Verona VR",
+        "cap": "37132",
+        "telefono": "045-2056100",
+        "email": "info@asfe-vr.it",
         "googleMaps": ""
       }
     ],
@@ -2798,12 +2798,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Campo San Fantin 1965, 30124 Venezia VE",
+        "cap": "30124",
+        "telefono": "041786511",
+        "email": "alessandro.fantini@teatrolafenice.org",
         "googleMaps": ""
       }
     ],
@@ -2818,12 +2818,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE SANT'AGOSTINO, 153, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "04441832190",
+        "email": "formazione.vi@sviluppoformazione.it",
         "googleMaps": ""
       }
     ],
@@ -2838,12 +2838,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Oderzo",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DEGLI ALPINI, 15, 31046 Oderzo TV",
+        "cap": "31046",
+        "telefono": "0422815544",
+        "email": "info@alpeadriaimprese.it",
         "googleMaps": ""
       }
     ],
@@ -2858,12 +2858,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA GIOVANNI SAVELLI, 24, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "049-775065",
+        "email": "risorse.padova@risorseitaliasrl.it",
         "googleMaps": ""
       }
     ],
@@ -2878,12 +2878,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Legnaro",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 2, 35020 Legnaro PD",
+        "cap": "35020",
+        "telefono": "0498068311",
+        "email": "prot@lnl.infn.it",
         "googleMaps": ""
       }
     ],
@@ -2898,12 +2898,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Donà di Piave",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA GARDA, 11/2, 30027 San Donà di Piave VE",
+        "cap": "30027",
+        "telefono": "04211880445",
+        "email": "info@protecnoformazione.it",
         "googleMaps": ""
       }
     ],
@@ -2918,12 +2918,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Rubano",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Pitagora 11/A, 35030 Rubano PD",
+        "cap": "35030",
+        "telefono": "0499406541",
+        "email": "info@venetica.org",
         "googleMaps": ""
       }
     ],
@@ -2938,12 +2938,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Mogliano Veneto",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA MARCONI, 15/5, 31021 Mogliano Veneto TV",
+        "cap": "31021",
+        "telefono": "0415906139",
+        "email": "info@rcbs.org.uk",
         "googleMaps": ""
       }
     ],
@@ -2958,12 +2958,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Portogruaro",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Viale Udine 17, 30026 Portogruaro VE",
+        "cap": "30026",
+        "telefono": "0421271166",
+        "email": "formazione@officinementali.eu",
         "googleMaps": ""
       }
     ],
@@ -2978,12 +2978,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Legione Gallieno 52, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444302980",
+        "email": "info@itsmeccatronico.it",
         "googleMaps": ""
       }
     ],
@@ -2998,12 +2998,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA SOMMACAMPAGNA 61, 37137 Verona VR",
+        "cap": "37137",
+        "telefono": "0454950249",
+        "email": "info@itslogistica.it",
         "googleMaps": ""
       }
     ],
@@ -3018,12 +3018,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Lungargine G. Rovetta, 28, 35127 Padova PD",
+        "cap": "35127",
+        "telefono": "049-8021850",
+        "email": "info@fondazionefenice.it",
         "googleMaps": ""
       }
     ],
@@ -3038,12 +3038,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Limena",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA L. Pierobon, 65, 35010 Limena PD",
+        "cap": "35010",
+        "telefono": "04291905040",
+        "email": "segreteria@timetotime.it",
         "googleMaps": ""
       }
     ],
@@ -3058,12 +3058,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Oderzo",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Contrada Rossa 2/3, 31046 Oderzo TV",
+        "cap": "31046",
+        "telefono": "0422713254",
+        "email": "formazione@euroiso.it",
         "googleMaps": ""
       }
     ],
@@ -3078,12 +3078,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Godega di Sant'Urbano",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA BOSCO, 36/a, 31010 Godega di Sant'Urbano TV",
+        "cap": "31010",
+        "telefono": "043838553",
+        "email": "berit@pec.it",
         "googleMaps": ""
       }
     ],
@@ -3098,12 +3098,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Piazza Virgilio Bardella n.12, complesso La Cittadella, 35131 Padova PD",
+        "cap": "35131",
+        "telefono": "3400646634",
+        "email": "deliveryesf@randstad.it",
         "googleMaps": ""
       }
     ],
@@ -3118,12 +3118,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Legnaro",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELL'UNIVERSITA', 14, 35020 Legnaro PD",
+        "cap": "35020",
+        "telefono": "0498293711",
+        "email": "divulgazione.formazione@venetoagricoltura.org",
         "googleMaps": ""
       }
     ],
@@ -3138,12 +3138,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Montecchio Maggiore",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Marconi,1, 36041 Montecchio Maggiore VI",
+        "cap": "36041",
+        "telefono": "0444-1390121",
+        "email": "montecchio@staff.it",
         "googleMaps": ""
       }
     ],
@@ -3158,12 +3158,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA MONTESI, 9, 35025 Padova PD",
+        "cap": "35025",
+        "telefono": "0499101545",
+        "email": "info@internationalonlineuniversity.it",
         "googleMaps": ""
       }
     ],
@@ -3178,12 +3178,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
-        "provincia": "Multi",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "citta": "Verona",
+        "provincia": "VR",
+        "indirizzo": "Via S. Giuseppe, 11, 37123 Verona VR",
+        "cap": "37123",
+        "telefono": "0458003043",
+        "email": "info@cfpcanossianovr.it",
         "googleMaps": ""
       }
     ],
@@ -3198,12 +3198,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA BRUNO MADERNA, 7 - MESTRE, 30174 Venezia VE",
+        "cap": "30174",
+        "telefono": "0417790577",
+        "email": "fondazione@ordineingegneri.ve.it",
         "googleMaps": ""
       }
     ],
@@ -3218,12 +3218,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "via San Crispino 8, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "0497450101",
+        "email": "padova@tacktmi.it",
         "googleMaps": ""
       }
     ],
@@ -3242,8 +3242,8 @@
         "provincia": "TV",
         "indirizzo": "Via S. Giacomo 25, 31046 Motta di Livenza TV",
         "cap": "31046",
-        "telefono": "",
-        "email": "",
+        "telefono": "0422 867511",
+        "email": "lepidorocco@lepidorocco.com",
         "googleMaps": ""
       }
     ],
@@ -3258,12 +3258,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Bassano del Grappa",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA SS. TRINITA' 8, 36061 Bassano del Grappa VI",
+        "cap": "36061",
+        "telefono": "04241760945",
+        "email": "info@foraction.it",
         "googleMaps": ""
       }
     ],
@@ -3278,12 +3278,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Trieste 47, 35121 Padova PD",
+        "cap": "35121",
+        "telefono": "0498456614",
+        "email": "accreditamentiregionali@manpower.it",
         "googleMaps": ""
       }
     ],
@@ -3298,12 +3298,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA BARANA, 10, 37100 Verona VR",
+        "cap": "37100",
+        "telefono": "045-8530078",
+        "email": "verona@evosolution.it",
         "googleMaps": ""
       }
     ],
@@ -3318,12 +3318,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DEL LAVORO, 37, 37135 Verona VR",
+        "cap": "37135",
+        "telefono": "045576600",
+        "email": "info@gruppoformazione.it",
         "googleMaps": ""
       }
     ],
@@ -3338,12 +3338,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Noventa Padovana",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE DELLA NAVIGAZIONE INTERNA 119, 35027 Noventa Padovana PD",
+        "cap": "35027",
+        "telefono": "049 8074467",
+        "email": "formazione@proevosrl.it",
         "googleMaps": ""
       }
     ],
@@ -3358,12 +3358,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Pianezze",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA S. PIO X, 13, 36060 Pianezze VI",
+        "cap": "36060",
+        "telefono": "0424-708879",
+        "email": "info@aineservizi.it",
         "googleMaps": ""
       }
     ],
@@ -3378,12 +3378,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Gruaro",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DELL'ARTIGIANATO, 23, 30020 Gruaro VE",
+        "cap": "30020",
+        "telefono": "0421761247",
+        "email": "info@accademia-pizzaioli.it",
         "googleMaps": ""
       }
     ],
@@ -3398,12 +3398,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Treviso",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DANIELE MONTERUMICI, 12, 31100 Treviso TV",
+        "cap": "31100",
+        "telefono": "0422-1560424",
+        "email": "contact@a-marksfactory.it",
         "googleMaps": ""
       }
     ],
@@ -3418,12 +3418,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Donà di Piave",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA VANONI, 14, 30027 San Donà di Piave VE",
+        "cap": "30027",
+        "telefono": "04211896082",
+        "email": "info@ecletformazione.it",
         "googleMaps": ""
       }
     ],
@@ -3438,12 +3438,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA ROMANA APONENSE 116, 35142 Padova PD",
+        "cap": "35142",
+        "telefono": "0498809842",
+        "email": "info@centrodiformazionests.it",
         "googleMaps": ""
       }
     ],
@@ -3458,12 +3458,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Castelfranco Veneto",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "PIAZZALE DELLA SERENISSIMA, 60, 31033 Castelfranco Veneto TV",
+        "cap": "31033",
+        "telefono": "0423605049",
+        "email": "info@sophiamanagement.it",
         "googleMaps": ""
       }
     ],
@@ -3478,12 +3478,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
-        "provincia": "Multi",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "citta": "Noventa Padovana",
+        "provincia": "PD",
+        "indirizzo": "VIA RISORGIMENTO, 29, 35027 Noventa Padovana PD",
+        "cap": "35027",
+        "telefono": "049-9865000",
+        "email": "padova@scuoledieffe.it",
         "googleMaps": ""
       }
     ],
@@ -3498,12 +3498,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Ciro Ferrari, 13, 37135 Verona VR",
+        "cap": "37135",
+        "telefono": "0454623588",
+        "email": "info@moodart.com",
         "googleMaps": ""
       }
     ],
@@ -3518,12 +3518,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DEGLI ONTANI 83, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444965113",
+        "email": "formazionepantere@libero.it",
         "googleMaps": ""
       }
     ],
@@ -3538,12 +3538,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Boara Pisani",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via del Lavoro n° 4, 35040 Boara Pisani PD",
+        "cap": "35040",
+        "telefono": "04251573100",
+        "email": "info@consorzioepic.it",
         "googleMaps": ""
       }
     ],
@@ -3558,12 +3558,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Bolzano 1, 37135 Verona VR",
+        "cap": "37135",
+        "telefono": "045500398",
+        "email": "cfpsgiuseppe@piccolefigliesg.it",
         "googleMaps": ""
       }
     ],
@@ -3578,12 +3578,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA A. MEUCCI 2, 37135 Verona VR",
+        "cap": "37135",
+        "telefono": "0458200181",
+        "email": "in-formazione@studiotosi.ner",
         "googleMaps": ""
       }
     ],
@@ -3598,12 +3598,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA GIOVANNI FALCONE 4, 35142 Padova PD",
+        "cap": "35142",
+        "telefono": "0571548459",
+        "email": "info@zhero.eu",
         "googleMaps": ""
       }
     ],
@@ -3618,12 +3618,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Villafranca di Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIALE POSTUMIA 37, 37069 Villafranca di Verona VR",
+        "cap": "37069",
+        "telefono": "0456336737",
+        "email": "direzione@gapformazione.it",
         "googleMaps": ""
       }
     ],
@@ -3638,12 +3638,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
-        "provincia": "Multi",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "citta": "Venezia",
+        "provincia": "VE",
+        "indirizzo": "Via dei Salesiani, 15, 30174 Venezia VE",
+        "cap": "30174",
+        "telefono": "0415498200",
+        "email": "cfpsanmarco@issm.it",
         "googleMaps": ""
       }
     ],
@@ -3658,12 +3658,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "via Beldomandi 1, 35137 Padova PD",
+        "cap": "35137",
+        "telefono": "0498278670",
+        "email": "info@unismart.it",
         "googleMaps": ""
       }
     ],
@@ -3678,12 +3678,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Povegliano",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA DEGLI ALPINI 12, 31050 Povegliano TV",
+        "cap": "31050",
+        "telefono": "0471061107",
+        "email": "academy@niederstaetter.it",
         "googleMaps": ""
       }
     ],
@@ -3698,12 +3698,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Venezia",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA TORINO 105/B, 30172 Venezia VE",
+        "cap": "30172",
+        "telefono": "0417798736",
+        "email": "info@strategieorganizzative.it",
         "googleMaps": ""
       }
     ],
@@ -3783,7 +3783,7 @@
         "indirizzo": "Via San Marco 121, 37138 Verona VR",
         "cap": "37138",
         "telefono": "045.8184411",
-        "email": "",
+        "email": "areaformativa@centrodoncalabria.it",
         "googleMaps": ""
       }
     ],
@@ -3798,12 +3798,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "viale dell'Industria 21, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "00390418520158",
+        "email": "info@darwin.srl",
         "googleMaps": ""
       }
     ],
@@ -3818,12 +3818,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Silea",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "piazza europa, 4 int 5, 31057 Silea TV",
+        "cap": "31057",
+        "telefono": "3282935856",
+        "email": "segreteria@serenissimaservizi.it",
         "googleMaps": ""
       }
     ],
@@ -3838,12 +3838,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Ponte San Nicolò",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Viale del Lavoro 44-46, 35020 Ponte San Nicolò PD",
+        "cap": "35020",
+        "telefono": "0497851621",
+        "email": "formazione@innovaconsulenze.it",
         "googleMaps": ""
       }
     ],
@@ -3858,12 +3858,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Lanza, 106, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444573002",
+        "email": "etc@etcsoluzioniaziendali.it",
         "googleMaps": ""
       }
     ],
@@ -3878,12 +3878,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Ceregnano",
         "provincia": "RO",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Gorizia 1540, 45010 Ceregnano RO",
+        "cap": "45010",
+        "telefono": "0425-47800",
+        "email": "info@sthconsulting.it",
         "googleMaps": ""
       }
     ],
@@ -3898,12 +3898,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "via dell'Economia 131, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "044961800",
+        "email": "scsa@scsa.it",
         "googleMaps": ""
       }
     ],
@@ -3918,12 +3918,12 @@
     "sedi": [
       {
         "nome": "",
-        "citta": "",
+        "citta": "San Pietro in Cariano",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "VIA CLAUDIA AUGUSTA 44, 37029 San Pietro in Cariano VR",
+        "cap": "37029",
+        "telefono": "0457725835",
+        "email": "cfpcorrubbio@casanazareth.it",
         "googleMaps": ""
       }
     ],
@@ -4362,7 +4362,7 @@
         "provincia": "VI",
         "indirizzo": "Via Monte Ortigara 115/B, 36073 Cornedo Vicentino VI",
         "cap": "36073",
-        "telefono": "",
+        "telefono": "0445-404629",
         "email": "personale@studioprogetto.org",
         "googleMaps": ""
       }
