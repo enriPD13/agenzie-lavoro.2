@@ -57,7 +57,7 @@ const Enti = {
     const grid = document.getElementById('entiGrid');
     if (!grid) return;
     
-    const stats = document.getElementById('statsCards');
+    const stats = document.getElementById('statsEnti');
     if (stats) {
       const total = this.filteredEnti.length;
       const sedi = this.filteredEnti.reduce((s, e) => s + (e.sedi?.length || 0), 0);
