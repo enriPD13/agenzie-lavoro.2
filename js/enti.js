@@ -82,9 +82,10 @@ const Enti = {
             </svg>
           </button>
         </div>
-        
+        ${e.categorie ? `<div class="text-sm text-purple-700 font-semibold mb-2">${e.categorie}</div>` : ''}
+        ${e.descrizione ? `<p class="text-sm text-gray-600 mb-3 line-clamp-2">${e.descrizione}</p>` : ''}
         <div class="text-sm text-gray-600 mb-3">
-          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-semibold">${e.provincia}</span>
+          <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-semibold">${e.sedi?.[0]?.provincia || 'Multi'}</span>
         </div>
         
         <div class="grid grid-cols-2 gap-2">
