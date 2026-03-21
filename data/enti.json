@@ -2,7 +2,7 @@
   {
     "id": "1",
     "nome": "CNA FORMAZIONE",
-    "descrizione": "CNA - Confederazione Nazionale dell'Artigianato - Formazione",
+    "descrizione": "Servizi di formazione CNA",
     "sito": "",
     "settori": "Artigianato, Formazione Professionale",
     "sedi": [
@@ -37,7 +37,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Artigianato, Formazione"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "2",
@@ -82,20 +82,10 @@
   {
     "id": "3",
     "nome": "ENAC VENETO",
-    "descrizione": "ENAC Veneto - Formazione per giovani (IeFP)",
+    "descrizione": "Rete ENAC - Ente Nazionale Canossiano - IeFP e formazione per donne",
     "sito": "www.enacveneto.it",
     "settori": "Formazione Professionale, IeFP",
     "sedi": [
-      {
-        "nome": "TREVISO",
-        "citta": "Treviso",
-        "provincia": "TV",
-        "indirizzo": "Viale Europa 20, 31100 Treviso TV",
-        "cap": "31100",
-        "telefono": "0422.267445",
-        "email": "treviso@enacveneto.it",
-        "googleMaps": ""
-      },
       {
         "nome": "SCHIO",
         "citta": "Schio",
@@ -107,6 +97,16 @@
         "googleMaps": ""
       },
       {
+        "nome": "TREVISO",
+        "citta": "Treviso",
+        "provincia": "TV",
+        "indirizzo": "Viale Europa 20, 31100 Treviso TV",
+        "cap": "31100",
+        "telefono": "0422.267445",
+        "email": "treviso@enacveneto.it",
+        "googleMaps": ""
+      },
+      {
         "nome": "VERONA",
         "citta": "Verona",
         "provincia": "VR",
@@ -115,47 +115,17 @@
         "telefono": "045.9209989",
         "email": "verona@enacveneto.it",
         "googleMaps": ""
-      },
-      {
-        "nome": "ENTE NAZIONALE CANOSSIANO ETS",
-        "citta": "",
-        "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
-        "googleMaps": ""
       }
     ],
-    "categorie": "IeFP, Formazione Professionale"
+    "categorie": "Formazione Professionale, IeFP"
   },
   {
     "id": "4",
     "nome": "ENAIP VENETO",
-    "descrizione": "ENAIP Veneto - Formazione professionale iniziale e continua",
+    "descrizione": "Rete ENAIP Veneto - Formazione Professionale Iniziale e Continua",
     "sito": "www.enaip.veneto.it",
     "settori": "Formazione Professionale",
     "sedi": [
-      {
-        "nome": "FELTRE",
-        "citta": "Feltre",
-        "provincia": "BL",
-        "indirizzo": "Via Monte Grappa 1, 32032 Feltre BL",
-        "cap": "32032",
-        "telefono": "0439.840947",
-        "email": "feltre@enacveneto.it",
-        "googleMaps": ""
-      },
-      {
-        "nome": "VENETO IMPRESA SOCIALE",
-        "citta": "",
-        "provincia": "Multi",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
-        "googleMaps": ""
-      },
       {
         "nome": "CONEGLIANO",
         "citta": "Conegliano",
@@ -164,6 +134,16 @@
         "cap": "31015",
         "telefono": "0438.427182",
         "email": "stefania.fabiano@enaip.veneto.it",
+        "googleMaps": ""
+      },
+      {
+        "nome": "FELTRE",
+        "citta": "Feltre",
+        "provincia": "BL",
+        "indirizzo": "Via Monte Grappa 1, 32032 Feltre BL",
+        "cap": "32032",
+        "telefono": "0439.840947",
+        "email": "feltre@enacveneto.it",
         "googleMaps": ""
       },
       {
@@ -177,7 +157,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "IeFP, Formazione Professionale"
+    "categorie": "Formazione Professionale, IeFP"
   },
   {
     "id": "5",
@@ -262,82 +242,12 @@
   {
     "id": "6",
     "nome": "FORMEDIL VENETO",
-    "descrizione": "Rete Formedil - Scuole Edili e Sicurezza sul Lavoro",
+    "descrizione": "Rete Formedil Veneto - Scuole Edili e Sicurezza sul Lavoro",
     "sito": "",
     "settori": "Edilizia, Sicurezza sul Lavoro",
     "sedi": [
       {
-        "nome": "- CENTRO PER LA FORMAZIONE E LA SICUREZZA DI BELLUNO",
-        "citta": "",
-        "provincia": "BL",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
-        "googleMaps": ""
-      },
-      {
-        "nome": "SEDICO Sedico",
-        "citta": "Sedico",
-        "provincia": "BL",
-        "indirizzo": "Via Stadio 14, 32036 Sedico BL",
-        "cap": "32036",
-        "telefono": "0437.852233",
-        "email": "",
-        "googleMaps": ""
-      },
-      {
-        "nome": "DI PADOVA",
-        "citta": "",
-        "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
-        "googleMaps": ""
-      },
-      {
-        "nome": "TREVISO",
-        "citta": "",
-        "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
-        "googleMaps": ""
-      },
-      {
-        "nome": "TREVISO Treviso",
-        "citta": "Treviso",
-        "provincia": "TV",
-        "indirizzo": "Via S. Pelaio 35, 31100 Treviso TV",
-        "cap": "31100",
-        "telefono": "0422.301141",
-        "email": "info@scuolaediletreviso.it",
-        "googleMaps": ""
-      },
-      {
-        "nome": "VENEZIA",
-        "citta": "",
-        "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
-        "googleMaps": ""
-      },
-      {
-        "nome": "VICENZA -  ANDREA PALLADIO",
-        "citta": "",
-        "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
-        "googleMaps": ""
-      },
-      {
-        "nome": "VICENZA ANDREA PALLADIO Vicenza",
+        "nome": "SCUOLA COSTRUZIONI VICENZA",
         "citta": "Vicenza",
         "provincia": "VI",
         "indirizzo": "Via Divisione Folgore 7/D, 36100 Vicenza VI",
@@ -347,43 +257,53 @@
         "googleMaps": ""
       },
       {
-        "nome": "VERONA -",
-        "citta": "",
-        "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
+        "nome": "CFS SEDICO",
+        "citta": "Sedico",
+        "provincia": "BL",
+        "indirizzo": "Via Stadio 14, 32036 Sedico BL",
+        "cap": "32036",
+        "telefono": "0437.852233",
+        "email": "",
+        "googleMaps": ""
+      },
+      {
+        "nome": "SCUOLA EDILE TREVISO",
+        "citta": "Treviso",
+        "provincia": "TV",
+        "indirizzo": "Via S. Pelaio 35, 31100 Treviso TV",
+        "cap": "31100",
+        "telefono": "0422.301141",
+        "email": "info@scuolaediletreviso.it",
+        "googleMaps": ""
+      },
+      {
+        "nome": "UPA FORMAZIONE PADOVA",
+        "citta": "Padova",
+        "provincia": "PD",
+        "indirizzo": "Via Cave 178, 35100 Padova PD",
+        "cap": "35100",
         "telefono": "",
         "email": "",
         "googleMaps": ""
       }
     ],
-    "categorie": "Edilizia, Sicurezza"
+    "categorie": "Formazione Professionale, Edilizia, Sicurezza"
   },
   {
     "id": "7",
     "nome": "UMANA FORMA",
-    "descrizione": "Umana Forma - Formazione professionale e politiche attive del lavoro",
+    "descrizione": "Ente di formazione professionale del Gruppo Umana",
     "sito": "www.umanaforma.it",
     "settori": "Formazione Professionale, Politiche Attive",
     "sedi": [
       {
-        "nome": "TREVISO",
-        "citta": "Treviso",
-        "provincia": "TV",
-        "indirizzo": "Viale Fratelli Bandiera 22, 31100 Treviso TV",
-        "cap": "31100",
-        "telefono": "0422.590510",
-        "email": "",
-        "googleMaps": ""
-      },
-      {
-        "nome": "SRL",
-        "citta": "",
+        "nome": "MARGHERA SEDE CENTRALE",
+        "citta": "Marghera",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Portenari 1, 30175 Marghera VE",
+        "cap": "30175",
+        "telefono": "041.5385630",
+        "email": "infove@umanaforma.it",
         "googleMaps": ""
       },
       {
@@ -394,6 +314,16 @@
         "cap": "36061",
         "telefono": "0424.529788",
         "email": "politiche.attive@umana.it",
+        "googleMaps": ""
+      },
+      {
+        "nome": "TREVISO",
+        "citta": "Treviso",
+        "provincia": "TV",
+        "indirizzo": "Viale Fratelli Bandiera 22, 31100 Treviso TV",
+        "cap": "31100",
+        "telefono": "0422.590510",
+        "email": "",
         "googleMaps": ""
       },
       {
@@ -417,63 +347,63 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Politiche Attive"
+    "categorie": "Formazione Professionale, Politiche Attive del Lavoro"
   },
   {
     "id": "8",
     "nome": "ISTITUTO VENETO PER IL LAVORO",
-    "descrizione": "Ente di formazione professionale e servizi per il lavoro in Veneto",
-    "sito": null,
+    "descrizione": "Formazione professionale e servizi per il lavoro",
+    "sito": "www.ivl.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "MESTRE",
+        "citta": "Mestre",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Torino 101, 30172 Mestre VE",
+        "cap": "30172",
+        "telefono": "041.932241",
+        "email": "sede@ivl.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Servizi per il Lavoro"
   },
   {
     "id": "9",
     "nome": "E.F.A. - ENTE FORMAZIONE ARTIGIANA",
-    "descrizione": "Ente di Formazione Professionale dell'Artigianato",
-    "sito": null,
+    "descrizione": "Ente Formazione Artigianato",
+    "sito": "www.federclaai.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "PADOVA",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Corso Stati Uniti 18/b, 35127 Padova PD",
+        "cap": "35127",
+        "telefono": "049.8705583",
+        "email": "efa@federclaai.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "10",
     "nome": "SISTHEMA FORMAZIONE SCARL",
-    "descrizione": "Ente di formazione professionale",
-    "sito": null,
+    "descrizione": "Formazione professionale e servizi per il lavoro",
+    "sito": "www.sisthema.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "CASTELFRANCO VENETO",
+        "citta": "Castelfranco Veneto",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Degli Olivi 1, 31033 Castelfranco Veneto TV",
+        "cap": "31033",
+        "telefono": "0423.451019",
+        "email": "info@sisthemaformazione.it",
         "googleMaps": ""
       }
     ],
@@ -522,22 +452,22 @@
   {
     "id": "13",
     "nome": "CESCOT VENETO",
-    "descrizione": "Centro Studi Commercio Turismo - Formazione per commercio e turismo",
-    "sito": null,
+    "descrizione": "Formazione per il terziario e i servizi",
+    "sito": "www.cescotveneto.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "PADOVA",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via G. Savelli 8, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "049.8698611",
+        "email": "info@cescotveneto.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Terziario"
   },
   {
     "id": "14",
@@ -582,12 +512,12 @@
   {
     "id": "16",
     "nome": "ASCOM SERVIZI PADOVA SPA",
-    "descrizione": "Confcommercio Padova - Formazione per commercio e servizi",
+    "descrizione": "Formazione per il commercio e i servizi",
     "sito": null,
     "settori": "Commercio, Servizi",
     "sedi": [
       {
-        "nome": "Padova",
+        "nome": "PADOVA",
         "citta": "Padova",
         "provincia": "PD",
         "indirizzo": "Piazza V. Bardella 3, 35131 Padova PD",
@@ -597,7 +527,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Commercio, Servizi"
+    "categorie": "Formazione Professionale, Commercio"
   },
   {
     "id": "17",
@@ -642,42 +572,42 @@
   {
     "id": "19",
     "nome": "IRECOOP VENETO SRL",
-    "descrizione": "Istituto Regionale per l'Educazione Cooperativa del Veneto",
-    "sito": null,
+    "descrizione": "Formazione per la cooperazione",
+    "sito": "www.irecoop.veneto.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "PADOVA",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Savelli 128, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "049.8076143",
+        "email": "info@irecoop.veneto.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Cooperazione"
   },
   {
     "id": "20",
     "nome": "ECIPA SOCIETA' CONSORTILE A RL",
-    "descrizione": "Ente Confederale di Istruzione Professionale per l'Artigianato",
-    "sito": null,
+    "descrizione": "Formazione professionale per artigiani e PMI",
+    "sito": "www.ecipa.eu",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "MARGHERA",
+        "citta": "Marghera",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via della Pila 3/B, 30175 Marghera VE",
+        "cap": "30175",
+        "telefono": "041.928638",
+        "email": "info@ecipa.eu",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "21",
@@ -722,22 +652,22 @@
   {
     "id": "23",
     "nome": "FONDAZIONE CUOA - CENTRO UNIVERSITARIO DI ORGANIZZAZIONE AZIENDALE",
-    "descrizione": "Centro Universitario di Organizzazione Aziendale - Business School",
-    "sito": null,
+    "descrizione": "Centro Universitario di Organizzazione Aziendale - Alta formazione manageriale",
+    "sito": "www.cuoa.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "ALTAVILLA VICENTINA",
+        "citta": "Altavilla Vicentina",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Marconi 103, 36077 Altavilla Vicentina VI",
+        "cap": "36077",
+        "telefono": "0444.333735",
+        "email": "info@cuoa.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Alta Formazione, Management"
   },
   {
     "id": "24",
@@ -762,22 +692,22 @@
   {
     "id": "25",
     "nome": "I.N.I.A.P.A. VENETO S. CONSORTILE A RL",
-    "descrizione": "",
-    "sito": null,
+    "descrizione": "Formazione e servizi per artigiani",
+    "sito": "https://iniapa.com",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "MARGHERA",
+        "citta": "Marghera",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via delle Industrie 19/c, 30175 Marghera VE",
+        "cap": "30175",
+        "telefono": "041.929270",
+        "email": "info@iniapa.com",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "26",
@@ -802,12 +732,12 @@
   {
     "id": "27",
     "nome": "SCUOLA SUPERIORE DI SALDATURA E CONTROLLO SRL",
-    "descrizione": "Scuola specializzata in saldatura, controlli non distruttivi e qualità",
+    "descrizione": "Formazione specialistica in saldatura e controlli non distruttivi",
     "sito": "www.saldaturacontrollo.it",
     "settori": "Saldatura, Controlli Qualità",
     "sedi": [
       {
-        "nome": "Caldogno",
+        "nome": "CALDOGNO",
         "citta": "Caldogno",
         "provincia": "VI",
         "indirizzo": "Via Diviglio 235, 36030 Caldogno VI",
@@ -817,17 +747,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Saldatura, Controlli Qualità"
+    "categorie": "Formazione Professionale, Saldatura"
   },
   {
     "id": "28",
     "nome": "CENTRO CONSORZI",
-    "descrizione": "Centro di formazione professionale Belluno",
+    "descrizione": "Formazione professionale e servizi per le imprese",
     "sito": "www.centroconsorzi.it",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Longarone",
+        "nome": "LONGARONE",
         "citta": "Longarone",
         "provincia": "BL",
         "indirizzo": "Z.I. Villanova, Via Malcom 14, 32013 Longarone BL",
@@ -842,22 +772,22 @@
   {
     "id": "29",
     "nome": "JOB & SCHOOL FORMAZIONE E PROFESSIONE - SOCIETA' COOPERATIVA",
-    "descrizione": "Centro di formazione professionale e orientamento al lavoro",
-    "sito": null,
+    "descrizione": "Formazione professionale e orientamento",
+    "sito": "www.job-school.com",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "GRUARO",
+        "citta": "Gruaro",
         "provincia": "VE",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via dell'Artigianato 1, 30020 Gruaro VE",
+        "cap": "30020",
+        "telefono": "0421.280436",
+        "email": "info.gruaro@job-school.com",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, IeFP"
   },
   {
     "id": "30",
@@ -982,13 +912,13 @@
   {
     "id": "36",
     "nome": "AG-FORM SRL",
-    "descrizione": "Centro di formazione professionale",
+    "descrizione": "Formazione e servizi per il lavoro",
     "sito": "https://www.ag-form.it/",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Venezia Mestre",
-        "citta": "Venezia Mestre",
+        "nome": "MESTRE",
+        "citta": "Mestre",
         "provincia": "VE",
         "indirizzo": "Via Peschiera 7, 30174 Venezia Mestre VE",
         "cap": "30174",
@@ -1002,12 +932,12 @@
   {
     "id": "37",
     "nome": "ERAPRA DEL VENETO",
-    "descrizione": "Formazione agricola e sviluppo rurale - Coldiretti Veneto",
+    "descrizione": "Ente Regionale Agricoltura - Formazione agricola e sviluppo rurale",
     "sito": "www.erapraveneto.it",
     "settori": "Agricoltura, Formazione",
     "sedi": [
       {
-        "nome": "Mestre",
+        "nome": "MESTRE SEDE REGIONALE",
         "citta": "Mestre",
         "provincia": "VE",
         "indirizzo": "Via Torino 101, 30172 Mestre VE",
@@ -1017,7 +947,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Agricoltura, Formazione"
+    "categorie": "Formazione Professionale, Agricoltura"
   },
   {
     "id": "38",
@@ -1042,22 +972,22 @@
   {
     "id": "39",
     "nome": "UNINDUSTRIA SERVIZI & FORMAZIONE TREVISO PORDENONE SCARL",
-    "descrizione": "",
-    "sito": null,
+    "descrizione": "Formazione Confartigianato Marca Trevigiana",
+    "sito": "www.confartigianatoformazione.tv",
     "settori": "",
     "sedi": [
       {
         "nome": "",
         "citta": "",
         "provincia": "TV",
-        "indirizzo": "",
+        "indirizzo": "Piazza delle Istituzioni 34, 31100 Treviso TV",
         "cap": "",
         "telefono": "",
-        "email": "",
+        "email": "info@confartigianatoformazione.tv",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "40",
@@ -1102,12 +1032,12 @@
   {
     "id": "42",
     "nome": "ISTITUTO VENETO PER I BENI CULTURALI",
-    "descrizione": "Formazione specialistica in restauro e conservazione beni culturali",
+    "descrizione": "Formazione per il restauro e i beni culturali",
     "sito": "www.ivbc.it",
     "settori": "Restauro, Beni Culturali",
     "sedi": [
       {
-        "nome": "Venezia",
+        "nome": "VENEZIA",
         "citta": "Venezia",
         "provincia": "VE",
         "indirizzo": "San Marco 2940, 30124 Venezia VE",
@@ -1302,12 +1232,12 @@
   {
     "id": "52",
     "nome": "UPA SERVIZI SRL",
-    "descrizione": "Confartigianato Verona - Formazione artigianato",
+    "descrizione": "Servizi di formazione Confartigianato Verona",
     "sito": "https://confartigianato.verona.it/",
     "settori": "Artigianato, Formazione",
     "sedi": [
       {
-        "nome": "Verona",
+        "nome": "VERONA",
         "citta": "Verona",
         "provincia": "VR",
         "indirizzo": "Via Selenia 16, 37135 Verona VR",
@@ -1317,7 +1247,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Artigianato, Formazione"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "53",
@@ -1382,22 +1312,22 @@
   {
     "id": "56",
     "nome": "FOREMA SRL",
-    "descrizione": "Ente di formazione aziendale e manageriale",
-    "sito": null,
+    "descrizione": "Formazione e sviluppo delle competenze per imprese e lavoratori",
+    "sito": "www.forema.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "PADOVA",
+        "citta": "Padova",
         "provincia": "PD",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Cave 178, 35129 Padova PD",
+        "cap": "35129",
+        "telefono": "049.8227500",
+        "email": "marketing@forema.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Formazione Continua"
   },
   {
     "id": "57",
@@ -1502,12 +1432,12 @@
   {
     "id": "62",
     "nome": "CESAR SRL",
-    "descrizione": "Confartigianato Vicenza - Formazione e servizi per l'artigianato",
+    "descrizione": "Servizi di formazione Confartigianato Vicenza",
     "sito": "www.cesarformazione.it",
     "settori": "Artigianato, Formazione",
     "sedi": [
       {
-        "nome": "Vicenza",
+        "nome": "VICENZA",
         "citta": "Vicenza",
         "provincia": "VI",
         "indirizzo": "Via E. Fermi 197, 36100 Vicenza VI",
@@ -1517,7 +1447,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Artigianato, Formazione"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "63",
@@ -1542,22 +1472,22 @@
   {
     "id": "64",
     "nome": "ESAC SPA",
-    "descrizione": "Università del Gusto - Formazione settore enogastronomico e ristorazione",
-    "sito": null,
+    "descrizione": "Università del Gusto - Formazione ristorazione e ospitalità",
+    "sito": "www.esacformazione.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "CREAZZO",
+        "citta": "Creazzo",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via Piazzon 40, 36051 Creazzo VI",
+        "cap": "36051",
+        "telefono": "0444.964300",
+        "email": "info@esacformazione.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Ristorazione"
   },
   {
     "id": "65",
@@ -1642,12 +1572,12 @@
   {
     "id": "69",
     "nome": "SYNTHESIS SRL",
-    "descrizione": "Formazione tecnica e innovazione",
+    "descrizione": "Formazione tecnica e professionale avanzata",
     "sito": "www.synthesis-srl.com",
     "settori": "Formazione Tecnica",
     "sedi": [
       {
-        "nome": "Noventa Padovana",
+        "nome": "NOVENTA PADOVANA",
         "citta": "Noventa Padovana",
         "provincia": "PD",
         "indirizzo": "Via Panà 56/a, 35020 Noventa Padovana PD",
@@ -1657,7 +1587,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Tecnica"
+    "categorie": "Formazione Professionale, Formazione Tecnica"
   },
   {
     "id": "70",
@@ -1722,22 +1652,22 @@
   {
     "id": "73",
     "nome": "CERTOTTICA S.C.R.L.",
-    "descrizione": "Centro di formazione per il settore ottico",
-    "sito": null,
+    "descrizione": "Formazione specialistica settore ottico",
+    "sito": "www.certottica.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "LONGARONE",
+        "citta": "Longarone",
         "provincia": "BL",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Z.I. Villanova, Via Malcom 1, 32013 Longarone BL",
+        "cap": "32013",
+        "telefono": "0437.573157",
+        "email": "formazione@certottica.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Ottica"
   },
   {
     "id": "74",
@@ -1782,22 +1712,22 @@
   {
     "id": "76",
     "nome": "NIUKO - INNOVATION & KNOWLEDGE S.R.L.",
-    "descrizione": "Innovation & Knowledge - Formazione su innovazione e tecnologia",
-    "sito": null,
+    "descrizione": "Innovation & Knowledge - Formazione e innovazione",
+    "sito": "www.niuko.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "VICENZA",
+        "citta": "Vicenza",
         "provincia": "VI",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Piazza Pontelandolfo 27, 36100 Vicenza VI",
+        "cap": "36100",
+        "telefono": "0444.1757700",
+        "email": "info@niuko.it",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Innovazione"
   },
   {
     "id": "77",
@@ -1822,12 +1752,12 @@
   {
     "id": "78",
     "nome": "CON-SER SRL",
-    "descrizione": "Servizi di formazione Venezia",
+    "descrizione": "Servizi di formazione CNA Venezia",
     "sito": "https://www.con-ser.it/",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Marcon",
+        "nome": "MARCON",
         "citta": "Marcon",
         "provincia": "VE",
         "indirizzo": "Viale R. Lombardi 19, 30020 Marcon VE",
@@ -1837,7 +1767,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "79",
@@ -2102,12 +2032,12 @@
   {
     "id": "92",
     "nome": "EQUASOFT SRL",
-    "descrizione": "Formazione informatica e tecnologica",
+    "descrizione": "Formazione tecnica e informatica",
     "sito": "www.equasoft.it",
     "settori": "Informatica, Tecnologia",
     "sedi": [
       {
-        "nome": "Vicenza",
+        "nome": "VICENZA",
         "citta": "Vicenza",
         "provincia": "VI",
         "indirizzo": "Via Divisione Folgore 7/D, 36100 Vicenza VI",
@@ -2117,7 +2047,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Informatica, Tecnologia"
+    "categorie": "Formazione Professionale, Informatica"
   },
   {
     "id": "93",
@@ -2462,12 +2392,12 @@
   {
     "id": "110",
     "nome": "ISTITUTO E SCUOLA DI ESTETICA PRIMIA SRL",
-    "descrizione": "Scuola specializzata in estetica",
+    "descrizione": "Scuola di estetica professionale",
     "sito": null,
     "settori": "Estetica",
     "sedi": [
       {
-        "nome": "Padova",
+        "nome": "PADOVA",
         "citta": "Padova",
         "provincia": "PD",
         "indirizzo": "Via Andrea Da Bassano 11, 35134 Padova PD",
@@ -2477,17 +2407,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Estetica"
+    "categorie": "Formazione Professionale, Estetica"
   },
   {
     "id": "111",
     "nome": "SEGRA - SCUOLA PROFESSIONALE DI ESTETICA",
-    "descrizione": "Scuola specializzata in estetica",
+    "descrizione": "Scuola professionale di estetica",
     "sito": null,
     "settori": "Estetica",
     "sedi": [
       {
-        "nome": "Treviso",
+        "nome": "TREVISO",
         "citta": "Treviso",
         "provincia": "TV",
         "indirizzo": "Via Cal di Breda 42, 31100 Treviso TV",
@@ -2497,7 +2427,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Estetica"
+    "categorie": "Formazione Professionale, Estetica"
   },
   {
     "id": "112",
@@ -2622,18 +2552,18 @@
   {
     "id": "118",
     "nome": "GIF - GRUPPO INSEGNANTI FORMATORI SCARL",
-    "descrizione": "Gruppo formatori professionali",
-    "sito": null,
+    "descrizione": "Gruppo Insegnanti Formatori - Formazione professionale",
+    "sito": "www.gifonline.com",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "ODERZO",
+        "citta": "Oderzo",
         "provincia": "TV",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
-        "email": "",
+        "indirizzo": "Via mons. Paride Artico 13, 31046 Oderzo TV",
+        "cap": "31046",
+        "telefono": "0422.717488",
+        "email": "marketing@gifonline.com",
         "googleMaps": ""
       }
     ],
@@ -3302,12 +3232,12 @@
   {
     "id": "152",
     "nome": "FONDAZIONE LEPIDO ROCCO",
-    "descrizione": "Fondazione per la formazione professionale",
+    "descrizione": "Fondazione - Formazione professionale",
     "sito": "www.lepidorocco.it",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Motta di Livenza",
+        "nome": "MOTTA DI LIVENZA",
         "citta": "Motta di Livenza",
         "provincia": "TV",
         "indirizzo": "Via S. Giacomo 25, 31046 Motta di Livenza TV",
@@ -3317,7 +3247,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, IeFP"
   },
   {
     "id": "153",
@@ -3822,42 +3752,42 @@
   {
     "id": "178",
     "nome": "ISTITUTO SUPERIORE CIPRIANI-COLOMBO DI ADRIA",
-    "descrizione": "",
+    "descrizione": "Istituto di Istruzione Superiore - Formazione professionale",
     "sito": null,
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "ADRIA",
+        "citta": "Adria",
         "provincia": "RO",
-        "indirizzo": "",
-        "cap": "",
+        "indirizzo": "Via Aldo Moro 1, 45011 Adria RO",
+        "cap": "45011",
         "telefono": "",
         "email": "",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "IeFP, Istruzione Superiore"
   },
   {
     "id": "179",
     "nome": "CENTRO POLIFUNZIONALE DON CALABRIA FONDAZIONE ETS",
-    "descrizione": "",
-    "sito": null,
+    "descrizione": "Formazione professionale e servizi educativi",
+    "sito": "www.centrodoncalabria.it",
     "settori": "",
     "sedi": [
       {
-        "nome": "",
-        "citta": "",
+        "nome": "VERONA",
+        "citta": "Verona",
         "provincia": "VR",
-        "indirizzo": "",
-        "cap": "",
-        "telefono": "",
+        "indirizzo": "Via San Marco 121, 37138 Verona VR",
+        "cap": "37138",
+        "telefono": "045.8184411",
         "email": "",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Servizi Educativi"
   },
   {
     "id": "180",
@@ -4022,12 +3952,12 @@
   {
     "id": "188",
     "nome": "DIEFFE SCARL",
-    "descrizione": "Ente di formazione e inclusione sociale",
+    "descrizione": "Formazione e inclusione sociale",
     "sito": "www.dieffe.com",
     "settori": "Formazione Professionale, Inclusione Sociale",
     "sedi": [
       {
-        "nome": "Padova",
+        "nome": "PADOVA",
         "citta": "Padova",
         "provincia": "PD",
         "indirizzo": "Via Forcellini 170/A, 35128 Padova PD",
@@ -4062,12 +3992,12 @@
   {
     "id": "190",
     "nome": "CONSORZIO VENETO INSIEME",
-    "descrizione": "Consorzio per l'inclusione sociale e la formazione",
+    "descrizione": "Formazione e servizi per la cooperazione sociale",
     "sito": "www.venetoinsieme.it",
     "settori": "Inclusione Sociale, Formazione",
     "sedi": [
       {
-        "nome": "Padova",
+        "nome": "PADOVA",
         "citta": "Padova",
         "provincia": "PD",
         "indirizzo": "Via G. Pullè 21, 35136 Padova PD",
@@ -4077,17 +4007,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Inclusione Sociale, Formazione"
+    "categorie": "Formazione Professionale, Cooperazione Sociale"
   },
   {
     "id": "191",
     "nome": "FONDAZIONE CENTRO PRODUTTIVITÀ VENETO",
-    "descrizione": "Centro di eccellenza per la formazione aziendale e produttività",
+    "descrizione": "Centro Produttività Veneto - Formazione e innovazione per le imprese",
     "sito": "www.cpv.org",
     "settori": "Formazione Aziendale, Produttività",
     "sedi": [
       {
-        "nome": "Vicenza",
+        "nome": "VICENZA",
         "citta": "Vicenza",
         "provincia": "VI",
         "indirizzo": "Via Rossini 60, 36100 Vicenza VI",
@@ -4097,7 +4027,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Aziendale, Produttività"
+    "categorie": "Formazione Professionale, Innovazione"
   },
   {
     "id": "192",
@@ -4122,12 +4052,12 @@
   {
     "id": "193",
     "nome": "PERFORMARE SPA",
-    "descrizione": "Ente di formazione professionale e consulenza",
+    "descrizione": "Formazione e sviluppo organizzativo",
     "sito": "www.performare.net",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Vicenza",
+        "nome": "VICENZA",
         "citta": "Vicenza",
         "provincia": "VI",
         "indirizzo": "Viale del Commercio 1/C, 36100 Vicenza VI",
@@ -4137,17 +4067,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Consulenza"
   },
   {
     "id": "194",
     "nome": "UNISEF",
-    "descrizione": "Unindustria Treviso - Formazione industria e sicurezza sul lavoro",
+    "descrizione": "Unindustria Treviso - Servizi e Formazione",
     "sito": "www.unisef.it",
     "settori": "Industria, Sicurezza sul Lavoro",
     "sedi": [
       {
-        "nome": "Treviso",
+        "nome": "TREVISO",
         "citta": "Treviso",
         "provincia": "TV",
         "indirizzo": "Piazza delle Istituzioni 12, 31100 Treviso TV",
@@ -4157,7 +4087,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Industria, Sicurezza sul Lavoro"
+    "categorie": "Formazione Professionale, Industria"
   },
   {
     "id": "195",
@@ -4202,12 +4132,12 @@
   {
     "id": "197",
     "nome": "IRIGEM",
-    "descrizione": "Società Cooperativa di formazione professionale",
+    "descrizione": "Formazione professionale cooperativa",
     "sito": "www.irigem.it",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Rosà",
+        "nome": "ROSÀ",
         "citta": "Rosà",
         "provincia": "VI",
         "indirizzo": "Via Tezze 36, 36027 Rosà VI",
@@ -4217,7 +4147,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, IeFP"
   },
   {
     "id": "198",
@@ -4282,12 +4212,12 @@
   {
     "id": "201",
     "nome": "UNIONCOOP FORMAZIONE E IMPRESA",
-    "descrizione": "Formazione tecnica e professionale avanzata - Cooperazione",
+    "descrizione": "Formazione e impresa cooperativa",
     "sito": "www.unioncoop.com",
     "settori": "Formazione Tecnica, Cooperazione",
     "sedi": [
       {
-        "nome": "Chioggia",
+        "nome": "CHIOGGIA",
         "citta": "Chioggia",
         "provincia": "VE",
         "indirizzo": "Via Maestri del Lavoro 50, 30015 Chioggia VE",
@@ -4297,17 +4227,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Tecnica, Cooperazione"
+    "categorie": "Formazione Professionale, Cooperazione"
   },
   {
     "id": "202",
     "nome": "ISPI GROUP SRL",
-    "descrizione": "Istituto di formazione professionale e tecnica",
+    "descrizione": "Formazione professionale e orientamento",
     "sito": "www.ispi-botticelli.it",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Padova",
+        "nome": "PADOVA",
         "citta": "Padova",
         "provincia": "PD",
         "indirizzo": "Via Guizza 57/A, 35125 Padova PD",
@@ -4322,12 +4252,12 @@
   {
     "id": "203",
     "nome": "ATENA SPA",
-    "descrizione": "Centro di formazione e orientamento professionale",
+    "descrizione": "Formazione e orientamento professionale",
     "sito": "www.atenateam.it",
     "settori": "Formazione Professionale, Orientamento",
     "sedi": [
       {
-        "nome": "Treviso",
+        "nome": "TREVISO",
         "citta": "Treviso",
         "provincia": "TV",
         "indirizzo": "Viale Appiani 22, 31100 Treviso TV",
@@ -4342,12 +4272,12 @@
   {
     "id": "204",
     "nome": "PENTA FORMAZIONE SRL",
-    "descrizione": "Centro di formazione professionale",
+    "descrizione": "Formazione professionale e sicurezza",
     "sito": "www.pentaformazione.it",
     "settori": "Formazione Professionale",
     "sedi": [
       {
-        "nome": "Monastier di Treviso",
+        "nome": "MONASTIER DI TREVISO",
         "citta": "Monastier di Treviso",
         "provincia": "TV",
         "indirizzo": "Via Monte Grappa 13/A, 31050 Monastier di Treviso TV",
@@ -4357,17 +4287,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale, Sicurezza"
   },
   {
     "id": "205",
     "nome": "ASSOCIAZIONE PICCOLA COMUNITÀ ONLUS",
-    "descrizione": "Formazione e inclusione sociale",
+    "descrizione": "Formazione e servizi educativi",
     "sito": "www.piccolacomunita.org",
     "settori": "Formazione Professionale, Sociale",
     "sedi": [
       {
-        "nome": "Conegliano",
+        "nome": "CONEGLIANO",
         "citta": "Conegliano",
         "provincia": "TV",
         "indirizzo": "Via P. Molmenti 8, 31015 Conegliano TV",
@@ -4377,7 +4307,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Sociale"
+    "categorie": "Formazione Professionale, Servizi Educativi"
   },
   {
     "id": "206",
@@ -4402,12 +4332,12 @@
   {
     "id": "207",
     "nome": "TECNA SOC. CONS. SRL",
-    "descrizione": "CNA Padova - Formazione e servizi per l'artigianato",
+    "descrizione": "Servizi di formazione CNA Padova",
     "sito": "https://www.tecnapadova.it/",
     "settori": "Artigianato, Formazione",
     "sedi": [
       {
-        "nome": "Padova",
+        "nome": "PADOVA",
         "citta": "Padova",
         "provincia": "PD",
         "indirizzo": "Via Savelli 128, 35129 Padova PD",
@@ -4417,17 +4347,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Artigianato, Formazione"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "208",
     "nome": "COOPERATIVA SOCIALE STUDIO PROGETTO",
-    "descrizione": "Cooperativa sociale - Formazione e servizi alla persona",
+    "descrizione": "Cooperativa sociale - Formazione e inclusione",
     "sito": "www.studioprogetto.org",
     "settori": "Sociale, Formazione",
     "sedi": [
       {
-        "nome": "Cornedo Vicentino",
+        "nome": "CORNEDO VICENTINO",
         "citta": "Cornedo Vicentino",
         "provincia": "VI",
         "indirizzo": "Via Monte Ortigara 115/B, 36073 Cornedo Vicentino VI",
@@ -4437,7 +4367,7 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Sociale, Formazione"
+    "categorie": "Formazione Professionale, Cooperazione Sociale"
   },
   {
     "id": "209",
@@ -4447,7 +4377,7 @@
     "settori": "Sociale, Formazione",
     "sedi": [
       {
-        "nome": "Schio",
+        "nome": "SCHIO",
         "citta": "Schio",
         "provincia": "VI",
         "indirizzo": "Via Paraiso 60, 36015 Schio VI",
@@ -4457,17 +4387,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Sociale, Formazione"
+    "categorie": "Formazione Professionale, Cooperazione Sociale"
   },
   {
     "id": "210",
     "nome": "INSIEME COOPERATIVA SOCIALE",
-    "descrizione": "Cooperativa sociale - Formazione e servizi",
+    "descrizione": "Cooperativa sociale - Formazione e servizi alla persona",
     "sito": "insiemesociale.it",
     "settori": "Sociale, Formazione",
     "sedi": [
       {
-        "nome": "Vicenza",
+        "nome": "VICENZA",
         "citta": "Vicenza",
         "provincia": "VI",
         "indirizzo": "Via Basilio Dalla Scola 255, 36100 Vicenza VI",
@@ -4477,17 +4407,17 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Sociale, Formazione"
+    "categorie": "Formazione Professionale, Cooperazione Sociale"
   },
   {
     "id": "211",
     "nome": "APPIA SERVIZI SRL",
-    "descrizione": "CNA Belluno - Formazione artigianato",
+    "descrizione": "Servizi di formazione CNA Belluno",
     "sito": "https://appiacna.com/",
     "settori": "Artigianato, Formazione",
     "sedi": [
       {
-        "nome": "Belluno",
+        "nome": "BELLUNO",
         "citta": "Belluno",
         "provincia": "BL",
         "indirizzo": "Via S. Gervasio 17, 32100 Belluno BL",
@@ -4497,27 +4427,27 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Artigianato, Formazione"
+    "categorie": "Formazione Professionale, Artigianato"
   },
   {
     "id": "212",
     "nome": "IAL ANAPIA VENETO SRL IMPRESA SOCIALE",
-    "descrizione": "Formazione professionale e sociale - CISL",
+    "descrizione": "Formazione professionale e orientamento",
     "sito": "https://www.ialanapia.net/",
     "settori": "Formazione Professionale, Sociale",
     "sedi": [
       {
-        "nome": "Venezia Mestre",
-        "citta": "Venezia Mestre",
+        "nome": "MESTRE",
+        "citta": "Mestre",
         "provincia": "VE",
-        "indirizzo": "Via Torino 103, 30172 Venezia / Mestre VE",
+        "indirizzo": "Via Torino 103, 30172 Venezia Mestre VE",
         "cap": "30172",
         "telefono": "",
         "email": "",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Sociale"
+    "categorie": "Formazione Professionale"
   },
   {
     "id": "213",
@@ -4542,32 +4472,32 @@
   {
     "id": "214",
     "nome": "GRUPPO FORMAZIONE SRL",
-    "descrizione": "Centro di formazione tecnica",
+    "descrizione": "Formazione professionale e servizi per il lavoro",
     "sito": "https://www.gruppoformazione.it/",
     "settori": "Formazione Tecnica",
     "sedi": [
       {
-        "nome": "Peschiera del Garda",
+        "nome": "PESCHIERA DEL GARDA",
         "citta": "Peschiera del Garda",
         "provincia": "VR",
-        "indirizzo": "Via Don B. Pozzetti 6, 37019 Peschiera del Garda VR",
+        "indirizzo": "Via Don B. Pozzetti 6, fraz. S. Benedetto, 37019 Peschiera del Garda VR",
         "cap": "37019",
         "telefono": "",
         "email": "",
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Tecnica"
+    "categorie": "Formazione Professionale"
   },
   {
     "id": "215",
     "nome": "POSTER FORMAZIONE",
-    "descrizione": "Centro di formazione e innovazione",
+    "descrizione": "Formazione e orientamento professionale",
     "sito": "https://www.poster.it/",
     "settori": "Formazione Professionale, Innovazione",
     "sedi": [
       {
-        "nome": "Vicenza",
+        "nome": "VICENZA",
         "citta": "Vicenza",
         "provincia": "VI",
         "indirizzo": "Viale F. Crispi 142, 36100 Vicenza VI",
@@ -4577,6 +4507,6 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Innovazione"
+    "categorie": "Formazione Professionale, Orientamento"
   }
 ]
