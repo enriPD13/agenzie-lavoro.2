@@ -127,7 +127,7 @@ const Enti = {
   },
   
   openSedi(id) {
-    const ente = this.allEnti.find(e => e.id === id);
+    const ente = this.allEnti.find(e => e.id === String(id));
     if (!ente) return;
     
     document.getElementById('sediEnteName').textContent = ente.nome;
@@ -206,6 +206,7 @@ const Enti = {
   async toggleFavorite(enteId) {
     if (!window.FirebaseFavorites) return;
     
+    enteId = String(enteId);  // Converti a stringa
     const index = this.favorites.indexOf(enteId);
     if (index > -1) {
       await FirebaseFavorites.removeEnte(enteId);
@@ -217,7 +218,7 @@ const Enti = {
   },
   
   isFavorite(enteId) {
-    return this.favorites.includes(enteId);
+    return this.favorites.includes(String(enteId));
   },
   
   async toggleSedeFavorite(sedeId, enteNome, city) {
