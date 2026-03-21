@@ -4,7 +4,7 @@
     "nome": "UMANA",
     "descrizione": "Il più grande gruppo al mondo nella gestione HR.",
     "sito": "https://www.adecco.it/",
-    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/qnGmMPaEg79XEPDTks5p.png",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/u6aSOHJGnmtPczHEs98g.png",
     "formIscrizione": "https://candidate.adecco.it/candidate/register.asp",
     "settori": [
       "Operativo",
@@ -646,12 +646,11 @@
       {
         "nome": "Conselve",
         "citta": "Conselve",
-        "provincia": "",
-        "indirizzo": "Via Vittorio Emanuele II, 101/B",
-        "cap": "",
-        "telefono": "049 535 2234",
+        "indirizzo": "Via Vittorio Emanuele II, 32, PD",
+        "cap": "35026",
+        "telefono": "049.5352234",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Areajob+Conselve+Via+Vittorio+Emanuele+II+32"
       }
     ]
   },
@@ -1397,14 +1396,85 @@
     ],
     "sedi": [
       {
-        "nome": "Monselice",
-        "citta": "Monselice",
-        "provincia": "",
-        "indirizzo": "Piazza Ossicella, 25",
+        "nome": "Padova",
+        "citta": "Padova",
+        "indirizzo": "Via San Crispino, PD",
         "cap": "",
-        "telefono": "0429 781061",
+        "telefono": "049.0990068",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Padova"
+      },
+      {
+        "nome": "Castelfranco Veneto",
+        "citta": "Castelfranco Veneto",
+        "indirizzo": "Via S. Pio X, TV",
+        "cap": "",
+        "telefono": "0423.723856",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Castelfranco+Veneto"
+      },
+      {
+        "nome": "Conegliano",
+        "citta": "Conegliano",
+        "indirizzo": "Conegliano, TV",
+        "cap": "",
+        "telefono": "0438.1914645",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Conegliano"
+      },
+      {
+        "nome": "Mestre",
+        "citta": "Mestre",
+        "indirizzo": "Mestre, VE",
+        "cap": "",
+        "telefono": "041.0980025",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Mestre"
+      },
+      {
+        "nome": "Portogruaro",
+        "citta": "Portogruaro",
+        "indirizzo": "Portogruaro, VE",
+        "cap": "",
+        "telefono": "0421.1897254",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Portogruaro"
+      },
+      {
+        "nome": "San Donà di Piave",
+        "citta": "San Donà di Piave",
+        "indirizzo": "San Donà di Piave, VE",
+        "cap": "",
+        "telefono": "0421.336599",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+San+Donà+di+Piave"
+      },
+      {
+        "nome": "Treviso",
+        "citta": "Treviso",
+        "indirizzo": "Treviso, TV",
+        "cap": "",
+        "telefono": "0422.1840071",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Treviso"
+      },
+      {
+        "nome": "Verona",
+        "citta": "Verona",
+        "indirizzo": "Verona, VR",
+        "cap": "",
+        "telefono": "045.8532019",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Verona"
+      },
+      {
+        "nome": "Vicenza",
+        "citta": "Vicenza",
+        "indirizzo": "Vicenza, VI",
+        "cap": "",
+        "telefono": "0444.1783621",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Lavoropiu+Vicenza"
       }
     ]
   },
@@ -1817,12 +1887,29 @@
       {
         "nome": "Padova",
         "citta": "Padova",
-        "provincia": "",
-        "indirizzo": "Via Niccolò Tommaseo, 98/A",
-        "cap": "",
-        "telefono": "049 099 0215",
+        "indirizzo": "Via Niccolò Tommaseo, 98/A, PD",
+        "cap": "35131",
+        "telefono": "049.0990215",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps?q=Via+Niccol%C3%B2+Tommaseo,+98a+35131+Padova+PD"
+      },
+      {
+        "nome": "Montecchio Maggiore",
+        "citta": "Montecchio Maggiore",
+        "indirizzo": "Piazza Guillermo Marconi, 4, VI",
+        "cap": "36075",
+        "telefono": "0444.1836421",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=NHRG+Montecchio+Maggiore+Piazza+Marconi+4"
+      },
+      {
+        "nome": "Treviso",
+        "citta": "Treviso",
+        "indirizzo": "Via Della Quercia, 2/B, TV",
+        "cap": "31100",
+        "telefono": "0422.1520939",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps?q=Via+della+Quercia,+2b+31100+Treviso+TV"
       }
     ]
   },
@@ -1840,12 +1927,20 @@
       {
         "nome": "Padova",
         "citta": "Padova",
-        "provincia": "",
-        "indirizzo": "Viale dell'Industria, 23",
-        "cap": "",
-        "telefono": "049 807 5523",
+        "indirizzo": "Viale dell'Industria, 23, PD",
+        "cap": "35129",
+        "telefono": "049.8075523",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Oasi+Lavoro+Padova+Viale+dell+Industria+23"
+      },
+      {
+        "nome": "Verona",
+        "citta": "Verona",
+        "indirizzo": "Via Unità d'Italia, 214, VR",
+        "cap": "37132",
+        "telefono": "045.4911655",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Oasi+Lavoro+Verona+Via+Unità+d+Italia+214"
       }
     ]
   },
@@ -1884,14 +1979,22 @@
     ],
     "sedi": [
       {
+        "nome": "Verona",
+        "citta": "Verona",
+        "indirizzo": "Via Spagna, 12, VR",
+        "cap": "37123",
+        "telefono": "045.8200113",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Only+Job+Verona+Via+Spagna+12"
+      },
+      {
         "nome": "Monselice",
         "citta": "Monselice",
-        "provincia": "",
-        "indirizzo": "Via Luigi Cadorna, 15",
-        "cap": "",
-        "telefono": "0429 653397",
+        "indirizzo": "Via Luigi Cadorna, 15, PD",
+        "cap": "35043",
+        "telefono": "0429.653397",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Only+Job+Monselice+Via+Luigi+Cadorna+15"
       }
     ]
   },
@@ -1922,7 +2025,7 @@
     "nome": "ADECCO",
     "descrizione": "Servizi di somministrazione e ricerca personale.",
     "sito": "https://www.orienta.net/it/",
-    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/IYRakxn3G6H0OlnR6SCb.png",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/qnGmMPaEg79XEPDTks5p.png",
     "formIscrizione": "https://www.orienta.net/it/orienta-job/registrati-per-inviare-la-tua-candidatura.html",
     "settori": [
       "HR",
@@ -2298,14 +2401,22 @@
     ],
     "sedi": [
       {
-        "nome": "Padova",
+        "nome": "Padova Sede Operativa",
         "citta": "Padova",
-        "provincia": "",
-        "indirizzo": "Via Elisa Benato, 3",
-        "cap": "",
-        "telefono": "049 744 1600",
+        "indirizzo": "Via Elisa Benato, 3, PD",
+        "cap": "35133",
+        "telefono": "049.7441600",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=QJob+Padova+Via+Elisa+Benato+3"
+      },
+      {
+        "nome": "Spinea Sede Legale",
+        "citta": "Spinea",
+        "indirizzo": "Via delle Industrie, 18/A, VE",
+        "cap": "30038",
+        "telefono": "049.7441600",
+        "email": "",
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=QJob+Spinea+Via+delle+Industrie+18a"
       }
     ]
   },
@@ -2848,12 +2959,11 @@
       {
         "nome": "Limena",
         "citta": "Limena",
-        "provincia": "",
-        "indirizzo": "Via del Santo, 12",
-        "cap": "",
-        "telefono": "049 520 7832",
+        "indirizzo": "Via del Santo, 12, PD",
+        "cap": "35010",
+        "telefono": "049.5207832",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Tempjob+Limena+Via+del+Santo+12"
       }
     ]
   },
@@ -2869,14 +2979,13 @@
     ],
     "sedi": [
       {
-        "nome": "Venezia",
-        "citta": "Venezia",
-        "provincia": "",
-        "indirizzo": "Via Daniele Manin, 38/a",
-        "cap": "",
-        "telefono": "041 894 6902",
+        "nome": "Mestre",
+        "citta": "Mestre",
+        "indirizzo": "Via Manin, 38/a, VE",
+        "cap": "30174",
+        "telefono": "041.8946902",
         "email": "",
-        "googleMaps": ""
+        "googleMaps": "https://www.google.com/maps/search/?api=1&query=Temporary+Mestre+Via+Manin+38a"
       }
     ]
   },
@@ -2885,7 +2994,7 @@
     "nome": "ORIENTA",
     "descrizione": "Agenzia italiana specializzata in somministrazione.",
     "sito": "https://www.umana.it/",
-    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/u6aSOHJGnmtPczHEs98g.png",
+    "logo": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/NtJL2WrbhoxOfscJ2y3G/pub/IYRakxn3G6H0OlnR6SCb.png",
     "formIscrizione": "https://areacandidato.umana.it/area-candidato/iscrizione",
     "settori": [
       "Vari settori"
