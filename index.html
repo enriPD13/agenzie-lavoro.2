@@ -44,6 +44,9 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css">
   
+  <!-- SPLASH SCREEN CSS - FILE SEPARATO -->
+  <link rel="stylesheet" href="css/splash.css">
+  
   <style>
     /* Previene problemi di layout in landscape */
     * {
@@ -62,6 +65,18 @@
 </head>
 <body class="bg-gradient-to-br from-indigo-500 via-purple-600 to-pink-500 overflow-hidden">
   
+  <!-- ========================================
+       SPLASH SCREEN - Schermata di caricamento
+       ======================================== -->
+  <div id="splash-screen">
+    <div class="splash-logo">JobApp</div>
+    <div class="loader-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
   <!-- Container principale -->
   <div id="app-container"></div>
   
@@ -84,6 +99,15 @@
   <!-- Init -->
   <script>
     window.addEventListener('DOMContentLoaded', () => {
+      // Nascondi splash screen dopo 1.5 secondi
+      setTimeout(() => {
+        const splash = document.getElementById('splash-screen');
+        if (splash) {
+          splash.classList.add('hide');
+          setTimeout(() => splash.remove(), 500);
+        }
+      }, 1500);
+
       AppMain.init();
       
       // Tentativo blocco orientamento (funziona solo in PWA installata)
