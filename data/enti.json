@@ -37,7 +37,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FS",
+      "FC"
+    ]
   },
   {
     "id": "2",
@@ -157,7 +161,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, IeFP"
+    "categorie": "Formazione Professionale, IeFP",
+    "ambiti": [
+      "OF",
+      "FS",
+      "FC",
+      "OR"
+    ]
   },
   {
     "id": "5",
@@ -237,7 +247,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "IeFP, Formazione Professionale"
+    "categorie": "IeFP, Formazione Professionale",
+    "ambiti": [
+      "OF",
+      "FS",
+      "FC",
+      "OR"
+    ]
   },
   {
     "id": "6",
@@ -347,7 +363,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Politiche Attive del Lavoro"
+    "categorie": "Formazione Professionale, Politiche Attive del Lavoro",
+    "ambiti": [
+      "FS",
+      "FC"
+    ]
   },
   {
     "id": "8",
@@ -367,7 +387,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Servizi per il Lavoro"
+    "categorie": "Formazione Professionale, Servizi per il Lavoro",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "9",
@@ -387,7 +411,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "10",
@@ -407,7 +435,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "11",
@@ -427,7 +459,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "12",
@@ -447,7 +484,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "OR"
+    ]
   },
   {
     "id": "13",
@@ -467,7 +507,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Terziario"
+    "categorie": "Formazione Professionale, Terziario",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "14",
@@ -487,7 +531,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "15",
@@ -507,7 +555,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "16",
@@ -527,7 +579,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Commercio"
+    "categorie": "Formazione Professionale, Commercio",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "17",
@@ -547,7 +604,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "18",
@@ -567,7 +628,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "19",
@@ -587,7 +652,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Cooperazione"
+    "categorie": "Formazione Professionale, Cooperazione",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "20",
@@ -607,7 +676,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "21",
@@ -627,7 +701,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "22",
@@ -647,7 +727,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "23",
@@ -667,7 +753,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Alta Formazione, Management"
+    "categorie": "Alta Formazione, Management",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "24",
@@ -687,7 +776,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "25",
@@ -707,7 +800,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FS",
+      "FC"
+    ]
   },
   {
     "id": "26",
@@ -727,7 +824,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "27",
@@ -747,7 +848,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Saldatura"
+    "categorie": "Formazione Professionale, Saldatura",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "28",
@@ -767,7 +871,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "29",
@@ -787,7 +896,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, IeFP"
+    "categorie": "Formazione Professionale, IeFP",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "30",
@@ -807,7 +919,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "31",
@@ -827,7 +944,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "32",
@@ -847,7 +969,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "33",
@@ -867,7 +993,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "34",
@@ -887,7 +1016,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "35",
@@ -907,7 +1040,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "36",
@@ -927,7 +1064,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "37",
@@ -947,7 +1087,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Agricoltura"
+    "categorie": "Formazione Professionale, Agricoltura",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "38",
@@ -967,7 +1111,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "39",
@@ -987,7 +1135,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "40",
@@ -1007,7 +1159,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "41",
@@ -1027,7 +1183,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "OF"
+    ]
   },
   {
     "id": "42",
@@ -1047,7 +1206,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Restauro, Beni Culturali"
+    "categorie": "Restauro, Beni Culturali",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "43",
@@ -1067,7 +1230,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "44",
@@ -1087,7 +1254,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "45",
@@ -1127,7 +1297,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "47",
@@ -1147,7 +1320,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "48",
@@ -1167,7 +1343,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "49",
@@ -1207,7 +1386,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "51",
@@ -1227,7 +1412,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "52",
@@ -1247,7 +1435,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "53",
@@ -1267,7 +1458,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "54",
@@ -1287,7 +1483,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "55",
@@ -1307,7 +1507,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "56",
@@ -1327,7 +1531,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Formazione Continua"
+    "categorie": "Formazione Professionale, Formazione Continua",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "57",
@@ -1347,7 +1556,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "58",
@@ -1367,7 +1581,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "59",
@@ -1387,7 +1605,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "60",
@@ -1407,7 +1630,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "61",
@@ -1427,7 +1654,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "62",
@@ -1447,7 +1677,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "63",
@@ -1467,7 +1701,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "64",
@@ -1487,7 +1724,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Ristorazione"
+    "categorie": "Formazione Professionale, Ristorazione",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "65",
@@ -1507,7 +1748,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "66",
@@ -1527,7 +1771,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "67",
@@ -1547,7 +1795,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "68",
@@ -1567,7 +1818,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "69",
@@ -1587,7 +1843,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Formazione Tecnica"
+    "categorie": "Formazione Professionale, Formazione Tecnica",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "70",
@@ -1607,7 +1867,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "71",
@@ -1627,7 +1891,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "FC"
+    ]
   },
   {
     "id": "72",
@@ -1647,7 +1915,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "73",
@@ -1667,7 +1939,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Ottica"
+    "categorie": "Formazione Professionale, Ottica",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "74",
@@ -1687,7 +1963,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "75",
@@ -1707,7 +1986,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "76",
@@ -1727,7 +2010,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Innovazione"
+    "categorie": "Formazione Professionale, Innovazione",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "77",
@@ -1767,7 +2054,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Artigianato"
+    "categorie": "Formazione Professionale, Artigianato",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "79",
@@ -1787,7 +2078,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "80",
@@ -1807,7 +2101,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "81",
@@ -1827,7 +2125,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "82",
@@ -1847,7 +2148,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "83",
@@ -1867,7 +2171,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "84",
@@ -1887,7 +2195,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "85",
@@ -1907,7 +2218,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "86",
@@ -1927,7 +2242,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "87",
@@ -1947,7 +2266,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "88",
@@ -1967,7 +2289,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "89",
@@ -1987,7 +2312,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "90",
@@ -2007,7 +2336,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "91",
@@ -2027,7 +2359,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "92",
@@ -2047,7 +2382,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Informatica"
+    "categorie": "Formazione Professionale, Informatica",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "93",
@@ -2067,7 +2406,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "94",
@@ -2087,7 +2430,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "95",
@@ -2107,7 +2453,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "96",
@@ -2127,7 +2476,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "97",
@@ -2147,7 +2500,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "98",
@@ -2167,7 +2523,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "99",
@@ -2187,7 +2546,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "100",
@@ -2207,7 +2569,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "OF"
+    ]
   },
   {
     "id": "101",
@@ -2227,7 +2592,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "102",
@@ -2247,7 +2617,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "103",
@@ -2267,7 +2640,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "104",
@@ -2287,7 +2663,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "105",
@@ -2307,7 +2686,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "106",
@@ -2327,7 +2709,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "107",
@@ -2347,7 +2732,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "108",
@@ -2367,7 +2755,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "109",
@@ -2387,7 +2780,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "110",
@@ -2407,7 +2805,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Estetica"
+    "categorie": "Formazione Professionale, Estetica",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "111",
@@ -2427,7 +2828,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Estetica"
+    "categorie": "Formazione Professionale, Estetica",
+    "ambiti": [
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "112",
@@ -2447,7 +2852,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "113",
@@ -2467,7 +2876,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "114",
@@ -2487,7 +2900,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "115",
@@ -2507,7 +2924,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "116",
@@ -2527,7 +2947,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "117",
@@ -2547,7 +2970,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "118",
@@ -2567,7 +2993,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "119",
@@ -2587,7 +3017,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "120",
@@ -2607,7 +3041,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "121",
@@ -2627,7 +3065,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "122",
@@ -2647,7 +3088,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "123",
@@ -2667,7 +3111,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "124",
@@ -2687,7 +3134,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "125",
@@ -2707,7 +3157,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "126",
@@ -2727,7 +3180,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "127",
@@ -2747,7 +3204,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "128",
@@ -2767,7 +3227,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "129",
@@ -2787,7 +3250,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "130",
@@ -2807,7 +3273,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "131",
@@ -2827,7 +3296,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "132",
@@ -2847,7 +3319,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "133",
@@ -2867,7 +3342,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "134",
@@ -2887,7 +3365,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "135",
@@ -2907,7 +3388,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "136",
@@ -2927,7 +3411,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "137",
@@ -2947,7 +3436,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "138",
@@ -2967,7 +3459,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "139",
@@ -2987,7 +3482,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "140",
@@ -3007,7 +3505,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "141",
@@ -3027,7 +3528,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "142",
@@ -3047,7 +3551,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "143",
@@ -3067,7 +3574,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "144",
@@ -3087,7 +3597,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "145",
@@ -3107,7 +3620,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "146",
@@ -3127,7 +3644,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "147",
@@ -3147,7 +3667,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "148",
@@ -3167,7 +3691,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "149",
@@ -3187,7 +3714,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "150",
@@ -3207,7 +3740,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "151",
@@ -3227,7 +3763,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "152",
@@ -3247,7 +3787,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, IeFP"
+    "categorie": "Formazione Professionale, IeFP",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "153",
@@ -3267,7 +3813,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "154",
@@ -3287,7 +3836,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "155",
@@ -3307,7 +3860,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "156",
@@ -3327,7 +3883,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "157",
@@ -3347,7 +3907,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "158",
@@ -3367,7 +3930,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "159",
@@ -3387,7 +3953,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "160",
@@ -3407,7 +3976,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "161",
@@ -3427,7 +3999,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS",
+      "OF"
+    ]
   },
   {
     "id": "162",
@@ -3447,7 +4023,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "163",
@@ -3467,7 +4046,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "164",
@@ -3487,7 +4069,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "165",
@@ -3507,7 +4095,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "166",
@@ -3527,7 +4118,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "167",
@@ -3547,7 +4141,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "168",
@@ -3567,7 +4164,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "169",
@@ -3587,7 +4188,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "170",
@@ -3607,7 +4211,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "171",
@@ -3627,7 +4234,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "172",
@@ -3647,7 +4257,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "173",
@@ -3667,7 +4283,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "174",
@@ -3687,7 +4306,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "175",
@@ -3707,7 +4329,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "176",
@@ -3727,7 +4352,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "177",
@@ -3747,7 +4375,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OR"
+    ]
   },
   {
     "id": "178",
@@ -3767,7 +4400,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "IeFP, Istruzione Superiore"
+    "categorie": "IeFP, Istruzione Superiore",
+    "ambiti": [
+      "FS"
+    ]
   },
   {
     "id": "179",
@@ -3787,7 +4423,13 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Servizi Educativi"
+    "categorie": "Formazione Professionale, Servizi Educativi",
+    "ambiti": [
+      "FC",
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "180",
@@ -3807,7 +4449,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "181",
@@ -3827,7 +4472,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "182",
@@ -3847,7 +4495,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "183",
@@ -3867,7 +4518,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "184",
@@ -3887,7 +4541,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "185",
@@ -3907,7 +4564,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC"
+    ]
   },
   {
     "id": "186",
@@ -3927,7 +4587,10 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "OF"
+    ]
   },
   {
     "id": "187",
@@ -4247,7 +4910,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale"
+    "categorie": "Formazione Professionale",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "203",
@@ -4267,7 +4934,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Orientamento"
+    "categorie": "Formazione Professionale, Orientamento",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "204",
@@ -4287,7 +4958,11 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Formazione Professionale, Sicurezza"
+    "categorie": "Formazione Professionale, Sicurezza",
+    "ambiti": [
+      "FC",
+      "FS"
+    ]
   },
   {
     "id": "205",
@@ -4467,7 +5142,12 @@
         "googleMaps": ""
       }
     ],
-    "categorie": "Grafica, Meccanica"
+    "categorie": "Grafica, Meccanica",
+    "ambiti": [
+      "FS",
+      "OF",
+      "OR"
+    ]
   },
   {
     "id": "214",
