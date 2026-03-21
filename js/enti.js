@@ -84,8 +84,23 @@ const Enti = {
         </div>
         ${e.categorie ? `<div class="text-sm text-purple-700 font-semibold mb-2">${e.categorie}</div>` : ''}
         ${e.descrizione ? `<p class="text-sm text-gray-600 mb-3 line-clamp-2">${e.descrizione}</p>` : ''}
-        <div class="text-sm text-gray-600 mb-3">
+        <div class="flex flex-wrap gap-2 mb-3">
           <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-semibold">${e.sedi?.[0]?.provincia || 'Multi'}</span>
+          ${e.ambiti && e.ambiti.length > 0 ? e.ambiti.map(a => {
+            const colori = {
+              'OF': 'bg-blue-100 text-blue-700',
+              'FS': 'bg-green-100 text-green-700',
+              'FC': 'bg-orange-100 text-orange-700',
+              'OR': 'bg-pink-100 text-pink-700'
+            };
+            const nomi = {
+              'OF': 'Obbligo Formativo',
+              'FS': 'Formazione Superiore',
+              'FC': 'Formazione Continua',
+              'OR': 'Orientamento'
+            };
+            return `<span class="${colori[a] || 'bg-gray-100 text-gray-700'} px-2 py-1 rounded-full text-xs font-semibold" title="${nomi[a] || a}">${a}</span>`;
+          }).join('') : ''}
         </div>
         
         <div class="grid grid-cols-2 gap-2">
