@@ -223,12 +223,18 @@ const Enti = {
     
     enteId = String(enteId);  // Converti a stringa
     const index = this.favorites.indexOf(enteId);
+    
     if (index > -1) {
-      await FirebaseFavorites.removeEnte(enteId);
+      // RIMUOVI - aggiorna locale SUBITO
+      this.favorites.splice(index, 1);
+      FirebaseFavorites.removeEnte(enteId); // Async in background
     } else {
-      await FirebaseFavorites.addEnte(enteId);
+      // AGGIUNGI - aggiorna locale SUBITO
+      this.favorites.push(enteId);
+      FirebaseFavorites.addEnte(enteId); // Async in background
     }
-    await this.loadFavorites();
+    
+    // Render immediato con dati locali
     this.render();
   },
   
@@ -243,13 +249,19 @@ const Enti = {
     const index = this.favoriteSedi.findIndex(f => f.id === sedeId);
     
     if (index > -1) {
-      await FirebaseFavorites.removeEnteSede(sedeId);
+      // RIMUOVI - aggiorna locale SUBITO
+      this.favoriteSedi.splice(index, 1);
+      FirebaseFavorites.removeEnteSede(sedeId); // Async in background
     } else {
-      await FirebaseFavorites.addEnteSede(fav);
+      // AGGIUNGI - aggiorna locale SUBITO
+      this.favoriteSedi.push(fav);
+      FirebaseFavorites.addEnteSede(fav); // Async in background
     }
     
-    await this.loadFavorites();
-    const enteId = parseInt(sedeId.split('-')[0]);
+    // Re-render della modal sedi
+    const enteId = sedeId.split('-')[0];
+    this.openSedi(enteId);
+  },
     this.openSedi(enteId);
   },
   
