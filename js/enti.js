@@ -262,8 +262,6 @@ const Enti = {
     const enteId = sedeId.split('-')[0];
     this.openSedi(enteId);
   },
-    this.openSedi(enteId);
-  },
   
   isSedeInFavorites(sedeId) {
     return this.favoriteSedi.some(f => f.id === sedeId);
