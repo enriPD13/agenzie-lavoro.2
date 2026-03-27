@@ -595,43 +595,129 @@ const Preferiti = {
 
   async rimuoviAgenzia(id) {
     if (!window.FirebaseFavorites) return;
-    await FirebaseFavorites.removeAgency(id);
-    await this.init();
+    
+    // AGGIORNAMENTO LOCALE IMMEDIATO
+    const index = this.favoriteAgenzieIds.indexOf(id);
+    if (index > -1) {
+      this.favoriteAgenzieIds.splice(index, 1);
+    }
+    this.favoriteAgenzie = this.agenzie.filter(a => this.favoriteAgenzieIds.includes(a.id));
+    
+    // Firebase in background
+    FirebaseFavorites.removeAgency(id);
+    
+    // Render immediato
+    this.render();
   },
 
   async rimuoviSedeAgenzia(sedeId) {
     if (!window.FirebaseFavorites) return;
-    await FirebaseFavorites.removeAgencySede(sedeId);
-    await this.init();
+    
+    // AGGIORNAMENTO LOCALE IMMEDIATO
+    const index = this.favoriteSediAgenzie.findIndex(s => s.id === sedeId);
+    if (index > -1) {
+      this.favoriteSediAgenzie.splice(index, 1);
+    }
+    
+    // Firebase in background
+    FirebaseFavorites.removeAgencySede(sedeId);
+    
+    // Render immediato
+    this.render();
   },
 
   async rimuoviCPI(sigla) {
     if (!window.FirebaseFavorites) return;
-    await FirebaseFavorites.removeCPI(sigla);
-    await this.init();
+    
+    // AGGIORNAMENTO LOCALE IMMEDIATO
+    const index = this.favoriteCPIIds.indexOf(sigla);
+    if (index > -1) {
+      this.favoriteCPIIds.splice(index, 1);
+    }
+    const provinceUniche = [...new Set(this.cpi.map(c => c.provincia_sigla))];
+    this.favoriteCPI = provinceUniche
+      .filter(s => this.favoriteCPIIds.includes(s))
+      .map(s => {
+        const primo = this.cpi.find(c => c.provincia_sigla === s);
+        return {
+          sigla: s,
+          nome: primo.provincia
+        };
+      });
+    
+    // Firebase in background
+    FirebaseFavorites.removeCPI(sigla);
+    
+    // Render immediato
+    this.render();
   },
 
   async rimuoviSedeCPI(sedeId) {
     if (!window.FirebaseFavorites) return;
-    await FirebaseFavorites.removeCPISede(sedeId);
-    await this.init();
+    
+    // AGGIORNAMENTO LOCALE IMMEDIATO
+    const index = this.favoriteSediCPI.findIndex(s => s.id === sedeId);
+    if (index > -1) {
+      this.favoriteSediCPI.splice(index, 1);
+    }
+    
+    // Firebase in background
+    FirebaseFavorites.removeCPISede(sedeId);
+    
+    // Render immediato
+    this.render();
   },
 
   async rimuoviEnte(id) {
     if (!window.FirebaseFavorites) return;
-    await FirebaseFavorites.removeEnte(id);
-    await this.init();
+    
+    // Converti a stringa per sicurezza
+    id = String(id);
+    
+    // AGGIORNAMENTO LOCALE IMMEDIATO
+    const index = this.favoriteEntiIds.indexOf(id);
+    if (index > -1) {
+      this.favoriteEntiIds.splice(index, 1);
+    }
+    this.favoriteEnti = this.enti.filter(e => this.favoriteEntiIds.includes(e.id));
+    
+    // Firebase in background
+    FirebaseFavorites.removeEnte(id);
+    
+    // Render immediato
+    this.render();
   },
   
   async rimuoviSedeEnte(sedeId) {
     if (!window.FirebaseFavorites) return;
-    await FirebaseFavorites.removeEnteSede(sedeId);
-    await this.init();
+    
+    // AGGIORNAMENTO LOCALE IMMEDIATO
+    const index = this.favoriteSediEnti.findIndex(s => s.id === sedeId);
+    if (index > -1) {
+      this.favoriteSediEnti.splice(index, 1);
+    }
+    
+    // Firebase in background
+    FirebaseFavorites.removeEnteSede(sedeId);
+    
+    // Render immediato
+    this.render();
   },
 
   async rimuoviPiattaforma(id) {
     if (!window.FirebaseFavorites) return;
-    await FirebaseFavorites.removePiattaforma(id);
-    await this.init();
+    
+    // AGGIORNAMENTO LOCALE IMMEDIATO
+    const index = this.favoritePiattaformeIds.indexOf(id);
+    if (index > -1) {
+      this.favoritePiattaformeIds.splice(index, 1);
+    }
+    this.favoritePiattaforme = this.piattaforme.filter(p => this.favoritePiattaformeIds.includes(p.id));
+    
+    // Firebase in background
+    FirebaseFavorites.removePiattaforma(id);
+    
+    // Render immediato
+    this.render();
   }
 };
